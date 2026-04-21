@@ -1,0 +1,23 @@
+repos:
+  # Sync .ipynb ↔ .py ↔ .md on every commit
+  - repo: https://github.com/mwouts/jupytext
+    rev: v1.18.1
+    hooks:
+      - id: jupytext
+        args: [--sync]
+
+  # Validate that all Marimo notebooks can export before pushing
+  - repo: local
+    hooks:
+      - id: marimo-export-check
+        name: Validate marimo notebooks can export
+        language: system
+        entry: bash -c '
+          for nb in marimo/*.py; do
+            [ -f "$nb" ] || continue
+            echo "Checking $nb..."
+            marimo export html "$nb" -o /tmp/marimo_check.html || exit 1
+          done
+        '
+        files: ^marimo/.*\.py$
+        pass_filenames: false

@@ -1,0 +1,43 @@
+# ── Generated outputs ────────────────────────────────────────────────────────
+docs/site/
+
+# ── Raw / large source data (not tracked — see data/README.md) ──────────────
+data/*_raw.csv
+data/baci_country_*.csv
+data/global_shipping_*.csv
+
+# Track processed outputs explicitly
+!data/coffee_analysis_panel.csv
+!data/baci_country_trade_aggregated.csv
+!data/fao_coffee_production_clean.csv
+!data/README.md
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+.env
+.venv/
+venv/
+
+# ── Jupyter outputs (nbstripout handles .ipynb; these are extra safety) ──────
+*.ipynb_checkpoints
+
+# ── Excel / binary source files ──────────────────────────────────────────────
+*.xls
+*.xlsm
+*.xlsx
+
+# ── macOS ────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+
+# ── Editor ───────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
