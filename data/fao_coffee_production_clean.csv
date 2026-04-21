@@ -1,0 +1,5081 @@
+ISO3,Country_Name_FAO,Year,Production_tonnes,FAO_Flag
+AGO,Angola,1961,168600.0,A
+AGO,Angola,1962,185000.0,A
+AGO,Angola,1963,168300.0,A
+AGO,Angola,1964,198200.0,A
+AGO,Angola,1965,205000.0,A
+AGO,Angola,1966,225700.0,A
+AGO,Angola,1967,235200.0,A
+AGO,Angola,1968,198000.0,A
+AGO,Angola,1969,215000.0,A
+AGO,Angola,1970,204000.0,A
+AGO,Angola,1971,228000.0,A
+AGO,Angola,1972,225000.0,A
+AGO,Angola,1973,210000.0,A
+AGO,Angola,1974,224772.0,A
+AGO,Angola,1975,180000.0,X
+AGO,Angola,1976,57480.0,X
+AGO,Angola,1977,57060.0,X
+AGO,Angola,1978,34320.0,X
+AGO,Angola,1979,17340.0,X
+AGO,Angola,1980,43260.0,X
+AGO,Angola,1981,20640.0,X
+AGO,Angola,1982,17400.0,X
+AGO,Angola,1983,13000.0,X
+AGO,Angola,1984,15000.0,X
+AGO,Angola,1985,12000.0,X
+AGO,Angola,1986,14800.0,A
+AGO,Angola,1987,8700.0,A
+AGO,Angola,1988,11000.0,A
+AGO,Angola,1989,10000.0,A
+AGO,Angola,1990,5000.0,A
+AGO,Angola,1991,5000.0,A
+AGO,Angola,1992,5000.0,A
+AGO,Angola,1993,4620.0,A
+AGO,Angola,1994,2160.0,X
+AGO,Angola,1995,3300.0,X
+AGO,Angola,1996,2820.0,X
+AGO,Angola,1997,3840.0,X
+AGO,Angola,1998,5100.0,X
+AGO,Angola,1999,3300.0,X
+AGO,Angola,2000,4260.0,X
+AGO,Angola,2001,3300.0,X
+AGO,Angola,2002,1260.0,X
+AGO,Angola,2003,2040.0,X
+AGO,Angola,2004,1980.0,X
+AGO,Angola,2005,3500.0,E
+AGO,Angola,2006,5000.0,E
+AGO,Angola,2007,11523.0,A
+AGO,Angola,2008,4000.0,A
+AGO,Angola,2009,11982.0,A
+AGO,Angola,2010,9951.0,A
+AGO,Angola,2011,10192.0,A
+AGO,Angola,2012,11740.03,I
+AGO,Angola,2013,12550.0,A
+AGO,Angola,2014,15009.0,A
+AGO,Angola,2015,15000.0,A
+AGO,Angola,2016,14679.61,I
+AGO,Angola,2017,13542.99,I
+AGO,Angola,2018,13228.18,I
+AGO,Angola,2019,13256.51,I
+AGO,Angola,2020,11652.14,I
+AGO,Angola,2021,10304.0,A
+AGO,Angola,2022,5206.0,A
+AGO,Angola,2023,6229.0,A
+AGO,Angola,2024,7584.0,A
+BLZ,Belize,1991,,M
+BLZ,Belize,1992,,M
+BLZ,Belize,1993,,M
+BLZ,Belize,1994,,M
+BLZ,Belize,1995,,M
+BLZ,Belize,1996,,M
+BLZ,Belize,1997,,M
+BLZ,Belize,1998,93.0,A
+BLZ,Belize,1999,70.0,A
+BLZ,Belize,2000,165.0,E
+BLZ,Belize,2001,229.0,A
+BLZ,Belize,2002,227.0,A
+BLZ,Belize,2003,229.0,A
+BLZ,Belize,2004,231.0,A
+BLZ,Belize,2005,54.0,A
+BLZ,Belize,2006,95.0,A
+BLZ,Belize,2007,45.0,A
+BLZ,Belize,2008,90.0,E
+BLZ,Belize,2009,105.19,I
+BLZ,Belize,2010,90.46,I
+BLZ,Belize,2011,90.68,I
+BLZ,Belize,2012,88.98,I
+BLZ,Belize,2013,87.27,I
+BLZ,Belize,2014,87.54,I
+BLZ,Belize,2015,91.22,I
+BLZ,Belize,2016,89.13,I
+BLZ,Belize,2017,89.3,E
+BLZ,Belize,2018,89.88,E
+BLZ,Belize,2019,89.44,E
+BLZ,Belize,2020,89.54,E
+BLZ,Belize,2021,89.62,E
+BLZ,Belize,2022,89.53,E
+BLZ,Belize,2023,89.56,E
+BLZ,Belize,2024,89.57,E
+BEN,Benin,1961,2090.0,E
+BEN,Benin,1962,1730.0,E
+BEN,Benin,1963,1002.0,E
+BEN,Benin,1964,1065.0,E
+BEN,Benin,1965,891.0,E
+BEN,Benin,1966,1041.0,E
+BEN,Benin,1967,1086.0,E
+BEN,Benin,1968,511.0,E
+BEN,Benin,1969,2268.0,E
+BEN,Benin,1970,1940.0,E
+BEN,Benin,1971,2229.0,E
+BEN,Benin,1972,2724.0,E
+BEN,Benin,1973,1341.0,E
+BEN,Benin,1974,161.0,E
+BEN,Benin,1975,477.0,E
+BEN,Benin,1976,599.0,E
+BEN,Benin,1977,610.0,E
+BEN,Benin,1978,185.0,E
+BEN,Benin,1979,31.0,E
+BEN,Benin,1980,321.0,E
+BEN,Benin,1981,585.0,E
+BEN,Benin,1982,1629.0,E
+BEN,Benin,1983,1000.0,E
+BEN,Benin,1984,3000.0,X
+BEN,Benin,1985,700.0,X
+BEN,Benin,1986,1100.0,X
+BEN,Benin,1987,1900.0,X
+BEN,Benin,1988,2700.0,X
+BEN,Benin,1989,800.0,E
+BEN,Benin,1990,120.0,X
+BEN,Benin,1991,180.0,X
+BEN,Benin,1992,200.0,X
+BEN,Benin,1993,300.0,E
+BEN,Benin,1994,200.0,E
+BEN,Benin,1995,174.67,I
+BEN,Benin,1996,165.26,I
+BEN,Benin,1997,160.65,I
+BEN,Benin,1998,153.89,I
+BEN,Benin,1999,150.68,I
+BEN,Benin,2000,142.51,I
+BEN,Benin,2001,150.0,E
+BEN,Benin,2002,100.0,E
+BEN,Benin,2003,60.0,X
+BEN,Benin,2004,85.77,I
+BEN,Benin,2005,82.25,I
+BEN,Benin,2006,60.0,X
+BEN,Benin,2007,60.0,X
+BEN,Benin,2008,70.43,I
+BEN,Benin,2009,67.34,I
+BEN,Benin,2010,60.0,E
+BEN,Benin,2011,65.0,E
+BEN,Benin,2012,68.0,E
+BEN,Benin,2013,70.0,E
+BEN,Benin,2014,57.3,I
+BEN,Benin,2015,48.76,I
+BEN,Benin,2016,58.69,E
+BEN,Benin,2017,54.91,E
+BEN,Benin,2018,54.12,E
+BEN,Benin,2019,55.91,E
+BEN,Benin,2020,54.98,E
+BEN,Benin,2021,55.0,E
+BEN,Benin,2022,55.3,E
+BEN,Benin,2023,55.09,E
+BEN,Benin,2024,55.13,E
+BOL,Bolivia (Plurinational State of),1961,4400.0,X
+BOL,Bolivia (Plurinational State of),1962,4400.0,X
+BOL,Bolivia (Plurinational State of),1963,4400.0,A
+BOL,Bolivia (Plurinational State of),1964,7400.0,A
+BOL,Bolivia (Plurinational State of),1965,4700.0,A
+BOL,Bolivia (Plurinational State of),1966,7700.0,A
+BOL,Bolivia (Plurinational State of),1967,8200.0,A
+BOL,Bolivia (Plurinational State of),1968,9500.0,A
+BOL,Bolivia (Plurinational State of),1969,10100.0,A
+BOL,Bolivia (Plurinational State of),1970,11200.0,A
+BOL,Bolivia (Plurinational State of),1971,12400.0,A
+BOL,Bolivia (Plurinational State of),1972,13000.0,A
+BOL,Bolivia (Plurinational State of),1973,13400.0,A
+BOL,Bolivia (Plurinational State of),1974,13870.0,A
+BOL,Bolivia (Plurinational State of),1975,14900.0,A
+BOL,Bolivia (Plurinational State of),1976,14664.0,A
+BOL,Bolivia (Plurinational State of),1977,13372.0,A
+BOL,Bolivia (Plurinational State of),1978,13424.0,A
+BOL,Bolivia (Plurinational State of),1979,15700.0,A
+BOL,Bolivia (Plurinational State of),1980,20540.0,A
+BOL,Bolivia (Plurinational State of),1981,21325.0,A
+BOL,Bolivia (Plurinational State of),1982,21179.0,A
+BOL,Bolivia (Plurinational State of),1983,21141.0,A
+BOL,Bolivia (Plurinational State of),1984,21566.0,A
+BOL,Bolivia (Plurinational State of),1985,23361.0,A
+BOL,Bolivia (Plurinational State of),1986,24153.0,A
+BOL,Bolivia (Plurinational State of),1987,25200.0,A
+BOL,Bolivia (Plurinational State of),1988,25450.0,A
+BOL,Bolivia (Plurinational State of),1989,26740.0,A
+BOL,Bolivia (Plurinational State of),1990,24378.0,A
+BOL,Bolivia (Plurinational State of),1991,14071.0,A
+BOL,Bolivia (Plurinational State of),1992,15179.0,A
+BOL,Bolivia (Plurinational State of),1993,13153.0,A
+BOL,Bolivia (Plurinational State of),1994,19216.0,A
+BOL,Bolivia (Plurinational State of),1995,20323.0,A
+BOL,Bolivia (Plurinational State of),1996,22015.0,A
+BOL,Bolivia (Plurinational State of),1997,22608.0,A
+BOL,Bolivia (Plurinational State of),1998,22532.0,A
+BOL,Bolivia (Plurinational State of),1999,26931.0,A
+BOL,Bolivia (Plurinational State of),2000,27696.0,A
+BOL,Bolivia (Plurinational State of),2001,24086.0,A
+BOL,Bolivia (Plurinational State of),2002,24513.0,A
+BOL,Bolivia (Plurinational State of),2003,24700.0,A
+BOL,Bolivia (Plurinational State of),2004,24546.0,A
+BOL,Bolivia (Plurinational State of),2005,24976.0,A
+BOL,Bolivia (Plurinational State of),2006,25272.0,A
+BOL,Bolivia (Plurinational State of),2007,27012.0,A
+BOL,Bolivia (Plurinational State of),2008,27305.0,A
+BOL,Bolivia (Plurinational State of),2009,28270.0,A
+BOL,Bolivia (Plurinational State of),2010,27327.02,A
+BOL,Bolivia (Plurinational State of),2011,27596.4,A
+BOL,Bolivia (Plurinational State of),2012,28136.86,A
+BOL,Bolivia (Plurinational State of),2013,29455.13,A
+BOL,Bolivia (Plurinational State of),2014,20496.0,A
+BOL,Bolivia (Plurinational State of),2015,20954.0,A
+BOL,Bolivia (Plurinational State of),2016,21427.0,A
+BOL,Bolivia (Plurinational State of),2017,21181.0,A
+BOL,Bolivia (Plurinational State of),2018,22120.99,A
+BOL,Bolivia (Plurinational State of),2019,24841.0,A
+BOL,Bolivia (Plurinational State of),2020,23401.0,A
+BOL,Bolivia (Plurinational State of),2021,23451.98,A
+BOL,Bolivia (Plurinational State of),2022,23238.78,A
+BOL,Bolivia (Plurinational State of),2023,23579.45,A
+BOL,Bolivia (Plurinational State of),2024,23063.65,A
+BRA,Brazil,1961,2228704.0,A
+BRA,Brazil,1962,2190303.0,A
+BRA,Brazil,1963,1650527.0,A
+BRA,Brazil,1964,1042013.0,A
+BRA,Brazil,1965,2294047.0,A
+BRA,Brazil,1966,1202868.0,A
+BRA,Brazil,1967,1507500.0,A
+BRA,Brazil,1968,1057700.0,A
+BRA,Brazil,1969,1283500.0,A
+BRA,Brazil,1970,754800.0,A
+BRA,Brazil,1971,1551462.0,A
+BRA,Brazil,1972,1495705.0,A
+BRA,Brazil,1973,872897.0,A
+BRA,Brazil,1974,1615309.0,A
+BRA,Brazil,1975,1272298.0,A
+BRA,Brazil,1976,375985.0,A
+BRA,Brazil,1977,975385.0,A
+BRA,Brazil,1978,1267661.0,A
+BRA,Brazil,1979,1332772.0,A
+BRA,Brazil,1980,1061195.0,A
+BRA,Brazil,1981,2032210.0,A
+BRA,Brazil,1982,957931.0,A
+BRA,Brazil,1983,1671588.0,A
+BRA,Brazil,1984,1420281.0,A
+BRA,Brazil,1985,1910646.0,A
+BRA,Brazil,1986,1041406.0,A
+BRA,Brazil,1987,2202708.0,A
+BRA,Brazil,1988,1348014.0,A
+BRA,Brazil,1989,1532335.0,A
+BRA,Brazil,1990,1464856.0,A
+BRA,Brazil,1991,1520382.0,A
+BRA,Brazil,1992,1294373.0,A
+BRA,Brazil,1993,1278759.0,A
+BRA,Brazil,1994,1307289.0,A
+BRA,Brazil,1995,930135.0,A
+BRA,Brazil,1996,1369196.0,A
+BRA,Brazil,1997,1228513.0,A
+BRA,Brazil,1998,1689366.0,A
+BRA,Brazil,1999,1631852.0,A
+BRA,Brazil,2000,1903562.0,A
+BRA,Brazil,2001,1819569.0,A
+BRA,Brazil,2002,2610524.0,A
+BRA,Brazil,2003,1987074.0,A
+BRA,Brazil,2004,2465710.0,A
+BRA,Brazil,2005,2140169.0,A
+BRA,Brazil,2006,2573368.0,A
+BRA,Brazil,2007,2249011.0,A
+BRA,Brazil,2008,2796927.0,A
+BRA,Brazil,2009,2440056.0,A
+BRA,Brazil,2010,2907265.0,A
+BRA,Brazil,2011,2700540.0,A
+BRA,Brazil,2012,3037534.0,A
+BRA,Brazil,2013,2964538.0,A
+BRA,Brazil,2014,2804070.0,A
+BRA,Brazil,2015,2647504.0,A
+BRA,Brazil,2016,3024466.0,A
+BRA,Brazil,2017,2684508.0,A
+BRA,Brazil,2018,3552729.0,A
+BRA,Brazil,2019,3011745.0,A
+BRA,Brazil,2020,3705719.0,A
+BRA,Brazil,2021,2985581.0,A
+BRA,Brazil,2022,3179341.0,A
+BRA,Brazil,2023,3348510.0,A
+BRA,Brazil,2024,3387724.0,A
+BDI,Burundi,1961,14000.0,A
+BDI,Burundi,1962,13001.0,A
+BDI,Burundi,1963,5777.0,A
+BDI,Burundi,1964,17737.0,A
+BDI,Burundi,1965,12831.0,A
+BDI,Burundi,1966,14071.0,A
+BDI,Burundi,1967,18682.0,A
+BDI,Burundi,1968,16539.0,A
+BDI,Burundi,1969,14551.0,A
+BDI,Burundi,1970,22084.0,A
+BDI,Burundi,1971,25051.0,A
+BDI,Burundi,1972,19403.0,A
+BDI,Burundi,1973,21395.0,A
+BDI,Burundi,1974,28140.0,A
+BDI,Burundi,1975,16924.0,A
+BDI,Burundi,1976,21428.0,A
+BDI,Burundi,1977,17030.0,A
+BDI,Burundi,1978,22783.0,A
+BDI,Burundi,1979,27728.0,A
+BDI,Burundi,1980,18894.0,A
+BDI,Burundi,1981,43824.0,A
+BDI,Burundi,1982,20221.0,A
+BDI,Burundi,1983,35954.0,A
+BDI,Burundi,1984,27005.0,A
+BDI,Burundi,1985,32493.0,A
+BDI,Burundi,1986,31290.0,A
+BDI,Burundi,1987,37338.0,A
+BDI,Burundi,1988,35247.0,A
+BDI,Burundi,1989,31400.0,A
+BDI,Burundi,1990,32694.0,A
+BDI,Burundi,1991,34204.0,A
+BDI,Burundi,1992,37215.0,A
+BDI,Burundi,1993,22991.0,A
+BDI,Burundi,1994,41293.0,A
+BDI,Burundi,1995,25516.0,A
+BDI,Burundi,1996,26875.0,A
+BDI,Burundi,1997,19991.0,A
+BDI,Burundi,1998,16937.0,A
+BDI,Burundi,1999,29130.0,A
+BDI,Burundi,2000,67439.0,A
+BDI,Burundi,2001,70980.0,A
+BDI,Burundi,2002,182182.0,A
+BDI,Burundi,2003,35682.0,A
+BDI,Burundi,2004,204509.0,A
+BDI,Burundi,2005,34828.0,A
+BDI,Burundi,2006,149460.0,A
+BDI,Burundi,2007,31964.0,A
+BDI,Burundi,2008,100475.0,A
+BDI,Burundi,2009,20517.0,A
+BDI,Burundi,2010,89960.0,A
+BDI,Burundi,2011,41960.0,A
+BDI,Burundi,2012,26340.0,A
+BDI,Burundi,2013,22625.0,A
+BDI,Burundi,2014,10405.0,A
+BDI,Burundi,2015,18367.0,A
+BDI,Burundi,2016,13624.46,A
+BDI,Burundi,2017,16340.0,A
+BDI,Burundi,2018,14216.0,A
+BDI,Burundi,2019,14059.0,A
+BDI,Burundi,2020,7111.0,A
+BDI,Burundi,2021,13800.0,X
+BDI,Burundi,2022,10500.0,X
+BDI,Burundi,2023,8400.0,X
+BDI,Burundi,2024,6900.0,X
+CPV,Cabo Verde,1961,52.0,A
+CPV,Cabo Verde,1962,22.0,A
+CPV,Cabo Verde,1963,40.0,A
+CPV,Cabo Verde,1964,39.0,A
+CPV,Cabo Verde,1965,45.0,A
+CPV,Cabo Verde,1966,106.0,X
+CPV,Cabo Verde,1967,121.0,X
+CPV,Cabo Verde,1968,82.0,X
+CPV,Cabo Verde,1969,94.0,A
+CPV,Cabo Verde,1970,114.0,A
+CPV,Cabo Verde,1971,185.0,A
+CPV,Cabo Verde,1972,76.0,A
+CPV,Cabo Verde,1973,8.0,A
+CPV,Cabo Verde,1974,71.0,X
+CPV,Cabo Verde,1975,103.0,X
+CPV,Cabo Verde,1976,168.0,A
+CPV,Cabo Verde,1977,53.0,A
+CPV,Cabo Verde,1978,100.0,A
+CPV,Cabo Verde,1979,150.0,A
+CPV,Cabo Verde,1980,50.0,A
+CPV,Cabo Verde,1981,100.0,A
+CPV,Cabo Verde,1982,50.0,E
+CPV,Cabo Verde,1983,50.0,E
+CPV,Cabo Verde,1984,50.0,E
+CPV,Cabo Verde,1985,30.0,A
+CPV,Cabo Verde,1986,44.0,A
+CPV,Cabo Verde,1987,34.0,A
+CPV,Cabo Verde,1988,50.0,A
+CPV,Cabo Verde,1989,100.0,A
+CPV,Cabo Verde,1990,50.0,A
+CPV,Cabo Verde,1991,10.0,A
+CPV,Cabo Verde,1992,0.0,E
+CPV,Cabo Verde,1993,,M
+CPV,Cabo Verde,1994,,M
+CPV,Cabo Verde,1995,,M
+CPV,Cabo Verde,1996,,M
+CPV,Cabo Verde,1997,,M
+CPV,Cabo Verde,1998,,M
+CPV,Cabo Verde,1999,,M
+CPV,Cabo Verde,2000,,M
+CPV,Cabo Verde,2001,,M
+CPV,Cabo Verde,2002,,M
+CPV,Cabo Verde,2003,,M
+CPV,Cabo Verde,2004,,M
+CPV,Cabo Verde,2005,,M
+CPV,Cabo Verde,2006,,M
+CPV,Cabo Verde,2007,,M
+CPV,Cabo Verde,2008,,M
+CPV,Cabo Verde,2009,,M
+CPV,Cabo Verde,2010,,M
+CPV,Cabo Verde,2011,62.0,A
+CPV,Cabo Verde,2012,88.0,A
+CPV,Cabo Verde,2013,62.0,A
+CPV,Cabo Verde,2014,52.0,A
+CPV,Cabo Verde,2015,52.34,A
+CPV,Cabo Verde,2016,68.09,A
+CPV,Cabo Verde,2017,46.89,A
+CPV,Cabo Verde,2018,46.0,A
+CPV,Cabo Verde,2019,40.0,A
+CPV,Cabo Verde,2020,48.0,A
+CPV,Cabo Verde,2021,40.73,A
+CPV,Cabo Verde,2022,47.0,A
+CPV,Cabo Verde,2023,17.17,A
+CPV,Cabo Verde,2024,14.0,A
+KHM,Cambodia,1961,240.0,E
+KHM,Cambodia,1962,350.0,E
+KHM,Cambodia,1963,400.0,A
+KHM,Cambodia,1964,350.0,A
+KHM,Cambodia,1965,400.0,A
+KHM,Cambodia,1966,480.0,A
+KHM,Cambodia,1967,433.0,A
+KHM,Cambodia,1968,350.0,A
+KHM,Cambodia,1969,460.0,A
+KHM,Cambodia,1970,600.0,A
+KHM,Cambodia,1971,600.0,A
+KHM,Cambodia,1972,470.0,A
+KHM,Cambodia,1973,124.0,A
+KHM,Cambodia,1974,100.0,E
+KHM,Cambodia,1975,100.0,E
+KHM,Cambodia,1976,90.0,E
+KHM,Cambodia,1977,85.0,E
+KHM,Cambodia,1978,72.0,E
+KHM,Cambodia,1979,50.0,E
+KHM,Cambodia,1980,70.0,E
+KHM,Cambodia,1981,68.0,E
+KHM,Cambodia,1982,70.0,E
+KHM,Cambodia,1983,80.0,E
+KHM,Cambodia,1984,90.0,E
+KHM,Cambodia,1985,100.0,E
+KHM,Cambodia,1986,120.0,E
+KHM,Cambodia,1987,130.0,E
+KHM,Cambodia,1988,140.0,E
+KHM,Cambodia,1989,150.0,E
+KHM,Cambodia,1990,160.0,E
+KHM,Cambodia,1991,170.0,E
+KHM,Cambodia,1992,180.0,E
+KHM,Cambodia,1993,198.08,I
+KHM,Cambodia,1994,190.0,X
+KHM,Cambodia,1995,200.0,X
+KHM,Cambodia,1996,250.0,A
+KHM,Cambodia,1997,280.0,E
+KHM,Cambodia,1998,290.0,E
+KHM,Cambodia,1999,300.0,A
+KHM,Cambodia,2000,300.0,A
+KHM,Cambodia,2001,300.0,A
+KHM,Cambodia,2002,300.17,I
+KHM,Cambodia,2003,305.02,I
+KHM,Cambodia,2004,310.0,E
+KHM,Cambodia,2005,319.57,I
+KHM,Cambodia,2006,300.0,E
+KHM,Cambodia,2007,320.0,E
+KHM,Cambodia,2008,330.0,E
+KHM,Cambodia,2009,350.0,E
+KHM,Cambodia,2010,362.29,I
+KHM,Cambodia,2011,348.8,I
+KHM,Cambodia,2012,350.04,I
+KHM,Cambodia,2013,353.12,I
+KHM,Cambodia,2014,356.58,I
+KHM,Cambodia,2015,369.69,I
+KHM,Cambodia,2016,359.8,E
+KHM,Cambodia,2017,356.64,I
+KHM,Cambodia,2018,356.82,I
+KHM,Cambodia,2019,357.51,I
+KHM,Cambodia,2020,358.97,I
+KHM,Cambodia,2021,362.38,I
+KHM,Cambodia,2022,361.76,I
+KHM,Cambodia,2023,362.22,I
+KHM,Cambodia,2024,362.68,I
+CMR,Cameroon,1961,44700.0,A
+CMR,Cameroon,1962,45000.0,A
+CMR,Cameroon,1963,53600.0,A
+CMR,Cameroon,1964,59100.0,A
+CMR,Cameroon,1965,74100.0,A
+CMR,Cameroon,1966,63300.0,A
+CMR,Cameroon,1967,79600.0,A
+CMR,Cameroon,1968,81700.0,A
+CMR,Cameroon,1969,81815.0,A
+CMR,Cameroon,1970,92993.0,A
+CMR,Cameroon,1971,94790.0,A
+CMR,Cameroon,1972,96165.0,A
+CMR,Cameroon,1973,93913.0,A
+CMR,Cameroon,1974,104442.0,A
+CMR,Cameroon,1975,92488.0,A
+CMR,Cameroon,1976,79599.0,A
+CMR,Cameroon,1977,86448.0,A
+CMR,Cameroon,1978,107993.0,A
+CMR,Cameroon,1979,101166.0,A
+CMR,Cameroon,1980,112207.0,A
+CMR,Cameroon,1981,109286.0,A
+CMR,Cameroon,1982,128237.0,A
+CMR,Cameroon,1983,63700.0,A
+CMR,Cameroon,1984,137900.0,A
+CMR,Cameroon,1985,100020.0,A
+CMR,Cameroon,1986,132000.0,A
+CMR,Cameroon,1987,82560.0,A
+CMR,Cameroon,1988,119400.0,A
+CMR,Cameroon,1989,115700.0,A
+CMR,Cameroon,1990,100980.0,A
+CMR,Cameroon,1991,115080.0,A
+CMR,Cameroon,1992,76200.0,A
+CMR,Cameroon,1993,68417.0,A
+CMR,Cameroon,1994,73743.0,A
+CMR,Cameroon,1995,74000.0,A
+CMR,Cameroon,1996,104121.0,A
+CMR,Cameroon,1997,63600.0,A
+CMR,Cameroon,1998,112532.0,A
+CMR,Cameroon,1999,98000.0,A
+CMR,Cameroon,2000,86200.0,A
+CMR,Cameroon,2001,70500.0,A
+CMR,Cameroon,2002,41000.0,X
+CMR,Cameroon,2003,48000.0,X
+CMR,Cameroon,2004,54000.0,X
+CMR,Cameroon,2005,60000.0,A
+CMR,Cameroon,2006,62300.0,X
+CMR,Cameroon,2007,47792.0,A
+CMR,Cameroon,2008,50687.0,A
+CMR,Cameroon,2009,48123.0,X
+CMR,Cameroon,2010,66584.0,A
+CMR,Cameroon,2011,26322.0,A
+CMR,Cameroon,2012,38127.0,A
+CMR,Cameroon,2013,41800.0,A
+CMR,Cameroon,2014,41143.17,I
+CMR,Cameroon,2015,39702.17,I
+CMR,Cameroon,2016,38411.7,A
+CMR,Cameroon,2017,41916.8,A
+CMR,Cameroon,2018,41184.5,A
+CMR,Cameroon,2019,40907.3,A
+CMR,Cameroon,2020,36359.9,A
+CMR,Cameroon,2021,32487.61,I
+CMR,Cameroon,2022,32255.27,I
+CMR,Cameroon,2023,31009.61,I
+CMR,Cameroon,2024,29774.37,I
+CHN,"China, mainland",1961,1500.0,E
+CHN,"China, mainland",1962,1700.0,E
+CHN,"China, mainland",1963,2000.0,E
+CHN,"China, mainland",1964,2300.0,E
+CHN,"China, mainland",1965,2500.0,E
+CHN,"China, mainland",1966,3200.0,E
+CHN,"China, mainland",1967,3500.0,E
+CHN,"China, mainland",1968,3500.0,E
+CHN,"China, mainland",1969,3700.0,E
+CHN,"China, mainland",1970,3800.0,E
+CHN,"China, mainland",1971,3900.0,E
+CHN,"China, mainland",1972,5000.0,E
+CHN,"China, mainland",1973,6000.0,E
+CHN,"China, mainland",1974,6000.0,E
+CHN,"China, mainland",1975,4000.0,E
+CHN,"China, mainland",1976,4000.0,E
+CHN,"China, mainland",1977,4000.0,E
+CHN,"China, mainland",1978,4000.0,E
+CHN,"China, mainland",1979,5000.0,E
+CHN,"China, mainland",1980,5000.0,E
+CHN,"China, mainland",1981,6000.0,E
+CHN,"China, mainland",1982,6000.0,E
+CHN,"China, mainland",1983,6000.0,E
+CHN,"China, mainland",1984,9000.0,E
+CHN,"China, mainland",1985,7000.0,E
+CHN,"China, mainland",1986,7700.0,E
+CHN,"China, mainland",1987,8600.0,E
+CHN,"China, mainland",1988,10000.0,E
+CHN,"China, mainland",1989,8000.0,E
+CHN,"China, mainland",1990,6300.0,E
+CHN,"China, mainland",1991,3500.0,E
+CHN,"China, mainland",1992,3800.0,E
+CHN,"China, mainland",1993,4000.0,E
+CHN,"China, mainland",1994,3250.0,A
+CHN,"China, mainland",1995,3196.0,A
+CHN,"China, mainland",1996,3023.0,A
+CHN,"China, mainland",1997,3573.0,A
+CHN,"China, mainland",1998,6237.0,A
+CHN,"China, mainland",1999,8743.0,A
+CHN,"China, mainland",2000,11568.0,A
+CHN,"China, mainland",2001,17202.0,A
+CHN,"China, mainland",2002,19456.0,A
+CHN,"China, mainland",2003,23144.0,A
+CHN,"China, mainland",2004,21659.0,A
+CHN,"China, mainland",2005,21919.0,A
+CHN,"China, mainland",2006,25655.0,A
+CHN,"China, mainland",2007,26000.0,E
+CHN,"China, mainland",2008,33278.0,A
+CHN,"China, mainland",2009,70405.0,A
+CHN,"China, mainland",2010,49596.0,A
+CHN,"China, mainland",2011,65384.0,A
+CHN,"China, mainland",2012,92064.0,A
+CHN,"China, mainland",2013,116826.0,A
+CHN,"China, mainland",2014,127585.93,I
+CHN,"China, mainland",2015,115139.76,I
+CHN,"China, mainland",2016,113345.44,I
+CHN,"China, mainland",2017,114163.14,I
+CHN,"China, mainland",2018,115500.0,X
+CHN,"China, mainland",2019,120000.0,X
+CHN,"China, mainland",2020,114000.0,X
+CHN,"China, mainland",2021,108000.0,X
+CHN,"China, mainland",2022,108000.0,X
+CHN,"China, mainland",2023,108000.0,X
+CHN,"China, mainland",2024,114000.0,X
+TWN,"China, Taiwan Province of",1961,112.0,A
+TWN,"China, Taiwan Province of",1962,56.0,A
+TWN,"China, Taiwan Province of",1963,42.0,A
+TWN,"China, Taiwan Province of",1964,46.0,A
+TWN,"China, Taiwan Province of",1965,77.0,A
+TWN,"China, Taiwan Province of",1966,36.0,A
+TWN,"China, Taiwan Province of",1967,66.0,A
+TWN,"China, Taiwan Province of",1968,40.0,A
+TWN,"China, Taiwan Province of",1969,48.0,A
+TWN,"China, Taiwan Province of",1970,36.0,A
+TWN,"China, Taiwan Province of",1971,34.0,A
+TWN,"China, Taiwan Province of",1972,29.0,A
+TWN,"China, Taiwan Province of",1973,17.0,A
+TWN,"China, Taiwan Province of",1974,68.0,A
+TWN,"China, Taiwan Province of",1975,66.0,A
+TWN,"China, Taiwan Province of",1976,9.0,A
+TWN,"China, Taiwan Province of",1977,52.0,A
+TWN,"China, Taiwan Province of",1978,47.0,A
+TWN,"China, Taiwan Province of",1979,36.0,A
+TWN,"China, Taiwan Province of",1980,51.0,A
+TWN,"China, Taiwan Province of",1981,52.0,A
+TWN,"China, Taiwan Province of",1982,54.0,A
+TWN,"China, Taiwan Province of",1983,0.0,A
+TWN,"China, Taiwan Province of",1984,0.0,A
+TWN,"China, Taiwan Province of",1985,0.0,A
+TWN,"China, Taiwan Province of",1986,0.0,A
+TWN,"China, Taiwan Province of",1987,0.0,A
+TWN,"China, Taiwan Province of",1988,0.0,A
+TWN,"China, Taiwan Province of",1989,0.0,A
+TWN,"China, Taiwan Province of",1990,0.0,A
+TWN,"China, Taiwan Province of",1991,0.0,A
+TWN,"China, Taiwan Province of",1992,0.0,A
+TWN,"China, Taiwan Province of",1993,0.0,A
+TWN,"China, Taiwan Province of",1994,0.0,A
+TWN,"China, Taiwan Province of",1995,0.0,A
+TWN,"China, Taiwan Province of",1996,0.0,A
+TWN,"China, Taiwan Province of",1997,0.0,I
+TWN,"China, Taiwan Province of",1998,0.0,I
+TWN,"China, Taiwan Province of",1999,0.0,I
+TWN,"China, Taiwan Province of",2000,0.0,I
+TWN,"China, Taiwan Province of",2001,0.0,I
+TWN,"China, Taiwan Province of",2002,0.0,I
+TWN,"China, Taiwan Province of",2003,0.0,I
+TWN,"China, Taiwan Province of",2004,0.0,I
+TWN,"China, Taiwan Province of",2005,0.0,I
+TWN,"China, Taiwan Province of",2006,0.0,I
+TWN,"China, Taiwan Province of",2007,0.0,I
+TWN,"China, Taiwan Province of",2008,0.0,I
+TWN,"China, Taiwan Province of",2009,0.0,I
+TWN,"China, Taiwan Province of",2010,0.0,I
+TWN,"China, Taiwan Province of",2011,0.0,I
+TWN,"China, Taiwan Province of",2012,0.0,I
+TWN,"China, Taiwan Province of",2013,0.0,I
+TWN,"China, Taiwan Province of",2014,0.0,I
+TWN,"China, Taiwan Province of",2015,757.0,A
+TWN,"China, Taiwan Province of",2016,841.0,A
+TWN,"China, Taiwan Province of",2017,947.0,A
+TWN,"China, Taiwan Province of",2018,1019.0,A
+TWN,"China, Taiwan Province of",2019,1012.0,A
+TWN,"China, Taiwan Province of",2020,970.0,A
+TWN,"China, Taiwan Province of",2021,906.0,A
+TWN,"China, Taiwan Province of",2022,980.0,A
+TWN,"China, Taiwan Province of",2023,956.0,A
+TWN,"China, Taiwan Province of",2024,951.29,I
+COL,Colombia,1961,450000.0,A
+COL,Colombia,1962,482100.0,A
+COL,Colombia,1963,450000.0,A
+COL,Colombia,1964,468000.0,A
+COL,Colombia,1965,492000.0,A
+COL,Colombia,1966,492000.0,A
+COL,Colombia,1967,456000.0,A
+COL,Colombia,1968,480000.0,A
+COL,Colombia,1969,474000.0,A
+COL,Colombia,1970,507000.0,A
+COL,Colombia,1971,468000.0,A
+COL,Colombia,1972,432000.0,A
+COL,Colombia,1973,528000.0,A
+COL,Colombia,1974,470000.0,A
+COL,Colombia,1975,513200.0,A
+COL,Colombia,1976,483000.0,A
+COL,Colombia,1977,639420.0,A
+COL,Colombia,1978,683220.0,A
+COL,Colombia,1979,713340.0,A
+COL,Colombia,1980,724380.0,A
+COL,Colombia,1981,782200.0,A
+COL,Colombia,1982,773600.0,A
+COL,Colombia,1983,768600.0,A
+COL,Colombia,1984,807800.0,A
+COL,Colombia,1985,643100.0,A
+COL,Colombia,1986,713500.0,A
+COL,Colombia,1987,651600.0,A
+COL,Colombia,1988,708700.0,A
+COL,Colombia,1989,664000.0,A
+COL,Colombia,1990,845000.0,A
+COL,Colombia,1991,970740.0,A
+COL,Colombia,1992,1100000.0,X
+COL,Colombia,1993,818220.0,A
+COL,Colombia,1994,721860.0,A
+COL,Colombia,1995,821820.0,A
+COL,Colombia,1996,671401.0,A
+COL,Colombia,1997,642239.0,A
+COL,Colombia,1998,766980.0,A
+COL,Colombia,1999,546720.0,A
+COL,Colombia,2000,637140.0,A
+COL,Colombia,2001,656160.0,A
+COL,Colombia,2002,696840.0,A
+COL,Colombia,2003,694080.0,A
+COL,Colombia,2004,674400.0,A
+COL,Colombia,2005,667140.0,A
+COL,Colombia,2006,724740.0,A
+COL,Colombia,2007,757080.0,A
+COL,Colombia,2008,688680.0,A
+COL,Colombia,2009,468720.0,A
+COL,Colombia,2010,535380.0,A
+COL,Colombia,2011,468540.0,A
+COL,Colombia,2012,462000.0,A
+COL,Colombia,2013,653160.0,A
+COL,Colombia,2014,728400.0,A
+COL,Colombia,2015,827750.0,A
+COL,Colombia,2016,818243.0,A
+COL,Colombia,2017,851640.0,A
+COL,Colombia,2018,813420.0,A
+COL,Colombia,2019,885120.0,A
+COL,Colombia,2020,833400.0,A
+COL,Colombia,2021,560340.0,A
+COL,Colombia,2022,665015.95,A
+COL,Colombia,2023,680857.67,A
+COL,Colombia,2024,839846.69,A
+COM,Comoros,1961,100.0,E
+COM,Comoros,1962,100.0,E
+COM,Comoros,1963,150.0,E
+COM,Comoros,1964,100.0,E
+COM,Comoros,1965,100.0,E
+COM,Comoros,1966,180.0,X
+COM,Comoros,1967,180.0,X
+COM,Comoros,1968,180.0,X
+COM,Comoros,1969,180.0,X
+COM,Comoros,1970,180.0,X
+COM,Comoros,1971,120.0,X
+COM,Comoros,1972,120.0,X
+COM,Comoros,1973,120.0,X
+COM,Comoros,1974,120.0,X
+COM,Comoros,1975,60.0,X
+COM,Comoros,1976,60.0,X
+COM,Comoros,1977,70.0,E
+COM,Comoros,1978,90.0,E
+COM,Comoros,1979,90.0,E
+COM,Comoros,1980,80.0,E
+COM,Comoros,1981,82.0,E
+COM,Comoros,1982,82.0,E
+COM,Comoros,1983,83.0,E
+COM,Comoros,1984,84.0,E
+COM,Comoros,1985,85.0,E
+COM,Comoros,1986,85.0,E
+COM,Comoros,1987,85.0,E
+COM,Comoros,1988,87.0,E
+COM,Comoros,1989,87.0,E
+COM,Comoros,1990,90.0,E
+COM,Comoros,1991,91.0,E
+COM,Comoros,1992,92.0,E
+COM,Comoros,1993,92.11,I
+COM,Comoros,1994,92.87,I
+COM,Comoros,1995,93.68,I
+COM,Comoros,1996,94.0,E
+COM,Comoros,1997,95.44,I
+COM,Comoros,1998,96.0,E
+COM,Comoros,1999,98.07,I
+COM,Comoros,2000,98.0,E
+COM,Comoros,2001,100.99,I
+COM,Comoros,2002,102.67,I
+COM,Comoros,2003,100.0,E
+COM,Comoros,2004,110.1,I
+COM,Comoros,2005,120.0,E
+COM,Comoros,2006,119.09,I
+COM,Comoros,2007,120.8,I
+COM,Comoros,2008,122.62,I
+COM,Comoros,2009,124.24,I
+COM,Comoros,2010,125.78,I
+COM,Comoros,2011,127.35,I
+COM,Comoros,2012,130.0,E
+COM,Comoros,2013,132.0,E
+COM,Comoros,2014,133.48,I
+COM,Comoros,2015,135.35,I
+COM,Comoros,2016,136.26,I
+COM,Comoros,2017,137.12,I
+COM,Comoros,2018,138.18,I
+COM,Comoros,2019,139.35,I
+COM,Comoros,2020,140.59,I
+COM,Comoros,2021,143.45,I
+COM,Comoros,2022,141.13,E
+COM,Comoros,2023,141.73,E
+COM,Comoros,2024,142.1,E
+COG,Congo,1961,900.0,A
+COG,Congo,1962,1300.0,A
+COG,Congo,1963,1500.0,A
+COG,Congo,1964,1500.0,A
+COG,Congo,1965,2700.0,A
+COG,Congo,1966,910.0,A
+COG,Congo,1967,920.0,A
+COG,Congo,1968,890.0,A
+COG,Congo,1969,1111.0,A
+COG,Congo,1970,1102.0,A
+COG,Congo,1971,1286.0,A
+COG,Congo,1972,1021.0,A
+COG,Congo,1973,1035.0,A
+COG,Congo,1974,1292.0,A
+COG,Congo,1975,1050.0,A
+COG,Congo,1976,2160.0,A
+COG,Congo,1977,5244.0,A
+COG,Congo,1978,4843.0,A
+COG,Congo,1979,3120.0,X
+COG,Congo,1980,2700.0,X
+COG,Congo,1981,2580.0,X
+COG,Congo,1982,2900.0,E
+COG,Congo,1983,3360.0,X
+COG,Congo,1984,2980.0,E
+COG,Congo,1985,3480.0,X
+COG,Congo,1986,1444.0,A
+COG,Congo,1987,1028.0,A
+COG,Congo,1988,1830.0,A
+COG,Congo,1989,1843.0,A
+COG,Congo,1990,1354.0,A
+COG,Congo,1991,1401.0,A
+COG,Congo,1992,1450.0,A
+COG,Congo,1993,1501.0,A
+COG,Congo,1994,1553.0,A
+COG,Congo,1995,1606.0,A
+COG,Congo,1996,1600.0,X
+COG,Congo,1997,1338.0,A
+COG,Congo,1998,850.0,A
+COG,Congo,1999,1490.0,A
+COG,Congo,2000,1550.0,A
+COG,Congo,2001,1612.0,A
+COG,Congo,2002,1687.0,A
+COG,Congo,2003,2000.0,X
+COG,Congo,2004,2800.0,E
+COG,Congo,2005,3300.0,E
+COG,Congo,2006,3000.0,E
+COG,Congo,2007,3000.0,E
+COG,Congo,2008,2400.0,A
+COG,Congo,2009,2700.0,E
+COG,Congo,2010,2826.61,I
+COG,Congo,2011,2900.7,I
+COG,Congo,2012,2934.58,I
+COG,Congo,2013,2987.03,I
+COG,Congo,2014,3005.38,I
+COG,Congo,2015,3038.73,I
+COG,Congo,2016,3062.07,I
+COG,Congo,2017,3108.09,I
+COG,Congo,2018,3151.08,I
+COG,Congo,2019,3173.44,I
+COG,Congo,2020,3191.72,I
+COG,Congo,2021,3172.08,E
+COG,Congo,2022,3179.08,E
+COG,Congo,2023,3180.96,E
+COG,Congo,2024,3177.37,E
+COK,Cook Islands,1961,3.0,A
+COK,Cook Islands,1962,5.0,E
+COK,Cook Islands,1963,7.0,E
+COK,Cook Islands,1964,11.0,A
+COK,Cook Islands,1965,10.0,E
+COK,Cook Islands,1966,11.0,E
+COK,Cook Islands,1967,12.0,E
+COK,Cook Islands,1968,10.0,E
+COK,Cook Islands,1969,10.0,E
+COK,Cook Islands,1970,10.0,E
+COK,Cook Islands,1971,10.0,E
+COK,Cook Islands,1972,10.0,E
+COK,Cook Islands,1973,10.0,E
+COK,Cook Islands,1974,10.0,E
+COK,Cook Islands,1975,10.0,E
+COK,Cook Islands,1976,2.0,A
+COK,Cook Islands,1977,3.0,A
+COK,Cook Islands,1978,2.0,A
+COK,Cook Islands,1979,2.0,E
+COK,Cook Islands,1980,2.0,E
+COK,Cook Islands,1981,2.0,E
+COK,Cook Islands,1982,2.0,E
+COK,Cook Islands,1983,2.0,E
+COK,Cook Islands,1984,2.0,E
+COK,Cook Islands,1985,2.0,E
+COK,Cook Islands,1986,2.0,E
+COK,Cook Islands,1987,2.0,E
+COK,Cook Islands,1988,1.0,A
+COK,Cook Islands,1989,1.0,A
+COK,Cook Islands,1990,2.0,A
+COK,Cook Islands,1991,2.0,A
+COK,Cook Islands,1992,5.0,A
+COK,Cook Islands,1993,4.0,A
+COK,Cook Islands,1994,8.0,A
+COK,Cook Islands,1995,15.0,A
+COK,Cook Islands,1996,20.0,A
+COK,Cook Islands,1997,15.0,E
+COK,Cook Islands,1998,10.0,E
+COK,Cook Islands,1999,5.0,A
+COK,Cook Islands,2000,6.5,I
+COK,Cook Islands,2001,6.62,I
+COK,Cook Islands,2002,6.78,I
+COK,Cook Islands,2003,3.0,A
+COK,Cook Islands,2004,0.0,A
+COK,Cook Islands,2005,0.14,I
+COK,Cook Islands,2006,0.0,E
+COK,Cook Islands,2007,0.0,E
+COK,Cook Islands,2008,0.12,I
+COK,Cook Islands,2009,0.37,I
+COK,Cook Islands,2010,0.35,I
+COK,Cook Islands,2011,0.33,I
+COK,Cook Islands,2012,0.32,I
+COK,Cook Islands,2013,0.3,I
+COK,Cook Islands,2014,0.3,I
+COK,Cook Islands,2015,0.4,I
+COK,Cook Islands,2016,0.34,E
+COK,Cook Islands,2017,0.3,I
+COK,Cook Islands,2018,0.27,I
+COK,Cook Islands,2019,0.26,I
+COK,Cook Islands,2020,0.25,I
+COK,Cook Islands,2021,0.34,I
+COK,Cook Islands,2022,0.36,I
+COK,Cook Islands,2023,0.36,I
+COK,Cook Islands,2024,0.37,I
+CRI,Costa Rica,1961,61769.0,A
+CRI,Costa Rica,1962,54523.0,A
+CRI,Costa Rica,1963,62295.0,A
+CRI,Costa Rica,1964,47219.0,A
+CRI,Costa Rica,1965,58384.0,A
+CRI,Costa Rica,1966,68344.0,A
+CRI,Costa Rica,1967,76014.0,A
+CRI,Costa Rica,1968,69372.0,A
+CRI,Costa Rica,1969,84549.0,A
+CRI,Costa Rica,1970,73192.0,A
+CRI,Costa Rica,1971,89350.0,A
+CRI,Costa Rica,1972,78787.0,A
+CRI,Costa Rica,1973,95721.0,A
+CRI,Costa Rica,1974,84287.0,A
+CRI,Costa Rica,1975,80248.0,A
+CRI,Costa Rica,1976,81784.0,A
+CRI,Costa Rica,1977,87183.0,A
+CRI,Costa Rica,1978,98549.0,A
+CRI,Costa Rica,1979,98575.0,A
+CRI,Costa Rica,1980,106389.0,A
+CRI,Costa Rica,1981,113102.0,A
+CRI,Costa Rica,1982,115087.0,A
+CRI,Costa Rica,1983,124008.0,A
+CRI,Costa Rica,1984,136857.0,A
+CRI,Costa Rica,1985,124000.0,A
+CRI,Costa Rica,1986,128227.0,A
+CRI,Costa Rica,1987,138000.0,A
+CRI,Costa Rica,1988,144900.0,A
+CRI,Costa Rica,1989,157000.0,A
+CRI,Costa Rica,1990,151100.0,A
+CRI,Costa Rica,1991,158000.0,A
+CRI,Costa Rica,1992,168000.0,A
+CRI,Costa Rica,1993,156927.0,A
+CRI,Costa Rica,1994,147998.0,A
+CRI,Costa Rica,1995,150061.0,A
+CRI,Costa Rica,1996,154131.0,A
+CRI,Costa Rica,1997,132015.0,A
+CRI,Costa Rica,1998,152385.0,A
+CRI,Costa Rica,1999,147868.0,A
+CRI,Costa Rica,2000,161395.0,A
+CRI,Costa Rica,2001,150289.0,A
+CRI,Costa Rica,2002,140874.0,A
+CRI,Costa Rica,2003,132259.0,A
+CRI,Costa Rica,2004,126000.0,X
+CRI,Costa Rica,2005,125669.0,A
+CRI,Costa Rica,2006,101038.0,A
+CRI,Costa Rica,2007,121058.0,A
+CRI,Costa Rica,2008,111959.0,A
+CRI,Costa Rica,2009,91403.0,A
+CRI,Costa Rica,2010,91620.0,A
+CRI,Costa Rica,2011,95038.0,A
+CRI,Costa Rica,2012,117873.0,A
+CRI,Costa Rica,2013,71381.0,A
+CRI,Costa Rica,2014,96735.0,A
+CRI,Costa Rica,2015,83846.0,A
+CRI,Costa Rica,2016,93720.0,A
+CRI,Costa Rica,2017,90419.0,A
+CRI,Costa Rica,2018,92016.0,A
+CRI,Costa Rica,2019,76385.0,A
+CRI,Costa Rica,2020,86791.0,A
+CRI,Costa Rica,2021,95322.0,A
+CRI,Costa Rica,2022,74620.26,A
+CRI,Costa Rica,2023,80270.33,A
+CRI,Costa Rica,2024,62153.98,A
+CIV,Côte d'Ivoire,1961,185500.0,A
+CIV,Côte d'Ivoire,1962,97071.0,A
+CIV,Côte d'Ivoire,1963,194639.0,A
+CIV,Côte d'Ivoire,1964,260698.0,A
+CIV,Côte d'Ivoire,1965,202105.0,A
+CIV,Côte d'Ivoire,1966,272566.0,A
+CIV,Côte d'Ivoire,1967,130759.0,A
+CIV,Côte d'Ivoire,1968,287760.0,A
+CIV,Côte d'Ivoire,1969,210124.0,A
+CIV,Côte d'Ivoire,1970,279610.0,A
+CIV,Côte d'Ivoire,1971,239706.0,A
+CIV,Côte d'Ivoire,1972,268836.0,A
+CIV,Côte d'Ivoire,1973,301804.0,A
+CIV,Côte d'Ivoire,1974,195935.0,A
+CIV,Côte d'Ivoire,1975,270400.0,A
+CIV,Côte d'Ivoire,1976,308400.0,A
+CIV,Côte d'Ivoire,1977,291339.0,A
+CIV,Côte d'Ivoire,1978,195565.0,A
+CIV,Côte d'Ivoire,1979,277048.0,A
+CIV,Côte d'Ivoire,1980,249608.0,A
+CIV,Côte d'Ivoire,1981,366839.0,A
+CIV,Côte d'Ivoire,1982,247708.0,A
+CIV,Côte d'Ivoire,1983,270581.0,A
+CIV,Côte d'Ivoire,1984,85203.0,A
+CIV,Côte d'Ivoire,1985,277082.0,A
+CIV,Côte d'Ivoire,1986,265199.0,A
+CIV,Côte d'Ivoire,1987,270130.0,A
+CIV,Côte d'Ivoire,1988,186705.0,A
+CIV,Côte d'Ivoire,1989,221350.0,A
+CIV,Côte d'Ivoire,1990,285164.0,A
+CIV,Côte d'Ivoire,1991,198909.0,A
+CIV,Côte d'Ivoire,1992,257000.0,A
+CIV,Côte d'Ivoire,1993,138937.0,A
+CIV,Côte d'Ivoire,1994,145576.0,A
+CIV,Côte d'Ivoire,1995,194968.0,A
+CIV,Côte d'Ivoire,1996,167786.0,A
+CIV,Côte d'Ivoire,1997,279219.0,A
+CIV,Côte d'Ivoire,1998,311000.0,A
+CIV,Côte d'Ivoire,1999,307331.0,A
+CIV,Côte d'Ivoire,2000,380000.0,A
+CIV,Côte d'Ivoire,2001,301127.0,A
+CIV,Côte d'Ivoire,2002,182001.0,A
+CIV,Côte d'Ivoire,2003,140027.0,A
+CIV,Côte d'Ivoire,2004,154081.0,A
+CIV,Côte d'Ivoire,2005,230000.0,A
+CIV,Côte d'Ivoire,2006,187000.0,A
+CIV,Côte d'Ivoire,2007,170849.0,A
+CIV,Côte d'Ivoire,2008,173118.0,A
+CIV,Côte d'Ivoire,2009,142945.0,A
+CIV,Côte d'Ivoire,2010,94372.0,A
+CIV,Côte d'Ivoire,2011,32291.0,A
+CIV,Côte d'Ivoire,2012,121426.0,A
+CIV,Côte d'Ivoire,2013,103743.0,A
+CIV,Côte d'Ivoire,2014,109913.47,I
+CIV,Côte d'Ivoire,2015,127000.0,A
+CIV,Côte d'Ivoire,2016,106000.0,A
+CIV,Côte d'Ivoire,2017,33600.0,A
+CIV,Côte d'Ivoire,2018,123900.0,A
+CIV,Côte d'Ivoire,2019,95204.0,A
+CIV,Côte d'Ivoire,2020,82366.0,A
+CIV,Côte d'Ivoire,2021,61312.0,A
+CIV,Côte d'Ivoire,2022,89878.0,A
+CIV,Côte d'Ivoire,2023,46975.0,A
+CIV,Côte d'Ivoire,2024,72133.0,A
+CUB,Cuba,1961,37000.0,A
+CUB,Cuba,1962,52206.0,A
+CUB,Cuba,1963,34691.0,A
+CUB,Cuba,1964,32028.0,A
+CUB,Cuba,1965,23880.0,A
+CUB,Cuba,1966,33407.0,A
+CUB,Cuba,1967,34246.0,A
+CUB,Cuba,1968,29246.0,A
+CUB,Cuba,1969,31649.0,A
+CUB,Cuba,1970,19742.0,A
+CUB,Cuba,1971,25987.0,A
+CUB,Cuba,1972,25391.0,A
+CUB,Cuba,1973,21028.0,A
+CUB,Cuba,1974,28795.0,A
+CUB,Cuba,1975,20112.0,A
+CUB,Cuba,1976,27151.0,A
+CUB,Cuba,1977,16826.0,A
+CUB,Cuba,1978,14807.0,A
+CUB,Cuba,1979,22674.0,A
+CUB,Cuba,1980,18973.0,A
+CUB,Cuba,1981,21616.0,A
+CUB,Cuba,1982,28684.0,A
+CUB,Cuba,1983,18410.0,A
+CUB,Cuba,1984,22051.0,A
+CUB,Cuba,1985,23783.0,A
+CUB,Cuba,1986,24509.0,A
+CUB,Cuba,1987,26165.0,A
+CUB,Cuba,1988,28801.0,A
+CUB,Cuba,1989,28920.0,A
+CUB,Cuba,1990,24900.0,X
+CUB,Cuba,1991,22740.0,X
+CUB,Cuba,1992,18720.0,X
+CUB,Cuba,1993,17100.0,X
+CUB,Cuba,1994,17040.0,X
+CUB,Cuba,1995,17100.0,X
+CUB,Cuba,1996,16680.0,X
+CUB,Cuba,1997,19980.0,X
+CUB,Cuba,1998,13500.0,X
+CUB,Cuba,1999,22020.0,X
+CUB,Cuba,2000,16500.0,X
+CUB,Cuba,2001,15720.0,X
+CUB,Cuba,2002,14700.0,X
+CUB,Cuba,2003,15000.0,X
+CUB,Cuba,2004,15240.0,X
+CUB,Cuba,2005,10800.0,X
+CUB,Cuba,2006,8400.0,X
+CUB,Cuba,2007,13500.0,X
+CUB,Cuba,2008,6240.0,X
+CUB,Cuba,2009,7980.0,X
+CUB,Cuba,2010,8430.0,X
+CUB,Cuba,2011,10150.0,X
+CUB,Cuba,2012,7560.0,X
+CUB,Cuba,2013,8944.0,X
+CUB,Cuba,2014,9203.03,I
+CUB,Cuba,2015,7416.54,I
+CUB,Cuba,2016,7539.75,I
+CUB,Cuba,2017,6780.0,X
+CUB,Cuba,2018,7680.0,X
+CUB,Cuba,2019,7800.0,X
+CUB,Cuba,2020,7500.0,X
+CUB,Cuba,2021,9100.0,A
+CUB,Cuba,2022,6252.0,A
+CUB,Cuba,2023,6000.0,X
+CUB,Cuba,2024,6000.0,X
+COD,Democratic Republic of the Congo,1961,54000.0,X
+COD,Democratic Republic of the Congo,1962,66000.0,X
+COD,Democratic Republic of the Congo,1963,66000.0,X
+COD,Democratic Republic of the Congo,1964,57000.0,X
+COD,Democratic Republic of the Congo,1965,58500.0,X
+COD,Democratic Republic of the Congo,1966,54000.0,X
+COD,Democratic Republic of the Congo,1967,60000.0,X
+COD,Democratic Republic of the Congo,1968,63300.0,A
+COD,Democratic Republic of the Congo,1969,68000.0,A
+COD,Democratic Republic of the Congo,1970,69600.0,A
+COD,Democratic Republic of the Congo,1971,74600.0,A
+COD,Democratic Republic of the Congo,1972,79200.0,A
+COD,Democratic Republic of the Congo,1973,77700.0,A
+COD,Democratic Republic of the Congo,1974,77100.0,A
+COD,Democratic Republic of the Congo,1975,82500.0,A
+COD,Democratic Republic of the Congo,1976,91100.0,A
+COD,Democratic Republic of the Congo,1977,88500.0,A
+COD,Democratic Republic of the Congo,1978,85600.0,A
+COD,Democratic Republic of the Congo,1979,86700.0,A
+COD,Democratic Republic of the Congo,1980,89000.0,A
+COD,Democratic Republic of the Congo,1981,93400.0,A
+COD,Democratic Republic of the Congo,1982,93400.0,A
+COD,Democratic Republic of the Congo,1983,84200.0,A
+COD,Democratic Republic of the Congo,1984,92700.0,A
+COD,Democratic Republic of the Congo,1985,91600.0,A
+COD,Democratic Republic of the Congo,1986,95000.0,A
+COD,Democratic Republic of the Congo,1987,97200.0,A
+COD,Democratic Republic of the Congo,1988,103080.0,A
+COD,Democratic Republic of the Congo,1989,94740.0,A
+COD,Democratic Republic of the Congo,1990,101594.0,A
+COD,Democratic Republic of the Congo,1991,95000.0,A
+COD,Democratic Republic of the Congo,1992,92400.0,A
+COD,Democratic Republic of the Congo,1993,90109.0,A
+COD,Democratic Republic of the Congo,1994,88346.0,A
+COD,Democratic Republic of the Congo,1995,84714.0,A
+COD,Democratic Republic of the Congo,1996,73975.0,A
+COD,Democratic Republic of the Congo,1997,70299.0,A
+COD,Democratic Republic of the Congo,1998,55991.0,A
+COD,Democratic Republic of the Congo,1999,48605.0,A
+COD,Democratic Republic of the Congo,2000,46767.0,A
+COD,Democratic Republic of the Congo,2001,34723.0,A
+COD,Democratic Republic of the Congo,2002,32080.0,A
+COD,Democratic Republic of the Congo,2003,32050.0,A
+COD,Democratic Republic of the Congo,2004,32020.0,A
+COD,Democratic Republic of the Congo,2005,31990.0,A
+COD,Democratic Republic of the Congo,2006,31960.0,A
+COD,Democratic Republic of the Congo,2007,31930.0,A
+COD,Democratic Republic of the Congo,2008,31900.0,A
+COD,Democratic Republic of the Congo,2009,31870.0,A
+COD,Democratic Republic of the Congo,2010,31840.0,A
+COD,Democratic Republic of the Congo,2011,31810.0,A
+COD,Democratic Republic of the Congo,2012,31561.74,I
+COD,Democratic Republic of the Congo,2013,29700.71,I
+COD,Democratic Republic of the Congo,2014,28233.0,I
+COD,Democratic Republic of the Congo,2015,30999.41,I
+COD,Democratic Republic of the Congo,2016,29644.37,E
+COD,Democratic Republic of the Congo,2017,40342.18,I
+COD,Democratic Republic of the Congo,2018,51485.0,A
+COD,Democratic Republic of the Congo,2019,52940.0,A
+COD,Democratic Republic of the Congo,2020,53303.0,A
+COD,Democratic Republic of the Congo,2021,54159.65,I
+COD,Democratic Republic of the Congo,2022,58817.48,I
+COD,Democratic Republic of the Congo,2023,62405.41,I
+COD,Democratic Republic of the Congo,2024,65701.24,I
+DMA,Dominica,1961,0.0,A
+DMA,Dominica,1962,0.0,A
+DMA,Dominica,1963,0.0,A
+DMA,Dominica,1964,0.0,A
+DMA,Dominica,1965,0.0,A
+DMA,Dominica,1966,0.0,A
+DMA,Dominica,1967,0.0,A
+DMA,Dominica,1968,0.0,A
+DMA,Dominica,1969,0.0,A
+DMA,Dominica,1970,0.0,A
+DMA,Dominica,1971,0.0,A
+DMA,Dominica,1972,0.0,A
+DMA,Dominica,1973,0.0,A
+DMA,Dominica,1974,0.0,A
+DMA,Dominica,1975,0.0,A
+DMA,Dominica,1976,0.0,A
+DMA,Dominica,1977,0.0,A
+DMA,Dominica,1978,0.0,A
+DMA,Dominica,1979,171.0,A
+DMA,Dominica,1980,164.0,A
+DMA,Dominica,1981,168.0,A
+DMA,Dominica,1982,171.0,A
+DMA,Dominica,1983,175.0,A
+DMA,Dominica,1984,187.0,A
+DMA,Dominica,1985,192.0,A
+DMA,Dominica,1986,195.0,A
+DMA,Dominica,1987,192.0,A
+DMA,Dominica,1988,196.0,A
+DMA,Dominica,1989,193.0,A
+DMA,Dominica,1990,178.0,A
+DMA,Dominica,1991,205.0,A
+DMA,Dominica,1992,204.0,A
+DMA,Dominica,1993,340.0,A
+DMA,Dominica,1994,350.0,E
+DMA,Dominica,1995,348.79,I
+DMA,Dominica,1996,360.0,E
+DMA,Dominica,1997,359.62,I
+DMA,Dominica,1998,362.38,I
+DMA,Dominica,1999,370.0,E
+DMA,Dominica,2000,307.71,I
+DMA,Dominica,2001,289.72,I
+DMA,Dominica,2002,271.73,I
+DMA,Dominica,2003,253.74,I
+DMA,Dominica,2004,235.76,I
+DMA,Dominica,2005,217.8,I
+DMA,Dominica,2006,199.84,I
+DMA,Dominica,2007,82.0,A
+DMA,Dominica,2008,67.0,A
+DMA,Dominica,2009,58.0,A
+DMA,Dominica,2010,45.0,A
+DMA,Dominica,2011,498.0,A
+DMA,Dominica,2012,370.81,I
+DMA,Dominica,2013,370.55,I
+DMA,Dominica,2014,370.3,I
+DMA,Dominica,2015,370.1,I
+DMA,Dominica,2016,369.63,I
+DMA,Dominica,2017,369.36,I
+DMA,Dominica,2018,369.7,E
+DMA,Dominica,2019,353.64,I
+DMA,Dominica,2020,364.23,E
+DMA,Dominica,2021,362.53,E
+DMA,Dominica,2022,360.13,E
+DMA,Dominica,2023,362.3,E
+DMA,Dominica,2024,361.65,E
+DOM,Dominican Republic,1961,36210.0,A
+DOM,Dominican Republic,1962,45968.0,A
+DOM,Dominican Republic,1963,44783.0,A
+DOM,Dominican Republic,1964,51974.0,A
+DOM,Dominican Republic,1965,43072.0,A
+DOM,Dominican Republic,1966,44535.0,A
+DOM,Dominican Republic,1967,42400.0,A
+DOM,Dominican Republic,1968,44500.0,A
+DOM,Dominican Republic,1969,43550.0,A
+DOM,Dominican Republic,1970,42494.0,A
+DOM,Dominican Republic,1971,45000.0,A
+DOM,Dominican Republic,1972,45300.0,A
+DOM,Dominican Republic,1973,58682.0,A
+DOM,Dominican Republic,1974,54311.0,A
+DOM,Dominican Republic,1975,51855.0,A
+DOM,Dominican Republic,1976,56997.0,A
+DOM,Dominican Republic,1977,60208.0,A
+DOM,Dominican Republic,1978,43405.0,A
+DOM,Dominican Republic,1979,60391.0,A
+DOM,Dominican Republic,1980,60091.0,A
+DOM,Dominican Republic,1981,52206.0,A
+DOM,Dominican Republic,1982,63493.0,A
+DOM,Dominican Republic,1983,68027.0,A
+DOM,Dominican Republic,1984,72109.0,A
+DOM,Dominican Republic,1985,71965.0,A
+DOM,Dominican Republic,1986,68504.0,A
+DOM,Dominican Republic,1987,67134.0,A
+DOM,Dominican Republic,1988,67939.0,A
+DOM,Dominican Republic,1989,64611.0,A
+DOM,Dominican Republic,1990,59377.0,A
+DOM,Dominican Republic,1991,55222.0,A
+DOM,Dominican Republic,1992,42464.0,A
+DOM,Dominican Republic,1993,37744.0,A
+DOM,Dominican Republic,1994,32715.23,A
+DOM,Dominican Republic,1995,42407.33,A
+DOM,Dominican Republic,1996,47895.31,A
+DOM,Dominican Republic,1997,33997.01,A
+DOM,Dominican Republic,1998,56943.0,A
+DOM,Dominican Republic,1999,34609.0,A
+DOM,Dominican Republic,2000,45546.0,A
+DOM,Dominican Republic,2001,35476.0,A
+DOM,Dominican Republic,2002,37330.0,A
+DOM,Dominican Republic,2003,36929.0,A
+DOM,Dominican Republic,2004,35421.0,A
+DOM,Dominican Republic,2005,40303.0,A
+DOM,Dominican Republic,2006,41352.17,A
+DOM,Dominican Republic,2007,41231.97,A
+DOM,Dominican Republic,2008,35582.42,A
+DOM,Dominican Republic,2009,37950.0,A
+DOM,Dominican Republic,2010,21876.0,A
+DOM,Dominican Republic,2011,22679.85,A
+DOM,Dominican Republic,2012,27009.0,A
+DOM,Dominican Republic,2013,18552.12,A
+DOM,Dominican Republic,2014,13213.28,A
+DOM,Dominican Republic,2015,9888.42,A
+DOM,Dominican Republic,2016,11470.58,A
+DOM,Dominican Republic,2017,15241.0,A
+DOM,Dominican Republic,2018,18416.04,A
+DOM,Dominican Republic,2019,13873.31,A
+DOM,Dominican Republic,2020,15380.93,A
+DOM,Dominican Republic,2021,16558.97,A
+DOM,Dominican Republic,2022,20577.02,A
+DOM,Dominican Republic,2023,27397.26,A
+DOM,Dominican Republic,2024,24838.0,A
+ECU,Ecuador,1961,53500.0,A
+ECU,Ecuador,1962,55500.0,A
+ECU,Ecuador,1963,42800.0,A
+ECU,Ecuador,1964,47000.0,A
+ECU,Ecuador,1965,66200.0,A
+ECU,Ecuador,1966,57222.0,A
+ECU,Ecuador,1967,61731.0,A
+ECU,Ecuador,1968,60493.0,A
+ECU,Ecuador,1969,44345.0,A
+ECU,Ecuador,1970,72053.0,A
+ECU,Ecuador,1971,62252.0,A
+ECU,Ecuador,1972,71385.0,A
+ECU,Ecuador,1973,74980.0,A
+ECU,Ecuador,1974,69638.0,A
+ECU,Ecuador,1975,76437.0,A
+ECU,Ecuador,1976,87101.0,A
+ECU,Ecuador,1977,82680.0,A
+ECU,Ecuador,1978,75447.0,A
+ECU,Ecuador,1979,89728.0,A
+ECU,Ecuador,1980,69445.0,A
+ECU,Ecuador,1981,86085.0,A
+ECU,Ecuador,1982,83938.0,A
+ECU,Ecuador,1983,81075.0,A
+ECU,Ecuador,1984,97258.0,A
+ECU,Ecuador,1985,120861.0,A
+ECU,Ecuador,1986,118000.0,A
+ECU,Ecuador,1987,111720.0,X
+ECU,Ecuador,1988,144401.0,A
+ECU,Ecuador,1989,129309.0,A
+ECU,Ecuador,1990,134980.0,A
+ECU,Ecuador,1991,116917.0,A
+ECU,Ecuador,1992,137671.0,A
+ECU,Ecuador,1993,137004.0,A
+ECU,Ecuador,1994,186797.0,A
+ECU,Ecuador,1995,148205.0,A
+ECU,Ecuador,1996,168919.0,A
+ECU,Ecuador,1997,173868.0,A
+ECU,Ecuador,1998,48190.0,A
+ECU,Ecuador,1999,132939.0,A
+ECU,Ecuador,2000,27606.0,A
+ECU,Ecuador,2001,164790.0,A
+ECU,Ecuador,2002,23325.0,A
+ECU,Ecuador,2003,23579.0,A
+ECU,Ecuador,2004,27932.0,A
+ECU,Ecuador,2005,40805.0,A
+ECU,Ecuador,2006,31461.0,A
+ECU,Ecuador,2007,38687.0,A
+ECU,Ecuador,2008,32096.0,A
+ECU,Ecuador,2009,33624.0,A
+ECU,Ecuador,2010,31347.0,A
+ECU,Ecuador,2011,23829.0,A
+ECU,Ecuador,2012,7340.03,A
+ECU,Ecuador,2013,7760.0,A
+ECU,Ecuador,2014,4224.53,A
+ECU,Ecuador,2015,5297.44,A
+ECU,Ecuador,2016,3904.53,A
+ECU,Ecuador,2017,7564.0,A
+ECU,Ecuador,2018,5065.0,A
+ECU,Ecuador,2019,8140.98,A
+ECU,Ecuador,2020,5280.29,A
+ECU,Ecuador,2021,4916.87,A
+ECU,Ecuador,2022,7965.97,A
+ECU,Ecuador,2023,5584.19,A
+ECU,Ecuador,2024,5465.05,A
+SLV,El Salvador,1961,122500.0,A
+SLV,El Salvador,1962,98300.0,A
+SLV,El Salvador,1963,122700.0,A
+SLV,El Salvador,1964,123100.0,A
+SLV,El Salvador,1965,109200.0,A
+SLV,El Salvador,1966,123100.0,A
+SLV,El Salvador,1967,144800.0,A
+SLV,El Salvador,1968,123800.0,A
+SLV,El Salvador,1969,143980.0,A
+SLV,El Salvador,1970,129490.0,A
+SLV,El Salvador,1971,144624.0,A
+SLV,El Salvador,1972,147476.0,A
+SLV,El Salvador,1973,126500.0,A
+SLV,El Salvador,1974,159436.0,A
+SLV,El Salvador,1975,161415.0,A
+SLV,El Salvador,1976,138690.0,A
+SLV,El Salvador,1977,147465.0,A
+SLV,El Salvador,1978,158490.0,A
+SLV,El Salvador,1979,185625.0,A
+SLV,El Salvador,1980,184230.0,A
+SLV,El Salvador,1981,180000.0,A
+SLV,El Salvador,1982,174616.0,A
+SLV,El Salvador,1983,154560.0,A
+SLV,El Salvador,1984,163852.0,A
+SLV,El Salvador,1985,148810.0,A
+SLV,El Salvador,1986,138184.0,A
+SLV,El Salvador,1987,147890.0,A
+SLV,El Salvador,1988,120290.0,A
+SLV,El Salvador,1989,121900.0,A
+SLV,El Salvador,1990,147200.0,A
+SLV,El Salvador,1991,149450.0,A
+SLV,El Salvador,1992,175720.0,A
+SLV,El Salvador,1993,140576.0,A
+SLV,El Salvador,1994,140534.0,A
+SLV,El Salvador,1995,139513.0,A
+SLV,El Salvador,1996,148859.0,A
+SLV,El Salvador,1997,124239.0,A
+SLV,El Salvador,1998,117214.0,A
+SLV,El Salvador,1999,160782.0,A
+SLV,El Salvador,2000,114087.0,A
+SLV,El Salvador,2001,112201.0,A
+SLV,El Salvador,2002,91513.0,A
+SLV,El Salvador,2003,81157.0,A
+SLV,El Salvador,2004,83088.0,A
+SLV,El Salvador,2005,87963.0,A
+SLV,El Salvador,2006,85350.0,A
+SLV,El Salvador,2007,96355.0,A
+SLV,El Salvador,2008,97727.0,A
+SLV,El Salvador,2009,76591.0,A
+SLV,El Salvador,2010,112636.0,A
+SLV,El Salvador,2011,82095.0,A
+SLV,El Salvador,2012,89489.0,A
+SLV,El Salvador,2013,32864.0,A
+SLV,El Salvador,2014,41965.0,A
+SLV,El Salvador,2015,35682.0,A
+SLV,El Salvador,2016,38636.0,A
+SLV,El Salvador,2017,41141.36,A
+SLV,El Salvador,2018,43318.8,A
+SLV,El Salvador,2019,33640.91,A
+SLV,El Salvador,2020,35000.0,A
+SLV,El Salvador,2021,41910.91,A
+SLV,El Salvador,2022,41866.0,A
+SLV,El Salvador,2023,32570.72,I
+SLV,El Salvador,2024,28487.64,I
+GNQ,Equatorial Guinea,1961,6600.0,A
+GNQ,Equatorial Guinea,1962,8100.0,A
+GNQ,Equatorial Guinea,1963,6700.0,A
+GNQ,Equatorial Guinea,1964,8235.0,A
+GNQ,Equatorial Guinea,1965,6664.0,A
+GNQ,Equatorial Guinea,1966,6400.0,A
+GNQ,Equatorial Guinea,1967,8700.0,X
+GNQ,Equatorial Guinea,1968,7500.0,X
+GNQ,Equatorial Guinea,1969,7200.0,X
+GNQ,Equatorial Guinea,1970,7200.0,X
+GNQ,Equatorial Guinea,1971,6900.0,X
+GNQ,Equatorial Guinea,1972,6900.0,X
+GNQ,Equatorial Guinea,1973,6300.0,X
+GNQ,Equatorial Guinea,1974,6600.0,X
+GNQ,Equatorial Guinea,1975,5400.0,X
+GNQ,Equatorial Guinea,1976,5400.0,X
+GNQ,Equatorial Guinea,1977,4800.0,X
+GNQ,Equatorial Guinea,1978,5400.0,X
+GNQ,Equatorial Guinea,1979,6000.0,X
+GNQ,Equatorial Guinea,1980,6000.0,X
+GNQ,Equatorial Guinea,1981,6600.0,X
+GNQ,Equatorial Guinea,1982,6700.0,E
+GNQ,Equatorial Guinea,1983,6700.0,E
+GNQ,Equatorial Guinea,1984,6800.0,E
+GNQ,Equatorial Guinea,1985,7000.0,E
+GNQ,Equatorial Guinea,1986,7000.0,E
+GNQ,Equatorial Guinea,1987,7000.0,E
+GNQ,Equatorial Guinea,1988,7000.0,E
+GNQ,Equatorial Guinea,1989,7000.0,E
+GNQ,Equatorial Guinea,1990,6500.0,E
+GNQ,Equatorial Guinea,1991,6000.0,E
+GNQ,Equatorial Guinea,1992,5500.0,E
+GNQ,Equatorial Guinea,1993,5329.48,I
+GNQ,Equatorial Guinea,1994,5000.0,E
+GNQ,Equatorial Guinea,1995,4500.0,E
+GNQ,Equatorial Guinea,1996,5000.0,X
+GNQ,Equatorial Guinea,1997,5000.0,X
+GNQ,Equatorial Guinea,1998,5000.0,X
+GNQ,Equatorial Guinea,1999,3500.0,A
+GNQ,Equatorial Guinea,2000,5000.0,X
+GNQ,Equatorial Guinea,2001,5000.0,X
+GNQ,Equatorial Guinea,2002,5000.0,X
+GNQ,Equatorial Guinea,2003,5000.0,X
+GNQ,Equatorial Guinea,2004,4000.0,X
+GNQ,Equatorial Guinea,2005,4000.0,X
+GNQ,Equatorial Guinea,2006,4500.0,E
+GNQ,Equatorial Guinea,2007,4397.59,I
+GNQ,Equatorial Guinea,2008,4299.55,I
+GNQ,Equatorial Guinea,2009,4000.0,E
+GNQ,Equatorial Guinea,2010,4250.71,I
+GNQ,Equatorial Guinea,2011,4342.63,I
+GNQ,Equatorial Guinea,2012,4594.72,I
+GNQ,Equatorial Guinea,2013,4401.74,I
+GNQ,Equatorial Guinea,2014,4385.48,I
+GNQ,Equatorial Guinea,2015,4254.38,I
+GNQ,Equatorial Guinea,2016,4174.11,I
+GNQ,Equatorial Guinea,2017,4134.3,I
+GNQ,Equatorial Guinea,2018,4113.44,I
+GNQ,Equatorial Guinea,2019,4094.87,I
+GNQ,Equatorial Guinea,2020,4056.41,I
+GNQ,Equatorial Guinea,2021,4062.25,I
+GNQ,Equatorial Guinea,2022,4076.41,I
+GNQ,Equatorial Guinea,2023,4055.45,I
+GNQ,Equatorial Guinea,2024,4034.35,I
+ETH,Ethiopia,1993,180000.0,X
+ETH,Ethiopia,1994,207000.0,X
+ETH,Ethiopia,1995,229980.0,X
+ETH,Ethiopia,1996,229980.0,X
+ETH,Ethiopia,1997,228000.0,X
+ETH,Ethiopia,1998,229980.0,X
+ETH,Ethiopia,1999,217450.0,A
+ETH,Ethiopia,2000,229980.0,X
+ETH,Ethiopia,2001,157155.0,A
+ETH,Ethiopia,2002,160000.0,E
+ETH,Ethiopia,2003,126188.0,A
+ETH,Ethiopia,2004,156170.0,A
+ETH,Ethiopia,2005,171631.0,A
+ETH,Ethiopia,2006,241482.0,A
+ETH,Ethiopia,2007,273400.0,A
+ETH,Ethiopia,2008,260239.0,A
+ETH,Ethiopia,2009,265469.0,A
+ETH,Ethiopia,2010,370569.0,A
+ETH,Ethiopia,2011,442270.0,E
+ETH,Ethiopia,2012,449740.0,E
+ETH,Ethiopia,2013,392006.0,A
+ETH,Ethiopia,2014,467860.0,E
+ETH,Ethiopia,2015,501240.0,E
+ETH,Ethiopia,2016,494819.0,A
+ETH,Ethiopia,2017,549531.0,A
+ETH,Ethiopia,2018,573986.0,A
+ETH,Ethiopia,2019,573580.0,E
+ETH,Ethiopia,2020,584789.57,A
+ETH,Ethiopia,2021,590400.0,E
+ETH,Ethiopia,2022,545566.36,A
+ETH,Ethiopia,2023,559400.0,X
+ETH,Ethiopia,2024,575696.18,I
+ETH,Ethiopia PDR,1961,127400.0,X
+ETH,Ethiopia PDR,1962,132700.0,A
+ETH,Ethiopia PDR,1963,139100.0,A
+ETH,Ethiopia PDR,1964,170400.0,A
+ETH,Ethiopia PDR,1965,140000.0,A
+ETH,Ethiopia PDR,1966,140000.0,A
+ETH,Ethiopia PDR,1967,155000.0,A
+ETH,Ethiopia PDR,1968,160000.0,A
+ETH,Ethiopia PDR,1969,165000.0,A
+ETH,Ethiopia PDR,1970,170000.0,A
+ETH,Ethiopia PDR,1971,182200.0,X
+ETH,Ethiopia PDR,1972,163500.0,X
+ETH,Ethiopia PDR,1973,180080.0,X
+ETH,Ethiopia PDR,1974,153400.0,X
+ETH,Ethiopia PDR,1975,171000.0,X
+ETH,Ethiopia PDR,1976,178600.0,X
+ETH,Ethiopia PDR,1977,191400.0,X
+ETH,Ethiopia PDR,1978,190000.0,A
+ETH,Ethiopia PDR,1979,188000.0,A
+ETH,Ethiopia PDR,1980,187200.0,A
+ETH,Ethiopia PDR,1981,202000.0,A
+ETH,Ethiopia PDR,1982,202000.0,A
+ETH,Ethiopia PDR,1983,157824.0,A
+ETH,Ethiopia PDR,1984,145306.0,A
+ETH,Ethiopia PDR,1985,155200.0,A
+ETH,Ethiopia PDR,1986,186000.0,A
+ETH,Ethiopia PDR,1987,186000.0,A
+ETH,Ethiopia PDR,1988,190000.0,A
+ETH,Ethiopia PDR,1989,200000.0,A
+ETH,Ethiopia PDR,1990,204000.0,A
+ETH,Ethiopia PDR,1991,210000.0,A
+ETH,Ethiopia PDR,1992,216000.0,A
+FJI,Fiji,1961,0.0,A
+FJI,Fiji,1962,1.0,A
+FJI,Fiji,1963,1.0,A
+FJI,Fiji,1964,1.0,A
+FJI,Fiji,1965,1.0,A
+FJI,Fiji,1966,2.0,E
+FJI,Fiji,1967,5.0,A
+FJI,Fiji,1968,8.0,E
+FJI,Fiji,1969,11.0,A
+FJI,Fiji,1970,11.0,E
+FJI,Fiji,1971,13.0,E
+FJI,Fiji,1972,13.0,E
+FJI,Fiji,1973,13.0,E
+FJI,Fiji,1974,13.0,E
+FJI,Fiji,1975,15.0,E
+FJI,Fiji,1976,15.0,E
+FJI,Fiji,1977,15.0,E
+FJI,Fiji,1978,20.0,E
+FJI,Fiji,1979,20.0,E
+FJI,Fiji,1980,20.0,E
+FJI,Fiji,1981,20.0,E
+FJI,Fiji,1982,30.0,X
+FJI,Fiji,1983,40.0,X
+FJI,Fiji,1984,30.0,A
+FJI,Fiji,1985,40.0,E
+FJI,Fiji,1986,45.0,A
+FJI,Fiji,1987,30.0,A
+FJI,Fiji,1988,63.0,A
+FJI,Fiji,1989,97.0,A
+FJI,Fiji,1990,660.0,A
+FJI,Fiji,1991,354.0,A
+FJI,Fiji,1992,226.0,A
+FJI,Fiji,1993,176.0,A
+FJI,Fiji,1994,11.0,A
+FJI,Fiji,1995,10.0,E
+FJI,Fiji,1996,10.48,I
+FJI,Fiji,1997,11.02,I
+FJI,Fiji,1998,10.85,I
+FJI,Fiji,1999,10.62,I
+FJI,Fiji,2000,15.0,E
+FJI,Fiji,2001,16.15,I
+FJI,Fiji,2002,15.0,E
+FJI,Fiji,2003,15.1,I
+FJI,Fiji,2004,15.01,I
+FJI,Fiji,2005,15.0,A
+FJI,Fiji,2006,14.43,I
+FJI,Fiji,2007,14.76,I
+FJI,Fiji,2008,14.85,I
+FJI,Fiji,2009,15.0,E
+FJI,Fiji,2010,15.15,I
+FJI,Fiji,2011,16.47,I
+FJI,Fiji,2012,17.83,I
+FJI,Fiji,2013,20.0,E
+FJI,Fiji,2014,21.14,I
+FJI,Fiji,2015,7.76,I
+FJI,Fiji,2016,16.3,E
+FJI,Fiji,2017,15.07,E
+FJI,Fiji,2018,13.04,E
+FJI,Fiji,2019,14.8,E
+FJI,Fiji,2020,14.3,E
+FJI,Fiji,2021,14.05,E
+FJI,Fiji,2022,14.38,E
+FJI,Fiji,2023,14.25,E
+FJI,Fiji,2024,14.23,E
+GAB,Gabon,1961,1100.0,X
+GAB,Gabon,1962,2500.0,A
+GAB,Gabon,1963,1100.0,E
+GAB,Gabon,1964,1100.0,E
+GAB,Gabon,1965,1100.0,E
+GAB,Gabon,1966,900.0,X
+GAB,Gabon,1967,900.0,X
+GAB,Gabon,1968,1200.0,X
+GAB,Gabon,1969,1200.0,X
+GAB,Gabon,1970,900.0,X
+GAB,Gabon,1971,600.0,X
+GAB,Gabon,1972,900.0,X
+GAB,Gabon,1973,540.0,X
+GAB,Gabon,1974,600.0,X
+GAB,Gabon,1975,259.0,A
+GAB,Gabon,1976,145.0,A
+GAB,Gabon,1977,360.0,A
+GAB,Gabon,1978,502.0,A
+GAB,Gabon,1979,269.0,A
+GAB,Gabon,1980,680.0,A
+GAB,Gabon,1981,750.0,X
+GAB,Gabon,1982,1850.0,A
+GAB,Gabon,1983,1400.0,A
+GAB,Gabon,1984,1200.0,E
+GAB,Gabon,1985,1295.0,A
+GAB,Gabon,1986,1332.0,A
+GAB,Gabon,1987,1724.0,A
+GAB,Gabon,1988,1774.0,A
+GAB,Gabon,1989,1920.0,X
+GAB,Gabon,1990,269.0,A
+GAB,Gabon,1991,451.0,A
+GAB,Gabon,1992,193.0,A
+GAB,Gabon,1993,256.0,A
+GAB,Gabon,1994,259.0,A
+GAB,Gabon,1995,159.0,A
+GAB,Gabon,1996,219.0,A
+GAB,Gabon,1997,154.0,A
+GAB,Gabon,1998,145.0,A
+GAB,Gabon,1999,125.0,A
+GAB,Gabon,2000,198.0,A
+GAB,Gabon,2001,78.0,A
+GAB,Gabon,2002,180.0,X
+GAB,Gabon,2003,120.0,X
+GAB,Gabon,2004,134.33,I
+GAB,Gabon,2005,100.0,A
+GAB,Gabon,2006,120.0,X
+GAB,Gabon,2007,125.0,E
+GAB,Gabon,2008,125.99,I
+GAB,Gabon,2009,122.8,I
+GAB,Gabon,2010,121.76,I
+GAB,Gabon,2011,118.56,I
+GAB,Gabon,2012,117.01,I
+GAB,Gabon,2013,114.28,I
+GAB,Gabon,2014,109.37,I
+GAB,Gabon,2015,107.33,I
+GAB,Gabon,2016,104.51,I
+GAB,Gabon,2017,102.42,I
+GAB,Gabon,2018,104.75,E
+GAB,Gabon,2019,103.9,E
+GAB,Gabon,2020,103.69,E
+GAB,Gabon,2021,104.11,E
+GAB,Gabon,2022,103.9,E
+GAB,Gabon,2023,103.9,E
+GAB,Gabon,2024,103.97,E
+GHA,Ghana,1961,1700.0,A
+GHA,Ghana,1962,3920.0,A
+GHA,Ghana,1963,2650.0,A
+GHA,Ghana,1964,6700.0,A
+GHA,Ghana,1965,1644.0,A
+GHA,Ghana,1966,8610.0,A
+GHA,Ghana,1967,4057.0,A
+GHA,Ghana,1968,6440.0,A
+GHA,Ghana,1969,4700.0,X
+GHA,Ghana,1970,6510.0,E
+GHA,Ghana,1971,7322.0,E
+GHA,Ghana,1972,7550.0,E
+GHA,Ghana,1973,3910.0,E
+GHA,Ghana,1974,2455.0,E
+GHA,Ghana,1975,4000.0,E
+GHA,Ghana,1976,5500.0,E
+GHA,Ghana,1977,3800.0,E
+GHA,Ghana,1978,1770.0,E
+GHA,Ghana,1979,1700.0,E
+GHA,Ghana,1980,1500.0,X
+GHA,Ghana,1981,1500.0,X
+GHA,Ghana,1982,1500.0,X
+GHA,Ghana,1983,1300.0,X
+GHA,Ghana,1984,700.0,X
+GHA,Ghana,1985,500.0,X
+GHA,Ghana,1986,531.0,A
+GHA,Ghana,1987,791.0,A
+GHA,Ghana,1988,377.0,A
+GHA,Ghana,1989,700.0,X
+GHA,Ghana,1990,1000.0,X
+GHA,Ghana,1991,2300.0,X
+GHA,Ghana,1992,2400.0,X
+GHA,Ghana,1993,4000.0,X
+GHA,Ghana,1994,3000.0,X
+GHA,Ghana,1995,3575.44,I
+GHA,Ghana,1996,6330.0,A
+GHA,Ghana,1997,2880.0,A
+GHA,Ghana,1998,8370.0,A
+GHA,Ghana,1999,3965.0,A
+GHA,Ghana,2000,1956.0,A
+GHA,Ghana,2001,1379.0,A
+GHA,Ghana,2002,1464.0,A
+GHA,Ghana,2003,900.0,A
+GHA,Ghana,2004,1140.0,A
+GHA,Ghana,2005,1200.0,X
+GHA,Ghana,2006,1740.0,X
+GHA,Ghana,2007,1860.0,X
+GHA,Ghana,2008,1620.0,X
+GHA,Ghana,2009,1860.0,X
+GHA,Ghana,2010,1200.0,X
+GHA,Ghana,2011,550.0,A
+GHA,Ghana,2012,600.0,A
+GHA,Ghana,2013,698.0,A
+GHA,Ghana,2014,736.0,A
+GHA,Ghana,2015,736.0,A
+GHA,Ghana,2016,736.0,X
+GHA,Ghana,2017,736.0,E
+GHA,Ghana,2018,736.0,E
+GHA,Ghana,2019,736.0,E
+GHA,Ghana,2020,736.0,E
+GHA,Ghana,2021,736.0,E
+GHA,Ghana,2022,736.0,E
+GHA,Ghana,2023,736.0,E
+GHA,Ghana,2024,736.0,E
+GLP,Guadeloupe,1961,500.0,A
+GLP,Guadeloupe,1962,500.0,A
+GLP,Guadeloupe,1963,300.0,A
+GLP,Guadeloupe,1964,400.0,A
+GLP,Guadeloupe,1965,200.0,E
+GLP,Guadeloupe,1966,300.0,X
+GLP,Guadeloupe,1967,300.0,A
+GLP,Guadeloupe,1968,300.0,X
+GLP,Guadeloupe,1969,300.0,E
+GLP,Guadeloupe,1970,300.0,A
+GLP,Guadeloupe,1971,270.0,A
+GLP,Guadeloupe,1972,220.0,A
+GLP,Guadeloupe,1973,180.0,A
+GLP,Guadeloupe,1974,120.0,A
+GLP,Guadeloupe,1975,100.0,A
+GLP,Guadeloupe,1976,116.0,A
+GLP,Guadeloupe,1977,95.0,A
+GLP,Guadeloupe,1978,20.0,A
+GLP,Guadeloupe,1979,20.0,A
+GLP,Guadeloupe,1980,10.0,A
+GLP,Guadeloupe,1981,10.0,E
+GLP,Guadeloupe,1982,10.0,A
+GLP,Guadeloupe,1983,20.0,A
+GLP,Guadeloupe,1984,40.0,A
+GLP,Guadeloupe,1985,40.0,E
+GLP,Guadeloupe,1986,26.0,A
+GLP,Guadeloupe,1987,40.0,A
+GLP,Guadeloupe,1988,40.0,E
+GLP,Guadeloupe,1989,35.0,E
+GLP,Guadeloupe,1990,20.0,E
+GLP,Guadeloupe,1991,20.0,A
+GLP,Guadeloupe,1992,47.0,A
+GLP,Guadeloupe,1993,53.0,A
+GLP,Guadeloupe,1994,23.0,A
+GLP,Guadeloupe,1995,15.12,I
+GLP,Guadeloupe,1996,23.94,I
+GLP,Guadeloupe,1997,27.0,E
+GLP,Guadeloupe,1998,29.0,E
+GLP,Guadeloupe,1999,32.0,E
+GLP,Guadeloupe,2000,35.0,X
+GLP,Guadeloupe,2001,35.0,X
+GLP,Guadeloupe,2002,35.0,X
+GLP,Guadeloupe,2003,30.0,X
+GLP,Guadeloupe,2004,19.0,X
+GLP,Guadeloupe,2005,25.0,E
+GLP,Guadeloupe,2006,24.44,I
+GTM,Guatemala,1961,100600.0,A
+GTM,Guatemala,1962,117700.0,A
+GTM,Guatemala,1963,104400.0,A
+GTM,Guatemala,1964,105200.0,A
+GTM,Guatemala,1965,126100.0,A
+GTM,Guatemala,1966,106200.0,A
+GTM,Guatemala,1967,102363.0,A
+GTM,Guatemala,1968,112392.0,A
+GTM,Guatemala,1969,118685.0,A
+GTM,Guatemala,1970,126546.0,A
+GTM,Guatemala,1971,128386.0,A
+GTM,Guatemala,1972,142682.0,A
+GTM,Guatemala,1973,145642.0,A
+GTM,Guatemala,1974,157437.0,A
+GTM,Guatemala,1975,139091.0,A
+GTM,Guatemala,1976,158433.0,A
+GTM,Guatemala,1977,168217.0,A
+GTM,Guatemala,1978,169636.0,A
+GTM,Guatemala,1979,164810.0,A
+GTM,Guatemala,1980,177430.0,A
+GTM,Guatemala,1981,193830.0,A
+GTM,Guatemala,1982,189330.0,A
+GTM,Guatemala,1983,183010.0,A
+GTM,Guatemala,1984,196610.0,A
+GTM,Guatemala,1985,181630.0,A
+GTM,Guatemala,1986,196560.0,A
+GTM,Guatemala,1987,193200.0,A
+GTM,Guatemala,1988,179400.0,A
+GTM,Guatemala,1989,193200.0,A
+GTM,Guatemala,1990,202400.0,A
+GTM,Guatemala,1991,196190.0,A
+GTM,Guatemala,1992,206586.0,A
+GTM,Guatemala,1993,208650.0,A
+GTM,Guatemala,1994,213900.0,A
+GTM,Guatemala,1995,210920.0,A
+GTM,Guatemala,1996,240300.0,X
+GTM,Guatemala,1997,271440.0,X
+GTM,Guatemala,1998,253080.0,X
+GTM,Guatemala,1999,293520.0,X
+GTM,Guatemala,2000,312060.0,X
+GTM,Guatemala,2001,261096.84,A
+GTM,Guatemala,2002,255091.28,A
+GTM,Guatemala,2003,244200.0,X
+GTM,Guatemala,2004,250279.0,A
+GTM,Guatemala,2005,248277.0,A
+GTM,Guatemala,2006,240331.38,A
+GTM,Guatemala,2007,248613.98,A
+GTM,Guatemala,2008,254914.38,A
+GTM,Guatemala,2009,247502.68,A
+GTM,Guatemala,2010,248355.43,A
+GTM,Guatemala,2011,265401.43,A
+GTM,Guatemala,2012,272432.0,A
+GTM,Guatemala,2013,248668.0,A
+GTM,Guatemala,2014,227653.47,A
+GTM,Guatemala,2015,225653.13,A
+GTM,Guatemala,2016,236144.72,A
+GTM,Guatemala,2017,224000.0,X
+GTM,Guatemala,2018,240400.0,X
+GTM,Guatemala,2019,216400.0,X
+GTM,Guatemala,2020,246000.0,X
+GTM,Guatemala,2021,226700.0,X
+GTM,Guatemala,2022,238354.0,A
+GTM,Guatemala,2023,212848.0,A
+GTM,Guatemala,2024,224860.0,A
+GIN,Guinea,1961,15000.0,X
+GIN,Guinea,1962,13000.0,X
+GIN,Guinea,1963,12300.0,X
+GIN,Guinea,1964,9000.0,X
+GIN,Guinea,1965,9600.0,X
+GIN,Guinea,1966,13000.0,X
+GIN,Guinea,1967,13000.0,X
+GIN,Guinea,1968,14500.0,X
+GIN,Guinea,1969,10000.0,X
+GIN,Guinea,1970,11500.0,E
+GIN,Guinea,1971,12500.0,E
+GIN,Guinea,1972,13000.0,E
+GIN,Guinea,1973,13673.0,A
+GIN,Guinea,1974,13809.0,A
+GIN,Guinea,1975,13949.0,A
+GIN,Guinea,1976,13975.0,A
+GIN,Guinea,1977,14121.0,A
+GIN,Guinea,1978,14283.0,A
+GIN,Guinea,1979,14405.0,A
+GIN,Guinea,1980,14400.0,A
+GIN,Guinea,1981,14400.0,A
+GIN,Guinea,1982,14500.0,A
+GIN,Guinea,1983,14700.0,A
+GIN,Guinea,1984,14800.0,A
+GIN,Guinea,1985,14900.0,A
+GIN,Guinea,1986,6500.0,X
+GIN,Guinea,1987,6500.0,X
+GIN,Guinea,1988,20000.0,A
+GIN,Guinea,1989,27500.0,A
+GIN,Guinea,1990,30000.0,A
+GIN,Guinea,1991,30000.0,A
+GIN,Guinea,1992,28804.0,A
+GIN,Guinea,1993,28800.0,E
+GIN,Guinea,1994,30000.0,A
+GIN,Guinea,1995,28000.0,E
+GIN,Guinea,1996,22750.0,A
+GIN,Guinea,1997,20000.0,X
+GIN,Guinea,1998,20888.0,A
+GIN,Guinea,1999,22119.47,I
+GIN,Guinea,2000,22080.0,A
+GIN,Guinea,2001,14160.0,A
+GIN,Guinea,2002,19680.0,A
+GIN,Guinea,2003,20880.0,A
+GIN,Guinea,2004,20220.0,A
+GIN,Guinea,2005,20770.0,A
+GIN,Guinea,2006,23226.0,A
+GIN,Guinea,2007,26556.0,A
+GIN,Guinea,2008,27353.0,A
+GIN,Guinea,2009,28173.0,A
+GIN,Guinea,2010,29018.0,A
+GIN,Guinea,2011,30320.0,A
+GIN,Guinea,2012,17907.0,A
+GIN,Guinea,2013,18440.0,A
+GIN,Guinea,2014,41500.0,A
+GIN,Guinea,2015,210866.0,A
+GIN,Guinea,2016,218635.0,A
+GIN,Guinea,2017,216691.0,A
+GIN,Guinea,2018,235043.0,A
+GIN,Guinea,2019,243703.0,A
+GIN,Guinea,2020,242682.0,A
+GIN,Guinea,2021,261992.0,A
+GIN,Guinea,2022,261645.0,A
+GIN,Guinea,2023,200000.0,X
+GIN,Guinea,2024,174847.18,I
+GUY,Guyana,1961,860.0,A
+GUY,Guyana,1962,1039.0,A
+GUY,Guyana,1963,659.0,A
+GUY,Guyana,1964,1129.0,A
+GUY,Guyana,1965,1156.0,A
+GUY,Guyana,1966,1122.0,A
+GUY,Guyana,1967,1290.0,A
+GUY,Guyana,1968,1302.0,A
+GUY,Guyana,1969,684.0,A
+GUY,Guyana,1970,703.0,A
+GUY,Guyana,1971,761.0,A
+GUY,Guyana,1972,762.0,A
+GUY,Guyana,1973,746.0,A
+GUY,Guyana,1974,900.0,X
+GUY,Guyana,1975,900.0,X
+GUY,Guyana,1976,900.0,X
+GUY,Guyana,1977,1020.0,X
+GUY,Guyana,1978,1140.0,X
+GUY,Guyana,1979,1320.0,X
+GUY,Guyana,1980,1560.0,X
+GUY,Guyana,1981,1560.0,X
+GUY,Guyana,1982,1260.0,X
+GUY,Guyana,1983,1020.0,X
+GUY,Guyana,1984,358.0,A
+GUY,Guyana,1985,370.0,A
+GUY,Guyana,1986,430.0,A
+GUY,Guyana,1987,240.0,X
+GUY,Guyana,1988,300.0,X
+GUY,Guyana,1989,300.0,X
+GUY,Guyana,1990,300.0,X
+GUY,Guyana,1991,300.0,X
+GUY,Guyana,1992,300.0,X
+GUY,Guyana,1993,300.0,X
+GUY,Guyana,1994,300.0,X
+GUY,Guyana,1995,300.0,A
+GUY,Guyana,1996,285.0,A
+GUY,Guyana,1997,261.0,A
+GUY,Guyana,1998,136.0,A
+GUY,Guyana,1999,140.0,E
+GUY,Guyana,2000,15.0,A
+GUY,Guyana,2001,153.0,A
+GUY,Guyana,2002,300.0,X
+GUY,Guyana,2003,480.0,X
+GUY,Guyana,2004,480.0,X
+GUY,Guyana,2005,480.0,X
+GUY,Guyana,2006,480.0,X
+GUY,Guyana,2007,480.0,X
+GUY,Guyana,2008,480.0,X
+GUY,Guyana,2009,420.0,X
+GUY,Guyana,2010,420.0,X
+GUY,Guyana,2011,420.0,X
+GUY,Guyana,2012,420.0,X
+GUY,Guyana,2013,420.0,X
+GUY,Guyana,2014,420.0,X
+GUY,Guyana,2015,420.0,X
+GUY,Guyana,2016,420.0,X
+GUY,Guyana,2017,420.0,X
+GUY,Guyana,2018,475.0,A
+GUY,Guyana,2019,654.0,A
+GUY,Guyana,2020,600.0,X
+GUY,Guyana,2021,600.0,X
+GUY,Guyana,2022,567.0,A
+GUY,Guyana,2023,133.0,A
+GUY,Guyana,2024,151.0,A
+HTI,Haiti,1961,45720.0,A
+HTI,Haiti,1962,31860.0,A
+HTI,Haiti,1963,34980.0,A
+HTI,Haiti,1964,36000.0,A
+HTI,Haiti,1965,36720.0,A
+HTI,Haiti,1966,30540.0,A
+HTI,Haiti,1967,31600.0,A
+HTI,Haiti,1968,30180.0,A
+HTI,Haiti,1969,27000.0,A
+HTI,Haiti,1970,32610.0,A
+HTI,Haiti,1971,32400.0,A
+HTI,Haiti,1972,31500.0,X
+HTI,Haiti,1973,33000.0,X
+HTI,Haiti,1974,31200.0,X
+HTI,Haiti,1975,39000.0,X
+HTI,Haiti,1976,32280.0,X
+HTI,Haiti,1977,31140.0,X
+HTI,Haiti,1978,26580.0,X
+HTI,Haiti,1979,40140.0,X
+HTI,Haiti,1980,42900.0,A
+HTI,Haiti,1981,33250.0,A
+HTI,Haiti,1982,32250.0,A
+HTI,Haiti,1983,36000.0,A
+HTI,Haiti,1984,37250.0,A
+HTI,Haiti,1985,36900.0,A
+HTI,Haiti,1986,37752.0,A
+HTI,Haiti,1987,30088.0,A
+HTI,Haiti,1988,37693.0,A
+HTI,Haiti,1989,38447.0,A
+HTI,Haiti,1990,37200.0,A
+HTI,Haiti,1991,37000.0,E
+HTI,Haiti,1992,27355.0,A
+HTI,Haiti,1993,33600.0,X
+HTI,Haiti,1994,31000.0,E
+HTI,Haiti,1995,29000.0,E
+HTI,Haiti,1996,27000.0,A
+HTI,Haiti,1997,29154.62,I
+HTI,Haiti,1998,27239.0,A
+HTI,Haiti,1999,28000.0,E
+HTI,Haiti,2000,30000.0,A
+HTI,Haiti,2001,28000.0,A
+HTI,Haiti,2002,27000.0,A
+HTI,Haiti,2003,30000.0,A
+HTI,Haiti,2004,29000.0,A
+HTI,Haiti,2005,35000.0,A
+HTI,Haiti,2006,35000.0,A
+HTI,Haiti,2007,47000.0,A
+HTI,Haiti,2008,35000.0,A
+HTI,Haiti,2009,21022.0,X
+HTI,Haiti,2010,20968.0,X
+HTI,Haiti,2011,20958.0,X
+HTI,Haiti,2012,20930.0,X
+HTI,Haiti,2013,10320.0,X
+HTI,Haiti,2014,3600.0,X
+HTI,Haiti,2015,3660.0,X
+HTI,Haiti,2016,3840.0,X
+HTI,Haiti,2017,3969.0,X
+HTI,Haiti,2018,4167.0,X
+HTI,Haiti,2019,4376.0,X
+HTI,Haiti,2020,4595.0,X
+HTI,Haiti,2021,4824.0,X
+HTI,Haiti,2022,5066.0,X
+HTI,Haiti,2023,5021.3,I
+HTI,Haiti,2024,4371.49,I
+HND,Honduras,1961,21450.0,A
+HND,Honduras,1962,27939.0,A
+HND,Honduras,1963,29014.0,A
+HND,Honduras,1964,29276.0,A
+HND,Honduras,1965,32195.0,A
+HND,Honduras,1966,33569.0,A
+HND,Honduras,1967,35041.0,A
+HND,Honduras,1968,36512.0,A
+HND,Honduras,1969,37984.0,A
+HND,Honduras,1970,39456.0,A
+HND,Honduras,1971,40927.0,A
+HND,Honduras,1972,42399.0,A
+HND,Honduras,1973,41778.0,A
+HND,Honduras,1974,45342.0,A
+HND,Honduras,1975,46814.0,A
+HND,Honduras,1976,48285.0,A
+HND,Honduras,1977,49757.0,A
+HND,Honduras,1978,59796.0,A
+HND,Honduras,1979,72547.0,A
+HND,Honduras,1980,64228.0,A
+HND,Honduras,1981,75347.0,A
+HND,Honduras,1982,72420.0,A
+HND,Honduras,1983,79474.0,A
+HND,Honduras,1984,72545.0,A
+HND,Honduras,1985,75091.0,A
+HND,Honduras,1986,76318.0,A
+HND,Honduras,1987,79877.0,A
+HND,Honduras,1988,94046.0,A
+HND,Honduras,1989,100234.0,A
+HND,Honduras,1990,119784.0,A
+HND,Honduras,1991,101890.0,A
+HND,Honduras,1992,111660.0,A
+HND,Honduras,1993,110481.0,A
+HND,Honduras,1994,126182.0,A
+HND,Honduras,1995,132400.0,A
+HND,Honduras,1996,148830.0,A
+HND,Honduras,1997,162658.0,A
+HND,Honduras,1998,172772.0,A
+HND,Honduras,1999,157409.0,A
+HND,Honduras,2000,193309.0,A
+HND,Honduras,2001,205545.0,A
+HND,Honduras,2002,172727.0,A
+HND,Honduras,2003,175284.0,A
+HND,Honduras,2004,185090.0,A
+HND,Honduras,2005,190640.0,A
+HND,Honduras,2006,213636.0,A
+HND,Honduras,2007,236302.0,A
+HND,Honduras,2008,240948.0,A
+HND,Honduras,2009,231288.0,A
+HND,Honduras,2010,244335.0,A
+HND,Honduras,2011,284347.0,A
+HND,Honduras,2012,343403.0,A
+HND,Honduras,2013,280697.0,A
+HND,Honduras,2014,282230.0,A
+HND,Honduras,2015,332747.0,A
+HND,Honduras,2016,366542.0,A
+HND,Honduras,2017,477580.0,A
+HND,Honduras,2018,478830.76,A
+HND,Honduras,2019,472497.96,A
+HND,Honduras,2020,364552.38,A
+HND,Honduras,2021,417591.24,A
+HND,Honduras,2022,330111.31,A
+HND,Honduras,2023,384361.02,A
+HND,Honduras,2024,324015.02,A
+IND,India,1961,43200.0,A
+IND,India,1962,46000.0,A
+IND,India,1963,56200.0,A
+IND,India,1964,69300.0,A
+IND,India,1965,60900.0,A
+IND,India,1966,63900.0,A
+IND,India,1967,78500.0,A
+IND,India,1968,57331.0,A
+IND,India,1969,73430.0,A
+IND,India,1970,63619.0,A
+IND,India,1971,110231.0,A
+IND,India,1972,68948.0,A
+IND,India,1973,91072.0,A
+IND,India,1974,86388.0,A
+IND,India,1975,92506.0,A
+IND,India,1976,84000.0,A
+IND,India,1977,102300.0,A
+IND,India,1978,125000.0,A
+IND,India,1979,110488.0,A
+IND,India,1980,149835.0,A
+IND,India,1981,118600.0,A
+IND,India,1982,152100.0,A
+IND,India,1983,130000.0,A
+IND,India,1984,105029.0,A
+IND,India,1985,195100.0,A
+IND,India,1986,122400.0,A
+IND,India,1987,192100.0,A
+IND,India,1988,122700.0,A
+IND,India,1989,214700.0,A
+IND,India,1990,118100.0,A
+IND,India,1991,170000.0,A
+IND,India,1992,180000.0,A
+IND,India,1993,162000.0,A
+IND,India,1994,208000.0,A
+IND,India,1995,180000.0,A
+IND,India,1996,223000.0,A
+IND,India,1997,205000.0,A
+IND,India,1998,228000.0,A
+IND,India,1999,265000.0,A
+IND,India,2000,292000.0,A
+IND,India,2001,301000.0,A
+IND,India,2002,301000.0,A
+IND,India,2003,275275.0,A
+IND,India,2004,270500.0,A
+IND,India,2005,275500.0,A
+IND,India,2006,274000.0,A
+IND,India,2007,288000.0,A
+IND,India,2008,262000.0,A
+IND,India,2009,262300.0,A
+IND,India,2010,289600.0,A
+IND,India,2011,302000.0,A
+IND,India,2012,314000.0,A
+IND,India,2013,318200.0,A
+IND,India,2014,304500.0,A
+IND,India,2015,327000.0,A
+IND,India,2016,348000.0,A
+IND,India,2017,312000.0,A
+IND,India,2018,316000.0,A
+IND,India,2019,319500.0,A
+IND,India,2020,298000.0,A
+IND,India,2021,334000.0,A
+IND,India,2022,352000.0,A
+IND,India,2023,360500.0,A
+IND,India,2024,363000.0,A
+IDN,Indonesia,1961,103100.0,A
+IDN,Indonesia,1962,106700.0,A
+IDN,Indonesia,1963,139600.0,A
+IDN,Indonesia,1964,118200.0,A
+IDN,Indonesia,1965,134500.0,A
+IDN,Indonesia,1966,142200.0,A
+IDN,Indonesia,1967,153478.0,A
+IDN,Indonesia,1968,157347.0,A
+IDN,Indonesia,1969,173613.0,A
+IDN,Indonesia,1970,185091.0,A
+IDN,Indonesia,1971,180916.0,A
+IDN,Indonesia,1972,178735.0,A
+IDN,Indonesia,1973,150163.0,A
+IDN,Indonesia,1974,149811.0,A
+IDN,Indonesia,1975,170372.0,A
+IDN,Indonesia,1976,193377.0,A
+IDN,Indonesia,1977,193966.0,A
+IDN,Indonesia,1978,222690.0,A
+IDN,Indonesia,1979,273675.0,A
+IDN,Indonesia,1980,294973.0,A
+IDN,Indonesia,1981,314899.0,A
+IDN,Indonesia,1982,281251.0,A
+IDN,Indonesia,1983,305648.0,A
+IDN,Indonesia,1984,315489.0,A
+IDN,Indonesia,1985,311398.0,A
+IDN,Indonesia,1986,356822.0,A
+IDN,Indonesia,1987,388669.0,A
+IDN,Indonesia,1988,391095.0,A
+IDN,Indonesia,1989,401048.0,A
+IDN,Indonesia,1990,412767.0,A
+IDN,Indonesia,1991,428305.0,A
+IDN,Indonesia,1992,436930.0,A
+IDN,Indonesia,1993,438868.0,A
+IDN,Indonesia,1994,450191.0,A
+IDN,Indonesia,1995,457801.0,A
+IDN,Indonesia,1996,421751.0,A
+IDN,Indonesia,1997,426800.0,A
+IDN,Indonesia,1998,512165.0,A
+IDN,Indonesia,1999,524687.0,A
+IDN,Indonesia,2000,554574.0,A
+IDN,Indonesia,2001,569234.0,A
+IDN,Indonesia,2002,682019.0,A
+IDN,Indonesia,2003,663571.0,A
+IDN,Indonesia,2004,647385.0,A
+IDN,Indonesia,2005,640365.0,A
+IDN,Indonesia,2006,682158.0,A
+IDN,Indonesia,2007,676475.0,A
+IDN,Indonesia,2008,698016.0,A
+IDN,Indonesia,2009,682591.0,A
+IDN,Indonesia,2010,684076.0,A
+IDN,Indonesia,2011,638600.0,A
+IDN,Indonesia,2012,691163.0,A
+IDN,Indonesia,2013,675800.0,A
+IDN,Indonesia,2014,643900.0,A
+IDN,Indonesia,2015,639412.0,A
+IDN,Indonesia,2016,639305.0,A
+IDN,Indonesia,2017,717962.0,A
+IDN,Indonesia,2018,756051.0,A
+IDN,Indonesia,2019,752512.0,A
+IDN,Indonesia,2020,762380.0,A
+IDN,Indonesia,2021,786191.0,A
+IDN,Indonesia,2022,774960.53,A
+IDN,Indonesia,2023,758725.0,A
+IDN,Indonesia,2024,807578.0,A
+JAM,Jamaica,1961,2546.0,A
+JAM,Jamaica,1962,1969.0,A
+JAM,Jamaica,1963,2009.0,A
+JAM,Jamaica,1964,1997.0,A
+JAM,Jamaica,1965,2170.0,A
+JAM,Jamaica,1966,1861.0,A
+JAM,Jamaica,1967,1991.0,A
+JAM,Jamaica,1968,1972.0,A
+JAM,Jamaica,1969,1589.0,A
+JAM,Jamaica,1970,1805.0,A
+JAM,Jamaica,1971,1358.0,A
+JAM,Jamaica,1972,1040.0,A
+JAM,Jamaica,1973,1146.0,A
+JAM,Jamaica,1974,1486.0,A
+JAM,Jamaica,1975,1186.0,A
+JAM,Jamaica,1976,1929.0,A
+JAM,Jamaica,1977,1208.0,A
+JAM,Jamaica,1978,1477.0,A
+JAM,Jamaica,1979,958.0,A
+JAM,Jamaica,1980,2216.0,A
+JAM,Jamaica,1981,1379.0,A
+JAM,Jamaica,1982,1516.0,A
+JAM,Jamaica,1983,1632.0,A
+JAM,Jamaica,1984,1745.0,A
+JAM,Jamaica,1985,1274.0,A
+JAM,Jamaica,1986,1697.0,A
+JAM,Jamaica,1987,1658.0,A
+JAM,Jamaica,1988,2231.0,A
+JAM,Jamaica,1989,1260.0,X
+JAM,Jamaica,1990,1560.0,X
+JAM,Jamaica,1991,2280.0,X
+JAM,Jamaica,1992,1920.0,X
+JAM,Jamaica,1993,1500.0,X
+JAM,Jamaica,1994,2460.0,X
+JAM,Jamaica,1995,2580.0,X
+JAM,Jamaica,1996,2580.0,A
+JAM,Jamaica,1997,2887.0,A
+JAM,Jamaica,1998,1740.0,X
+JAM,Jamaica,1999,2340.0,X
+JAM,Jamaica,2000,2220.0,X
+JAM,Jamaica,2001,2880.0,X
+JAM,Jamaica,2002,2760.0,X
+JAM,Jamaica,2003,3300.0,E
+JAM,Jamaica,2004,2400.0,X
+JAM,Jamaica,2005,8897.0,A
+JAM,Jamaica,2006,12390.0,A
+JAM,Jamaica,2007,15117.0,A
+JAM,Jamaica,2008,9035.0,A
+JAM,Jamaica,2009,12456.0,A
+JAM,Jamaica,2010,9121.0,A
+JAM,Jamaica,2011,8099.0,A
+JAM,Jamaica,2012,6687.0,A
+JAM,Jamaica,2013,6984.0,A
+JAM,Jamaica,2014,5298.0,A
+JAM,Jamaica,2015,5755.0,A
+JAM,Jamaica,2016,7580.0,A
+JAM,Jamaica,2017,6222.0,A
+JAM,Jamaica,2018,7085.0,A
+JAM,Jamaica,2019,6701.0,A
+JAM,Jamaica,2020,6201.0,A
+JAM,Jamaica,2021,6507.8,A
+JAM,Jamaica,2022,7064.1,A
+JAM,Jamaica,2023,8152.0,A
+JAM,Jamaica,2024,6521.0,A
+KEN,Kenya,1961,28100.0,A
+KEN,Kenya,1962,50000.0,A
+KEN,Kenya,1963,40500.0,A
+KEN,Kenya,1964,41400.0,A
+KEN,Kenya,1965,39300.0,A
+KEN,Kenya,1966,56900.0,A
+KEN,Kenya,1967,48000.0,A
+KEN,Kenya,1968,39600.0,A
+KEN,Kenya,1969,52400.0,A
+KEN,Kenya,1970,58300.0,A
+KEN,Kenya,1971,59500.0,A
+KEN,Kenya,1972,62048.0,A
+KEN,Kenya,1973,71190.0,A
+KEN,Kenya,1974,70103.0,A
+KEN,Kenya,1975,66152.0,A
+KEN,Kenya,1976,80303.0,A
+KEN,Kenya,1977,101218.0,A
+KEN,Kenya,1978,84332.0,A
+KEN,Kenya,1979,75082.0,A
+KEN,Kenya,1980,91334.0,A
+KEN,Kenya,1981,99717.0,A
+KEN,Kenya,1982,87436.0,A
+KEN,Kenya,1983,86064.0,A
+KEN,Kenya,1984,118500.0,A
+KEN,Kenya,1985,93600.0,A
+KEN,Kenya,1986,113926.0,A
+KEN,Kenya,1987,104679.0,A
+KEN,Kenya,1988,128700.0,A
+KEN,Kenya,1989,116900.0,A
+KEN,Kenya,1990,103900.0,A
+KEN,Kenya,1991,86400.0,A
+KEN,Kenya,1992,85300.0,A
+KEN,Kenya,1993,75100.0,A
+KEN,Kenya,1994,79900.0,A
+KEN,Kenya,1995,95400.0,A
+KEN,Kenya,1996,97976.0,A
+KEN,Kenya,1997,68642.0,A
+KEN,Kenya,1998,53715.0,A
+KEN,Kenya,1999,68100.0,A
+KEN,Kenya,2000,100700.0,A
+KEN,Kenya,2001,51700.0,A
+KEN,Kenya,2002,51900.0,A
+KEN,Kenya,2003,55443.0,A
+KEN,Kenya,2004,48431.0,A
+KEN,Kenya,2005,45200.0,A
+KEN,Kenya,2006,48300.0,A
+KEN,Kenya,2007,53368.0,A
+KEN,Kenya,2008,42000.0,A
+KEN,Kenya,2009,54000.0,A
+KEN,Kenya,2010,42000.0,A
+KEN,Kenya,2011,36300.0,A
+KEN,Kenya,2012,49000.0,A
+KEN,Kenya,2013,39800.0,A
+KEN,Kenya,2014,49500.0,A
+KEN,Kenya,2015,42000.0,A
+KEN,Kenya,2016,46100.0,A
+KEN,Kenya,2017,38620.0,A
+KEN,Kenya,2018,41375.0,A
+KEN,Kenya,2019,44500.0,A
+KEN,Kenya,2020,36900.0,A
+KEN,Kenya,2021,34500.0,A
+KEN,Kenya,2022,51900.0,A
+KEN,Kenya,2023,48700.0,A
+KEN,Kenya,2024,49500.0,A
+LAO,Lao People's Democratic Republic,1961,1000.0,A
+LAO,Lao People's Democratic Republic,1962,1500.0,A
+LAO,Lao People's Democratic Republic,1963,2000.0,A
+LAO,Lao People's Democratic Republic,1964,3500.0,A
+LAO,Lao People's Democratic Republic,1965,3500.0,A
+LAO,Lao People's Democratic Republic,1966,3500.0,E
+LAO,Lao People's Democratic Republic,1967,3500.0,E
+LAO,Lao People's Democratic Republic,1968,3500.0,A
+LAO,Lao People's Democratic Republic,1969,3450.0,A
+LAO,Lao People's Democratic Republic,1970,3200.0,A
+LAO,Lao People's Democratic Republic,1971,2800.0,A
+LAO,Lao People's Democratic Republic,1972,2300.0,A
+LAO,Lao People's Democratic Republic,1973,1800.0,A
+LAO,Lao People's Democratic Republic,1974,2070.0,A
+LAO,Lao People's Democratic Republic,1975,1800.0,E
+LAO,Lao People's Democratic Republic,1976,2780.0,A
+LAO,Lao People's Democratic Republic,1977,4315.0,A
+LAO,Lao People's Democratic Republic,1978,2980.0,A
+LAO,Lao People's Democratic Republic,1979,3500.0,A
+LAO,Lao People's Democratic Republic,1980,4442.0,A
+LAO,Lao People's Democratic Republic,1981,5031.0,A
+LAO,Lao People's Democratic Republic,1982,5200.0,A
+LAO,Lao People's Democratic Republic,1983,5320.0,A
+LAO,Lao People's Democratic Republic,1984,5780.0,A
+LAO,Lao People's Democratic Republic,1985,6144.0,A
+LAO,Lao People's Democratic Republic,1986,4711.0,A
+LAO,Lao People's Democratic Republic,1987,5312.0,A
+LAO,Lao People's Democratic Republic,1988,7829.0,A
+LAO,Lao People's Democratic Republic,1989,5413.0,A
+LAO,Lao People's Democratic Republic,1990,5204.0,A
+LAO,Lao People's Democratic Republic,1991,8017.0,A
+LAO,Lao People's Democratic Republic,1992,6582.0,A
+LAO,Lao People's Democratic Republic,1993,7622.0,A
+LAO,Lao People's Democratic Republic,1994,9035.0,A
+LAO,Lao People's Democratic Republic,1995,8576.0,A
+LAO,Lao People's Democratic Republic,1996,10020.0,A
+LAO,Lao People's Democratic Republic,1997,12300.0,A
+LAO,Lao People's Democratic Republic,1998,16999.0,A
+LAO,Lao People's Democratic Republic,1999,17530.0,A
+LAO,Lao People's Democratic Republic,2000,23500.0,A
+LAO,Lao People's Democratic Republic,2001,25796.0,A
+LAO,Lao People's Democratic Republic,2002,32197.0,A
+LAO,Lao People's Democratic Republic,2003,27850.0,A
+LAO,Lao People's Democratic Republic,2004,23100.0,A
+LAO,Lao People's Democratic Republic,2005,25000.0,A
+LAO,Lao People's Democratic Republic,2006,25250.0,A
+LAO,Lao People's Democratic Republic,2007,33200.0,A
+LAO,Lao People's Democratic Republic,2008,38985.0,A
+LAO,Lao People's Democratic Republic,2009,46035.0,A
+LAO,Lao People's Democratic Republic,2010,46290.0,A
+LAO,Lao People's Democratic Republic,2011,52010.0,A
+LAO,Lao People's Democratic Republic,2012,87330.0,A
+LAO,Lao People's Democratic Republic,2013,92045.0,A
+LAO,Lao People's Democratic Republic,2014,113580.0,A
+LAO,Lao People's Democratic Republic,2015,135925.0,A
+LAO,Lao People's Democratic Republic,2016,136600.0,A
+LAO,Lao People's Democratic Republic,2017,150795.0,A
+LAO,Lao People's Democratic Republic,2018,154435.0,A
+LAO,Lao People's Democratic Republic,2019,171380.0,A
+LAO,Lao People's Democratic Republic,2020,158190.0,A
+LAO,Lao People's Democratic Republic,2021,161200.0,A
+LAO,Lao People's Democratic Republic,2022,171000.0,A
+LAO,Lao People's Democratic Republic,2023,183895.0,A
+LAO,Lao People's Democratic Republic,2024,174900.0,A
+LBR,Liberia,1961,3400.0,A
+LBR,Liberia,1962,3754.0,A
+LBR,Liberia,1963,3670.0,A
+LBR,Liberia,1964,3500.0,X
+LBR,Liberia,1965,3187.0,A
+LBR,Liberia,1966,8911.0,A
+LBR,Liberia,1967,4327.0,A
+LBR,Liberia,1968,4686.0,A
+LBR,Liberia,1969,4261.0,A
+LBR,Liberia,1970,4967.0,A
+LBR,Liberia,1971,5521.0,A
+LBR,Liberia,1972,5594.0,A
+LBR,Liberia,1973,6935.0,A
+LBR,Liberia,1974,3424.0,A
+LBR,Liberia,1975,4150.0,A
+LBR,Liberia,1976,4238.0,A
+LBR,Liberia,1977,10076.0,A
+LBR,Liberia,1978,8665.0,A
+LBR,Liberia,1979,8200.0,A
+LBR,Liberia,1980,12742.0,A
+LBR,Liberia,1981,8400.0,A
+LBR,Liberia,1982,11734.0,A
+LBR,Liberia,1983,7500.0,X
+LBR,Liberia,1984,11500.0,X
+LBR,Liberia,1985,9000.0,X
+LBR,Liberia,1986,9000.0,X
+LBR,Liberia,1987,4200.0,X
+LBR,Liberia,1988,3600.0,X
+LBR,Liberia,1989,4800.0,X
+LBR,Liberia,1990,1600.0,X
+LBR,Liberia,1991,1300.0,X
+LBR,Liberia,1992,3000.0,X
+LBR,Liberia,1993,3000.0,X
+LBR,Liberia,1994,3000.0,X
+LBR,Liberia,1995,2996.67,I
+LBR,Liberia,1996,3016.96,I
+LBR,Liberia,1997,3041.01,I
+LBR,Liberia,1998,3059.3,I
+LBR,Liberia,1999,3078.58,I
+LBR,Liberia,2000,3126.8,I
+LBR,Liberia,2001,3200.0,E
+LBR,Liberia,2002,3345.77,I
+LBR,Liberia,2003,3538.89,I
+LBR,Liberia,2004,3750.57,I
+LBR,Liberia,2005,4080.0,X
+LBR,Liberia,2006,4260.0,X
+LBR,Liberia,2007,3180.0,X
+LBR,Liberia,2008,2400.0,X
+LBR,Liberia,2009,1800.0,X
+LBR,Liberia,2010,600.0,X
+LBR,Liberia,2011,649.83,I
+LBR,Liberia,2012,650.19,I
+LBR,Liberia,2013,636.92,I
+LBR,Liberia,2014,650.74,I
+LBR,Liberia,2015,628.42,I
+LBR,Liberia,2016,638.69,E
+LBR,Liberia,2017,625.6,I
+LBR,Liberia,2018,620.95,I
+LBR,Liberia,2019,628.41,E
+LBR,Liberia,2020,626.48,I
+LBR,Liberia,2021,656.18,I
+LBR,Liberia,2022,655.85,I
+LBR,Liberia,2023,654.58,I
+LBR,Liberia,2024,653.22,I
+MDG,Madagascar,1961,54000.0,E
+MDG,Madagascar,1962,73000.0,E
+MDG,Madagascar,1963,62000.0,E
+MDG,Madagascar,1964,70415.0,A
+MDG,Madagascar,1965,65640.0,A
+MDG,Madagascar,1966,71535.0,A
+MDG,Madagascar,1967,73065.0,A
+MDG,Madagascar,1968,70850.0,A
+MDG,Madagascar,1969,63945.0,A
+MDG,Madagascar,1970,66555.0,A
+MDG,Madagascar,1971,57710.0,A
+MDG,Madagascar,1972,68585.0,A
+MDG,Madagascar,1973,73880.0,A
+MDG,Madagascar,1974,80900.0,A
+MDG,Madagascar,1975,83560.0,A
+MDG,Madagascar,1976,78930.0,A
+MDG,Madagascar,1977,91520.0,A
+MDG,Madagascar,1978,78200.0,A
+MDG,Madagascar,1979,81565.0,A
+MDG,Madagascar,1980,79880.0,A
+MDG,Madagascar,1981,83460.0,A
+MDG,Madagascar,1982,81225.0,A
+MDG,Madagascar,1983,80855.0,A
+MDG,Madagascar,1984,81400.0,A
+MDG,Madagascar,1985,78500.0,A
+MDG,Madagascar,1986,82280.0,A
+MDG,Madagascar,1987,80750.0,A
+MDG,Madagascar,1988,83500.0,A
+MDG,Madagascar,1989,88200.0,A
+MDG,Madagascar,1990,85000.0,A
+MDG,Madagascar,1991,83865.0,A
+MDG,Madagascar,1992,79882.0,A
+MDG,Madagascar,1993,78000.0,A
+MDG,Madagascar,1994,70000.0,A
+MDG,Madagascar,1995,68000.0,A
+MDG,Madagascar,1996,68000.0,A
+MDG,Madagascar,1997,55000.0,A
+MDG,Madagascar,1998,60000.0,A
+MDG,Madagascar,1999,65000.0,A
+MDG,Madagascar,2000,58080.0,A
+MDG,Madagascar,2001,64530.0,A
+MDG,Madagascar,2002,61520.0,A
+MDG,Madagascar,2003,70315.0,A
+MDG,Madagascar,2004,67775.0,A
+MDG,Madagascar,2005,55500.0,A
+MDG,Madagascar,2006,61635.0,A
+MDG,Madagascar,2007,56470.0,A
+MDG,Madagascar,2008,56978.0,A
+MDG,Madagascar,2009,57491.0,A
+MDG,Madagascar,2010,58178.0,A
+MDG,Madagascar,2011,55698.04,I
+MDG,Madagascar,2012,53363.68,I
+MDG,Madagascar,2013,51627.54,I
+MDG,Madagascar,2014,49223.0,A
+MDG,Madagascar,2015,47507.0,A
+MDG,Madagascar,2016,53093.0,A
+MDG,Madagascar,2017,59602.0,A
+MDG,Madagascar,2018,54514.81,I
+MDG,Madagascar,2019,65760.0,A
+MDG,Madagascar,2020,42220.0,A
+MDG,Madagascar,2021,46400.61,I
+MDG,Madagascar,2022,50532.03,I
+MDG,Madagascar,2023,49340.52,I
+MDG,Madagascar,2024,49561.4,I
+MWI,Malawi,1961,167.0,A
+MWI,Malawi,1962,198.0,A
+MWI,Malawi,1963,230.0,A
+MWI,Malawi,1964,133.0,A
+MWI,Malawi,1965,128.0,A
+MWI,Malawi,1966,166.0,A
+MWI,Malawi,1967,151.0,A
+MWI,Malawi,1968,145.0,A
+MWI,Malawi,1969,154.0,A
+MWI,Malawi,1970,263.0,A
+MWI,Malawi,1971,153.0,A
+MWI,Malawi,1972,186.0,A
+MWI,Malawi,1973,187.0,A
+MWI,Malawi,1974,625.0,A
+MWI,Malawi,1975,788.0,A
+MWI,Malawi,1976,880.0,E
+MWI,Malawi,1977,880.0,E
+MWI,Malawi,1978,900.0,E
+MWI,Malawi,1979,900.0,E
+MWI,Malawi,1980,1000.0,E
+MWI,Malawi,1981,1000.0,E
+MWI,Malawi,1982,1020.0,X
+MWI,Malawi,1983,1140.0,X
+MWI,Malawi,1984,1860.0,X
+MWI,Malawi,1985,3480.0,X
+MWI,Malawi,1986,3692.0,A
+MWI,Malawi,1987,4966.0,A
+MWI,Malawi,1988,4320.0,A
+MWI,Malawi,1989,6780.0,X
+MWI,Malawi,1990,6180.0,X
+MWI,Malawi,1991,7500.0,X
+MWI,Malawi,1992,8160.0,X
+MWI,Malawi,1993,3780.0,X
+MWI,Malawi,1994,5040.0,X
+MWI,Malawi,1995,5460.0,X
+MWI,Malawi,1996,4797.0,A
+MWI,Malawi,1997,4552.0,A
+MWI,Malawi,1998,3840.0,X
+MWI,Malawi,1999,3540.0,X
+MWI,Malawi,2000,3780.0,X
+MWI,Malawi,2001,4320.0,X
+MWI,Malawi,2002,2980.0,A
+MWI,Malawi,2003,2584.0,A
+MWI,Malawi,2004,1590.0,A
+MWI,Malawi,2005,1181.0,A
+MWI,Malawi,2006,2091.0,A
+MWI,Malawi,2007,1403.0,A
+MWI,Malawi,2008,1122.0,A
+MWI,Malawi,2009,5510.0,A
+MWI,Malawi,2010,4176.0,A
+MWI,Malawi,2011,4015.0,A
+MWI,Malawi,2012,5684.0,A
+MWI,Malawi,2013,5699.0,A
+MWI,Malawi,2014,6757.0,A
+MWI,Malawi,2015,7217.0,A
+MWI,Malawi,2016,7217.0,A
+MWI,Malawi,2017,8420.0,A
+MWI,Malawi,2018,11082.0,A
+MWI,Malawi,2019,11000.0,X
+MWI,Malawi,2020,10000.0,X
+MWI,Malawi,2021,10086.0,A
+MWI,Malawi,2022,11000.0,X
+MWI,Malawi,2023,11000.0,X
+MWI,Malawi,2024,11223.46,I
+MYS,Malaysia,1961,2700.0,A
+MYS,Malaysia,1962,2580.0,A
+MYS,Malaysia,1963,2820.0,A
+MYS,Malaysia,1964,3120.0,A
+MYS,Malaysia,1965,3120.0,A
+MYS,Malaysia,1966,3480.0,A
+MYS,Malaysia,1967,3420.0,A
+MYS,Malaysia,1968,3600.0,A
+MYS,Malaysia,1969,3780.0,A
+MYS,Malaysia,1970,3540.0,A
+MYS,Malaysia,1971,3960.0,A
+MYS,Malaysia,1972,4200.0,A
+MYS,Malaysia,1973,4920.0,A
+MYS,Malaysia,1974,5880.0,A
+MYS,Malaysia,1975,6240.0,A
+MYS,Malaysia,1976,8100.0,A
+MYS,Malaysia,1977,5400.0,A
+MYS,Malaysia,1978,6120.0,A
+MYS,Malaysia,1979,5880.0,A
+MYS,Malaysia,1980,10100.0,A
+MYS,Malaysia,1981,10400.0,A
+MYS,Malaysia,1982,11300.0,A
+MYS,Malaysia,1983,11900.0,A
+MYS,Malaysia,1984,11900.0,A
+MYS,Malaysia,1985,10900.0,A
+MYS,Malaysia,1986,10300.0,A
+MYS,Malaysia,1987,11500.0,A
+MYS,Malaysia,1988,9500.0,A
+MYS,Malaysia,1989,6732.0,A
+MYS,Malaysia,1990,7215.0,A
+MYS,Malaysia,1991,7600.0,E
+MYS,Malaysia,1992,9000.0,E
+MYS,Malaysia,1993,11100.0,X
+MYS,Malaysia,1994,11200.0,X
+MYS,Malaysia,1995,11300.0,X
+MYS,Malaysia,1996,15000.0,E
+MYS,Malaysia,1997,20000.0,E
+MYS,Malaysia,1998,28000.0,E
+MYS,Malaysia,1999,35000.0,E
+MYS,Malaysia,2000,39800.0,X
+MYS,Malaysia,2001,38500.0,X
+MYS,Malaysia,2002,39200.0,X
+MYS,Malaysia,2003,40000.0,X
+MYS,Malaysia,2004,39200.0,X
+MYS,Malaysia,2005,40000.0,X
+MYS,Malaysia,2006,32779.0,A
+MYS,Malaysia,2007,21213.0,A
+MYS,Malaysia,2008,23061.0,A
+MYS,Malaysia,2009,16332.0,A
+MYS,Malaysia,2010,15768.0,A
+MYS,Malaysia,2011,15064.0,A
+MYS,Malaysia,2012,10427.0,A
+MYS,Malaysia,2013,14739.0,A
+MYS,Malaysia,2014,8186.0,A
+MYS,Malaysia,2015,5929.0,A
+MYS,Malaysia,2016,7170.0,A
+MYS,Malaysia,2017,8109.18,A
+MYS,Malaysia,2018,3369.2,A
+MYS,Malaysia,2019,3558.5,A
+MYS,Malaysia,2020,4241.08,A
+MYS,Malaysia,2021,4150.55,A
+MYS,Malaysia,2022,3849.58,A
+MYS,Malaysia,2023,3910.09,A
+MYS,Malaysia,2024,2861.29,A
+MTQ,Martinique,1961,2400.0,E
+MTQ,Martinique,1962,2400.0,E
+MTQ,Martinique,1963,2400.0,E
+MTQ,Martinique,1964,2400.0,E
+MTQ,Martinique,1965,2400.0,E
+MTQ,Martinique,1966,2400.0,E
+MTQ,Martinique,1967,2400.0,X
+MTQ,Martinique,1968,2400.0,X
+MTQ,Martinique,1969,600.0,X
+MTQ,Martinique,1970,600.0,X
+MTQ,Martinique,1971,600.0,X
+MTQ,Martinique,1972,600.0,X
+MTQ,Martinique,1973,600.0,X
+MTQ,Martinique,1974,600.0,X
+MTQ,Martinique,1975,0.0,E
+MTQ,Martinique,1976,0.0,A
+MTQ,Martinique,1977,0.0,A
+MTQ,Martinique,1978,0.0,A
+MTQ,Martinique,1979,0.0,A
+MTQ,Martinique,1980,0.0,A
+MTQ,Martinique,1981,0.0,A
+MTQ,Martinique,1982,0.0,A
+MTQ,Martinique,1983,0.0,A
+MTQ,Martinique,1984,0.0,A
+MTQ,Martinique,1985,0.0,A
+MTQ,Martinique,1986,0.0,A
+MTQ,Martinique,1987,0.0,A
+MTQ,Martinique,1988,0.0,A
+MTQ,Martinique,1989,0.0,A
+MTQ,Martinique,1990,0.0,A
+MTQ,Martinique,1991,75.0,A
+MTQ,Martinique,1992,75.0,A
+MTQ,Martinique,1993,75.0,I
+MTQ,Martinique,1994,74.73,I
+MTQ,Martinique,1995,35.0,A
+MTQ,Martinique,1996,44.62,I
+MTQ,Martinique,1997,40.0,E
+MTQ,Martinique,1998,40.0,E
+MTQ,Martinique,1999,40.91,I
+MTQ,Martinique,2000,40.0,E
+MTQ,Martinique,2001,39.81,I
+MTQ,Martinique,2002,36.68,I
+MTQ,Martinique,2003,35.47,I
+MTQ,Martinique,2004,36.57,I
+MTQ,Martinique,2005,32.75,I
+MTQ,Martinique,2006,30.35,I
+MUS,Mauritius,1961,0.0,A
+MUS,Mauritius,1962,0.0,A
+MUS,Mauritius,1963,0.0,A
+MUS,Mauritius,1964,0.0,A
+MUS,Mauritius,1965,0.0,A
+MUS,Mauritius,1966,0.0,A
+MUS,Mauritius,1967,0.0,A
+MUS,Mauritius,1968,0.0,A
+MUS,Mauritius,1969,0.0,A
+MUS,Mauritius,1970,0.0,A
+MUS,Mauritius,1971,0.0,A
+MUS,Mauritius,1972,0.0,A
+MUS,Mauritius,1973,0.0,A
+MUS,Mauritius,1974,0.0,A
+MUS,Mauritius,1975,0.0,A
+MUS,Mauritius,1976,0.0,A
+MUS,Mauritius,1977,0.0,A
+MUS,Mauritius,1978,0.0,A
+MUS,Mauritius,1979,0.0,A
+MUS,Mauritius,1980,0.0,A
+MUS,Mauritius,1981,0.0,A
+MUS,Mauritius,1982,0.0,A
+MUS,Mauritius,1983,0.0,A
+MUS,Mauritius,1984,0.0,A
+MUS,Mauritius,1985,0.0,A
+MUS,Mauritius,1986,0.0,A
+MUS,Mauritius,1987,40.0,A
+MUS,Mauritius,1988,40.0,A
+MUS,Mauritius,1989,50.0,A
+MUS,Mauritius,1990,0.0,E
+MUS,Mauritius,1991,0.0,A
+MUS,Mauritius,1992,0.0,A
+MUS,Mauritius,1993,,M
+MUS,Mauritius,1994,,M
+MUS,Mauritius,1995,,M
+MUS,Mauritius,1996,,M
+MUS,Mauritius,1997,,M
+MUS,Mauritius,1998,,M
+MUS,Mauritius,1999,,M
+MUS,Mauritius,2000,,M
+MUS,Mauritius,2001,,M
+MUS,Mauritius,2002,,M
+MUS,Mauritius,2003,,M
+MUS,Mauritius,2004,,M
+MUS,Mauritius,2005,,M
+MUS,Mauritius,2006,,M
+MUS,Mauritius,2007,,M
+MUS,Mauritius,2008,,M
+MUS,Mauritius,2009,,M
+MUS,Mauritius,2010,,M
+MUS,Mauritius,2011,,M
+MUS,Mauritius,2012,,M
+MUS,Mauritius,2013,,M
+MUS,Mauritius,2014,,M
+MUS,Mauritius,2015,,M
+MUS,Mauritius,2016,,M
+MUS,Mauritius,2017,,M
+MUS,Mauritius,2018,,M
+MUS,Mauritius,2019,,M
+MUS,Mauritius,2020,,M
+MUS,Mauritius,2021,,M
+MUS,Mauritius,2022,,M
+MUS,Mauritius,2023,,M
+MUS,Mauritius,2024,,M
+MEX,Mexico,1961,126616.0,A
+MEX,Mexico,1962,139794.0,A
+MEX,Mexico,1963,137069.0,A
+MEX,Mexico,1964,156477.0,A
+MEX,Mexico,1965,162149.0,A
+MEX,Mexico,1966,183005.0,A
+MEX,Mexico,1967,224505.0,A
+MEX,Mexico,1968,212656.0,A
+MEX,Mexico,1969,172734.0,A
+MEX,Mexico,1970,185293.0,A
+MEX,Mexico,1971,187495.0,A
+MEX,Mexico,1972,203462.0,A
+MEX,Mexico,1973,221718.0,A
+MEX,Mexico,1974,220767.0,A
+MEX,Mexico,1975,228264.0,A
+MEX,Mexico,1976,212200.0,A
+MEX,Mexico,1977,182010.0,A
+MEX,Mexico,1978,241602.0,A
+MEX,Mexico,1979,220191.0,A
+MEX,Mexico,1980,220040.0,A
+MEX,Mexico,1981,262904.0,A
+MEX,Mexico,1982,251768.0,A
+MEX,Mexico,1983,307948.0,A
+MEX,Mexico,1984,239870.0,A
+MEX,Mexico,1985,260197.0,A
+MEX,Mexico,1986,374828.0,A
+MEX,Mexico,1987,336180.0,X
+MEX,Mexico,1988,423000.0,A
+MEX,Mexico,1989,343440.0,A
+MEX,Mexico,1990,440000.0,A
+MEX,Mexico,1991,334330.0,A
+MEX,Mexico,1992,359665.0,A
+MEX,Mexico,1993,335627.0,A
+MEX,Mexico,1994,324500.0,A
+MEX,Mexico,1995,324526.0,A
+MEX,Mexico,1996,374153.0,A
+MEX,Mexico,1997,368315.0,A
+MEX,Mexico,1998,277372.0,A
+MEX,Mexico,1999,302119.0,A
+MEX,Mexico,2000,338170.0,A
+MEX,Mexico,2001,302996.0,A
+MEX,Mexico,2002,313027.0,A
+MEX,Mexico,2003,310861.0,A
+MEX,Mexico,2004,312413.0,A
+MEX,Mexico,2005,294364.0,A
+MEX,Mexico,2006,279635.0,A
+MEX,Mexico,2007,268565.0,A
+MEX,Mexico,2008,260442.0,A
+MEX,Mexico,2009,264472.0,A
+MEX,Mexico,2010,245271.0,A
+MEX,Mexico,2011,237056.0,A
+MEX,Mexico,2012,246121.0,A
+MEX,Mexico,2013,231596.0,A
+MEX,Mexico,2014,214667.0,A
+MEX,Mexico,2015,188934.0,A
+MEX,Mexico,2016,151714.0,A
+MEX,Mexico,2017,153777.4,A
+MEX,Mexico,2018,158307.99,A
+MEX,Mexico,2019,165712.27,A
+MEX,Mexico,2020,175554.62,A
+MEX,Mexico,2021,174341.4,A
+MEX,Mexico,2022,188710.0,E
+MEX,Mexico,2023,194940.0,E
+MEX,Mexico,2024,194470.0,E
+MOZ,Mozambique,1961,1000.0,E
+MOZ,Mozambique,1962,1000.0,E
+MOZ,Mozambique,1963,1000.0,E
+MOZ,Mozambique,1964,1000.0,E
+MOZ,Mozambique,1965,1000.0,E
+MOZ,Mozambique,1966,1000.0,E
+MOZ,Mozambique,1967,1000.0,E
+MOZ,Mozambique,1968,1000.0,E
+MOZ,Mozambique,1969,1000.0,E
+MOZ,Mozambique,1970,1000.0,E
+MOZ,Mozambique,1971,1000.0,E
+MOZ,Mozambique,1972,1000.0,E
+MOZ,Mozambique,1973,1000.0,E
+MOZ,Mozambique,1974,1000.0,E
+MOZ,Mozambique,1975,1000.0,E
+MOZ,Mozambique,1976,1000.0,E
+MOZ,Mozambique,1977,1000.0,E
+MOZ,Mozambique,1978,1000.0,E
+MOZ,Mozambique,1979,1000.0,E
+MOZ,Mozambique,1980,1000.0,E
+MOZ,Mozambique,1981,1000.0,E
+MOZ,Mozambique,1982,1000.0,E
+MOZ,Mozambique,1983,1000.0,E
+MOZ,Mozambique,1984,1000.0,E
+MOZ,Mozambique,1985,1000.0,E
+MOZ,Mozambique,1986,1000.0,E
+MOZ,Mozambique,1987,1000.0,E
+MOZ,Mozambique,1988,1000.0,E
+MOZ,Mozambique,1989,1000.0,E
+MOZ,Mozambique,1990,937.0,E
+MOZ,Mozambique,1991,900.0,E
+MOZ,Mozambique,1992,700.0,E
+MOZ,Mozambique,1993,1000.0,E
+MOZ,Mozambique,1994,800.0,E
+MOZ,Mozambique,1995,900.0,E
+MOZ,Mozambique,1996,950.0,E
+MOZ,Mozambique,1997,1000.0,E
+MOZ,Mozambique,1998,838.0,I
+MOZ,Mozambique,1999,812.89,I
+MOZ,Mozambique,2000,600.0,E
+MOZ,Mozambique,2001,782.41,I
+MOZ,Mozambique,2002,786.66,I
+MOZ,Mozambique,2003,801.53,I
+MOZ,Mozambique,2004,750.0,E
+MOZ,Mozambique,2005,680.0,E
+MOZ,Mozambique,2006,700.0,E
+MOZ,Mozambique,2007,720.0,E
+MOZ,Mozambique,2008,730.0,E
+MOZ,Mozambique,2009,740.0,E
+MOZ,Mozambique,2010,770.0,E
+MOZ,Mozambique,2011,800.0,E
+MOZ,Mozambique,2012,900.0,E
+MOZ,Mozambique,2013,900.0,E
+MOZ,Mozambique,2014,816.94,I
+MOZ,Mozambique,2015,804.44,I
+MOZ,Mozambique,2016,840.46,E
+MOZ,Mozambique,2017,806.23,I
+MOZ,Mozambique,2018,798.24,I
+MOZ,Mozambique,2019,789.95,I
+MOZ,Mozambique,2020,791.95,I
+MOZ,Mozambique,2021,797.11,I
+MOZ,Mozambique,2022,802.61,I
+MOZ,Mozambique,2023,803.15,I
+MOZ,Mozambique,2024,803.7,I
+MMR,Myanmar,1961,200.0,X
+MMR,Myanmar,1962,949.0,A
+MMR,Myanmar,1963,1688.0,A
+MMR,Myanmar,1964,1162.0,A
+MMR,Myanmar,1965,1534.0,A
+MMR,Myanmar,1966,1292.0,A
+MMR,Myanmar,1967,1506.0,A
+MMR,Myanmar,1968,1406.0,A
+MMR,Myanmar,1969,1210.0,A
+MMR,Myanmar,1970,1016.0,A
+MMR,Myanmar,1971,917.0,A
+MMR,Myanmar,1972,957.0,A
+MMR,Myanmar,1973,1026.0,A
+MMR,Myanmar,1974,956.0,A
+MMR,Myanmar,1975,1024.0,A
+MMR,Myanmar,1976,923.0,A
+MMR,Myanmar,1977,940.0,A
+MMR,Myanmar,1978,1079.0,A
+MMR,Myanmar,1979,1017.0,A
+MMR,Myanmar,1980,1114.0,A
+MMR,Myanmar,1981,1044.0,A
+MMR,Myanmar,1982,1167.0,A
+MMR,Myanmar,1983,1195.0,A
+MMR,Myanmar,1984,1217.0,A
+MMR,Myanmar,1985,1253.0,A
+MMR,Myanmar,1986,1414.0,A
+MMR,Myanmar,1987,1488.0,A
+MMR,Myanmar,1988,1501.0,A
+MMR,Myanmar,1989,1571.0,A
+MMR,Myanmar,1990,1378.0,A
+MMR,Myanmar,1991,1300.0,A
+MMR,Myanmar,1992,1200.0,A
+MMR,Myanmar,1993,1400.0,A
+MMR,Myanmar,1994,1500.0,A
+MMR,Myanmar,1995,1500.0,A
+MMR,Myanmar,1996,1700.0,A
+MMR,Myanmar,1997,1900.0,A
+MMR,Myanmar,1998,1700.0,A
+MMR,Myanmar,1999,1800.0,A
+MMR,Myanmar,2000,2100.0,A
+MMR,Myanmar,2001,2300.0,A
+MMR,Myanmar,2002,2700.0,A
+MMR,Myanmar,2003,2960.0,A
+MMR,Myanmar,2004,3500.0,A
+MMR,Myanmar,2005,4000.0,A
+MMR,Myanmar,2006,4800.0,A
+MMR,Myanmar,2007,5900.0,A
+MMR,Myanmar,2008,6300.0,A
+MMR,Myanmar,2009,7000.0,A
+MMR,Myanmar,2010,7300.0,A
+MMR,Myanmar,2011,7600.0,A
+MMR,Myanmar,2012,8000.0,A
+MMR,Myanmar,2013,8100.0,A
+MMR,Myanmar,2014,8400.0,A
+MMR,Myanmar,2015,8300.0,A
+MMR,Myanmar,2016,8474.0,A
+MMR,Myanmar,2017,8547.0,A
+MMR,Myanmar,2018,8677.84,A
+MMR,Myanmar,2019,8769.0,A
+MMR,Myanmar,2020,8908.0,A
+MMR,Myanmar,2021,8908.0,A
+MMR,Myanmar,2022,8557.0,A
+MMR,Myanmar,2023,8481.74,I
+MMR,Myanmar,2024,8903.66,I
+NPL,Nepal,1991,,M
+NPL,Nepal,1992,,M
+NPL,Nepal,1993,,M
+NPL,Nepal,1994,,M
+NPL,Nepal,1995,25.0,E
+NPL,Nepal,1996,29.0,A
+NPL,Nepal,1997,37.0,A
+NPL,Nepal,1998,56.0,A
+NPL,Nepal,1999,45.0,A
+NPL,Nepal,2000,72.0,A
+NPL,Nepal,2001,89.0,A
+NPL,Nepal,2002,139.0,A
+NPL,Nepal,2003,188.0,A
+NPL,Nepal,2004,218.0,A
+NPL,Nepal,2005,250.0,A
+NPL,Nepal,2006,300.0,A
+NPL,Nepal,2007,460.0,A
+NPL,Nepal,2008,500.0,A
+NPL,Nepal,2009,268.0,A
+NPL,Nepal,2010,307.0,A
+NPL,Nepal,2011,402.0,A
+NPL,Nepal,2012,425.0,A
+NPL,Nepal,2013,366.0,A
+NPL,Nepal,2014,430.0,A
+NPL,Nepal,2015,463.58,A
+NPL,Nepal,2016,532.0,A
+NPL,Nepal,2017,466.0,A
+NPL,Nepal,2018,513.0,A
+NPL,Nepal,2019,530.0,A
+NPL,Nepal,2020,297.0,A
+NPL,Nepal,2021,315.0,A
+NPL,Nepal,2022,355.0,A
+NPL,Nepal,2023,394.4,A
+NPL,Nepal,2024,501.3,A
+NCL,New Caledonia,1961,2250.0,A
+NCL,New Caledonia,1962,2125.0,A
+NCL,New Caledonia,1963,2250.0,A
+NCL,New Caledonia,1964,2437.0,A
+NCL,New Caledonia,1965,2200.0,A
+NCL,New Caledonia,1966,1770.0,A
+NCL,New Caledonia,1967,1537.0,A
+NCL,New Caledonia,1968,870.0,A
+NCL,New Caledonia,1969,1620.0,A
+NCL,New Caledonia,1970,780.0,A
+NCL,New Caledonia,1971,1000.0,A
+NCL,New Caledonia,1972,1100.0,A
+NCL,New Caledonia,1973,1500.0,A
+NCL,New Caledonia,1974,727.0,A
+NCL,New Caledonia,1975,1500.0,A
+NCL,New Caledonia,1976,1500.0,A
+NCL,New Caledonia,1977,538.0,A
+NCL,New Caledonia,1978,507.0,A
+NCL,New Caledonia,1979,664.0,A
+NCL,New Caledonia,1980,659.0,A
+NCL,New Caledonia,1981,597.0,A
+NCL,New Caledonia,1982,347.0,A
+NCL,New Caledonia,1983,377.0,A
+NCL,New Caledonia,1984,304.0,A
+NCL,New Caledonia,1985,552.0,A
+NCL,New Caledonia,1986,472.0,A
+NCL,New Caledonia,1987,438.0,A
+NCL,New Caledonia,1988,107.0,A
+NCL,New Caledonia,1989,273.0,A
+NCL,New Caledonia,1990,300.0,A
+NCL,New Caledonia,1991,69.0,A
+NCL,New Caledonia,1992,78.0,A
+NCL,New Caledonia,1993,59.0,A
+NCL,New Caledonia,1994,44.0,A
+NCL,New Caledonia,1995,29.0,A
+NCL,New Caledonia,1996,25.0,A
+NCL,New Caledonia,1997,42.0,A
+NCL,New Caledonia,1998,35.0,A
+NCL,New Caledonia,1999,48.0,A
+NCL,New Caledonia,2000,18.0,A
+NCL,New Caledonia,2001,56.0,A
+NCL,New Caledonia,2002,20.0,A
+NCL,New Caledonia,2003,18.0,A
+NCL,New Caledonia,2004,60.0,A
+NCL,New Caledonia,2005,25.0,A
+NCL,New Caledonia,2006,25.0,A
+NCL,New Caledonia,2007,21.0,A
+NCL,New Caledonia,2008,33.0,A
+NCL,New Caledonia,2009,9.0,A
+NCL,New Caledonia,2010,13.0,A
+NCL,New Caledonia,2011,19.0,A
+NCL,New Caledonia,2012,6.0,A
+NCL,New Caledonia,2013,7.0,A
+NCL,New Caledonia,2014,5.0,A
+NCL,New Caledonia,2015,6.39,A
+NCL,New Caledonia,2016,3.55,A
+NCL,New Caledonia,2017,5.2,A
+NCL,New Caledonia,2018,2.6,A
+NCL,New Caledonia,2019,2.0,A
+NCL,New Caledonia,2020,1.94,A
+NCL,New Caledonia,2021,1.92,A
+NCL,New Caledonia,2022,1.54,I
+NCL,New Caledonia,2023,1.18,I
+NCL,New Caledonia,2024,1.01,I
+NIC,Nicaragua,1961,23200.0,A
+NIC,Nicaragua,1962,29800.0,A
+NIC,Nicaragua,1963,26200.0,A
+NIC,Nicaragua,1964,40200.0,A
+NIC,Nicaragua,1965,31500.0,A
+NIC,Nicaragua,1966,24921.0,A
+NIC,Nicaragua,1967,33233.0,A
+NIC,Nicaragua,1968,30246.0,A
+NIC,Nicaragua,1969,33904.0,A
+NIC,Nicaragua,1970,39418.0,A
+NIC,Nicaragua,1971,42013.0,A
+NIC,Nicaragua,1972,35073.0,A
+NIC,Nicaragua,1973,36694.0,A
+NIC,Nicaragua,1974,40972.0,A
+NIC,Nicaragua,1975,49137.0,A
+NIC,Nicaragua,1976,56580.0,A
+NIC,Nicaragua,1977,55200.0,A
+NIC,Nicaragua,1978,65092.0,A
+NIC,Nicaragua,1979,56304.0,A
+NIC,Nicaragua,1980,59107.0,A
+NIC,Nicaragua,1981,61087.0,A
+NIC,Nicaragua,1982,72145.0,A
+NIC,Nicaragua,1983,49205.0,A
+NIC,Nicaragua,1984,51290.0,A
+NIC,Nicaragua,1985,35360.0,A
+NIC,Nicaragua,1986,43332.0,A
+NIC,Nicaragua,1987,38626.0,A
+NIC,Nicaragua,1988,43447.0,A
+NIC,Nicaragua,1989,45167.0,A
+NIC,Nicaragua,1990,27996.0,A
+NIC,Nicaragua,1991,47421.0,A
+NIC,Nicaragua,1992,44505.0,A
+NIC,Nicaragua,1993,41818.0,A
+NIC,Nicaragua,1994,40551.0,A
+NIC,Nicaragua,1995,54587.0,A
+NIC,Nicaragua,1996,49900.0,A
+NIC,Nicaragua,1997,65169.0,A
+NIC,Nicaragua,1998,65420.0,A
+NIC,Nicaragua,1999,91791.0,A
+NIC,Nicaragua,2000,82206.0,A
+NIC,Nicaragua,2001,66799.0,A
+NIC,Nicaragua,2002,60235.0,A
+NIC,Nicaragua,2003,82727.0,A
+NIC,Nicaragua,2004,57533.0,A
+NIC,Nicaragua,2005,95455.0,A
+NIC,Nicaragua,2006,70455.0,A
+NIC,Nicaragua,2007,100000.0,A
+NIC,Nicaragua,2008,75957.0,A
+NIC,Nicaragua,2009,92204.55,A
+NIC,Nicaragua,2010,78712.27,A
+NIC,Nicaragua,2011,103881.73,A
+NIC,Nicaragua,2012,86943.73,A
+NIC,Nicaragua,2013,84146.33,A
+NIC,Nicaragua,2014,86089.58,A
+NIC,Nicaragua,2015,95254.51,A
+NIC,Nicaragua,2016,122470.09,A
+NIC,Nicaragua,2017,128111.06,A
+NIC,Nicaragua,2018,141931.0,A
+NIC,Nicaragua,2019,156902.0,A
+NIC,Nicaragua,2020,154409.87,A
+NIC,Nicaragua,2021,165558.38,A
+NIC,Nicaragua,2022,170180.53,A
+NIC,Nicaragua,2023,143336.66,A
+NGA,Nigeria,1961,1100.0,E
+NGA,Nigeria,1962,2000.0,E
+NGA,Nigeria,1963,2000.0,E
+NGA,Nigeria,1964,3000.0,E
+NGA,Nigeria,1965,3000.0,E
+NGA,Nigeria,1966,4000.0,E
+NGA,Nigeria,1967,1712.0,E
+NGA,Nigeria,1968,2360.0,E
+NGA,Nigeria,1969,4776.0,E
+NGA,Nigeria,1970,2826.0,X
+NGA,Nigeria,1971,3600.0,A
+NGA,Nigeria,1972,4171.0,X
+NGA,Nigeria,1973,2300.0,A
+NGA,Nigeria,1974,2400.0,A
+NGA,Nigeria,1975,3000.0,A
+NGA,Nigeria,1976,3000.0,A
+NGA,Nigeria,1977,3100.0,A
+NGA,Nigeria,1978,3100.0,A
+NGA,Nigeria,1979,3200.0,A
+NGA,Nigeria,1980,3500.0,A
+NGA,Nigeria,1981,3000.0,A
+NGA,Nigeria,1982,3000.0,A
+NGA,Nigeria,1983,3000.0,A
+NGA,Nigeria,1984,4000.0,A
+NGA,Nigeria,1985,6000.0,A
+NGA,Nigeria,1986,1200.0,X
+NGA,Nigeria,1987,1500.0,X
+NGA,Nigeria,1988,1570.0,A
+NGA,Nigeria,1989,2570.0,A
+NGA,Nigeria,1990,3030.0,A
+NGA,Nigeria,1991,3200.0,A
+NGA,Nigeria,1992,3380.0,A
+NGA,Nigeria,1993,3580.0,A
+NGA,Nigeria,1994,3720.0,A
+NGA,Nigeria,1995,3090.0,A
+NGA,Nigeria,1996,3780.0,A
+NGA,Nigeria,1997,3700.0,A
+NGA,Nigeria,1998,3700.0,A
+NGA,Nigeria,1999,3750.0,A
+NGA,Nigeria,2000,3830.0,A
+NGA,Nigeria,2001,3850.0,A
+NGA,Nigeria,2002,4100.0,A
+NGA,Nigeria,2003,4360.0,A
+NGA,Nigeria,2004,4660.0,A
+NGA,Nigeria,2005,4990.0,A
+NGA,Nigeria,2006,5340.0,A
+NGA,Nigeria,2007,2520.0,X
+NGA,Nigeria,2008,3000.0,X
+NGA,Nigeria,2009,2040.0,X
+NGA,Nigeria,2010,2400.0,X
+NGA,Nigeria,2011,2524.57,I
+NGA,Nigeria,2012,2416.92,I
+NGA,Nigeria,2013,2100.0,X
+NGA,Nigeria,2014,1972.17,I
+NGA,Nigeria,2015,1754.52,I
+NGA,Nigeria,2016,1942.23,E
+NGA,Nigeria,2017,1889.64,E
+NGA,Nigeria,2018,1862.13,E
+NGA,Nigeria,2019,1852.02,I
+NGA,Nigeria,2020,1806.08,I
+NGA,Nigeria,2021,1798.95,I
+NGA,Nigeria,2022,1819.02,E
+NGA,Nigeria,2023,1808.01,E
+NGA,Nigeria,2024,1808.66,E
+PAN,Panama,1961,5000.0,A
+PAN,Panama,1962,4400.0,A
+PAN,Panama,1963,4500.0,A
+PAN,Panama,1964,4300.0,A
+PAN,Panama,1965,4300.0,A
+PAN,Panama,1966,5000.0,A
+PAN,Panama,1967,5166.0,A
+PAN,Panama,1968,4500.0,A
+PAN,Panama,1969,5139.0,A
+PAN,Panama,1970,4436.0,A
+PAN,Panama,1971,5307.0,A
+PAN,Panama,1972,4944.0,A
+PAN,Panama,1973,4318.0,A
+PAN,Panama,1974,4504.0,A
+PAN,Panama,1975,4801.0,A
+PAN,Panama,1976,4677.0,A
+PAN,Panama,1977,5516.0,A
+PAN,Panama,1978,6146.0,A
+PAN,Panama,1979,6100.0,A
+PAN,Panama,1980,7272.0,A
+PAN,Panama,1981,7062.0,A
+PAN,Panama,1982,8142.0,A
+PAN,Panama,1983,8854.0,A
+PAN,Panama,1984,10750.0,A
+PAN,Panama,1985,9390.0,A
+PAN,Panama,1986,10596.0,A
+PAN,Panama,1987,10160.0,A
+PAN,Panama,1988,10274.0,A
+PAN,Panama,1989,9757.0,A
+PAN,Panama,1990,11547.0,A
+PAN,Panama,1991,12174.0,A
+PAN,Panama,1992,10945.0,A
+PAN,Panama,1993,9766.0,A
+PAN,Panama,1994,10400.0,A
+PAN,Panama,1995,11702.0,A
+PAN,Panama,1996,11113.0,A
+PAN,Panama,1997,10527.0,A
+PAN,Panama,1998,11435.0,A
+PAN,Panama,1999,12024.0,A
+PAN,Panama,2000,10255.0,A
+PAN,Panama,2001,15074.0,A
+PAN,Panama,2002,11390.0,A
+PAN,Panama,2003,11586.5,A
+PAN,Panama,2004,12778.8,A
+PAN,Panama,2005,13153.0,A
+PAN,Panama,2006,12844.0,A
+PAN,Panama,2007,13790.0,A
+PAN,Panama,2008,13324.0,A
+PAN,Panama,2009,12961.0,A
+PAN,Panama,2010,12470.0,A
+PAN,Panama,2011,9826.0,A
+PAN,Panama,2012,10049.0,A
+PAN,Panama,2013,7096.0,A
+PAN,Panama,2014,6688.0,A
+PAN,Panama,2015,7464.0,A
+PAN,Panama,2016,6135.0,A
+PAN,Panama,2017,6588.0,A
+PAN,Panama,2018,5579.0,A
+PAN,Panama,2019,8371.0,A
+PAN,Panama,2020,6254.0,A
+PAN,Panama,2021,6020.0,A
+PAN,Panama,2022,6189.06,I
+PAN,Panama,2023,6445.13,I
+PAN,Panama,2024,6318.02,I
+PNG,Papua New Guinea,1961,2520.0,X
+PNG,Papua New Guinea,1962,4140.0,X
+PNG,Papua New Guinea,1963,5280.0,X
+PNG,Papua New Guinea,1964,7500.0,X
+PNG,Papua New Guinea,1965,9240.0,X
+PNG,Papua New Guinea,1966,11700.0,X
+PNG,Papua New Guinea,1967,15720.0,X
+PNG,Papua New Guinea,1968,14570.0,A
+PNG,Papua New Guinea,1969,21478.0,A
+PNG,Papua New Guinea,1970,27495.0,A
+PNG,Papua New Guinea,1971,26967.0,A
+PNG,Papua New Guinea,1972,29015.0,A
+PNG,Papua New Guinea,1973,34798.0,A
+PNG,Papua New Guinea,1974,34084.0,A
+PNG,Papua New Guinea,1975,36945.0,A
+PNG,Papua New Guinea,1976,39466.0,A
+PNG,Papua New Guinea,1977,38224.0,A
+PNG,Papua New Guinea,1978,45945.0,A
+PNG,Papua New Guinea,1979,49532.0,A
+PNG,Papua New Guinea,1980,54762.0,A
+PNG,Papua New Guinea,1981,49837.0,A
+PNG,Papua New Guinea,1982,41108.0,A
+PNG,Papua New Guinea,1983,55894.0,A
+PNG,Papua New Guinea,1984,43675.0,A
+PNG,Papua New Guinea,1985,56206.0,A
+PNG,Papua New Guinea,1986,44310.0,A
+PNG,Papua New Guinea,1987,62520.0,X
+PNG,Papua New Guinea,1988,62000.0,X
+PNG,Papua New Guinea,1989,65640.0,A
+PNG,Papua New Guinea,1990,60000.0,A
+PNG,Papua New Guinea,1991,47220.0,A
+PNG,Papua New Guinea,1992,50460.0,A
+PNG,Papua New Guinea,1993,63540.0,A
+PNG,Papua New Guinea,1994,67136.0,A
+PNG,Papua New Guinea,1995,59589.0,A
+PNG,Papua New Guinea,1996,65091.0,A
+PNG,Papua New Guinea,1997,64524.0,A
+PNG,Papua New Guinea,1998,80940.0,A
+PNG,Papua New Guinea,1999,83040.0,A
+PNG,Papua New Guinea,2000,83000.0,X
+PNG,Papua New Guinea,2001,63720.0,A
+PNG,Papua New Guinea,2002,65100.0,A
+PNG,Papua New Guinea,2003,69300.0,A
+PNG,Papua New Guinea,2004,59820.0,A
+PNG,Papua New Guinea,2005,76080.0,A
+PNG,Papua New Guinea,2006,48420.0,A
+PNG,Papua New Guinea,2007,58080.0,A
+PNG,Papua New Guinea,2008,61680.0,A
+PNG,Papua New Guinea,2009,60240.0,A
+PNG,Papua New Guinea,2010,52220.0,A
+PNG,Papua New Guinea,2011,84870.0,A
+PNG,Papua New Guinea,2012,43620.0,A
+PNG,Papua New Guinea,2013,49680.0,A
+PNG,Papua New Guinea,2014,56893.36,I
+PNG,Papua New Guinea,2015,57982.28,I
+PNG,Papua New Guinea,2016,53719.27,I
+PNG,Papua New Guinea,2017,46980.0,X
+PNG,Papua New Guinea,2018,53160.0,X
+PNG,Papua New Guinea,2019,45129.0,A
+PNG,Papua New Guinea,2020,40500.0,A
+PNG,Papua New Guinea,2021,47880.0,X
+PNG,Papua New Guinea,2022,40800.0,X
+PNG,Papua New Guinea,2023,58800.0,X
+PNG,Papua New Guinea,2024,50400.0,X
+PRY,Paraguay,1961,6000.0,E
+PRY,Paraguay,1962,6180.0,X
+PRY,Paraguay,1963,7140.0,X
+PRY,Paraguay,1964,7200.0,A
+PRY,Paraguay,1965,6018.0,A
+PRY,Paraguay,1966,6510.0,A
+PRY,Paraguay,1967,7110.0,A
+PRY,Paraguay,1968,7340.0,A
+PRY,Paraguay,1969,6090.0,A
+PRY,Paraguay,1970,4310.0,A
+PRY,Paraguay,1971,5810.0,A
+PRY,Paraguay,1972,7660.0,A
+PRY,Paraguay,1973,6930.0,A
+PRY,Paraguay,1974,8480.0,A
+PRY,Paraguay,1975,8340.0,A
+PRY,Paraguay,1976,3910.0,A
+PRY,Paraguay,1977,6000.0,A
+PRY,Paraguay,1978,7200.0,A
+PRY,Paraguay,1979,7560.0,A
+PRY,Paraguay,1980,7800.0,X
+PRY,Paraguay,1981,12856.0,A
+PRY,Paraguay,1982,13865.0,A
+PRY,Paraguay,1983,15031.0,A
+PRY,Paraguay,1984,18359.0,A
+PRY,Paraguay,1985,18134.0,A
+PRY,Paraguay,1986,19070.0,A
+PRY,Paraguay,1987,18276.0,A
+PRY,Paraguay,1988,18335.0,A
+PRY,Paraguay,1989,17605.0,A
+PRY,Paraguay,1990,17576.0,A
+PRY,Paraguay,1991,4519.0,A
+PRY,Paraguay,1992,4850.0,A
+PRY,Paraguay,1993,4950.0,A
+PRY,Paraguay,1994,5002.0,A
+PRY,Paraguay,1995,4008.0,A
+PRY,Paraguay,1996,4024.0,A
+PRY,Paraguay,1997,4823.0,A
+PRY,Paraguay,1998,4752.0,A
+PRY,Paraguay,1999,4726.0,A
+PRY,Paraguay,2000,3586.0,A
+PRY,Paraguay,2001,2751.0,A
+PRY,Paraguay,2002,2434.0,A
+PRY,Paraguay,2003,3085.0,A
+PRY,Paraguay,2004,3353.0,A
+PRY,Paraguay,2005,2900.0,A
+PRY,Paraguay,2006,3040.0,A
+PRY,Paraguay,2007,3100.0,E
+PRY,Paraguay,2008,273.0,A
+PRY,Paraguay,2009,281.0,A
+PRY,Paraguay,2010,370.0,A
+PRY,Paraguay,2011,370.0,A
+PRY,Paraguay,2012,370.0,A
+PRY,Paraguay,2013,382.0,A
+PRY,Paraguay,2014,386.0,A
+PRY,Paraguay,2015,395.0,A
+PRY,Paraguay,2016,395.0,A
+PRY,Paraguay,2017,442.0,A
+PRY,Paraguay,2018,441.0,A
+PRY,Paraguay,2019,399.0,A
+PRY,Paraguay,2020,381.0,A
+PRY,Paraguay,2021,388.0,A
+PRY,Paraguay,2022,394.55,I
+PRY,Paraguay,2023,361.58,I
+PRY,Paraguay,2024,363.19,I
+PER,Peru,1961,42643.0,A
+PER,Peru,1962,46356.0,A
+PER,Peru,1963,48940.0,A
+PER,Peru,1964,52740.0,A
+PER,Peru,1965,48264.0,A
+PER,Peru,1966,52380.0,A
+PER,Peru,1967,52753.0,A
+PER,Peru,1968,64652.0,A
+PER,Peru,1969,68439.0,A
+PER,Peru,1970,65368.0,A
+PER,Peru,1971,70587.0,A
+PER,Peru,1972,70195.0,A
+PER,Peru,1973,70396.0,A
+PER,Peru,1974,69855.0,A
+PER,Peru,1975,65387.0,A
+PER,Peru,1976,65445.0,A
+PER,Peru,1977,80190.0,A
+PER,Peru,1978,88166.0,A
+PER,Peru,1979,105478.0,A
+PER,Peru,1980,86177.0,A
+PER,Peru,1981,79360.0,A
+PER,Peru,1982,79422.0,A
+PER,Peru,1983,85637.0,A
+PER,Peru,1984,83357.0,A
+PER,Peru,1985,90736.0,A
+PER,Peru,1986,96054.0,A
+PER,Peru,1987,98538.0,A
+PER,Peru,1988,99414.0,A
+PER,Peru,1989,105753.0,A
+PER,Peru,1990,81142.0,A
+PER,Peru,1991,82635.0,A
+PER,Peru,1992,86519.0,A
+PER,Peru,1993,85603.0,A
+PER,Peru,1994,91340.0,A
+PER,Peru,1995,96697.0,A
+PER,Peru,1996,106520.0,A
+PER,Peru,1997,133296.0,A
+PER,Peru,1998,144763.0,A
+PER,Peru,1999,167145.0,A
+PER,Peru,2000,191651.0,A
+PER,Peru,2001,196232.0,A
+PER,Peru,2002,212770.0,A
+PER,Peru,2003,203148.0,A
+PER,Peru,2004,231447.0,A
+PER,Peru,2005,188611.0,A
+PER,Peru,2006,273178.0,A
+PER,Peru,2007,225992.0,A
+PER,Peru,2008,273780.0,A
+PER,Peru,2009,243479.0,A
+PER,Peru,2010,264605.0,A
+PER,Peru,2011,331547.0,A
+PER,Peru,2012,320163.56,A
+PER,Peru,2013,256241.43,A
+PER,Peru,2014,222047.0,A
+PER,Peru,2015,251938.0,A
+PER,Peru,2016,277760.4,A
+PER,Peru,2017,337330.0,A
+PER,Peru,2018,369621.99,A
+PER,Peru,2019,363319.59,A
+PER,Peru,2020,353205.74,A
+PER,Peru,2021,363996.83,A
+PER,Peru,2022,357346.42,A
+PER,Peru,2023,366940.03,A
+PER,Peru,2024,358993.78,A
+PHL,Philippines,1961,32300.0,A
+PHL,Philippines,1962,43100.0,A
+PHL,Philippines,1963,32900.0,A
+PHL,Philippines,1964,39311.0,A
+PHL,Philippines,1965,44145.0,A
+PHL,Philippines,1966,42793.0,A
+PHL,Philippines,1967,44300.0,A
+PHL,Philippines,1968,43862.0,A
+PHL,Philippines,1969,44172.0,A
+PHL,Philippines,1970,49017.0,A
+PHL,Philippines,1971,49500.0,A
+PHL,Philippines,1972,51600.0,A
+PHL,Philippines,1973,50910.0,A
+PHL,Philippines,1974,53031.0,A
+PHL,Philippines,1975,91444.0,A
+PHL,Philippines,1976,80800.0,A
+PHL,Philippines,1977,105100.0,A
+PHL,Philippines,1978,118750.0,A
+PHL,Philippines,1979,115500.0,A
+PHL,Philippines,1980,125285.0,A
+PHL,Philippines,1981,146700.0,A
+PHL,Philippines,1982,171400.0,A
+PHL,Philippines,1983,146927.0,A
+PHL,Philippines,1984,116755.0,A
+PHL,Philippines,1985,135354.0,A
+PHL,Philippines,1986,145301.0,A
+PHL,Philippines,1987,140119.0,A
+PHL,Philippines,1988,141892.0,A
+PHL,Philippines,1989,155900.0,A
+PHL,Philippines,1990,125659.0,A
+PHL,Philippines,1991,125017.0,A
+PHL,Philippines,1992,126832.0,A
+PHL,Philippines,1993,124415.0,A
+PHL,Philippines,1994,123553.0,A
+PHL,Philippines,1995,127412.0,A
+PHL,Philippines,1996,117226.0,A
+PHL,Philippines,1997,120006.0,A
+PHL,Philippines,1998,107802.0,A
+PHL,Philippines,1999,104124.0,A
+PHL,Philippines,2000,107557.0,A
+PHL,Philippines,2001,112271.0,A
+PHL,Philippines,2002,107080.0,A
+PHL,Philippines,2003,106388.0,A
+PHL,Philippines,2004,102865.0,A
+PHL,Philippines,2005,105847.0,A
+PHL,Philippines,2006,104093.0,A
+PHL,Philippines,2007,97877.0,A
+PHL,Philippines,2008,97428.0,A
+PHL,Philippines,2009,96433.0,A
+PHL,Philippines,2010,94536.0,A
+PHL,Philippines,2011,88526.0,A
+PHL,Philippines,2012,88943.0,A
+PHL,Philippines,2013,78634.0,A
+PHL,Philippines,2014,75454.0,A
+PHL,Philippines,2015,72342.0,A
+PHL,Philippines,2016,68822.93,A
+PHL,Philippines,2017,62077.95,A
+PHL,Philippines,2018,60312.76,A
+PHL,Philippines,2019,60043.88,A
+PHL,Philippines,2020,60640.95,A
+PHL,Philippines,2021,60607.18,A
+PHL,Philippines,2022,59962.36,I
+PHL,Philippines,2023,60000.0,E
+PHL,Philippines,2024,64000.0,E
+PRI,Puerto Rico,1961,15876.0,A
+PRI,Puerto Rico,1962,17917.0,A
+PRI,Puerto Rico,1963,14288.0,A
+PRI,Puerto Rico,1964,17010.0,A
+PRI,Puerto Rico,1965,13600.0,A
+PRI,Puerto Rico,1966,12882.0,A
+PRI,Puerto Rico,1967,14742.0,A
+PRI,Puerto Rico,1968,11793.0,A
+PRI,Puerto Rico,1969,9078.0,A
+PRI,Puerto Rico,1970,15422.0,A
+PRI,Puerto Rico,1971,10886.0,A
+PRI,Puerto Rico,1972,12247.0,A
+PRI,Puerto Rico,1973,13698.0,A
+PRI,Puerto Rico,1974,10478.0,A
+PRI,Puerto Rico,1975,11430.0,A
+PRI,Puerto Rico,1976,11428.0,A
+PRI,Puerto Rico,1977,8707.0,A
+PRI,Puerto Rico,1978,11927.0,A
+PRI,Puerto Rico,1979,9526.0,A
+PRI,Puerto Rico,1980,11884.0,A
+PRI,Puerto Rico,1981,13608.0,A
+PRI,Puerto Rico,1982,12973.0,A
+PRI,Puerto Rico,1983,15649.0,A
+PRI,Puerto Rico,1984,12247.0,A
+PRI,Puerto Rico,1985,14061.0,A
+PRI,Puerto Rico,1986,11340.0,A
+PRI,Puerto Rico,1987,15967.0,A
+PRI,Puerto Rico,1988,13154.0,A
+PRI,Puerto Rico,1989,14515.0,A
+PRI,Puerto Rico,1990,12927.0,A
+PRI,Puerto Rico,1991,12701.0,A
+PRI,Puerto Rico,1992,12701.0,A
+PRI,Puerto Rico,1993,15478.0,A
+PRI,Puerto Rico,1994,12700.0,A
+PRI,Puerto Rico,1995,12701.0,A
+PRI,Puerto Rico,1996,12175.0,A
+PRI,Puerto Rico,1997,11567.0,A
+PRI,Puerto Rico,1998,13393.0,A
+PRI,Puerto Rico,1999,7000.0,A
+PRI,Puerto Rico,2000,8250.0,A
+PRI,Puerto Rico,2001,8650.0,A
+PRI,Puerto Rico,2002,7600.0,A
+PRI,Puerto Rico,2003,9308.0,A
+PRI,Puerto Rico,2004,10206.0,A
+PRI,Puerto Rico,2005,7938.0,A
+PRI,Puerto Rico,2006,7323.2,I
+PRI,Puerto Rico,2007,6833.48,I
+PRI,Puerto Rico,2008,6683.26,I
+PRI,Puerto Rico,2009,6337.28,I
+PRI,Puerto Rico,2010,6058.22,I
+PRI,Puerto Rico,2011,5737.88,I
+PRI,Puerto Rico,2012,5760.0,A
+PRI,Puerto Rico,2013,4880.9,I
+PRI,Puerto Rico,2014,4674.4,A
+PRI,Puerto Rico,2015,3369.05,A
+PRI,Puerto Rico,2016,3120.43,I
+PRI,Puerto Rico,2017,1800.0,E
+PRI,Puerto Rico,2018,975.0,A
+PRI,Puerto Rico,2019,1820.06,I
+PRI,Puerto Rico,2020,1950.76,I
+PRI,Puerto Rico,2021,1862.42,I
+PRI,Puerto Rico,2022,2740.0,A
+PRI,Puerto Rico,2023,1468.77,I
+PRI,Puerto Rico,2024,635.99,I
+RWA,Rwanda,1961,10500.0,E
+RWA,Rwanda,1962,10000.0,E
+RWA,Rwanda,1963,4700.0,A
+RWA,Rwanda,1964,8100.0,A
+RWA,Rwanda,1965,9998.0,A
+RWA,Rwanda,1966,8603.0,A
+RWA,Rwanda,1967,11157.0,A
+RWA,Rwanda,1968,12015.0,A
+RWA,Rwanda,1969,12399.0,A
+RWA,Rwanda,1970,14240.0,A
+RWA,Rwanda,1971,15245.0,A
+RWA,Rwanda,1972,10602.0,A
+RWA,Rwanda,1973,14160.0,A
+RWA,Rwanda,1974,14062.0,A
+RWA,Rwanda,1975,18045.0,A
+RWA,Rwanda,1976,20334.0,A
+RWA,Rwanda,1977,20684.0,A
+RWA,Rwanda,1978,21994.0,A
+RWA,Rwanda,1979,25500.0,E
+RWA,Rwanda,1980,22600.0,E
+RWA,Rwanda,1981,29200.0,E
+RWA,Rwanda,1982,27200.0,E
+RWA,Rwanda,1983,33500.0,A
+RWA,Rwanda,1984,32500.0,X
+RWA,Rwanda,1985,43000.0,X
+RWA,Rwanda,1986,41348.0,A
+RWA,Rwanda,1987,41797.0,A
+RWA,Rwanda,1988,42666.0,A
+RWA,Rwanda,1989,30591.0,A
+RWA,Rwanda,1990,34680.0,A
+RWA,Rwanda,1991,35000.0,E
+RWA,Rwanda,1992,38824.0,A
+RWA,Rwanda,1993,27510.0,A
+RWA,Rwanda,1994,1274.0,A
+RWA,Rwanda,1995,21952.0,A
+RWA,Rwanda,1996,15285.0,A
+RWA,Rwanda,1997,14830.0,A
+RWA,Rwanda,1998,14268.0,A
+RWA,Rwanda,1999,18800.0,A
+RWA,Rwanda,2000,16098.0,A
+RWA,Rwanda,2001,18366.0,A
+RWA,Rwanda,2002,19427.0,A
+RWA,Rwanda,2003,13805.0,A
+RWA,Rwanda,2004,20017.0,A
+RWA,Rwanda,2005,18597.0,A
+RWA,Rwanda,2006,22223.0,A
+RWA,Rwanda,2007,14683.0,A
+RWA,Rwanda,2008,20724.0,A
+RWA,Rwanda,2009,19371.89,A
+RWA,Rwanda,2010,19319.0,A
+RWA,Rwanda,2011,21820.4,A
+RWA,Rwanda,2012,19995.0,A
+RWA,Rwanda,2013,18346.0,A
+RWA,Rwanda,2014,16379.0,A
+RWA,Rwanda,2015,21808.0,A
+RWA,Rwanda,2016,24689.41,I
+RWA,Rwanda,2017,31717.52,A
+RWA,Rwanda,2018,38643.34,A
+RWA,Rwanda,2019,29366.01,A
+RWA,Rwanda,2020,20459.0,A
+RWA,Rwanda,2021,19466.88,A
+RWA,Rwanda,2022,18945.39,A
+RWA,Rwanda,2023,27104.4,A
+RWA,Rwanda,2024,17839.78,A
+LCA,Saint Lucia,1961,25.0,A
+LCA,Saint Lucia,1962,25.0,E
+LCA,Saint Lucia,1963,25.0,E
+LCA,Saint Lucia,1964,25.0,E
+LCA,Saint Lucia,1965,25.0,E
+LCA,Saint Lucia,1966,25.0,E
+LCA,Saint Lucia,1967,25.0,E
+LCA,Saint Lucia,1968,25.0,E
+LCA,Saint Lucia,1969,24.0,E
+LCA,Saint Lucia,1970,24.0,E
+LCA,Saint Lucia,1971,24.0,E
+LCA,Saint Lucia,1972,24.0,E
+LCA,Saint Lucia,1973,24.0,A
+LCA,Saint Lucia,1974,23.0,E
+LCA,Saint Lucia,1975,22.0,E
+LCA,Saint Lucia,1976,21.0,E
+LCA,Saint Lucia,1977,20.0,E
+LCA,Saint Lucia,1978,19.0,E
+LCA,Saint Lucia,1979,18.0,E
+LCA,Saint Lucia,1980,17.0,A
+LCA,Saint Lucia,1981,12.0,A
+LCA,Saint Lucia,1982,15.0,E
+LCA,Saint Lucia,1983,16.0,E
+LCA,Saint Lucia,1984,17.0,E
+LCA,Saint Lucia,1985,18.0,E
+LCA,Saint Lucia,1986,19.0,E
+LCA,Saint Lucia,1987,20.0,E
+LCA,Saint Lucia,1988,20.0,E
+LCA,Saint Lucia,1989,0.0,E
+LCA,Saint Lucia,1990,,M
+LCA,Saint Lucia,1991,,M
+LCA,Saint Lucia,1992,,M
+LCA,Saint Lucia,1993,,M
+LCA,Saint Lucia,1994,,M
+LCA,Saint Lucia,1995,,M
+LCA,Saint Lucia,1996,,M
+LCA,Saint Lucia,1997,,M
+LCA,Saint Lucia,1998,,M
+LCA,Saint Lucia,1999,,M
+LCA,Saint Lucia,2000,,M
+LCA,Saint Lucia,2001,,M
+LCA,Saint Lucia,2002,,M
+LCA,Saint Lucia,2003,,M
+LCA,Saint Lucia,2004,,M
+LCA,Saint Lucia,2005,,M
+LCA,Saint Lucia,2006,,M
+LCA,Saint Lucia,2007,,M
+LCA,Saint Lucia,2008,,M
+LCA,Saint Lucia,2009,,M
+LCA,Saint Lucia,2010,,M
+LCA,Saint Lucia,2011,,M
+LCA,Saint Lucia,2012,,M
+LCA,Saint Lucia,2013,,M
+LCA,Saint Lucia,2014,,M
+LCA,Saint Lucia,2015,,M
+LCA,Saint Lucia,2016,,M
+LCA,Saint Lucia,2017,,M
+LCA,Saint Lucia,2018,,M
+LCA,Saint Lucia,2019,,M
+LCA,Saint Lucia,2020,,M
+LCA,Saint Lucia,2021,,M
+LCA,Saint Lucia,2022,,M
+LCA,Saint Lucia,2023,,M
+LCA,Saint Lucia,2024,,M
+VCT,Saint Vincent and the Grenadines,1961,50.0,E
+VCT,Saint Vincent and the Grenadines,1962,50.0,E
+VCT,Saint Vincent and the Grenadines,1963,55.0,E
+VCT,Saint Vincent and the Grenadines,1964,55.0,E
+VCT,Saint Vincent and the Grenadines,1965,60.0,E
+VCT,Saint Vincent and the Grenadines,1966,60.0,E
+VCT,Saint Vincent and the Grenadines,1967,70.0,E
+VCT,Saint Vincent and the Grenadines,1968,70.0,E
+VCT,Saint Vincent and the Grenadines,1969,80.0,E
+VCT,Saint Vincent and the Grenadines,1970,80.0,E
+VCT,Saint Vincent and the Grenadines,1971,90.0,E
+VCT,Saint Vincent and the Grenadines,1972,90.0,E
+VCT,Saint Vincent and the Grenadines,1973,90.0,E
+VCT,Saint Vincent and the Grenadines,1974,100.0,E
+VCT,Saint Vincent and the Grenadines,1975,100.0,E
+VCT,Saint Vincent and the Grenadines,1976,100.0,E
+VCT,Saint Vincent and the Grenadines,1977,100.0,E
+VCT,Saint Vincent and the Grenadines,1978,105.0,E
+VCT,Saint Vincent and the Grenadines,1979,110.0,E
+VCT,Saint Vincent and the Grenadines,1980,115.0,E
+VCT,Saint Vincent and the Grenadines,1981,120.0,E
+VCT,Saint Vincent and the Grenadines,1982,120.0,E
+VCT,Saint Vincent and the Grenadines,1983,130.0,E
+VCT,Saint Vincent and the Grenadines,1984,130.0,E
+VCT,Saint Vincent and the Grenadines,1985,130.0,E
+VCT,Saint Vincent and the Grenadines,1986,140.0,E
+VCT,Saint Vincent and the Grenadines,1987,140.0,E
+VCT,Saint Vincent and the Grenadines,1988,145.0,E
+VCT,Saint Vincent and the Grenadines,1989,145.0,E
+VCT,Saint Vincent and the Grenadines,1990,150.0,E
+VCT,Saint Vincent and the Grenadines,1991,152.05,I
+VCT,Saint Vincent and the Grenadines,1992,155.0,E
+VCT,Saint Vincent and the Grenadines,1993,150.0,E
+VCT,Saint Vincent and the Grenadines,1994,155.0,E
+VCT,Saint Vincent and the Grenadines,1995,160.0,E
+VCT,Saint Vincent and the Grenadines,1996,163.17,I
+VCT,Saint Vincent and the Grenadines,1997,164.22,I
+VCT,Saint Vincent and the Grenadines,1998,173.49,I
+VCT,Saint Vincent and the Grenadines,1999,170.0,E
+VCT,Saint Vincent and the Grenadines,2000,160.0,E
+VCT,Saint Vincent and the Grenadines,2001,155.0,E
+VCT,Saint Vincent and the Grenadines,2002,150.0,E
+VCT,Saint Vincent and the Grenadines,2003,145.0,E
+VCT,Saint Vincent and the Grenadines,2004,150.0,E
+VCT,Saint Vincent and the Grenadines,2005,165.0,E
+VCT,Saint Vincent and the Grenadines,2006,175.0,E
+VCT,Saint Vincent and the Grenadines,2007,180.0,E
+VCT,Saint Vincent and the Grenadines,2008,200.0,E
+VCT,Saint Vincent and the Grenadines,2009,220.0,E
+VCT,Saint Vincent and the Grenadines,2010,199.57,I
+VCT,Saint Vincent and the Grenadines,2011,188.91,I
+VCT,Saint Vincent and the Grenadines,2012,170.0,E
+VCT,Saint Vincent and the Grenadines,2013,175.0,E
+VCT,Saint Vincent and the Grenadines,2014,177.28,I
+VCT,Saint Vincent and the Grenadines,2015,180.61,I
+VCT,Saint Vincent and the Grenadines,2016,184.4,I
+VCT,Saint Vincent and the Grenadines,2017,187.31,I
+VCT,Saint Vincent and the Grenadines,2018,189.22,I
+VCT,Saint Vincent and the Grenadines,2019,189.87,I
+VCT,Saint Vincent and the Grenadines,2020,190.52,I
+VCT,Saint Vincent and the Grenadines,2021,189.95,I
+VCT,Saint Vincent and the Grenadines,2022,189.55,I
+VCT,Saint Vincent and the Grenadines,2023,189.78,I
+VCT,Saint Vincent and the Grenadines,2024,189.99,I
+WSM,Samoa,1961,115.0,E
+WSM,Samoa,1962,130.0,E
+WSM,Samoa,1963,130.0,E
+WSM,Samoa,1964,120.0,E
+WSM,Samoa,1965,135.0,E
+WSM,Samoa,1966,150.0,A
+WSM,Samoa,1967,150.0,A
+WSM,Samoa,1968,150.0,A
+WSM,Samoa,1969,150.0,A
+WSM,Samoa,1970,150.0,A
+WSM,Samoa,1971,150.0,A
+WSM,Samoa,1972,40.0,A
+WSM,Samoa,1973,40.0,A
+WSM,Samoa,1974,40.0,A
+WSM,Samoa,1975,20.0,A
+WSM,Samoa,1976,20.0,E
+WSM,Samoa,1977,20.0,E
+WSM,Samoa,1978,20.0,A
+WSM,Samoa,1979,20.0,A
+WSM,Samoa,1980,20.0,A
+WSM,Samoa,1981,20.0,E
+WSM,Samoa,1982,20.0,E
+WSM,Samoa,1983,20.0,E
+WSM,Samoa,1984,20.0,E
+WSM,Samoa,1985,20.0,E
+WSM,Samoa,1986,20.0,E
+WSM,Samoa,1987,20.0,E
+WSM,Samoa,1988,20.0,E
+WSM,Samoa,1989,20.0,E
+WSM,Samoa,1990,18.0,E
+WSM,Samoa,1991,17.0,E
+WSM,Samoa,1992,16.0,E
+WSM,Samoa,1993,15.0,E
+WSM,Samoa,1994,14.0,E
+WSM,Samoa,1995,13.0,E
+WSM,Samoa,1996,12.0,E
+WSM,Samoa,1997,11.0,E
+WSM,Samoa,1998,10.0,E
+WSM,Samoa,1999,9.0,E
+WSM,Samoa,2000,8.0,E
+WSM,Samoa,2001,8.0,E
+WSM,Samoa,2002,8.0,E
+WSM,Samoa,2003,8.0,E
+WSM,Samoa,2004,8.32,I
+WSM,Samoa,2005,8.39,I
+WSM,Samoa,2006,8.44,I
+WSM,Samoa,2007,8.0,E
+WSM,Samoa,2008,8.0,E
+WSM,Samoa,2009,8.0,E
+WSM,Samoa,2010,10.0,E
+WSM,Samoa,2011,10.0,E
+WSM,Samoa,2012,11.0,E
+WSM,Samoa,2013,11.0,E
+WSM,Samoa,2014,11.22,I
+WSM,Samoa,2015,11.13,I
+WSM,Samoa,2016,11.27,I
+WSM,Samoa,2017,11.43,I
+WSM,Samoa,2018,11.7,I
+WSM,Samoa,2019,11.96,I
+WSM,Samoa,2020,12.27,I
+WSM,Samoa,2021,11.79,E
+WSM,Samoa,2022,11.82,E
+WSM,Samoa,2023,11.77,E
+WSM,Samoa,2024,11.79,E
+STP,Sao Tome and Principe,1961,258.0,A
+STP,Sao Tome and Principe,1962,297.0,A
+STP,Sao Tome and Principe,1963,258.0,A
+STP,Sao Tome and Principe,1964,197.0,A
+STP,Sao Tome and Principe,1965,214.0,A
+STP,Sao Tome and Principe,1966,158.0,A
+STP,Sao Tome and Principe,1967,175.0,A
+STP,Sao Tome and Principe,1968,133.0,A
+STP,Sao Tome and Principe,1969,151.0,A
+STP,Sao Tome and Principe,1970,125.0,A
+STP,Sao Tome and Principe,1971,70.0,A
+STP,Sao Tome and Principe,1972,143.0,A
+STP,Sao Tome and Principe,1973,61.0,A
+STP,Sao Tome and Principe,1974,93.0,A
+STP,Sao Tome and Principe,1975,28.0,A
+STP,Sao Tome and Principe,1976,45.0,A
+STP,Sao Tome and Principe,1977,60.0,X
+STP,Sao Tome and Principe,1978,60.0,X
+STP,Sao Tome and Principe,1979,60.0,E
+STP,Sao Tome and Principe,1980,60.0,E
+STP,Sao Tome and Principe,1981,60.0,E
+STP,Sao Tome and Principe,1982,60.0,E
+STP,Sao Tome and Principe,1983,60.0,E
+STP,Sao Tome and Principe,1984,54.0,A
+STP,Sao Tome and Principe,1985,14.0,A
+STP,Sao Tome and Principe,1986,22.0,A
+STP,Sao Tome and Principe,1987,9.0,A
+STP,Sao Tome and Principe,1988,31.0,A
+STP,Sao Tome and Principe,1989,8.0,A
+STP,Sao Tome and Principe,1990,37.0,A
+STP,Sao Tome and Principe,1991,11.0,A
+STP,Sao Tome and Principe,1992,13.0,A
+STP,Sao Tome and Principe,1993,20.0,A
+STP,Sao Tome and Principe,1994,22.0,A
+STP,Sao Tome and Principe,1995,17.0,X
+STP,Sao Tome and Principe,1996,21.0,A
+STP,Sao Tome and Principe,1997,45.0,A
+STP,Sao Tome and Principe,1998,36.0,A
+STP,Sao Tome and Principe,1999,58.0,A
+STP,Sao Tome and Principe,2000,18.0,A
+STP,Sao Tome and Principe,2001,22.0,E
+STP,Sao Tome and Principe,2002,25.0,E
+STP,Sao Tome and Principe,2003,22.97,I
+STP,Sao Tome and Principe,2004,27.0,E
+STP,Sao Tome and Principe,2005,28.0,E
+STP,Sao Tome and Principe,2006,30.0,E
+STP,Sao Tome and Principe,2007,22.96,I
+STP,Sao Tome and Principe,2008,19.95,I
+STP,Sao Tome and Principe,2009,17.9,I
+STP,Sao Tome and Principe,2010,15.17,I
+STP,Sao Tome and Principe,2011,5.6,A
+STP,Sao Tome and Principe,2012,6.2,A
+STP,Sao Tome and Principe,2013,3.9,A
+STP,Sao Tome and Principe,2014,8.03,I
+STP,Sao Tome and Principe,2015,8.61,I
+STP,Sao Tome and Principe,2016,6.84,E
+STP,Sao Tome and Principe,2017,7.83,E
+STP,Sao Tome and Principe,2018,7.62,I
+STP,Sao Tome and Principe,2019,6.85,I
+STP,Sao Tome and Principe,2020,7.0,I
+STP,Sao Tome and Principe,2021,6.76,I
+STP,Sao Tome and Principe,2022,7.19,E
+STP,Sao Tome and Principe,2023,7.31,E
+STP,Sao Tome and Principe,2024,7.27,E
+SAU,Saudi Arabia,1961,200.0,E
+SAU,Saudi Arabia,1962,200.0,E
+SAU,Saudi Arabia,1963,200.0,A
+SAU,Saudi Arabia,1964,100.0,A
+SAU,Saudi Arabia,1965,100.0,A
+SAU,Saudi Arabia,1966,100.0,E
+SAU,Saudi Arabia,1967,100.0,E
+SAU,Saudi Arabia,1968,100.0,E
+SAU,Saudi Arabia,1969,120.0,X
+SAU,Saudi Arabia,1970,120.0,X
+SAU,Saudi Arabia,1971,120.0,X
+SAU,Saudi Arabia,1972,243.0,A
+SAU,Saudi Arabia,1973,120.0,X
+SAU,Saudi Arabia,1974,140.0,E
+SAU,Saudi Arabia,1975,160.0,E
+SAU,Saudi Arabia,1976,180.0,E
+SAU,Saudi Arabia,1977,200.0,E
+SAU,Saudi Arabia,1978,220.0,E
+SAU,Saudi Arabia,1979,240.0,E
+SAU,Saudi Arabia,1980,260.0,E
+SAU,Saudi Arabia,1981,300.0,E
+SAU,Saudi Arabia,1982,386.0,A
+SAU,Saudi Arabia,1983,250.0,E
+SAU,Saudi Arabia,1984,150.0,E
+SAU,Saudi Arabia,1985,50.0,E
+SAU,Saudi Arabia,1986,0.0,A
+SAU,Saudi Arabia,1987,0.0,A
+SAU,Saudi Arabia,1988,0.0,A
+SAU,Saudi Arabia,1989,0.0,A
+SAU,Saudi Arabia,1990,0.0,A
+SAU,Saudi Arabia,1991,0.0,A
+SAU,Saudi Arabia,1992,0.0,A
+SAU,Saudi Arabia,1993,0.0,A
+SAU,Saudi Arabia,1994,0.0,A
+SAU,Saudi Arabia,1995,0.0,A
+SAU,Saudi Arabia,1996,0.0,A
+SAU,Saudi Arabia,1997,,M
+SAU,Saudi Arabia,1998,,M
+SAU,Saudi Arabia,1999,,M
+SAU,Saudi Arabia,2000,,M
+SAU,Saudi Arabia,2001,,M
+SAU,Saudi Arabia,2002,,M
+SAU,Saudi Arabia,2003,,M
+SAU,Saudi Arabia,2004,,M
+SAU,Saudi Arabia,2005,,M
+SAU,Saudi Arabia,2006,,M
+SAU,Saudi Arabia,2007,,M
+SAU,Saudi Arabia,2008,,M
+SAU,Saudi Arabia,2009,,M
+SAU,Saudi Arabia,2010,,M
+SAU,Saudi Arabia,2011,,M
+SAU,Saudi Arabia,2012,,M
+SAU,Saudi Arabia,2013,,M
+SAU,Saudi Arabia,2014,,M
+SAU,Saudi Arabia,2015,,M
+SAU,Saudi Arabia,2016,,M
+SAU,Saudi Arabia,2017,,M
+SAU,Saudi Arabia,2018,,M
+SAU,Saudi Arabia,2019,,M
+SAU,Saudi Arabia,2020,,M
+SAU,Saudi Arabia,2021,,M
+SAU,Saudi Arabia,2022,,M
+SAU,Saudi Arabia,2023,763.34,A
+SAU,Saudi Arabia,2024,760.0,E
+SLE,Sierra Leone,1961,5103.0,E
+SLE,Sierra Leone,1962,2419.0,E
+SLE,Sierra Leone,1963,3958.0,E
+SLE,Sierra Leone,1964,6029.0,E
+SLE,Sierra Leone,1965,3937.0,E
+SLE,Sierra Leone,1966,9593.0,E
+SLE,Sierra Leone,1967,3000.0,E
+SLE,Sierra Leone,1968,4131.0,A
+SLE,Sierra Leone,1969,8257.0,A
+SLE,Sierra Leone,1970,6188.0,A
+SLE,Sierra Leone,1971,9527.0,A
+SLE,Sierra Leone,1972,7297.0,A
+SLE,Sierra Leone,1973,11971.0,A
+SLE,Sierra Leone,1974,3188.0,A
+SLE,Sierra Leone,1975,7416.0,A
+SLE,Sierra Leone,1976,4702.0,A
+SLE,Sierra Leone,1977,10273.0,A
+SLE,Sierra Leone,1978,4367.0,A
+SLE,Sierra Leone,1979,13690.0,A
+SLE,Sierra Leone,1980,10146.0,A
+SLE,Sierra Leone,1981,9288.0,A
+SLE,Sierra Leone,1982,8658.0,A
+SLE,Sierra Leone,1983,16500.0,A
+SLE,Sierra Leone,1984,18000.0,A
+SLE,Sierra Leone,1985,26000.0,A
+SLE,Sierra Leone,1986,23100.0,A
+SLE,Sierra Leone,1987,24200.0,A
+SLE,Sierra Leone,1988,25300.0,A
+SLE,Sierra Leone,1989,25600.0,A
+SLE,Sierra Leone,1990,25800.0,A
+SLE,Sierra Leone,1991,26000.0,A
+SLE,Sierra Leone,1992,26000.0,A
+SLE,Sierra Leone,1993,24700.0,A
+SLE,Sierra Leone,1994,27805.0,A
+SLE,Sierra Leone,1995,25025.0,A
+SLE,Sierra Leone,1996,25000.0,E
+SLE,Sierra Leone,1997,30700.0,A
+SLE,Sierra Leone,1998,25000.0,E
+SLE,Sierra Leone,1999,15350.0,A
+SLE,Sierra Leone,2000,15000.0,E
+SLE,Sierra Leone,2001,16267.37,I
+SLE,Sierra Leone,2002,16704.64,I
+SLE,Sierra Leone,2003,17000.0,E
+SLE,Sierra Leone,2004,18000.0,E
+SLE,Sierra Leone,2005,20000.0,E
+SLE,Sierra Leone,2006,20500.0,E
+SLE,Sierra Leone,2007,21000.0,E
+SLE,Sierra Leone,2008,21200.0,E
+SLE,Sierra Leone,2009,22000.0,E
+SLE,Sierra Leone,2010,26130.3,I
+SLE,Sierra Leone,2011,30449.28,I
+SLE,Sierra Leone,2012,35000.0,E
+SLE,Sierra Leone,2013,36000.0,E
+SLE,Sierra Leone,2014,2756.0,X
+SLE,Sierra Leone,2015,2756.0,X
+SLE,Sierra Leone,2016,2275.0,X
+SLE,Sierra Leone,2017,2277.0,X
+SLE,Sierra Leone,2018,2685.0,X
+SLE,Sierra Leone,2019,2400.0,X
+SLE,Sierra Leone,2020,2400.0,X
+SLE,Sierra Leone,2021,2400.0,X
+SLE,Sierra Leone,2022,2580.0,X
+SLE,Sierra Leone,2023,2333.16,A
+SLE,Sierra Leone,2024,2208.05,I
+ESP,Spain,1961,5.0,A
+ESP,Spain,1962,5.0,A
+ESP,Spain,1963,5.0,A
+ESP,Spain,1964,5.0,A
+ESP,Spain,1965,6.0,A
+ESP,Spain,1966,8.0,A
+ESP,Spain,1967,8.0,A
+ESP,Spain,1968,8.0,A
+ESP,Spain,1969,7.0,A
+ESP,Spain,1970,8.0,A
+ESP,Spain,1971,6.0,A
+ESP,Spain,1972,0.0,A
+ESP,Spain,1973,6.0,A
+ESP,Spain,1974,6.0,A
+ESP,Spain,1975,8.0,A
+ESP,Spain,1976,8.0,A
+ESP,Spain,1977,8.0,A
+ESP,Spain,1978,9.0,A
+ESP,Spain,1979,9.0,A
+ESP,Spain,1980,9.0,A
+ESP,Spain,1981,4.0,A
+ESP,Spain,1982,0.0,A
+ESP,Spain,1983,0.0,A
+ESP,Spain,1984,0.0,A
+ESP,Spain,1985,0.0,A
+ESP,Spain,1986,0.0,A
+ESP,Spain,1987,11.0,A
+ESP,Spain,1988,13.0,A
+ESP,Spain,1989,14.0,A
+ESP,Spain,1990,9.0,A
+ESP,Spain,1991,7.0,A
+ESP,Spain,1992,5.0,A
+ESP,Spain,1993,5.0,A
+ESP,Spain,1994,5.0,A
+ESP,Spain,1995,,M
+ESP,Spain,1996,,M
+ESP,Spain,1997,,M
+ESP,Spain,1998,,M
+ESP,Spain,1999,,M
+ESP,Spain,2000,,M
+ESP,Spain,2001,,M
+ESP,Spain,2002,,M
+ESP,Spain,2003,,M
+ESP,Spain,2004,,M
+ESP,Spain,2005,,M
+ESP,Spain,2006,,M
+ESP,Spain,2007,,M
+ESP,Spain,2008,,M
+ESP,Spain,2009,,M
+ESP,Spain,2010,,M
+ESP,Spain,2011,,M
+ESP,Spain,2012,,M
+ESP,Spain,2013,,M
+ESP,Spain,2014,,M
+ESP,Spain,2015,,M
+ESP,Spain,2016,,M
+ESP,Spain,2017,,M
+LKA,Sri Lanka,1961,4002.0,A
+LKA,Sri Lanka,1962,3754.0,A
+LKA,Sri Lanka,1963,5520.0,A
+LKA,Sri Lanka,1964,8395.0,A
+LKA,Sri Lanka,1965,7008.0,A
+LKA,Sri Lanka,1966,6660.0,A
+LKA,Sri Lanka,1967,11488.0,A
+LKA,Sri Lanka,1968,10020.0,A
+LKA,Sri Lanka,1969,10943.0,A
+LKA,Sri Lanka,1970,7306.0,A
+LKA,Sri Lanka,1971,8358.0,A
+LKA,Sri Lanka,1972,6806.0,A
+LKA,Sri Lanka,1973,7032.0,A
+LKA,Sri Lanka,1974,8624.0,A
+LKA,Sri Lanka,1975,8838.0,A
+LKA,Sri Lanka,1976,8876.0,A
+LKA,Sri Lanka,1977,10387.0,A
+LKA,Sri Lanka,1978,12318.0,A
+LKA,Sri Lanka,1979,10100.0,A
+LKA,Sri Lanka,1980,11688.0,A
+LKA,Sri Lanka,1981,12500.0,A
+LKA,Sri Lanka,1982,13179.0,A
+LKA,Sri Lanka,1983,16600.0,A
+LKA,Sri Lanka,1984,10500.0,A
+LKA,Sri Lanka,1985,9300.0,A
+LKA,Sri Lanka,1986,5622.0,A
+LKA,Sri Lanka,1987,6030.0,A
+LKA,Sri Lanka,1988,5600.0,A
+LKA,Sri Lanka,1989,6760.0,A
+LKA,Sri Lanka,1990,7567.0,A
+LKA,Sri Lanka,1991,7861.0,A
+LKA,Sri Lanka,1992,8672.0,A
+LKA,Sri Lanka,1993,10090.0,A
+LKA,Sri Lanka,1994,11056.0,A
+LKA,Sri Lanka,1995,11481.0,A
+LKA,Sri Lanka,1996,11760.0,A
+LKA,Sri Lanka,1997,11348.0,A
+LKA,Sri Lanka,1998,10498.0,A
+LKA,Sri Lanka,1999,10580.0,A
+LKA,Sri Lanka,2000,9790.0,A
+LKA,Sri Lanka,2001,10210.0,A
+LKA,Sri Lanka,2002,9780.0,A
+LKA,Sri Lanka,2003,9110.0,A
+LKA,Sri Lanka,2004,7670.0,A
+LKA,Sri Lanka,2005,7240.0,A
+LKA,Sri Lanka,2006,6460.0,A
+LKA,Sri Lanka,2007,6050.0,A
+LKA,Sri Lanka,2008,5450.0,A
+LKA,Sri Lanka,2009,5410.0,A
+LKA,Sri Lanka,2010,5240.0,A
+LKA,Sri Lanka,2011,5320.0,A
+LKA,Sri Lanka,2012,5560.0,A
+LKA,Sri Lanka,2013,5570.0,A
+LKA,Sri Lanka,2014,6089.0,A
+LKA,Sri Lanka,2015,5866.3,I
+LKA,Sri Lanka,2016,5593.0,A
+LKA,Sri Lanka,2017,5431.0,A
+LKA,Sri Lanka,2018,6445.0,A
+LKA,Sri Lanka,2019,4887.0,A
+LKA,Sri Lanka,2020,6724.6,A
+LKA,Sri Lanka,2021,5306.2,A
+LKA,Sri Lanka,2022,4828.0,A
+LKA,Sri Lanka,2023,4750.0,A
+LKA,Sri Lanka,2024,5117.0,A
+SUR,Suriname,1961,342.0,A
+SUR,Suriname,1962,329.0,A
+SUR,Suriname,1963,378.0,A
+SUR,Suriname,1964,380.0,A
+SUR,Suriname,1965,397.0,A
+SUR,Suriname,1966,377.0,A
+SUR,Suriname,1967,431.0,A
+SUR,Suriname,1968,359.0,A
+SUR,Suriname,1969,233.0,A
+SUR,Suriname,1970,207.0,A
+SUR,Suriname,1971,200.0,A
+SUR,Suriname,1972,98.0,A
+SUR,Suriname,1973,89.0,A
+SUR,Suriname,1974,91.0,A
+SUR,Suriname,1975,88.0,A
+SUR,Suriname,1976,76.0,A
+SUR,Suriname,1977,90.0,A
+SUR,Suriname,1978,52.0,A
+SUR,Suriname,1979,59.0,A
+SUR,Suriname,1980,45.0,A
+SUR,Suriname,1981,53.0,A
+SUR,Suriname,1982,44.0,A
+SUR,Suriname,1983,47.0,A
+SUR,Suriname,1984,40.0,A
+SUR,Suriname,1985,35.0,A
+SUR,Suriname,1986,44.0,A
+SUR,Suriname,1987,36.0,A
+SUR,Suriname,1988,39.0,A
+SUR,Suriname,1989,49.0,A
+SUR,Suriname,1990,46.0,A
+SUR,Suriname,1991,55.0,A
+SUR,Suriname,1992,43.0,A
+SUR,Suriname,1993,50.0,E
+SUR,Suriname,1994,42.0,A
+SUR,Suriname,1995,50.0,A
+SUR,Suriname,1996,33.0,A
+SUR,Suriname,1997,16.0,A
+SUR,Suriname,1998,11.0,A
+SUR,Suriname,1999,10.0,A
+SUR,Suriname,2000,4.0,A
+SUR,Suriname,2001,4.0,A
+SUR,Suriname,2002,4.0,E
+SUR,Suriname,2003,5.32,I
+SUR,Suriname,2004,4.0,E
+SUR,Suriname,2005,4.0,E
+SUR,Suriname,2006,6.0,E
+SUR,Suriname,2007,10.0,E
+SUR,Suriname,2008,10.0,E
+SUR,Suriname,2009,9.0,E
+SUR,Suriname,2010,6.41,I
+SUR,Suriname,2011,5.61,I
+SUR,Suriname,2012,5.97,I
+SUR,Suriname,2013,5.97,I
+SUR,Suriname,2014,5.87,I
+SUR,Suriname,2015,6.0,I
+SUR,Suriname,2016,5.53,I
+SUR,Suriname,2017,5.8,E
+SUR,Suriname,2018,5.78,E
+SUR,Suriname,2019,5.44,I
+SUR,Suriname,2020,5.49,I
+SUR,Suriname,2021,6.14,I
+SUR,Suriname,2022,6.22,I
+SUR,Suriname,2023,6.22,I
+SUR,Suriname,2024,6.22,I
+THA,Thailand,1961,60.0,X
+THA,Thailand,1962,60.0,X
+THA,Thailand,1963,60.0,X
+THA,Thailand,1964,60.0,X
+THA,Thailand,1965,120.0,X
+THA,Thailand,1966,120.0,X
+THA,Thailand,1967,120.0,X
+THA,Thailand,1968,180.0,X
+THA,Thailand,1969,240.0,X
+THA,Thailand,1970,600.0,X
+THA,Thailand,1971,1140.0,X
+THA,Thailand,1972,1657.0,A
+THA,Thailand,1973,2240.0,A
+THA,Thailand,1974,4020.0,A
+THA,Thailand,1975,5816.0,A
+THA,Thailand,1976,7635.0,A
+THA,Thailand,1977,6300.0,A
+THA,Thailand,1978,6900.0,A
+THA,Thailand,1979,7500.0,A
+THA,Thailand,1980,9120.0,A
+THA,Thailand,1981,12060.0,A
+THA,Thailand,1982,18539.0,A
+THA,Thailand,1983,18035.0,A
+THA,Thailand,1984,18099.0,A
+THA,Thailand,1985,26641.0,A
+THA,Thailand,1986,31455.0,A
+THA,Thailand,1987,25220.0,A
+THA,Thailand,1988,35154.0,A
+THA,Thailand,1989,59580.0,A
+THA,Thailand,1990,71483.0,A
+THA,Thailand,1991,47328.0,A
+THA,Thailand,1992,80386.0,A
+THA,Thailand,1993,70426.0,A
+THA,Thailand,1994,78175.0,A
+THA,Thailand,1995,86450.0,A
+THA,Thailand,1996,80287.0,A
+THA,Thailand,1997,83810.0,A
+THA,Thailand,1998,78444.0,A
+THA,Thailand,1999,54923.0,A
+THA,Thailand,2000,81057.0,A
+THA,Thailand,2001,86009.0,A
+THA,Thailand,2002,53447.0,A
+THA,Thailand,2003,53907.0,A
+THA,Thailand,2004,61765.0,A
+THA,Thailand,2005,59644.0,A
+THA,Thailand,2006,46873.0,A
+THA,Thailand,2007,55660.0,A
+THA,Thailand,2008,50442.0,A
+THA,Thailand,2009,56315.0,A
+THA,Thailand,2010,48955.0,A
+THA,Thailand,2011,42394.0,A
+THA,Thailand,2012,41461.0,A
+THA,Thailand,2013,37569.0,A
+THA,Thailand,2014,37950.0,A
+THA,Thailand,2015,26089.0,A
+THA,Thailand,2016,30579.0,A
+THA,Thailand,2017,25909.0,A
+THA,Thailand,2018,23619.0,A
+THA,Thailand,2019,26424.38,A
+THA,Thailand,2020,22483.0,A
+THA,Thailand,2021,21774.51,A
+THA,Thailand,2022,18740.0,A
+THA,Thailand,2023,16690.0,A
+THA,Thailand,2024,16623.48,A
+TLS,Timor-Leste,1961,1700.0,A
+TLS,Timor-Leste,1962,2127.0,A
+TLS,Timor-Leste,1963,2453.0,A
+TLS,Timor-Leste,1964,2378.0,A
+TLS,Timor-Leste,1965,2806.0,A
+TLS,Timor-Leste,1966,2088.0,A
+TLS,Timor-Leste,1967,6602.0,A
+TLS,Timor-Leste,1968,1023.0,A
+TLS,Timor-Leste,1969,5025.0,A
+TLS,Timor-Leste,1970,4906.0,A
+TLS,Timor-Leste,1971,5275.0,A
+TLS,Timor-Leste,1972,4701.0,A
+TLS,Timor-Leste,1973,5355.0,A
+TLS,Timor-Leste,1974,4500.0,X
+TLS,Timor-Leste,1975,4500.0,X
+TLS,Timor-Leste,1976,6000.0,E
+TLS,Timor-Leste,1977,8500.0,X
+TLS,Timor-Leste,1978,8500.0,E
+TLS,Timor-Leste,1979,8000.0,E
+TLS,Timor-Leste,1980,8000.0,E
+TLS,Timor-Leste,1981,8000.0,E
+TLS,Timor-Leste,1982,8000.0,E
+TLS,Timor-Leste,1983,8000.0,E
+TLS,Timor-Leste,1984,8000.0,E
+TLS,Timor-Leste,1985,8000.0,E
+TLS,Timor-Leste,1986,8000.0,E
+TLS,Timor-Leste,1987,8000.0,E
+TLS,Timor-Leste,1988,8000.0,E
+TLS,Timor-Leste,1989,8000.0,E
+TLS,Timor-Leste,1990,8631.0,E
+TLS,Timor-Leste,1991,8538.26,I
+TLS,Timor-Leste,1992,7734.0,X
+TLS,Timor-Leste,1993,8000.0,E
+TLS,Timor-Leste,1994,9000.0,E
+TLS,Timor-Leste,1995,10000.0,E
+TLS,Timor-Leste,1996,10987.0,A
+TLS,Timor-Leste,1997,9723.0,X
+TLS,Timor-Leste,1998,11000.0,E
+TLS,Timor-Leste,1999,12000.0,E
+TLS,Timor-Leste,2000,13000.0,E
+TLS,Timor-Leste,2001,14134.0,X
+TLS,Timor-Leste,2002,14000.0,E
+TLS,Timor-Leste,2003,12000.0,E
+TLS,Timor-Leste,2004,14500.0,X
+TLS,Timor-Leste,2005,14500.0,X
+TLS,Timor-Leste,2006,14000.0,X
+TLS,Timor-Leste,2007,14000.0,X
+TLS,Timor-Leste,2008,14009.0,A
+TLS,Timor-Leste,2009,10122.0,A
+TLS,Timor-Leste,2010,12653.0,A
+TLS,Timor-Leste,2011,8320.0,A
+TLS,Timor-Leste,2012,3660.0,X
+TLS,Timor-Leste,2013,4800.0,X
+TLS,Timor-Leste,2014,6660.0,X
+TLS,Timor-Leste,2015,3540.0,X
+TLS,Timor-Leste,2016,4920.0,X
+TLS,Timor-Leste,2017,3900.0,X
+TLS,Timor-Leste,2018,8340.0,X
+TLS,Timor-Leste,2019,6180.0,X
+TLS,Timor-Leste,2020,9088.23,I
+TLS,Timor-Leste,2021,13313.98,A
+TLS,Timor-Leste,2022,11571.53,I
+TLS,Timor-Leste,2023,9637.22,I
+TLS,Timor-Leste,2024,9522.52,I
+TGO,Togo,1961,10300.0,X
+TGO,Togo,1962,11600.0,X
+TGO,Togo,1963,13800.0,X
+TGO,Togo,1964,13800.0,X
+TGO,Togo,1965,13500.0,X
+TGO,Togo,1966,7900.0,X
+TGO,Togo,1967,10500.0,X
+TGO,Togo,1968,17208.0,A
+TGO,Togo,1969,13795.0,A
+TGO,Togo,1970,13877.0,A
+TGO,Togo,1971,6459.0,A
+TGO,Togo,1972,6806.0,A
+TGO,Togo,1973,6756.0,A
+TGO,Togo,1974,7694.0,A
+TGO,Togo,1975,10800.0,A
+TGO,Togo,1976,8512.0,A
+TGO,Togo,1977,10430.0,A
+TGO,Togo,1978,4707.0,A
+TGO,Togo,1979,6229.0,A
+TGO,Togo,1980,10385.0,A
+TGO,Togo,1981,8878.0,A
+TGO,Togo,1982,9237.0,A
+TGO,Togo,1983,5941.0,A
+TGO,Togo,1984,2689.0,A
+TGO,Togo,1985,10044.0,A
+TGO,Togo,1986,8179.0,A
+TGO,Togo,1987,13611.0,A
+TGO,Togo,1988,14500.0,A
+TGO,Togo,1989,12121.0,A
+TGO,Togo,1990,12800.0,A
+TGO,Togo,1991,24900.0,A
+TGO,Togo,1992,6300.0,A
+TGO,Togo,1993,11000.0,A
+TGO,Togo,1994,10600.0,A
+TGO,Togo,1995,12080.0,A
+TGO,Togo,1996,22400.0,A
+TGO,Togo,1997,10600.0,A
+TGO,Togo,1998,20000.0,A
+TGO,Togo,1999,17000.0,A
+TGO,Togo,2000,15200.0,A
+TGO,Togo,2001,16900.0,A
+TGO,Togo,2002,7900.0,A
+TGO,Togo,2003,5500.0,A
+TGO,Togo,2004,9300.0,A
+TGO,Togo,2005,7200.0,A
+TGO,Togo,2006,8900.0,A
+TGO,Togo,2007,9300.0,A
+TGO,Togo,2008,9143.0,A
+TGO,Togo,2009,11700.0,A
+TGO,Togo,2010,11500.0,A
+TGO,Togo,2011,12500.0,A
+TGO,Togo,2012,10843.0,A
+TGO,Togo,2013,10950.0,A
+TGO,Togo,2014,15500.0,A
+TGO,Togo,2015,16093.0,A
+TGO,Togo,2016,17933.0,A
+TGO,Togo,2017,18476.0,A
+TGO,Togo,2018,19076.0,A
+TGO,Togo,2019,21316.0,A
+TGO,Togo,2020,22006.0,A
+TGO,Togo,2021,23106.0,A
+TGO,Togo,2022,25132.0,A
+TGO,Togo,2023,22619.45,I
+TGO,Togo,2024,21769.41,I
+TON,Tonga,1961,0.0,A
+TON,Tonga,1962,0.0,A
+TON,Tonga,1963,0.0,A
+TON,Tonga,1964,0.0,A
+TON,Tonga,1965,0.0,A
+TON,Tonga,1966,0.0,A
+TON,Tonga,1967,0.0,A
+TON,Tonga,1968,0.0,A
+TON,Tonga,1969,0.0,A
+TON,Tonga,1970,0.0,A
+TON,Tonga,1971,0.0,A
+TON,Tonga,1972,0.0,A
+TON,Tonga,1973,0.0,A
+TON,Tonga,1974,0.0,A
+TON,Tonga,1975,0.0,A
+TON,Tonga,1976,0.0,A
+TON,Tonga,1977,0.0,A
+TON,Tonga,1978,0.0,A
+TON,Tonga,1979,0.0,A
+TON,Tonga,1980,0.0,A
+TON,Tonga,1981,0.0,A
+TON,Tonga,1982,0.0,A
+TON,Tonga,1983,10.0,E
+TON,Tonga,1984,12.0,E
+TON,Tonga,1985,14.0,E
+TON,Tonga,1986,14.0,E
+TON,Tonga,1987,14.0,E
+TON,Tonga,1988,14.0,E
+TON,Tonga,1989,14.0,E
+TON,Tonga,1990,13.0,E
+TON,Tonga,1991,11.81,I
+TON,Tonga,1992,12.68,I
+TON,Tonga,1993,13.68,I
+TON,Tonga,1994,13.69,I
+TON,Tonga,1995,14.0,A
+TON,Tonga,1996,15.0,E
+TON,Tonga,1997,14.46,I
+TON,Tonga,1998,14.02,I
+TON,Tonga,1999,14.05,I
+TON,Tonga,2000,14.08,I
+TON,Tonga,2001,14.1,I
+TON,Tonga,2002,14.12,I
+TON,Tonga,2003,14.13,I
+TON,Tonga,2004,14.09,I
+TON,Tonga,2005,15.69,I
+TON,Tonga,2006,18.0,E
+TON,Tonga,2007,17.12,I
+TON,Tonga,2008,16.89,I
+TON,Tonga,2009,16.65,I
+TON,Tonga,2010,16.36,I
+TON,Tonga,2011,16.02,I
+TON,Tonga,2012,15.73,I
+TON,Tonga,2013,15.0,E
+TON,Tonga,2014,14.86,I
+TON,Tonga,2015,15.99,I
+TON,Tonga,2016,15.28,E
+TON,Tonga,2017,15.2,I
+TON,Tonga,2018,15.22,I
+TON,Tonga,2019,15.24,I
+TON,Tonga,2020,15.32,I
+TON,Tonga,2021,15.38,I
+TON,Tonga,2022,15.24,I
+TON,Tonga,2023,15.21,I
+TON,Tonga,2024,15.18,I
+TTO,Trinidad and Tobago,1961,2885.0,A
+TTO,Trinidad and Tobago,1962,3900.0,A
+TTO,Trinidad and Tobago,1963,3625.0,A
+TTO,Trinidad and Tobago,1964,4181.0,A
+TTO,Trinidad and Tobago,1965,4198.0,A
+TTO,Trinidad and Tobago,1966,2920.0,A
+TTO,Trinidad and Tobago,1967,3117.0,A
+TTO,Trinidad and Tobago,1968,4586.0,A
+TTO,Trinidad and Tobago,1969,3191.0,A
+TTO,Trinidad and Tobago,1970,2302.0,A
+TTO,Trinidad and Tobago,1971,3894.0,A
+TTO,Trinidad and Tobago,1972,3300.0,A
+TTO,Trinidad and Tobago,1973,2717.0,A
+TTO,Trinidad and Tobago,1974,1940.0,A
+TTO,Trinidad and Tobago,1975,4024.0,A
+TTO,Trinidad and Tobago,1976,2671.0,A
+TTO,Trinidad and Tobago,1977,2918.0,A
+TTO,Trinidad and Tobago,1978,2500.0,A
+TTO,Trinidad and Tobago,1979,2497.0,A
+TTO,Trinidad and Tobago,1980,2240.0,A
+TTO,Trinidad and Tobago,1981,2433.0,A
+TTO,Trinidad and Tobago,1982,1794.0,A
+TTO,Trinidad and Tobago,1983,1389.0,A
+TTO,Trinidad and Tobago,1984,852.0,A
+TTO,Trinidad and Tobago,1985,2141.0,A
+TTO,Trinidad and Tobago,1986,1334.0,A
+TTO,Trinidad and Tobago,1987,1842.0,A
+TTO,Trinidad and Tobago,1988,582.0,A
+TTO,Trinidad and Tobago,1989,1206.0,A
+TTO,Trinidad and Tobago,1990,1944.0,A
+TTO,Trinidad and Tobago,1991,914.0,A
+TTO,Trinidad and Tobago,1992,707.0,A
+TTO,Trinidad and Tobago,1993,874.0,A
+TTO,Trinidad and Tobago,1994,1015.0,A
+TTO,Trinidad and Tobago,1995,831.0,A
+TTO,Trinidad and Tobago,1996,352.0,A
+TTO,Trinidad and Tobago,1997,1102.0,A
+TTO,Trinidad and Tobago,1998,367.0,A
+TTO,Trinidad and Tobago,1999,343.0,A
+TTO,Trinidad and Tobago,2000,553.0,A
+TTO,Trinidad and Tobago,2001,406.0,A
+TTO,Trinidad and Tobago,2002,247.0,A
+TTO,Trinidad and Tobago,2003,586.0,A
+TTO,Trinidad and Tobago,2004,109.0,A
+TTO,Trinidad and Tobago,2005,350.0,E
+TTO,Trinidad and Tobago,2006,720.0,X
+TTO,Trinidad and Tobago,2007,60.0,X
+TTO,Trinidad and Tobago,2008,60.0,X
+TTO,Trinidad and Tobago,2009,129.01,I
+TTO,Trinidad and Tobago,2010,51.27,I
+TTO,Trinidad and Tobago,2011,72.72,I
+TTO,Trinidad and Tobago,2012,50.78,I
+TTO,Trinidad and Tobago,2013,51.25,I
+TTO,Trinidad and Tobago,2014,51.16,I
+TTO,Trinidad and Tobago,2015,30.79,I
+TTO,Trinidad and Tobago,2016,707.0,X
+TTO,Trinidad and Tobago,2017,707.0,X
+TTO,Trinidad and Tobago,2018,720.0,X
+TTO,Trinidad and Tobago,2019,800.0,X
+TTO,Trinidad and Tobago,2020,742.33,E
+TTO,Trinidad and Tobago,2021,754.11,E
+TTO,Trinidad and Tobago,2022,765.48,E
+TTO,Trinidad and Tobago,2023,753.98,E
+TTO,Trinidad and Tobago,2024,757.86,E
+UGA,Uganda,1961,94100.0,A
+UGA,Uganda,1962,119000.0,A
+UGA,Uganda,1963,158200.0,A
+UGA,Uganda,1964,172400.0,A
+UGA,Uganda,1965,152100.0,A
+UGA,Uganda,1966,153900.0,A
+UGA,Uganda,1967,166400.0,A
+UGA,Uganda,1968,133000.0,A
+UGA,Uganda,1969,247200.0,A
+UGA,Uganda,1970,201500.0,A
+UGA,Uganda,1971,175500.0,A
+UGA,Uganda,1972,183700.0,A
+UGA,Uganda,1973,212600.0,A
+UGA,Uganda,1974,199100.0,A
+UGA,Uganda,1975,199000.0,A
+UGA,Uganda,1976,137100.0,A
+UGA,Uganda,1977,155900.0,A
+UGA,Uganda,1978,121300.0,A
+UGA,Uganda,1979,103000.0,A
+UGA,Uganda,1980,135200.0,A
+UGA,Uganda,1981,97500.0,A
+UGA,Uganda,1982,161866.0,A
+UGA,Uganda,1983,148224.0,A
+UGA,Uganda,1984,145971.0,A
+UGA,Uganda,1985,143995.0,A
+UGA,Uganda,1986,159881.0,A
+UGA,Uganda,1987,167067.0,A
+UGA,Uganda,1988,151157.0,A
+UGA,Uganda,1989,169042.0,A
+UGA,Uganda,1990,128747.0,A
+UGA,Uganda,1991,147366.0,A
+UGA,Uganda,1992,110334.0,A
+UGA,Uganda,1993,144551.0,A
+UGA,Uganda,1994,198371.0,A
+UGA,Uganda,1995,181465.0,A
+UGA,Uganda,1996,287925.0,A
+UGA,Uganda,1997,219624.0,A
+UGA,Uganda,1998,205056.0,A
+UGA,Uganda,1999,251881.0,A
+UGA,Uganda,2000,143475.0,A
+UGA,Uganda,2001,197410.0,A
+UGA,Uganda,2002,209547.0,A
+UGA,Uganda,2003,150871.0,A
+UGA,Uganda,2004,170081.0,A
+UGA,Uganda,2005,158100.0,A
+UGA,Uganda,2006,133310.0,A
+UGA,Uganda,2007,175346.0,A
+UGA,Uganda,2008,211726.0,A
+UGA,Uganda,2009,195871.0,A
+UGA,Uganda,2010,166968.0,A
+UGA,Uganda,2011,191371.0,A
+UGA,Uganda,2012,186125.0,A
+UGA,Uganda,2013,222894.0,A
+UGA,Uganda,2014,220135.0,A
+UGA,Uganda,2015,229149.0,A
+UGA,Uganda,2016,243061.0,A
+UGA,Uganda,2017,302063.0,A
+UGA,Uganda,2018,284225.0,A
+UGA,Uganda,2019,313933.0,A
+UGA,Uganda,2020,360103.0,A
+UGA,Uganda,2021,414007.0,A
+UGA,Uganda,2022,507000.0,A
+UGA,Uganda,2023,468000.0,A
+UGA,Uganda,2024,402000.0,X
+TZA,United Republic of Tanzania,1961,33000.0,E
+TZA,United Republic of Tanzania,1962,35000.0,E
+TZA,United Republic of Tanzania,1963,40900.0,A
+TZA,United Republic of Tanzania,1964,43600.0,A
+TZA,United Republic of Tanzania,1965,56400.0,A
+TZA,United Republic of Tanzania,1966,66900.0,A
+TZA,United Republic of Tanzania,1967,49600.0,A
+TZA,United Republic of Tanzania,1968,51100.0,A
+TZA,United Republic of Tanzania,1969,51545.0,A
+TZA,United Republic of Tanzania,1970,46140.0,A
+TZA,United Republic of Tanzania,1971,49700.0,A
+TZA,United Republic of Tanzania,1972,52126.0,A
+TZA,United Republic of Tanzania,1973,54997.0,A
+TZA,United Republic of Tanzania,1974,59454.0,A
+TZA,United Republic of Tanzania,1975,62291.0,A
+TZA,United Republic of Tanzania,1976,43278.0,A
+TZA,United Republic of Tanzania,1977,50216.0,A
+TZA,United Republic of Tanzania,1978,51359.0,A
+TZA,United Republic of Tanzania,1979,47875.0,A
+TZA,United Republic of Tanzania,1980,47802.0,A
+TZA,United Republic of Tanzania,1981,66441.0,A
+TZA,United Republic of Tanzania,1982,53120.0,A
+TZA,United Republic of Tanzania,1983,52129.0,A
+TZA,United Republic of Tanzania,1984,56943.0,A
+TZA,United Republic of Tanzania,1985,45808.0,A
+TZA,United Republic of Tanzania,1986,54756.0,A
+TZA,United Republic of Tanzania,1987,57653.0,A
+TZA,United Republic of Tanzania,1988,45510.0,A
+TZA,United Republic of Tanzania,1989,48800.0,A
+TZA,United Republic of Tanzania,1990,53420.0,A
+TZA,United Republic of Tanzania,1991,46210.0,A
+TZA,United Republic of Tanzania,1992,56030.0,A
+TZA,United Republic of Tanzania,1993,59574.0,A
+TZA,United Republic of Tanzania,1994,34151.0,A
+TZA,United Republic of Tanzania,1995,41971.0,A
+TZA,United Republic of Tanzania,1996,52490.0,A
+TZA,United Republic of Tanzania,1997,43568.0,A
+TZA,United Republic of Tanzania,1998,38002.0,A
+TZA,United Republic of Tanzania,1999,46670.0,A
+TZA,United Republic of Tanzania,2000,47800.0,A
+TZA,United Republic of Tanzania,2001,58100.0,A
+TZA,United Republic of Tanzania,2002,66170.0,A
+TZA,United Republic of Tanzania,2003,52320.0,A
+TZA,United Republic of Tanzania,2004,72440.0,A
+TZA,United Republic of Tanzania,2005,95390.0,A
+TZA,United Republic of Tanzania,2006,34300.0,A
+TZA,United Republic of Tanzania,2007,48869.0,A
+TZA,United Republic of Tanzania,2008,43100.0,A
+TZA,United Republic of Tanzania,2009,62350.0,A
+TZA,United Republic of Tanzania,2010,40000.0,A
+TZA,United Republic of Tanzania,2011,60575.0,A
+TZA,United Republic of Tanzania,2012,66204.0,A
+TZA,United Republic of Tanzania,2013,71200.0,A
+TZA,United Republic of Tanzania,2014,48982.0,A
+TZA,United Republic of Tanzania,2015,42674.0,A
+TZA,United Republic of Tanzania,2016,60921.0,A
+TZA,United Republic of Tanzania,2017,47693.0,A
+TZA,United Republic of Tanzania,2018,45254.0,A
+TZA,United Republic of Tanzania,2019,68147.0,A
+TZA,United Republic of Tanzania,2020,60651.0,A
+TZA,United Republic of Tanzania,2021,73027.0,A
+TZA,United Republic of Tanzania,2022,66837.0,A
+TZA,United Republic of Tanzania,2023,62917.0,A
+TZA,United Republic of Tanzania,2024,77417.0,A
+VUT,Vanuatu,1961,240.0,E
+VUT,Vanuatu,1962,200.0,E
+VUT,Vanuatu,1963,200.0,E
+VUT,Vanuatu,1964,200.0,E
+VUT,Vanuatu,1965,250.0,E
+VUT,Vanuatu,1966,250.0,E
+VUT,Vanuatu,1967,300.0,E
+VUT,Vanuatu,1968,240.0,X
+VUT,Vanuatu,1969,180.0,X
+VUT,Vanuatu,1970,120.0,X
+VUT,Vanuatu,1971,120.0,X
+VUT,Vanuatu,1972,120.0,X
+VUT,Vanuatu,1973,120.0,X
+VUT,Vanuatu,1974,120.0,X
+VUT,Vanuatu,1975,60.0,X
+VUT,Vanuatu,1976,60.0,X
+VUT,Vanuatu,1977,60.0,E
+VUT,Vanuatu,1978,60.0,E
+VUT,Vanuatu,1979,80.0,E
+VUT,Vanuatu,1980,60.0,E
+VUT,Vanuatu,1981,61.0,A
+VUT,Vanuatu,1982,21.0,A
+VUT,Vanuatu,1983,38.0,A
+VUT,Vanuatu,1984,55.0,A
+VUT,Vanuatu,1985,65.0,A
+VUT,Vanuatu,1986,57.0,A
+VUT,Vanuatu,1987,53.0,A
+VUT,Vanuatu,1988,15.0,A
+VUT,Vanuatu,1989,25.0,A
+VUT,Vanuatu,1990,15.0,A
+VUT,Vanuatu,1991,42.0,A
+VUT,Vanuatu,1992,30.0,E
+VUT,Vanuatu,1993,28.13,I
+VUT,Vanuatu,1994,31.22,I
+VUT,Vanuatu,1995,32.86,I
+VUT,Vanuatu,1996,40.0,E
+VUT,Vanuatu,1997,38.34,I
+VUT,Vanuatu,1998,50.0,A
+VUT,Vanuatu,1999,44.69,I
+VUT,Vanuatu,2000,30.0,E
+VUT,Vanuatu,2001,15.0,E
+VUT,Vanuatu,2002,20.2,I
+VUT,Vanuatu,2003,15.85,I
+VUT,Vanuatu,2004,15.71,I
+VUT,Vanuatu,2005,14.0,E
+VUT,Vanuatu,2006,15.53,I
+VUT,Vanuatu,2007,15.57,I
+VUT,Vanuatu,2008,15.0,E
+VUT,Vanuatu,2009,15.38,I
+VUT,Vanuatu,2010,15.47,I
+VUT,Vanuatu,2011,15.47,I
+VUT,Vanuatu,2012,15.46,I
+VUT,Vanuatu,2013,15.64,I
+VUT,Vanuatu,2014,15.3,I
+VUT,Vanuatu,2015,15.22,I
+VUT,Vanuatu,2016,15.13,I
+VUT,Vanuatu,2017,15.03,I
+VUT,Vanuatu,2018,14.93,I
+VUT,Vanuatu,2019,14.59,I
+VUT,Vanuatu,2020,14.37,I
+VUT,Vanuatu,2021,14.44,I
+VUT,Vanuatu,2022,15.0,A
+VUT,Vanuatu,2023,14.49,I
+VUT,Vanuatu,2024,13.43,I
+VEN,Venezuela (Bolivarian Republic of),1961,57050.0,A
+VEN,Venezuela (Bolivarian Republic of),1962,54228.0,A
+VEN,Venezuela (Bolivarian Republic of),1963,60678.0,A
+VEN,Venezuela (Bolivarian Republic of),1964,56141.0,A
+VEN,Venezuela (Bolivarian Republic of),1965,54387.0,A
+VEN,Venezuela (Bolivarian Republic of),1966,61000.0,A
+VEN,Venezuela (Bolivarian Republic of),1967,61824.0,A
+VEN,Venezuela (Bolivarian Republic of),1968,45886.0,A
+VEN,Venezuela (Bolivarian Republic of),1969,60665.0,A
+VEN,Venezuela (Bolivarian Republic of),1970,60586.0,A
+VEN,Venezuela (Bolivarian Republic of),1971,58385.0,A
+VEN,Venezuela (Bolivarian Republic of),1972,40406.0,A
+VEN,Venezuela (Bolivarian Republic of),1973,65926.0,A
+VEN,Venezuela (Bolivarian Republic of),1974,45878.0,A
+VEN,Venezuela (Bolivarian Republic of),1975,64611.0,A
+VEN,Venezuela (Bolivarian Republic of),1976,40350.0,A
+VEN,Venezuela (Bolivarian Republic of),1977,57682.0,A
+VEN,Venezuela (Bolivarian Republic of),1978,58977.0,A
+VEN,Venezuela (Bolivarian Republic of),1979,53935.0,A
+VEN,Venezuela (Bolivarian Republic of),1980,58173.0,A
+VEN,Venezuela (Bolivarian Republic of),1981,59566.0,A
+VEN,Venezuela (Bolivarian Republic of),1982,58037.0,A
+VEN,Venezuela (Bolivarian Republic of),1983,58848.0,A
+VEN,Venezuela (Bolivarian Republic of),1984,60861.0,A
+VEN,Venezuela (Bolivarian Republic of),1985,64370.0,A
+VEN,Venezuela (Bolivarian Republic of),1986,66232.0,A
+VEN,Venezuela (Bolivarian Republic of),1987,70188.0,A
+VEN,Venezuela (Bolivarian Republic of),1988,71040.0,A
+VEN,Venezuela (Bolivarian Republic of),1989,72594.0,A
+VEN,Venezuela (Bolivarian Republic of),1990,76412.0,A
+VEN,Venezuela (Bolivarian Republic of),1991,68404.0,A
+VEN,Venezuela (Bolivarian Republic of),1992,69340.0,A
+VEN,Venezuela (Bolivarian Republic of),1993,66476.0,A
+VEN,Venezuela (Bolivarian Republic of),1994,68404.0,A
+VEN,Venezuela (Bolivarian Republic of),1995,65088.0,A
+VEN,Venezuela (Bolivarian Republic of),1996,73026.0,A
+VEN,Venezuela (Bolivarian Republic of),1997,63000.0,A
+VEN,Venezuela (Bolivarian Republic of),1998,66840.0,A
+VEN,Venezuela (Bolivarian Republic of),1999,79854.0,A
+VEN,Venezuela (Bolivarian Republic of),2000,78440.0,A
+VEN,Venezuela (Bolivarian Republic of),2001,91877.0,A
+VEN,Venezuela (Bolivarian Republic of),2002,84470.0,A
+VEN,Venezuela (Bolivarian Republic of),2003,64265.0,A
+VEN,Venezuela (Bolivarian Republic of),2004,71503.0,A
+VEN,Venezuela (Bolivarian Republic of),2005,64484.0,A
+VEN,Venezuela (Bolivarian Republic of),2006,74332.0,A
+VEN,Venezuela (Bolivarian Republic of),2007,70311.0,A
+VEN,Venezuela (Bolivarian Republic of),2008,72000.0,A
+VEN,Venezuela (Bolivarian Republic of),2009,63193.0,A
+VEN,Venezuela (Bolivarian Republic of),2010,71687.0,A
+VEN,Venezuela (Bolivarian Republic of),2011,72109.0,A
+VEN,Venezuela (Bolivarian Republic of),2012,60917.0,A
+VEN,Venezuela (Bolivarian Republic of),2013,62069.0,A
+VEN,Venezuela (Bolivarian Republic of),2014,52683.0,A
+VEN,Venezuela (Bolivarian Republic of),2015,49987.0,A
+VEN,Venezuela (Bolivarian Republic of),2016,50947.58,A
+VEN,Venezuela (Bolivarian Republic of),2017,56630.0,A
+VEN,Venezuela (Bolivarian Republic of),2018,58188.0,A
+VEN,Venezuela (Bolivarian Republic of),2019,57015.0,A
+VEN,Venezuela (Bolivarian Republic of),2020,54242.0,A
+VEN,Venezuela (Bolivarian Republic of),2021,53723.0,A
+VEN,Venezuela (Bolivarian Republic of),2022,57177.0,A
+VEN,Venezuela (Bolivarian Republic of),2023,58625.0,A
+VEN,Venezuela (Bolivarian Republic of),2024,58268.29,I
+VNM,Viet Nam,1961,4100.0,A
+VNM,Viet Nam,1962,4020.0,A
+VNM,Viet Nam,1963,4500.0,E
+VNM,Viet Nam,1964,5500.0,E
+VNM,Viet Nam,1965,7500.0,A
+VNM,Viet Nam,1966,6300.0,A
+VNM,Viet Nam,1967,7000.0,E
+VNM,Viet Nam,1968,6000.0,E
+VNM,Viet Nam,1969,6500.0,E
+VNM,Viet Nam,1970,7300.0,A
+VNM,Viet Nam,1971,6500.0,A
+VNM,Viet Nam,1972,7000.0,E
+VNM,Viet Nam,1973,6600.0,E
+VNM,Viet Nam,1974,6000.0,E
+VNM,Viet Nam,1975,6800.0,A
+VNM,Viet Nam,1976,9700.0,A
+VNM,Viet Nam,1977,5600.0,A
+VNM,Viet Nam,1978,5400.0,A
+VNM,Viet Nam,1979,5100.0,A
+VNM,Viet Nam,1980,8400.0,A
+VNM,Viet Nam,1981,5300.0,A
+VNM,Viet Nam,1982,5300.0,A
+VNM,Viet Nam,1983,5700.0,A
+VNM,Viet Nam,1984,4800.0,A
+VNM,Viet Nam,1985,12300.0,A
+VNM,Viet Nam,1986,25000.0,E
+VNM,Viet Nam,1987,27500.0,E
+VNM,Viet Nam,1988,42000.0,E
+VNM,Viet Nam,1989,40900.0,A
+VNM,Viet Nam,1990,92000.0,A
+VNM,Viet Nam,1991,100000.0,A
+VNM,Viet Nam,1992,119200.0,A
+VNM,Viet Nam,1993,136100.0,A
+VNM,Viet Nam,1994,180000.0,A
+VNM,Viet Nam,1995,218000.0,A
+VNM,Viet Nam,1996,320100.0,A
+VNM,Viet Nam,1997,420500.0,A
+VNM,Viet Nam,1998,409300.0,A
+VNM,Viet Nam,1999,553200.0,A
+VNM,Viet Nam,2000,802500.0,A
+VNM,Viet Nam,2001,840600.0,A
+VNM,Viet Nam,2002,699500.0,A
+VNM,Viet Nam,2003,793700.0,A
+VNM,Viet Nam,2004,913800.0,X
+VNM,Viet Nam,2005,831000.0,X
+VNM,Viet Nam,2006,985300.0,A
+VNM,Viet Nam,2007,1251000.0,X
+VNM,Viet Nam,2008,1055811.0,A
+VNM,Viet Nam,2009,1057539.6,A
+VNM,Viet Nam,2010,1105700.0,A
+VNM,Viet Nam,2011,1276506.0,A
+VNM,Viet Nam,2012,1260463.0,A
+VNM,Viet Nam,2013,1326688.0,A
+VNM,Viet Nam,2014,1406469.0,A
+VNM,Viet Nam,2015,1452999.3,A
+VNM,Viet Nam,2016,1460800.01,A
+VNM,Viet Nam,2017,1542397.88,A
+VNM,Viet Nam,2018,1616307.25,A
+VNM,Viet Nam,2019,1686765.17,A
+VNM,Viet Nam,2020,1763476.04,A
+VNM,Viet Nam,2021,1845032.98,A
+VNM,Viet Nam,2022,1953990.16,A
+VNM,Viet Nam,2023,1956782.46,A
+VNM,Viet Nam,2024,2015289.0,A
+YEM,Yemen,1961,6300.0,X
+YEM,Yemen,1962,6300.0,X
+YEM,Yemen,1963,5800.0,X
+YEM,Yemen,1964,5700.0,X
+YEM,Yemen,1965,6300.0,X
+YEM,Yemen,1966,5323.0,X
+YEM,Yemen,1967,4423.0,X
+YEM,Yemen,1968,4423.0,X
+YEM,Yemen,1969,5013.0,X
+YEM,Yemen,1970,4813.0,A
+YEM,Yemen,1971,4823.0,A
+YEM,Yemen,1972,4313.0,A
+YEM,Yemen,1973,4313.0,A
+YEM,Yemen,1974,4313.0,A
+YEM,Yemen,1975,3810.0,A
+YEM,Yemen,1976,3810.0,A
+YEM,Yemen,1977,4710.0,A
+YEM,Yemen,1978,4716.0,A
+YEM,Yemen,1979,4410.0,A
+YEM,Yemen,1980,4390.0,A
+YEM,Yemen,1981,4405.0,A
+YEM,Yemen,1982,4305.0,X
+YEM,Yemen,1983,3917.0,X
+YEM,Yemen,1984,5152.0,A
+YEM,Yemen,1985,4913.0,A
+YEM,Yemen,1986,5012.0,A
+YEM,Yemen,1987,5111.0,A
+YEM,Yemen,1988,6474.0,A
+YEM,Yemen,1989,6807.0,A
+YEM,Yemen,1990,7411.0,A
+YEM,Yemen,1991,5430.0,A
+YEM,Yemen,1992,8218.0,A
+YEM,Yemen,1993,8727.0,A
+YEM,Yemen,1994,8480.0,A
+YEM,Yemen,1995,8993.0,A
+YEM,Yemen,1996,10600.0,A
+YEM,Yemen,1997,10325.0,A
+YEM,Yemen,1998,11283.0,A
+YEM,Yemen,1999,11182.0,A
+YEM,Yemen,2000,11363.0,A
+YEM,Yemen,2001,11906.0,A
+YEM,Yemen,2002,11499.0,A
+YEM,Yemen,2003,11608.0,A
+YEM,Yemen,2004,10260.0,A
+YEM,Yemen,2005,11331.0,A
+YEM,Yemen,2006,17292.0,A
+YEM,Yemen,2007,18330.0,A
+YEM,Yemen,2008,18788.0,A
+YEM,Yemen,2009,18924.0,A
+YEM,Yemen,2010,19029.0,A
+YEM,Yemen,2011,19275.0,A
+YEM,Yemen,2012,19828.0,A
+YEM,Yemen,2013,19984.0,A
+YEM,Yemen,2014,20059.0,A
+YEM,Yemen,2015,19257.0,A
+YEM,Yemen,2016,18945.0,A
+YEM,Yemen,2017,18767.0,A
+YEM,Yemen,2018,18642.0,A
+YEM,Yemen,2019,20812.0,A
+YEM,Yemen,2020,21443.0,X
+YEM,Yemen,2021,41933.49,X
+YEM,Yemen,2022,23945.0,X
+YEM,Yemen,2023,24640.0,X
+YEM,Yemen,2024,26544.19,I
+ZMB,Zambia,1961,0.0,A
+ZMB,Zambia,1962,0.0,A
+ZMB,Zambia,1963,0.0,A
+ZMB,Zambia,1964,0.0,A
+ZMB,Zambia,1965,0.0,A
+ZMB,Zambia,1966,0.0,E
+ZMB,Zambia,1967,0.0,E
+ZMB,Zambia,1968,0.0,E
+ZMB,Zambia,1969,3.0,A
+ZMB,Zambia,1970,7.0,A
+ZMB,Zambia,1971,10.0,A
+ZMB,Zambia,1972,7.0,A
+ZMB,Zambia,1973,12.0,A
+ZMB,Zambia,1974,13.0,A
+ZMB,Zambia,1975,25.0,A
+ZMB,Zambia,1976,37.0,A
+ZMB,Zambia,1977,50.0,A
+ZMB,Zambia,1978,80.0,A
+ZMB,Zambia,1979,20.0,A
+ZMB,Zambia,1980,30.0,A
+ZMB,Zambia,1981,40.0,A
+ZMB,Zambia,1982,66.0,A
+ZMB,Zambia,1983,76.0,A
+ZMB,Zambia,1984,200.0,E
+ZMB,Zambia,1985,377.0,A
+ZMB,Zambia,1986,600.0,A
+ZMB,Zambia,1987,540.0,X
+ZMB,Zambia,1988,540.0,X
+ZMB,Zambia,1989,1500.0,X
+ZMB,Zambia,1990,1380.0,X
+ZMB,Zambia,1991,1329.0,A
+ZMB,Zambia,1992,1792.0,A
+ZMB,Zambia,1993,1531.0,A
+ZMB,Zambia,1994,1582.0,A
+ZMB,Zambia,1995,1232.0,A
+ZMB,Zambia,1996,1580.0,A
+ZMB,Zambia,1997,2167.0,A
+ZMB,Zambia,1998,2628.0,A
+ZMB,Zambia,1999,3450.0,A
+ZMB,Zambia,2000,2200.0,A
+ZMB,Zambia,2001,5868.0,A
+ZMB,Zambia,2002,5000.0,A
+ZMB,Zambia,2003,6500.0,A
+ZMB,Zambia,2004,5881.0,A
+ZMB,Zambia,2005,6684.64,A
+ZMB,Zambia,2006,6126.7,A
+ZMB,Zambia,2007,3431.84,A
+ZMB,Zambia,2008,6584.09,I
+ZMB,Zambia,2009,7140.61,I
+ZMB,Zambia,2010,7390.95,I
+ZMB,Zambia,2011,7120.19,I
+ZMB,Zambia,2012,7372.36,I
+ZMB,Zambia,2013,7415.12,I
+ZMB,Zambia,2014,7564.41,I
+ZMB,Zambia,2015,8051.05,I
+ZMB,Zambia,2016,8732.02,I
+ZMB,Zambia,2017,8760.77,I
+ZMB,Zambia,2018,8514.61,E
+ZMB,Zambia,2019,9003.91,I
+ZMB,Zambia,2020,8759.76,E
+ZMB,Zambia,2021,8759.43,E
+ZMB,Zambia,2022,8841.03,E
+ZMB,Zambia,2023,8786.74,E
+ZMB,Zambia,2024,8795.73,E
+ZWE,Zimbabwe,1961,0.0,A
+ZWE,Zimbabwe,1962,0.0,A
+ZWE,Zimbabwe,1963,0.0,A
+ZWE,Zimbabwe,1964,0.0,A
+ZWE,Zimbabwe,1965,0.0,A
+ZWE,Zimbabwe,1966,52.0,A
+ZWE,Zimbabwe,1967,62.0,A
+ZWE,Zimbabwe,1968,212.0,A
+ZWE,Zimbabwe,1969,212.0,A
+ZWE,Zimbabwe,1970,615.0,A
+ZWE,Zimbabwe,1971,745.0,A
+ZWE,Zimbabwe,1972,1255.0,A
+ZWE,Zimbabwe,1973,1553.0,A
+ZWE,Zimbabwe,1974,2581.0,A
+ZWE,Zimbabwe,1975,3415.0,A
+ZWE,Zimbabwe,1976,4639.0,A
+ZWE,Zimbabwe,1977,4310.0,A
+ZWE,Zimbabwe,1978,4977.0,A
+ZWE,Zimbabwe,1979,4603.0,A
+ZWE,Zimbabwe,1980,5261.0,A
+ZWE,Zimbabwe,1981,5476.0,A
+ZWE,Zimbabwe,1982,6073.0,A
+ZWE,Zimbabwe,1983,8234.0,A
+ZWE,Zimbabwe,1984,10720.0,A
+ZWE,Zimbabwe,1985,11354.0,A
+ZWE,Zimbabwe,1986,13486.0,A
+ZWE,Zimbabwe,1987,11599.0,A
+ZWE,Zimbabwe,1988,12627.0,A
+ZWE,Zimbabwe,1989,14601.0,A
+ZWE,Zimbabwe,1990,13569.0,A
+ZWE,Zimbabwe,1991,12091.0,A
+ZWE,Zimbabwe,1992,4995.0,A
+ZWE,Zimbabwe,1993,4000.0,A
+ZWE,Zimbabwe,1994,9420.0,X
+ZWE,Zimbabwe,1995,7860.0,X
+ZWE,Zimbabwe,1996,11500.0,A
+ZWE,Zimbabwe,1997,9300.0,A
+ZWE,Zimbabwe,1998,10000.0,A
+ZWE,Zimbabwe,1999,10000.0,A
+ZWE,Zimbabwe,2000,9100.0,A
+ZWE,Zimbabwe,2001,7518.0,A
+ZWE,Zimbabwe,2002,8050.0,A
+ZWE,Zimbabwe,2003,10000.0,A
+ZWE,Zimbabwe,2004,5800.0,X
+ZWE,Zimbabwe,2005,3960.0,X
+ZWE,Zimbabwe,2006,2700.0,X
+ZWE,Zimbabwe,2007,1860.0,X
+ZWE,Zimbabwe,2008,1440.0,X
+ZWE,Zimbabwe,2009,1260.0,X
+ZWE,Zimbabwe,2010,600.0,X
+ZWE,Zimbabwe,2011,540.0,X
+ZWE,Zimbabwe,2012,540.0,X
+ZWE,Zimbabwe,2013,763.9,I
+ZWE,Zimbabwe,2014,850.0,E
+ZWE,Zimbabwe,2015,500.0,E
+ZWE,Zimbabwe,2016,700.0,E
+ZWE,Zimbabwe,2017,545.66,I
+ZWE,Zimbabwe,2018,491.71,I
+ZWE,Zimbabwe,2019,531.0,A
+ZWE,Zimbabwe,2020,579.0,A
+ZWE,Zimbabwe,2021,608.0,A
+ZWE,Zimbabwe,2022,681.0,A
+ZWE,Zimbabwe,2023,665.49,I
+ZWE,Zimbabwe,2024,572.0,A

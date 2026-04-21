@@ -63,6 +63,44 @@ jupytext --sync notebooks/<name>.ipynb
 - **Jupyter path:** Edit `notebooks/<name>.ipynb` → Jupytext auto-syncs to `scripts/<name>.py` and `docs/<name>.md` → nbstripout removes outputs before commit
 - Never edit `scripts/` or `docs/` directly — they are Jupytext-managed derivatives
 
+## Current Status (as of 2026-04-21)
+
+### What's Done
+- Repo scaffolded, initialized, and pushed to GitHub (`warrenrross/coffee_bean_production_analysis`)
+- All 4 processed data files are in `data/`:
+  - `coffee_analysis_panel_with_covariates.csv` — **primary analysis file** (~1,800 rows, all 15 columns including `FAO_Flag` and `Brent_Avg`)
+  - `coffee_analysis_panel.csv` — intermediate panel
+  - `baci_country_trade_aggregated.csv` — BACI country-level aggregates
+  - `fao_coffee_production_clean.csv` — FAO production cleaned
+- `marimo/coffee_analysis.py` — notebook is complete and launches successfully
+- `marimo` installed (`python3 -m marimo`, v0.23.2) and tested locally
+
+### Known Bug: `corr_df` NameError
+The correlation results cell wraps its logic in an inner `def _(): ...` function (Marimo anti-collision pattern), which traps `corr_df` in the inner scope. The downstream conclusions cell (`def _(corr_df, mo, pd):`) raises `NameError: name 'corr_df' is not defined`.
+
+**Fix documented in:** `docs/fix_corr_df_nameerror.md`  
+**Summary:** Split the broken cell into two — one that computes and `return (corr_df,)`, one that displays. Affected lines: ~350–406. No changes needed to the downstream consumer at ~717.
+
+### Architecture Decision
+No DuckDB. The panel is already built and 1,800 rows; pandas is perfectly adequate. Stick with pandas throughout.
+
+### What's Next
+1. Apply the `corr_df` fix (see `docs/fix_corr_df_nameerror.md`)
+2. Run full notebook end-to-end (`Cmd+Shift+Enter`) — watch for any other NameErrors from other inner-function-wrapped cells
+3. Verify all 4 analysis sections render: EDA → Correlation → Regression → Model Adequacy
+4. Enable GitHub Pages on the repo (Settings → Pages → Source: GitHub Actions)
+5. Push `marimo/` to trigger auto-publish to GitHub Pages
+
+### Running Locally
+```bash
+cd coffee_bean_production_analysis
+python3 -m marimo edit marimo/coffee_analysis.py
+# Opens at http://localhost:2718
+```
+Note: `marimo` may not be on PATH after `pip3 install`; use `python3 -m marimo` as the reliable invocation.
+
+---
+
 ## Key Analytical Patterns
 
 - **Regional aggregate filtering (FAOSTAT):** Exclude rows where country name contains 'World', 'Africa', 'Asia', 'Europe', 'America', 'Oceania', 'Low-income', 'OECD', 'developing'

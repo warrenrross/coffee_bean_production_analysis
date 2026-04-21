@@ -85,7 +85,8 @@ pip install marimo pandas numpy scipy statsmodels matplotlib seaborn plotly \
             geopandas pycountry jupytext nbdime nbstripout
 
 # Run the Marimo notebook interactively
-marimo edit marimo/coffee_analysis.py
+python3 -m marimo edit marimo/coffee_analysis.py
+# (marimo may not be on PATH after pip install; python3 -m marimo is the reliable form)
 ```
 
 The notebook will open in your browser. All analysis runs locally against the `data/` CSVs.

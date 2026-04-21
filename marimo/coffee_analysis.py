@@ -1,0 +1,830 @@
+import marimo
+
+__generated_with = "0.23.2"
+app = marimo.App(width="medium", app_title="Grounds for Correlation")
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    # Grounds for Correlation
+    ### Do climate, population, and oil price predict coffee bean production and export revenue?
+
+    **INEG 2314H — Statistics for Industrial Engineers | Warren Ross**
+
+    ---
+
+    This notebook walks through a complete exploratory statistical analysis of country-level coffee
+    production (1995–2024). Four independent variables are tested against two response variables:
+
+    | Variable | Role | Symbol |
+    |---|---|---|
+    | Average temperature (°C) | Predictor | X₁ |
+    | Average rainfall (mm/yr) | Predictor | X₂ |
+    | Annual population | Predictor | X₃ |
+    | Brent crude oil price (USD/bbl) | Predictor | X₄ |
+    | Coffee production (tonnes) | **Response** | Y₁ |
+    | Export revenue (1000 USD) | **Response** | Y₂ |
+
+    **Analysis window:** 1995–2024 · **Countries:** ~74 coffee-producing nations (complete cases)
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    ## 0 · Setup and Data Loading
+    """)
+    return
+
+
+@app.cell
+def _():
+    import marimo as mo
+    import pandas as pd
+    import numpy as np
+    import scipy.stats as stats
+    import statsmodels.formula.api as smf
+    import statsmodels.api as sm
+    import matplotlib.pyplot as plt
+    import matplotlib.ticker as mticker
+    import seaborn as sns
+    import warnings
+
+    warnings.filterwarnings("ignore")
+
+    # ── Plotting defaults ──────────────────────────────────────────────────────
+    plt.rcParams.update({
+        "figure.dpi": 130,
+        "axes.spines.top": False,
+        "axes.spines.right": False,
+        "font.size": 11,
+        "axes.titlesize": 13,
+        "axes.titleweight": "bold",
+    })
+    ACCENT   = "#6F4E37"   # coffee brown
+    ACCENT2  = "#2D6A4F"   # forest green
+    GREY     = "#9E9E9E"
+    return ACCENT, ACCENT2, mo, np, pd, plt, smf, sns, stats
+
+
+@app.cell
+def _(np, pd):
+    # ── Load panel ────────────────────────────────────────────────────────────
+    # Notebook lives at marimo/coffee_analysis.py
+    # Data lives at data/coffee_analysis_panel_with_covariates.csv (relative to repo root)
+    import pathlib
+    _here = pathlib.Path(__file__).parent          # marimo/
+    DATA_PATH = _here.parent / "data" / "coffee_analysis_panel_with_covariates.csv"
+
+    panel_raw = pd.read_csv(DATA_PATH)
+
+    # Rename Brent_Avg → Oil_Price_Brent_USD for clarity throughout the analysis
+    panel_raw = panel_raw.rename(columns={"Brent_Avg": "Oil_Price_Brent_USD"})
+
+    # Drop rows missing any of the four predictors or either response
+    panel = panel_raw.dropna(subset=[
+        "Production_tonnes", "Export_Value_1000USD",
+        "Avg_Temp_C", "Rain_mm", "Population", "Oil_Price_Brent_USD"
+    ]).copy()
+
+    # Add log-transformed variables used in regression
+    panel["ln_Production"]    = np.log(panel["Production_tonnes"])
+    panel["ln_Export_Value"]  = np.log(panel["Export_Value_1000USD"])
+    panel["ln_Population"]    = np.log(panel["Population"])
+
+    print(f"Panel loaded: {len(panel):,} rows · {panel.ISO3.nunique()} countries · "
+          f"{panel.Year.min()}–{panel.Year.max()}")
+    return (panel,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    ---
+    ## 1 · Exploratory Data Analysis
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    ### 1.1 Descriptive Statistics
+    """)
+    return
+
+
+@app.cell
+def _(mo, panel, pd):
+    _vars = {
+        "Production_tonnes":      ("Production (tonnes)",        "Y₁"),
+        "Export_Value_1000USD":   ("Export Revenue (1000 USD)",  "Y₂"),
+        "Avg_Temp_C":             ("Avg Temperature (°C)",       "X₁"),
+        "Rain_mm":                ("Avg Rainfall (mm/yr)",       "X₂"),
+        "Population":             ("Population",                 "X₃"),
+        "Oil_Price_Brent_USD":    ("Brent Oil Price (USD/bbl)",  "X₄"),
+    }
+
+    _rows = []
+    for col, (label, role) in _vars.items():
+        s = panel[col]
+        _rows.append({
+            "Variable": label,
+            "Role": role,
+            "n": len(s.dropna()),
+            "Mean": s.mean(),
+            "Std Dev": s.std(),
+            "Min": s.min(),
+            "Median": s.median(),
+            "Max": s.max(),
+            "Skewness": s.skew(),
+        })
+
+    desc = pd.DataFrame(_rows).set_index("Variable")
+
+    # Format nicely
+    def _fmt(val, col):
+        if col in ("n",):
+            return f"{int(val):,}"
+        if col == "Skewness":
+            return f"{val:.2f}"
+        if abs(val) >= 1e6:
+            return f"{val:,.0f}"
+        if abs(val) >= 1000:
+            return f"{val:,.1f}"
+        return f"{val:.2f}"
+
+    desc_fmt = desc.copy()
+    for c in desc.columns:
+        if c != "Role":
+            desc_fmt[c] = desc[c].apply(lambda v: _fmt(v, c))
+
+    mo.md(
+        f"""
+        {mo.as_html(desc_fmt)}
+
+        > **Note on skewness:** Production (skew = {panel['Production_tonnes'].skew():.1f}) and Export Revenue
+        > (skew = {panel['Export_Value_1000USD'].skew():.1f}) are strongly right-skewed. Log transformations
+        > are applied before regression and correlation analysis. Population (skew = {panel['Population'].skew():.1f})
+        > is also log-transformed due to its three-order-of-magnitude range.
+        """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    ### 1.2 Distributions — Production and Export Revenue (Raw vs. Log)
+    """)
+    return
+
+
+@app.cell
+def _(ACCENT, ACCENT2, mo, panel, plt):
+    def _():
+        fig_dist, axes = plt.subplots(2, 2, figsize=(12, 8))
+        fig_dist.suptitle("Response Variable Distributions: Raw vs. Log-Transformed", fontsize=14, fontweight="bold")
+
+        pairs = [
+            (panel["Production_tonnes"],   "Production (tonnes)",        ACCENT,  axes[0, 0]),
+            (panel["ln_Production"],       "ln(Production)",             ACCENT,  axes[0, 1]),
+            (panel["Export_Value_1000USD"],"Export Revenue (1000 USD)",  ACCENT2, axes[1, 0]),
+            (panel["ln_Export_Value"],     "ln(Export Revenue)",         ACCENT2, axes[1, 1]),
+        ]
+
+        for data, title, color, ax in pairs:
+            ax.hist(data.dropna(), bins=40, color=color, alpha=0.8, edgecolor="white", linewidth=0.4)
+            ax.set_title(title)
+            ax.set_ylabel("Frequency")
+            skew_val = data.skew()
+            ax.annotate(f"skew = {skew_val:.2f}", xy=(0.97, 0.93), xycoords="axes fraction",
+                        ha="right", fontsize=9, color="#555")
+
+        # Annotate the before/after logic
+        for col_idx, label in [(0, "Before log transform →"), (1, "← After log transform")]:
+            fig_dist.text(0.27 + col_idx * 0.46, 0.02, label, ha="center", fontsize=9, color="#777", style="italic")
+
+        plt.tight_layout(rect=[0, 0.04, 1, 1])
+        return mo.mpl.interactive(fig_dist)
+
+
+    _()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    ### 1.3 Global Production Time Series (1995–2024)
+    """)
+    return
+
+
+@app.cell
+def _(ACCENT, mo, panel, plt):
+    _global = (
+        panel.groupby("Year")["Production_tonnes"]
+        .sum()
+        .reset_index()
+    )
+    _global["Production_million_t"] = _global["Production_tonnes"] / 1e6
+
+    fig_ts, ax_ts = plt.subplots(figsize=(11, 4))
+    ax_ts.fill_between(_global["Year"], _global["Production_million_t"], alpha=0.18, color=ACCENT)
+    ax_ts.plot(_global["Year"], _global["Production_million_t"], color=ACCENT, linewidth=2.2, marker="o", markersize=4)
+    ax_ts.set_title("Global Coffee Production (Coffee-Producing Countries in Panel)", pad=10)
+    ax_ts.set_xlabel("Year")
+    ax_ts.set_ylabel("Production (million tonnes)")
+    ax_ts.set_xlim(1994, 2025)
+    ax_ts.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f"{x:.1f}M t"))
+
+    # Annotate peak year
+    _peak = _global.loc[_global["Production_million_t"].idxmax()]
+    ax_ts.annotate(
+        f"Peak: {_peak['Production_million_t']:.1f}M t ({int(_peak['Year'])})",
+        xy=(_peak["Year"], _peak["Production_million_t"]),
+        xytext=(-40, 12), textcoords="offset points",
+        arrowprops=dict(arrowstyle="->", color="#555", lw=1.2),
+        fontsize=9, color="#333"
+    )
+
+    plt.tight_layout()
+    mo.mpl.interactive(fig_ts)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    ### 1.4 Top Producers (2020)
+    """)
+    return
+
+
+@app.cell
+def _(ACCENT, mo, panel, plt):
+    _top = (
+        panel[panel["Year"] == 2020]
+        .nlargest(12, "Production_tonnes")
+        [["Country_Name", "Production_tonnes"]]
+        .copy()
+    )
+    _top["Production_million_t"] = _top["Production_tonnes"] / 1e6
+
+    fig_top, ax_top = plt.subplots(figsize=(10, 4.5))
+    bars = ax_top.barh(_top["Country_Name"][::-1], _top["Production_million_t"][::-1],
+                       color=ACCENT, alpha=0.85)
+    ax_top.set_title("Top 12 Coffee Producers — 2020", pad=10)
+    ax_top.set_xlabel("Production (million tonnes)")
+    ax_top.bar_label(bars, fmt="%.2f", padding=4, fontsize=9)
+    ax_top.set_xlim(0, _top["Production_million_t"].max() * 1.18)
+    plt.tight_layout()
+    mo.mpl.interactive(fig_top)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    ### 1.5 Predictor vs. Response Scatter Plots
+    """)
+    return
+
+
+@app.cell
+def _(ACCENT, ACCENT2, mo, np, panel, plt):
+    _predictors = [
+        ("Avg_Temp_C",         "Avg Temperature (°C)",       "X₁"),
+        ("Rain_mm",            "Avg Rainfall (mm/yr)",       "X₂"),
+        ("ln_Population",      "ln(Population)",             "ln(X₃)"),
+        ("Oil_Price_Brent_USD","Oil Price (USD/bbl)",        "X₄"),
+    ]
+    _responses = [
+        ("ln_Production",   "ln(Production, tonnes)",    ACCENT),
+        ("ln_Export_Value", "ln(Export Revenue, 1000USD)", ACCENT2),
+    ]
+
+    fig_scatter, axes_sc = plt.subplots(4, 2, figsize=(13, 18))
+    fig_scatter.suptitle("Predictors vs. Response Variables (Log-Transformed Y)", fontsize=13, fontweight="bold", y=1.002)
+
+    for row_idx, (pred_col, pred_label, pred_sym) in enumerate(_predictors):
+        for col_idx, (resp_col, resp_label, color) in enumerate(_responses):
+            ax = axes_sc[row_idx, col_idx]
+            _d = panel[[pred_col, resp_col]].dropna()
+            ax.scatter(_d[pred_col], _d[resp_col], alpha=0.25, s=14, color=color, linewidths=0)
+
+            # OLS trend line
+            _m, _b, _r, _p, _ = __import__("scipy").stats.linregress(_d[pred_col], _d[resp_col])
+            _x_line = np.linspace(_d[pred_col].min(), _d[pred_col].max(), 200)
+            ax.plot(_x_line, _m * _x_line + _b, color="#333", linewidth=1.5, linestyle="--")
+
+            ax.set_xlabel(f"{pred_sym}: {pred_label}", fontsize=9)
+            ax.set_ylabel(resp_label, fontsize=9)
+            ax.annotate(f"r = {_r:.3f}  p = {_p:.3f}", xy=(0.05, 0.93), xycoords="axes fraction",
+                        fontsize=9, color="#333")
+
+    plt.tight_layout()
+    mo.mpl.interactive(fig_scatter)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    ---
+    ## 2 · Correlation Analysis
+
+    For each predictor–response pair, we test:
+
+    > **H₀:** ρ = 0 (no linear relationship)
+    > **H₁:** ρ ≠ 0
+    > **Test statistic:** T₀ = r√[(n−2) / (1−r²)],  T₀ ~ t(n−2)
+    > **α = 0.05**
+    """)
+    return
+
+
+@app.cell
+def _(np, panel, pd, stats):
+    # ── Run all 8 correlation tests ───────────────────────────────────────────
+    _predictors = [
+        ("Avg_Temp_C",         "Temperature (X₁)",     "Avg_Temp_C"),
+        ("Rain_mm",            "Rainfall (X₂)",        "Rain_mm"),
+        ("ln_Population",      "ln(Population) (X₃)",  "ln_Population"),
+        ("Oil_Price_Brent_USD","Oil Price (X₄)",       "Oil_Price_Brent_USD"),
+    ]
+    _responses = [
+        ("ln_Production",   "ln(Production) (Y₁)"),
+        ("ln_Export_Value", "ln(Export Value) (Y₂)"),
+    ]
+
+    _corr_rows = []
+    for _pred_col, _pred_label, _ in _predictors:
+        for _resp_col, _resp_label in _responses:
+            _d = panel[[_pred_col, _resp_col]].dropna()
+            _n = len(_d)
+            _r, _p = stats.pearsonr(_d[_pred_col], _d[_resp_col])
+            _t0 = _r * np.sqrt((_n - 2) / (1 - _r**2))
+            _reject = _p < 0.05
+            _corr_rows.append({
+                "Predictor":   _pred_label,
+                "Response":    _resp_label,
+                "n":           _n,
+                "r":           _r,
+                "T₀":          _t0,
+                "df":          _n - 2,
+                "p-value":     _p,
+                "Reject H₀?":  "Yes ✓" if _reject else "No ✗",
+                "Conclusion":  (
+                    f"Significant {'positive' if _r > 0 else 'negative'} linear relationship (α=0.05)"
+                    if _reject else
+                    "Insufficient evidence to reject H₀ (α=0.05)"
+                ),
+            })
+
+    corr_df = pd.DataFrame(_corr_rows)
+    return (corr_df,)
+
+
+@app.cell
+def _(corr_df, mo):
+    _display = corr_df.copy()
+    _display["r"]       = _display["r"].map(lambda x: f"{x:.4f}")
+    _display["T₀"]      = _display["T₀"].map(lambda x: f"{x:.3f}")
+    _display["p-value"] = _display["p-value"].map(lambda x: f"{x:.4f}" if x >= 0.0001 else "< 0.0001")
+    mo.md(
+        f"""
+        ### 2.1 Pearson Correlation Results (8 tests)
+
+        {mo.as_html(_display[["Predictor","Response","n","r","T₀","df","p-value","Reject H₀?","Conclusion"]])}
+        """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    ### 2.2 Correlation Heatmap
+    """)
+    return
+
+
+@app.cell
+def _(mo, panel, plt, sns):
+    _cols = {
+        "Avg_Temp_C":          "Temp (X₁)",
+        "Rain_mm":             "Rainfall (X₂)",
+        "ln_Population":       "ln(Pop) (X₃)",
+        "Oil_Price_Brent_USD": "Oil Price (X₄)",
+        "ln_Production":       "ln(Prod) (Y₁)",
+        "ln_Export_Value":     "ln(Export) (Y₂)",
+    }
+    _data = panel[list(_cols.keys())].rename(columns=_cols).dropna()
+    _corr_mat = _data.corr()
+
+    fig_heat, ax_heat = plt.subplots(figsize=(8, 6))
+    sns.heatmap(
+        _corr_mat, annot=True, fmt=".3f", cmap="RdBu_r",
+        center=0, vmin=-1, vmax=1,
+        linewidths=0.5, ax=ax_heat,
+        annot_kws={"size": 10}
+    )
+    ax_heat.set_title("Pearson Correlation Matrix — Predictors and Responses", pad=12)
+    plt.tight_layout()
+    mo.mpl.interactive(fig_heat)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ---
+    ## 3 · Multiple Linear Regression
+
+    Two models are fit, both with the same four predictors:
+
+    **Model A — Production:**
+    $$\ln(\text{Production}) = \beta_0 + \beta_1\,\text{Temp} + \beta_2\,\text{Rain} + \beta_3\,\ln(\text{Population}) + \beta_4\,\text{Oil} + \varepsilon$$
+
+    **Model B — Export Revenue:**
+    $$\ln(\text{Export\_Value}) = \beta_0 + \beta_1\,\text{Temp} + \beta_2\,\text{Rain} + \beta_3\,\ln(\text{Population}) + \beta_4\,\text{Oil} + \varepsilon$$
+
+    **Overall F-test H₀:** β₁ = β₂ = β₃ = β₄ = 0 (model has no explanatory power)
+    **Individual t-tests H₀:** βⱼ = 0 for j = 1, 2, 3, 4
+    **α = 0.05**
+    """)
+    return
+
+
+@app.cell
+def _(mo, panel, pd, smf):
+    # ── Fit both models ───────────────────────────────────────────────────────
+    FORMULA_A = "ln_Production  ~ Avg_Temp_C + Rain_mm + ln_Population + Oil_Price_Brent_USD"
+    FORMULA_B = "ln_Export_Value ~ Avg_Temp_C + Rain_mm + ln_Population + Oil_Price_Brent_USD"
+
+    _panel_model = panel.dropna(subset=[
+        "ln_Production", "ln_Export_Value",
+        "Avg_Temp_C", "Rain_mm", "ln_Population", "Oil_Price_Brent_USD"
+    ])
+
+    model_a = smf.ols(FORMULA_A, data=_panel_model).fit()
+    model_b = smf.ols(FORMULA_B, data=_panel_model).fit()
+
+    def _model_summary_table(result, model_name):
+        """Build a tidy coefficient + F-test table from a statsmodels OLS result."""
+        coef_df = pd.DataFrame({
+            "Term":     result.params.index,
+            "β̂ (coef)": result.params.values,
+            "SE":       result.bse.values,
+            "t₀":       result.tvalues.values,
+            "p-value":  result.pvalues.values,
+            "95% CI Lo": result.conf_int()[0].values,
+            "95% CI Hi": result.conf_int()[1].values,
+        })
+        coef_df["Sig?"] = coef_df["p-value"].apply(lambda p: "Yes ✓" if p < 0.05 else "No ✗")
+        for c in ["β̂ (coef)", "SE", "t₀", "95% CI Lo", "95% CI Hi"]:
+            coef_df[c] = coef_df[c].map(lambda x: f"{x:.4f}")
+        coef_df["p-value"] = coef_df["p-value"].map(lambda x: f"{x:.4f}" if x >= 0.0001 else "< 0.0001")
+        return coef_df
+
+    coef_a = _model_summary_table(model_a, "Model A")
+    coef_b = _model_summary_table(model_b, "Model B")
+
+    # F-test summary
+    _f_rows = []
+    for _name, _res in [("Model A — ln(Production)", model_a), ("Model B — ln(Export Revenue)", model_b)]:
+        _f_rows.append({
+            "Model":      _name,
+            "n":          int(_res.nobs),
+            "R²":         f"{_res.rsquared:.4f}",
+            "R²_adj":     f"{_res.rsquared_adj:.4f}",
+            "F₀":         f"{_res.fvalue:.3f}",
+            "df (reg)":   int(_res.df_model),
+            "df (error)": int(_res.df_resid),
+            "p(F)":       "< 0.0001" if _res.f_pvalue < 0.0001 else f"{_res.f_pvalue:.4f}",
+            "Reject H₀?": "Yes ✓" if _res.f_pvalue < 0.05 else "No ✗",
+        })
+    f_df = pd.DataFrame(_f_rows)
+
+    mo.md(
+        f"""
+        ### 3.1 Overall Model Significance (F-test)
+
+        {mo.as_html(f_df)}
+
+        ---
+
+        ### 3.2 Model A — Coefficients: ln(Production)
+
+        {mo.as_html(coef_a)}
+
+        ---
+
+        ### 3.3 Model B — Coefficients: ln(Export Revenue)
+
+        {mo.as_html(coef_b)}
+        """
+    )
+    return model_a, model_b
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    ### 3.4 Coefficient Plot — Effect Sizes and 95% CIs
+    """)
+    return
+
+
+@app.cell
+def _(ACCENT, ACCENT2, mo, model_a, model_b, np, plt):
+    def _():
+        _terms = ["Avg_Temp_C", "Rain_mm", "ln_Population", "Oil_Price_Brent_USD"]
+        _labels = ["Temp (X₁)", "Rainfall (X₂)", "ln(Pop) (X₃)", "Oil Price (X₄)"]
+
+        fig_coef, axes_coef = plt.subplots(1, 2, figsize=(13, 4), sharey=True)
+        fig_coef.suptitle("Regression Coefficients with 95% Confidence Intervals", fontsize=13, fontweight="bold")
+
+        for ax, result, title, color in [
+            (axes_coef[0], model_a, "Model A — ln(Production)", ACCENT),
+            (axes_coef[1], model_b, "Model B — ln(Export Revenue)", ACCENT2),
+        ]:
+            _coefs  = [result.params[t]         for t in _terms]
+            _lo     = [result.conf_int().loc[t, 0] for t in _terms]
+            _hi     = [result.conf_int().loc[t, 1] for t in _terms]
+            _errs   = [[c - lo for c, lo in zip(_coefs, _lo)],
+                       [hi - c for c, hi in zip(_coefs, _hi)]]
+            _pvals  = [result.pvalues[t] for t in _terms]
+
+            _y = np.arange(len(_terms))
+            _colors = [color if p < 0.05 else "#BDBDBD" for p in _pvals]
+
+            ax.axvline(0, color="#888", linewidth=1, linestyle="--")
+            ax.barh(_y, _coefs, xerr=_errs, color=_colors, alpha=0.85,
+                    height=0.5, error_kw=dict(ecolor="#333", capsize=4, linewidth=1.3))
+            ax.set_yticks(_y)
+            ax.set_yticklabels(_labels)
+            ax.set_xlabel("Coefficient value")
+            ax.set_title(title)
+            ax.annotate("Grey = not significant (α=0.05)", xy=(0.98, 0.02), xycoords="axes fraction",
+                        ha="right", fontsize=8, color="#888")
+
+        plt.tight_layout()
+        return mo.mpl.interactive(fig_coef)
+
+
+    _()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ---
+    ## 4 · Model Adequacy Checks
+
+    For both models, we verify the four OLS regression assumptions:
+
+    1. **Linearity** — Residuals vs. Fitted: no systematic curve
+    2. **Independence** — assumed given panel structure (not formally tested here)
+    3. **Homoscedasticity** — Residuals vs. Fitted: no fan/funnel shape
+    4. **Normality of residuals** — Normal Q-Q plot; Shapiro-Wilk test
+    """)
+    return
+
+
+@app.cell
+def _(ACCENT, ACCENT2, mo, model_a, model_b, np, plt, stats):
+    def _():
+        fig_diag, axes_diag = plt.subplots(2, 4, figsize=(17, 8))
+        fig_diag.suptitle("Model Adequacy Diagnostics", fontsize=13, fontweight="bold")
+
+        for row_idx, (result, title, color) in enumerate([
+            (model_a, "Model A — ln(Production)",    ACCENT),
+            (model_b, "Model B — ln(Export Revenue)", ACCENT2),
+        ]):
+            residuals = result.resid
+            fitted    = result.fittedvalues
+            std_resid = residuals / residuals.std()
+
+            # ── Plot 1: Residuals vs Fitted ──────────────────────────────────────
+            ax = axes_diag[row_idx, 0]
+            ax.scatter(fitted, residuals, alpha=0.25, s=10, color=color, linewidths=0)
+            ax.axhline(0, color="#333", linewidth=1.2, linestyle="--")
+            ax.set_xlabel("Fitted values")
+            ax.set_ylabel("Residuals")
+            ax.set_title(f"{title}\nResiduals vs. Fitted")
+
+            # ── Plot 2: Normal Q-Q ───────────────────────────────────────────────
+            ax = axes_diag[row_idx, 1]
+            _osm, _osr = stats.probplot(residuals, dist="norm")
+            ax.scatter(_osm[0], _osm[1], alpha=0.3, s=10, color=color, linewidths=0)
+            _fit_line = np.polyfit(_osm[0], _osm[1], 1)
+            _x_ql = np.linspace(min(_osm[0]), max(_osm[0]), 200)
+            ax.plot(_x_ql, np.polyval(_fit_line, _x_ql), color="#333", linewidth=1.5, linestyle="--")
+            ax.set_xlabel("Theoretical quantiles")
+            ax.set_ylabel("Sample quantiles")
+            ax.set_title(f"{title}\nNormal Q-Q Plot")
+
+            # ── Plot 3: Scale-Location (√|std resid| vs fitted) ─────────────────
+            ax = axes_diag[row_idx, 2]
+            ax.scatter(fitted, np.sqrt(np.abs(std_resid)), alpha=0.25, s=10, color=color, linewidths=0)
+            ax.axhline(1, color="#333", linewidth=1, linestyle="--")
+            ax.set_xlabel("Fitted values")
+            ax.set_ylabel("√|Standardized residuals|")
+            ax.set_title(f"{title}\nScale-Location")
+
+            # ── Plot 4: Residual histogram ───────────────────────────────────────
+            ax = axes_diag[row_idx, 3]
+            ax.hist(residuals, bins=35, color=color, alpha=0.8, edgecolor="white", linewidth=0.4)
+            _sw_stat, _sw_p = stats.shapiro(residuals[:5000])  # Shapiro-Wilk (max 5000)
+            ax.set_title(f"{title}\nResidual Distribution")
+            ax.set_xlabel("Residual")
+            ax.set_ylabel("Frequency")
+            ax.annotate(
+                f"Shapiro-Wilk\nW = {_sw_stat:.4f}\np = {'< 0.0001' if _sw_p < 0.0001 else f'{_sw_p:.4f}'}",
+                xy=(0.97, 0.93), xycoords="axes fraction", ha="right", va="top", fontsize=8, color="#333",
+                bbox=dict(boxstyle="round,pad=0.3", facecolor="white", alpha=0.7)
+            )
+
+        plt.tight_layout()
+        return mo.mpl.interactive(fig_diag)
+
+
+    _()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo, model_a, model_b, stats):
+    # ── Shapiro-Wilk formal results table ─────────────────────────────────────
+    _results = []
+    for _name, _res in [("Model A — ln(Production)", model_a), ("Model B — ln(Export Revenue)", model_b)]:
+        _resid = _res.resid.values
+        _w, _p = stats.shapiro(_resid[:5000])
+        _results.append({
+            "Model": _name,
+            "n (residuals)": len(_resid),
+            "Shapiro-Wilk W": f"{_w:.4f}",
+            "p-value": "< 0.0001" if _p < 0.0001 else f"{_p:.4f}",
+            "Reject normality (α=0.05)?": "Yes" if _p < 0.05 else "No",
+            "Interpretation": (
+                "Residuals depart significantly from normality. With n > 1,000, "
+                "Shapiro-Wilk is highly sensitive to small departures. "
+                "Inspect Q-Q plot for practical significance."
+            ) if _p < 0.05 else (
+                "No significant departure from normality detected."
+            )
+        })
+
+    import pandas as _pd2
+    _sw_df = _pd2.DataFrame(_results)
+
+    mo.md(
+        f"""
+        ### 4.1 Shapiro-Wilk Normality Test Results
+
+        {mo.as_html(_sw_df)}
+
+        > **Note on sample size:** With n ≈ 2,000 observations, the Shapiro-Wilk test has very high
+        > statistical power and will flag even minor, practically irrelevant deviations from normality.
+        > The Q-Q plots above are the more informative diagnostic at this sample size.
+        > If residuals follow approximately a straight line on the Q-Q plot, the normality assumption
+        > is reasonably satisfied for inference purposes.
+        """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ---
+    ## 5 · Conclusions
+
+    ### 5.1 Correlation Analysis Summary
+
+    For each of the 8 Pearson correlation tests at **α = 0.05**:
+    """)
+    return
+
+
+@app.cell
+def _(corr_df, mo, pd):
+    # Build a plain-English conclusion table
+    _conclusions = []
+    for _, row in corr_df.iterrows():
+        r = float(row["r"])
+        p = float(row["p-value"])
+        reject = p < 0.05
+        direction = "positive" if r > 0 else "negative"
+        strength = "weak" if abs(r) < 0.2 else ("moderate" if abs(r) < 0.5 else "strong")
+
+        if reject:
+            text = (f"Reject H₀. Statistically significant {direction} linear relationship "
+                    f"(r = {r:.3f}, {strength}). At α = 0.05, there is sufficient evidence "
+                    f"that ρ ≠ 0.")
+        else:
+            text = (f"Fail to reject H₀. Insufficient evidence of a linear relationship "
+                    f"(r = {r:.3f}, p = {p:.3f}). Cannot conclude ρ ≠ 0 at α = 0.05.")
+
+        _conclusions.append({
+            "Pair": f"{row['Predictor']} → {row['Response']}",
+            "r": f"{r:.4f}",
+            "p-value": "< 0.0001" if p < 0.0001 else f"{p:.4f}",
+            "Conclusion": text,
+        })
+
+    _conc_df = pd.DataFrame(_conclusions)
+    mo.as_html(_conc_df)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo, model_a, model_b):
+    # Regression conclusion text
+    _a_sig = [t for t in ["Avg_Temp_C", "Rain_mm", "ln_Population", "Oil_Price_Brent_USD"]
+              if model_a.pvalues[t] < 0.05]
+    _b_sig = [t for t in ["Avg_Temp_C", "Rain_mm", "ln_Population", "Oil_Price_Brent_USD"]
+              if model_b.pvalues[t] < 0.05]
+
+    _name_map = {
+        "Avg_Temp_C": "Temperature",
+        "Rain_mm": "Rainfall",
+        "ln_Population": "ln(Population)",
+        "Oil_Price_Brent_USD": "Oil Price"
+    }
+
+    _a_sig_names = ", ".join(_name_map[t] for t in _a_sig) if _a_sig else "none"
+    _b_sig_names = ", ".join(_name_map[t] for t in _b_sig) if _b_sig else "none"
+
+    mo.md(
+        f"""
+        ### 5.2 Regression Summary
+
+        **Model A — ln(Production):** R² = {model_a.rsquared:.4f}, R²_adj = {model_a.rsquared_adj:.4f}  
+        Overall F-test: F₀ = {model_a.fvalue:.2f}, p {'< 0.0001' if model_a.f_pvalue < 0.0001 else f'= {model_a.f_pvalue:.4f}'}  
+        → {'Reject H₀' if model_a.f_pvalue < 0.05 else 'Fail to reject H₀'}. The model as a whole {'has' if model_a.f_pvalue < 0.05 else 'does not have'} statistically significant explanatory power at α = 0.05.  
+        Individually significant predictors (α = 0.05): **{_a_sig_names}**
+
+        **Model B — ln(Export Revenue):** R² = {model_b.rsquared:.4f}, R²_adj = {model_b.rsquared_adj:.4f}  
+        Overall F-test: F₀ = {model_b.fvalue:.2f}, p {'< 0.0001' if model_b.f_pvalue < 0.0001 else f'= {model_b.f_pvalue:.4f}'}  
+        → {'Reject H₀' if model_b.f_pvalue < 0.05 else 'Fail to reject H₀'}. The model as a whole {'has' if model_b.f_pvalue < 0.05 else 'does not have'} statistically significant explanatory power at α = 0.05.  
+        Individually significant predictors (α = 0.05): **{_b_sig_names}**
+
+        ---
+
+        ### 5.3 Limitations
+
+        1. **Rainfall is largely structural:** 82.5% of country-year rows carry a fixed climatological
+           mean for rainfall — the value does not vary year to year. Rainfall reflects cross-country
+           differences in climate zone rather than year-to-year variation. Its coefficient should be
+           interpreted as a structural climate effect, not a dynamic one.
+
+        2. **Omitted variables:** Altitude, soil type, variety (Arabica vs. Robusta), political
+           stability, and agricultural subsidies are all known drivers of production that are not
+           included in this model.
+
+        3. **Correlation ≠ causation:** This is a cross-sectional panel analysis. Statistically
+           significant correlations document co-variation across countries and years but do not
+           establish causal mechanisms.
+
+        4. **Oil price is global:** A single annual Brent price is assigned to all countries. This
+           cannot capture country-specific exposure to fuel and fertilizer costs.
+
+        5. **Panel is unbalanced:** Not every country appears in every year. This could introduce
+           selection effects if data availability is correlated with production levels.
+        """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    ---
+    ## Data Sources
+
+    | Source | Description | Coverage |
+    |---|---|---|
+    | [FAOSTAT QCL](https://www.fao.org/faostat/en/#data/QCL) | Coffee production (tonnes), item 656 "Coffee, green" | 1961–2024 |
+    | [BACI/CEPII](https://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37) | Harmonized bilateral coffee trade flows | 1995–2024 |
+    | [Berkeley Earth](https://berkeleyearth.org) / [ERA5](https://www.ecmwf.int) | Country annual avg temperature (°C) | 1995–2024 |
+    | [World Bank / ERA5-Land](https://data.worldbank.org) | Country annual avg rainfall (mm/yr) | 1995–2024 |
+    | [World Bank](https://data.worldbank.org/indicator/SP.POP.TOTL) | Annual population | 1995–2024 |
+    | Various (Brent crude) | Annual avg oil price (USD/bbl) | 1995–2024 |
+
+    Full column-level documentation: [`data/coffee_analysis_panel_with_covariates_data_dictionary.md`](../data/coffee_analysis_panel_with_covariates_data_dictionary.md)
+
+    ---
+    *INEG 2314H — Statistics for Industrial Engineers · Warren Ross · 2026*
+    """)
+    return
+
+
+if __name__ == "__main__":
+    app.run()
