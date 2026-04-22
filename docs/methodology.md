@@ -19,12 +19,15 @@ The analysis uses a panel dataset of ~60 coffee-producing countries observed ann
 
 **Predictor variables (X)**
 
-| Variable | Symbol | Transform |
-|---|---|---|
-| Annual mean temperature (°C) | X₁ | none |
-| Annual total rainfall (mm) | X₂ | none |
-| National population | X₃ | ln(X₃) |
-| Brent crude oil price (USD/bbl) | X₄ | none |
+| Variable | Symbol | Transform | Notes |
+|---|---|---|---|
+| Annual mean temperature (°C) | X₁ | none | |
+| Rainfall — country mean (mm) | X₂ₐ | none | Structural cross-country climate characteristic |
+| Rainfall — within-country deviation (mm) | X₂ᵦ | none | Year-to-year variation; near-zero for most countries |
+| National population | X₃ | ln(X₃) | |
+| Brent crude oil price (USD/bbl) | X₄ | none | Global annual series; no country-level variation |
+
+**Rainfall decomposition:** `Rain_mm_country_mean` and `Rain_mm_within` are derived in the panel loading cell. For ~82% of countries `Rain_mm_within` ≈ 0 across all years (climatological mean only), so X₂ₐ carries almost all the rainfall signal.
 
 **Why log transforms?** Production and export revenue are right-skewed with high-leverage outliers (Brazil, Vietnam, Colombia dominate volumes). Log transformation compresses the range, linearizes multiplicative relationships, and produces more homogeneous residual variance.
 
@@ -65,17 +68,21 @@ Two MLR models, one per response:
 
 **Model 1 — Production:**
 ```
-ln(Production) = β₀ + β₁(Temp) + β₂(Rain) + β₃·ln(Population) + β₄(OilPrice) + ε
+ln(Production) = β₀ + β₁(Temp) + β₂ₐ(Rain_between) + β₂ᵦ(Rain_within)
+               + β₃·ln(Population) + β₄(OilPrice) + ε
 ```
 
 **Model 2 — Export Revenue:**
 ```
-ln(Export_Value) = β₀ + β₁(Temp) + β₂(Rain) + β₃·ln(Population) + β₄(OilPrice) + ε
+ln(Export_Value) = β₀ + β₁(Temp) + β₂ₐ(Rain_between) + β₂ᵦ(Rain_within)
+                 + β₃·ln(Population) + β₄(OilPrice) + ε
 ```
 
-For each model: estimate coefficients, standard errors, t-statistics, p-values for each βⱼ. Report overall F-statistic, R², adjusted R².
+For each model: estimate coefficients, HC3 robust standard errors, t-statistics, p-values for each βⱼ. Report overall F-statistic, R², adjusted R².
 
-**Implementation:** `statsmodels.formula.api.ols()` with HC3 heteroskedasticity-consistent standard errors given the panel structure.
+**Implementation:** `statsmodels.formula.api.ols().fit(cov_type="HC3")`. Raw OLS fits also retained as `ols_a`/`ols_b` for influence diagnostics (`OLSInfluence` requires plain OLS).
+
+**Robustness check (§4.2):** p-values compared across OLS / HC3 / Clustered-by-country / Year-FE+Clustered specifications.
 
 ### 4. Model Adequacy
 
@@ -85,9 +92,11 @@ Residual diagnostics to assess whether model assumptions hold:
 - **Normal Q-Q plot of residuals** — assess normality assumption
 - **Shapiro-Wilk test** — formal normality test on residuals (n ≤ 5000)
 - **Scale-location plot** — homoskedasticity check
-- **Leverage / Cook's distance** — identify high-influence observations
+- **Leverage / Cook's distance / externally studentized residuals** — identify high-influence observations (§4.3); threshold Cook's D > 0.5, leverage > 2p/n, |rstudent| > 3
 
 If assumptions are violated: document the violation, note its direction of impact on inference, and consider whether subgroup analysis (by region or production tier) is warranted.
+
+**Country names:** All output tables display full country names (via `pycountry`) rather than ISO3 codes.
 
 ---
 

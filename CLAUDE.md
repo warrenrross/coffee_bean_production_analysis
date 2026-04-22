@@ -63,7 +63,7 @@ jupytext --sync notebooks/<name>.ipynb
 - **Jupyter path:** Edit `notebooks/<name>.ipynb` → Jupytext auto-syncs to `scripts/<name>.py` and `docs/<name>.md` → nbstripout removes outputs before commit
 - Never edit `scripts/` or `docs/` directly — they are Jupytext-managed derivatives
 
-## Current Status (as of 2026-04-21)
+## Current Status (as of 2026-04-22)
 
 ### What's Done
 - Repo scaffolded, initialized, and pushed to GitHub (`warrenrross/coffee_bean_production_analysis`)
@@ -74,22 +74,36 @@ jupytext --sync notebooks/<name>.ipynb
   - `fao_coffee_production_clean.csv` — FAO production cleaned
 - `marimo/coffee_analysis.py` — notebook is complete and launches successfully
 - `marimo` installed (`python3 -m marimo`, v0.23.2) and tested locally
+- `corr_df` NameError resolved — cell split correctly; `corr_df` returned to DAG
 
-### Known Bug: `corr_df` NameError
-The correlation results cell wraps its logic in an inner `def _(): ...` function (Marimo anti-collision pattern), which traps `corr_df` in the inner scope. The downstream conclusions cell (`def _(corr_df, mo, pd):`) raises `NameError: name 'corr_df' is not defined`.
+### Statistical improvements implemented 2026-04-22
+All five "Big 5" items from `../statistical_critique.md` are implemented:
 
-**Fix documented in:** `docs/fix_corr_df_nameerror.md`  
-**Summary:** Split the broken cell into two — one that computes and `return (corr_df,)`, one that displays. Affected lines: ~350–406. No changes needed to the downstream consumer at ~717.
+1. **HC3 robust SEs** — `model_a`/`model_b` now use `.fit(cov_type="HC3")`. Raw OLS fits kept as `ols_a`/`ols_b` for influence diagnostics. Column headers updated to `Robust SE`, `Robust t₀`, `Robust 95% CI`.
+2. **Clustered SE robustness** — new §4.2 table compares p-values across four specifications: OLS / HC3 / Clustered-ISO3 / Year-FE+Clustered.
+3. **Oil price / year fixed effects** — year-FE specification included in §4.2 robustness table with callout that oil becomes weakly identified once year dummies absorb shared time trends.
+4. **Rainfall decomposition** — `Rain_mm` replaced in all model formulas with `Rain_mm_country_mean` (structural cross-country climate) and `Rain_mm_within` (within-country year-to-year deviation). Decomposition computed in the panel loading cell.
+5. **Influence diagnostics** — new §4.3 adds Cook's D bar chart and top-10 influence table (externally studentized residuals, leverage, Cook's D > 0.5 flag). Uses `OLSInfluence` on raw OLS fits. Country names shown via `pycountry` instead of ISO3 codes.
 
-### Architecture Decision
-No DuckDB. The panel is already built and 1,800 rows; pandas is perfectly adequate. Stick with pandas throughout.
+### Architecture decisions
+- No DuckDB — panel is 1,800 rows; pandas is adequate throughout.
+- Raw OLS fits (`ols_a`, `ols_b`) retained alongside HC3 fits because `OLSInfluence` requires a plain `OLSResults` object and does not work on robust result wrappers.
+- `panel_model` (without underscore prefix) returned from the regression cell so downstream influence and robustness cells can reference it.
+- Country names displayed via `pycountry` wherever data is surfaced to the user; ISO3 retained only as the internal join key.
+
+### Known issues / remaining work
+- Statistical critique items 6–10 are logged but not yet implemented (see `../statistical_critique.md`):
+  - Missing-data bias check before complete-case filtering
+  - Confidence intervals on Pearson ρ; de-emphasize pooled p-values in conclusions
+  - Mean-response CI and prediction intervals for selected country-year scenarios
+  - Scale-location plot: replace ad hoc `residuals / residuals.std()` with model-based standardized residuals
+  - Model comparison: reduced vs. expanded specifications; interaction terms (e.g. Temp × Rain)
+- GitHub Pages not yet verified live — push `marimo/` to trigger auto-publish and confirm deployment.
 
 ### What's Next
-1. Apply the `corr_df` fix (see `docs/fix_corr_df_nameerror.md`)
-2. Run full notebook end-to-end (`Cmd+Shift+Enter`) — watch for any other NameErrors from other inner-function-wrapped cells
-3. Verify all 4 analysis sections render: EDA → Correlation → Regression → Model Adequacy
-4. Enable GitHub Pages on the repo (Settings → Pages → Source: GitHub Actions)
-5. Push `marimo/` to trigger auto-publish to GitHub Pages
+1. Address remaining statistical critique items 6–10
+2. Push to `main` → verify GitHub Pages deployment at https://warrenrross.github.io/coffee_bean_production_analysis/
+3. Run full notebook end-to-end locally before pushing to confirm no runtime errors in new cells
 
 ### Running Locally
 ```bash
@@ -107,7 +121,9 @@ Note: `marimo` may not be on PATH after `pip3 install`; use `python3 -m marimo` 
 - **Log transforms:** `Production_tonnes` and `Export_Value_1000USD` are right-skewed — use `np.log1p()` before regression. `Population` spans 3 orders of magnitude — also log-transform.
 - **Export unit value:** `(Export_Value_1000USD * 1000) / Export_Qty_tonnes`; trim to [100, 50000] USD/tonne for outlier removal
 - **Correlation test:** `scipy.stats.pearsonr(x, y)` → r, p-value. T₀ = r√[(n−2)/(1−r²)], df = n−2
-- **MLR:** `statsmodels.formula.api.ols('np.log1p(Production_tonnes) ~ Avg_Temp_C + Rain_mm + np.log1p(Population) + Oil_Price_Brent_USD', data=panel).fit()`
+- **MLR (primary):** `.fit(cov_type="HC3")` for inference; keep raw `.fit()` as `ols_a`/`ols_b` for `OLSInfluence`. Rainfall is decomposed: `Rain_mm_country_mean + Rain_mm_within`.
+- **MLR formula:** `"ln_Production ~ Avg_Temp_C + Rain_mm_country_mean + Rain_mm_within + ln_Population + Oil_Price_Brent_USD"`
+- **Country display:** Always convert ISO3 → country name via `pycountry.countries.get(alpha_3=code).name` before displaying to user.
 - **Map joins:** BACI uses `ISO3`; geopandas Natural Earth uses `iso_a3`
 
 ## Publishing

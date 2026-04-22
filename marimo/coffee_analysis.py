@@ -94,6 +94,10 @@ def _(np, pd):
     panel["ln_Export_Value"]  = np.log(panel["Export_Value_1000USD"])
     panel["ln_Population"]    = np.log(panel["Population"])
 
+    # Rainfall decomposition: country mean (structural) vs within-country deviation
+    panel["Rain_mm_country_mean"] = panel.groupby("ISO3")["Rain_mm"].transform("mean")
+    panel["Rain_mm_within"]       = panel["Rain_mm"] - panel["Rain_mm_country_mean"]
+
     print(f"Panel loaded: {len(panel):,} rows · {panel.ISO3.nunique()} countries · "
           f"{panel.Year.min()}–{panel.Year.max()}")
     return (panel,)
@@ -462,31 +466,42 @@ def _(mo):
 
 @app.cell
 def _(mo, panel, pd, smf):
-    # ── Fit both models ───────────────────────────────────────────────────────
-    FORMULA_A = "ln_Production  ~ Avg_Temp_C + Rain_mm + ln_Population + Oil_Price_Brent_USD"
-    FORMULA_B = "ln_Export_Value ~ Avg_Temp_C + Rain_mm + ln_Population + Oil_Price_Brent_USD"
+    # ── Fit both models (HC3 robust standard errors) ──────────────────────────
+    FORMULA_A = (
+        "ln_Production  ~ Avg_Temp_C + Rain_mm_country_mean + Rain_mm_within"
+        " + ln_Population + Oil_Price_Brent_USD"
+    )
+    FORMULA_B = (
+        "ln_Export_Value ~ Avg_Temp_C + Rain_mm_country_mean + Rain_mm_within"
+        " + ln_Population + Oil_Price_Brent_USD"
+    )
 
-    _panel_model = panel.dropna(subset=[
+    panel_model = panel.dropna(subset=[
         "ln_Production", "ln_Export_Value",
-        "Avg_Temp_C", "Rain_mm", "ln_Population", "Oil_Price_Brent_USD"
+        "Avg_Temp_C", "Rain_mm_country_mean", "Rain_mm_within",
+        "ln_Population", "Oil_Price_Brent_USD"
     ])
 
-    model_a = smf.ols(FORMULA_A, data=_panel_model).fit()
-    model_b = smf.ols(FORMULA_B, data=_panel_model).fit()
+    # Raw OLS (retained for influence diagnostics — OLSInfluence requires plain OLS)
+    ols_a = smf.ols(FORMULA_A, data=panel_model).fit()
+    ols_b = smf.ols(FORMULA_B, data=panel_model).fit()
+
+    # HC3 heteroskedasticity-consistent fits — primary inference
+    model_a = smf.ols(FORMULA_A, data=panel_model).fit(cov_type="HC3")
+    model_b = smf.ols(FORMULA_B, data=panel_model).fit(cov_type="HC3")
 
     def _model_summary_table(result, model_name):
-        """Build a tidy coefficient + F-test table from a statsmodels OLS result."""
         coef_df = pd.DataFrame({
-            "Term":     result.params.index,
-            "β̂ (coef)": result.params.values,
-            "SE":       result.bse.values,
-            "t₀":       result.tvalues.values,
-            "p-value":  result.pvalues.values,
-            "95% CI Lo": result.conf_int()[0].values,
-            "95% CI Hi": result.conf_int()[1].values,
+            "Term":             result.params.index,
+            "β̂ (coef)":        result.params.values,
+            "Robust SE":        result.bse.values,
+            "Robust t₀":       result.tvalues.values,
+            "p-value":          result.pvalues.values,
+            "Robust 95% CI Lo": result.conf_int()[0].values,
+            "Robust 95% CI Hi": result.conf_int()[1].values,
         })
         coef_df["Sig?"] = coef_df["p-value"].apply(lambda p: "Yes ✓" if p < 0.05 else "No ✗")
-        for c in ["β̂ (coef)", "SE", "t₀", "95% CI Lo", "95% CI Hi"]:
+        for c in ["β̂ (coef)", "Robust SE", "Robust t₀", "Robust 95% CI Lo", "Robust 95% CI Hi"]:
             coef_df[c] = coef_df[c].map(lambda x: f"{x:.4f}")
         coef_df["p-value"] = coef_df["p-value"].map(lambda x: f"{x:.4f}" if x >= 0.0001 else "< 0.0001")
         return coef_df
@@ -494,7 +509,7 @@ def _(mo, panel, pd, smf):
     coef_a = _model_summary_table(model_a, "Model A")
     coef_b = _model_summary_table(model_b, "Model B")
 
-    # F-test summary
+    # F-test summary (R² and F come from base OLS; HC3 affects SE/t/p only)
     _f_rows = []
     for _name, _res in [("Model A — ln(Production)", model_a), ("Model B — ln(Export Revenue)", model_b)]:
         _f_rows.append({
@@ -519,17 +534,19 @@ def _(mo, panel, pd, smf):
         ---
 
         ### 3.2 Model A — Coefficients: ln(Production)
+        *Standard errors and CIs are HC3 heteroskedasticity-consistent.*
 
         {mo.as_html(coef_a)}
 
         ---
 
         ### 3.3 Model B — Coefficients: ln(Export Revenue)
+        *Standard errors and CIs are HC3 heteroskedasticity-consistent.*
 
         {mo.as_html(coef_b)}
         """
     )
-    return model_a, model_b
+    return model_a, model_b, ols_a, ols_b, panel_model
 
 
 @app.cell(hide_code=True)
@@ -543,8 +560,8 @@ def _(mo):
 @app.cell
 def _(ACCENT, ACCENT2, mo, model_a, model_b, np, plt):
     def _():
-        _terms = ["Avg_Temp_C", "Rain_mm", "ln_Population", "Oil_Price_Brent_USD"]
-        _labels = ["Temp (X₁)", "Rainfall (X₂)", "ln(Pop) (X₃)", "Oil Price (X₄)"]
+        _terms = ["Avg_Temp_C", "Rain_mm_country_mean", "Rain_mm_within", "ln_Population", "Oil_Price_Brent_USD"]
+        _labels = ["Temp (X₁)", "Rainfall-between (X₂ₐ)", "Rainfall-within (X₂ᵦ)", "ln(Pop) (X₃)", "Oil Price (X₄)"]
 
         fig_coef, axes_coef = plt.subplots(1, 2, figsize=(13, 4), sharey=True)
         fig_coef.suptitle("Regression Coefficients with 95% Confidence Intervals", fontsize=13, fontweight="bold")
@@ -590,8 +607,8 @@ def _(mo):
     For both models, we verify the four OLS regression assumptions:
 
     1. **Linearity** — Residuals vs. Fitted: no systematic curve
-    2. **Independence** — assumed given panel structure (not formally tested here)
-    3. **Homoscedasticity** — Residuals vs. Fitted: no fan/funnel shape
+    2. **Heteroskedasticity** — mitigated by HC3 robust SEs; within-country serial correlation addressed in robustness section (§4.2)
+    3. **Homoscedasticity** — Scale-location plot; residual spread vs. fitted
     4. **Normality of residuals** — Normal Q-Q plot; Shapiro-Wilk test
     """)
     return
@@ -702,6 +719,163 @@ def _(mo, model_a, model_b, stats):
 
 @app.cell(hide_code=True)
 def _(mo):
+    mo.md("""
+    ---
+    ### 4.2 Robustness — Standard Error Strategies
+    """)
+    return
+
+
+@app.cell
+def _(mo, model_a, model_b, ols_a, ols_b, panel_model, pd, smf):
+    # Compare OLS / HC3 / clustered-ISO3 / year-FE+clustered p-values per predictor
+    _FORMULA_A_YFE = (
+        "ln_Production  ~ Avg_Temp_C + Rain_mm_country_mean + Rain_mm_within"
+        " + ln_Population + Oil_Price_Brent_USD + C(Year)"
+    )
+    _FORMULA_B_YFE = (
+        "ln_Export_Value ~ Avg_Temp_C + Rain_mm_country_mean + Rain_mm_within"
+        " + ln_Population + Oil_Price_Brent_USD + C(Year)"
+    )
+    _yfe_a_raw = smf.ols(_FORMULA_A_YFE, data=panel_model).fit()
+    _yfe_b_raw = smf.ols(_FORMULA_B_YFE, data=panel_model).fit()
+
+    _clust_a     = ols_a.get_robustcov_results(cov_type="cluster", groups=panel_model["ISO3"])
+    _clust_b     = ols_b.get_robustcov_results(cov_type="cluster", groups=panel_model["ISO3"])
+    _yfe_clust_a = _yfe_a_raw.get_robustcov_results(cov_type="cluster", groups=panel_model["ISO3"])
+    _yfe_clust_b = _yfe_b_raw.get_robustcov_results(cov_type="cluster", groups=panel_model["ISO3"])
+
+    _terms  = ["Avg_Temp_C", "Rain_mm_country_mean", "Rain_mm_within", "ln_Population", "Oil_Price_Brent_USD"]
+    _labels = ["Temp (X₁)", "Rainfall-between (X₂ₐ)", "Rainfall-within (X₂ᵦ)", "ln(Pop) (X₃)", "Oil Price (X₄)"]
+
+    def _rob_table(results, terms, labels):
+        rows = []
+        for t, lbl in zip(terms, labels):
+            row = {"Term": lbl}
+            for spec, res in results:
+                _pvals = pd.Series(res.pvalues, index=res.model.exog_names)
+                if t in _pvals.index:
+                    p = _pvals[t]
+                    sig = " ✓" if p < 0.05 else " ✗"
+                    row[spec] = ("< 0.0001" if p < 0.0001 else f"{p:.4f}") + sig
+                else:
+                    row[spec] = "—"
+            rows.append(row)
+        return pd.DataFrame(rows)
+
+    _rob_a = _rob_table(
+        [("OLS", ols_a), ("HC3", model_a), ("Clustered", _clust_a), ("YFE+Clustered", _yfe_clust_a)],
+        _terms, _labels,
+    )
+    _rob_b = _rob_table(
+        [("OLS", ols_b), ("HC3", model_b), ("Clustered", _clust_b), ("YFE+Clustered", _yfe_clust_b)],
+        _terms, _labels,
+    )
+
+    mo.md(f"""
+    #### Model A — ln(Production): p-values across specifications
+
+    {mo.as_html(_rob_a)}
+
+    #### Model B — ln(Export Revenue): p-values across specifications
+
+    {mo.as_html(_rob_b)}
+
+    > **Oil price (X₄):** A single global annual series with no country-level variation. In the
+    > Year FE + Clustered specification, year dummies absorb all shared time movements, making
+    > the oil term weakly identified. Its coefficient in that column is a macro-time residual,
+    > not a country-level logistics effect — interpret cautiously.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    ### 4.3 Influence Diagnostics — Leverage, Cook's Distance, Studentized Residuals
+    """)
+    return
+
+
+@app.cell
+def _(mo, ols_a, ols_b, panel_model, pd):
+    import pycountry
+    from statsmodels.stats.outliers_influence import OLSInfluence
+
+    def _iso3_to_name(code):
+        try:
+            return pycountry.countries.get(alpha_3=code).name
+        except AttributeError:
+            return code
+
+    def _build_diag(ols_result, panel_df):
+        infl = OLSInfluence(ols_result)
+        n = int(ols_result.nobs)
+        p = int(ols_result.df_model) + 1
+        df = pd.DataFrame({
+            "Country":  [_iso3_to_name(c) for c in panel_df["ISO3"].values],
+            "Year":     panel_df["Year"].values,
+            "rstudent": infl.resid_studentized_external,
+            "leverage": infl.hat_matrix_diag,
+            "cooks_d":  infl.cooks_distance[0],
+        })
+        df["high_leverage"] = df["leverage"] > 2 * p / n
+        df["outlier"]       = df["rstudent"].abs() > 3
+        df["influential"]   = df["cooks_d"] > 0.5
+        return df, n, p
+
+    diag_a, _n_a, _p_a = _build_diag(ols_a, panel_model)
+    diag_b, _n_b, _p_b = _build_diag(ols_b, panel_model)
+
+    def _top10(df, label):
+        _t = df.nlargest(10, "cooks_d")[
+            ["Country", "Year", "rstudent", "leverage", "cooks_d", "high_leverage", "outlier", "influential"]
+        ].copy()
+        for c in ["rstudent", "leverage", "cooks_d"]:
+            _t[c] = _t[c].map(lambda x: f"{x:.4f}")
+        _t.insert(0, "Model", label)
+        return _t
+
+    _top_df = pd.concat([_top10(diag_a, "A"), _top10(diag_b, "B")], ignore_index=True)
+
+    mo.md(f"""
+    #### Top 10 influential observations by Cook's D
+
+    {mo.as_html(_top_df)}
+
+    > Thresholds: leverage > 2p/n ({2*_p_a/_n_a:.4f} for A, {2*_p_b/_n_b:.4f} for B);
+    > outlier = |rstudent| > 3; influential = Cook's D > 0.5.
+    """)
+    return diag_a, diag_b
+
+
+@app.cell
+def _(ACCENT, ACCENT2, diag_a, diag_b, mo, ols_a, ols_b, plt):
+    def _():
+        fig_inf, axes_inf = plt.subplots(1, 2, figsize=(14, 4))
+        fig_inf.suptitle("Cook's Distance — Influence Diagnostics", fontsize=13, fontweight="bold")
+
+        for ax, diag, color, label, n in [
+            (axes_inf[0], diag_a, ACCENT,  "Model A — ln(Production)",    int(ols_a.nobs)),
+            (axes_inf[1], diag_b, ACCENT2, "Model B — ln(Export Revenue)", int(ols_b.nobs)),
+        ]:
+            ax.bar(range(len(diag)), diag["cooks_d"], color=color, alpha=0.5, width=1.0, linewidth=0)
+            ax.axhline(0.5,   color="red",    linewidth=1.2, linestyle="--", label="D = 0.5")
+            ax.axhline(4 / n, color="orange", linewidth=1.0, linestyle="--", label=f"4/n = {4/n:.4f}")
+            ax.set_title(label)
+            ax.set_xlabel("Observation index")
+            ax.set_ylabel("Cook's D")
+            ax.legend(fontsize=8)
+
+        plt.tight_layout()
+        return mo.mpl.interactive(fig_inf)
+
+    _()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
     mo.md(r"""
     ---
     ## 5 · Conclusions
@@ -747,16 +921,16 @@ def _(corr_df, mo, pd):
 @app.cell(hide_code=True)
 def _(mo, model_a, model_b):
     # Regression conclusion text
-    _a_sig = [t for t in ["Avg_Temp_C", "Rain_mm", "ln_Population", "Oil_Price_Brent_USD"]
-              if model_a.pvalues[t] < 0.05]
-    _b_sig = [t for t in ["Avg_Temp_C", "Rain_mm", "ln_Population", "Oil_Price_Brent_USD"]
-              if model_b.pvalues[t] < 0.05]
+    _all_terms = ["Avg_Temp_C", "Rain_mm_country_mean", "Rain_mm_within", "ln_Population", "Oil_Price_Brent_USD"]
+    _a_sig = [t for t in _all_terms if model_a.pvalues[t] < 0.05]
+    _b_sig = [t for t in _all_terms if model_b.pvalues[t] < 0.05]
 
     _name_map = {
-        "Avg_Temp_C": "Temperature",
-        "Rain_mm": "Rainfall",
-        "ln_Population": "ln(Population)",
-        "Oil_Price_Brent_USD": "Oil Price"
+        "Avg_Temp_C":           "Temperature",
+        "Rain_mm_country_mean": "Rainfall-between",
+        "Rain_mm_within":       "Rainfall-within",
+        "ln_Population":        "ln(Population)",
+        "Oil_Price_Brent_USD":  "Oil Price",
     }
 
     _a_sig_names = ", ".join(_name_map[t] for t in _a_sig) if _a_sig else "none"
