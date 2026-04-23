@@ -63,7 +63,7 @@ jupytext --sync notebooks/<name>.ipynb
 - **Jupyter path:** Edit `notebooks/<name>.ipynb` → Jupytext auto-syncs to `scripts/<name>.py` and `docs/<name>.md` → nbstripout removes outputs before commit
 - Never edit `scripts/` or `docs/` directly — they are Jupytext-managed derivatives
 
-## Current Status (as of 2026-04-22)
+## Current Status (last updated 2026-04-22)
 
 ### What's Done
 - Repo scaffolded, initialized, and pushed to GitHub (`warrenrross/coffee_bean_production_analysis`)
@@ -75,6 +75,8 @@ jupytext --sync notebooks/<name>.ipynb
 - `marimo/coffee_analysis.py` — notebook is complete and launches successfully
 - `marimo` installed (`python3 -m marimo`, v0.23.2) and tested locally
 - `corr_df` NameError resolved — cell split correctly; `corr_df` returned to DAG
+- `marimo/__marimo__/` session state added to `.gitignore`
+- All Big 5 changes committed and pushed to `main` (commit `8223ed8`); GitHub Pages deployment triggered
 
 ### Statistical improvements implemented 2026-04-22
 All five "Big 5" items from `../statistical_critique.md` are implemented:
@@ -101,9 +103,14 @@ All five "Big 5" items from `../statistical_critique.md` are implemented:
 - GitHub Pages not yet verified live — push `marimo/` to trigger auto-publish and confirm deployment.
 
 ### What's Next
-1. Address remaining statistical critique items 6–10
-2. Push to `main` → verify GitHub Pages deployment at https://warrenrross.github.io/coffee_bean_production_analysis/
-3. Run full notebook end-to-end locally before pushing to confirm no runtime errors in new cells
+1. **Verify GitHub Pages** — confirm deployment at https://warrenrross.github.io/coffee_bean_production_analysis/ (push was triggered in session 2026-04-22)
+2. **Run notebook end-to-end locally** — `python3 -m marimo edit marimo/coffee_analysis.py` and confirm no runtime errors in new cells before next push
+3. **Address statistical critique items 6–10** (see `../statistical_critique.md`):
+   - Missing-data bias check before complete-case filtering
+   - Confidence intervals on Pearson ρ; de-emphasize pooled p-values in conclusions
+   - Mean-response CI and prediction intervals for selected country-year scenarios
+   - Scale-location plot: replace ad hoc standardization with model-based standardized residuals
+   - Model comparison: reduced vs. expanded specifications; interaction terms (e.g. Temp × Rain)
 
 ### Running Locally
 ```bash

@@ -27,6 +27,8 @@ def _(mo):
     | Export revenue (1000 USD) | **Response** | Y₂ |
 
     **Analysis window:** 1995–2024 · **Countries:** ~74 coffee-producing nations (complete cases)
+
+    [View source on GitHub →](https://github.com/warrenrross/coffee_bean_production_analysis)
     """)
     return
 
