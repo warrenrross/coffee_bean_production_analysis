@@ -21,7 +21,7 @@ def _(mo):
 
     > After removing the population/scale effect, which countries still show production variation associated with temperature or rainfall?
 
-    This notebook is an exploratory screening tool. It identifies candidate countries for deeper environmental case-study analysis; it does not prove climate causation.
+    This notebook is an exploratory screening tool. It identifies candidate countries for deeper environmental case-study analysis; it does not prove climate causation. Exploratory screening is the first step of the research cycle — it focuses the investigation before committing to formal tests. All H₀/H₁ conclusions with teacher-phrasing are in the main workbook (`coffee_analysis.py` §2–§5).
     """)
     return
 
@@ -491,6 +491,31 @@ def _(anova_lm, durbin_watson, multipletests, np, panel, pd, sm, stats):
     return MIN_OBS, TIER_STRONG_DR2, TIER_STRONG_R, TIER_MOD_R, TIER_MOD_P, candidate_screen, country_screen, residual_panel
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    #### Reading the new screening columns
+
+    **Benjamini-Hochberg (BH) FDR correction — Note 17**
+    Running ~74 countries × 2 environmental variables ≈ 148 simultaneous Pearson tests at α = 0.05 means about 7–8 false positives are expected by chance even when no real signal exists. The Bonferroni correction fixes this by making each test harder to pass (α/148 ≈ 0.00034) but is too conservative when tests are correlated. The Benjamini-Hochberg procedure controls the *False Discovery Rate* (FDR) — the expected proportion of "significant" results that are actually false — at 5%. The `p Temp (BH-adj)` and `p Rain (BH-adj)` columns in the table are BH-corrected. Tier classification uses these adjusted values, not raw p-values.
+
+    **Incremental F-test — Note 18**
+    The Strong tier requires that adding temperature and rainfall to a population-only model produces a statistically significant improvement in fit, tested with a nested F-test:
+
+    - Restricted model: ln(Production) ~ ln(Population)
+    - Full model: ln(Production) ~ ln(Population) + Temp + Rain
+
+    The F-statistic measures the reduction in residual sum of squares (RSS) relative to the degrees of freedom consumed by the two extra predictors. The `p F-incr` column shows this p-value. A country can have a moderate partial r but fail the F-test if the improvement is not consistent across the full time series — that country would be classified as Moderate or Weak, not Strong.
+
+    **Durbin-Watson statistic — Note 19**
+    Coffee production within a country is often serially correlated over time (drought, disease, expansion all persist across years). The `DW stat` column measures this autocorrelation: values near 2.0 indicate no autocorrelation; values below 1.5 suggest positive AR(1), meaning consecutive residuals move together. **BH correction cannot fix this problem** — BH adjusts for the number of tests, not for inflated test statistics within each test. A country showing DW < 1.5 together with a small BH-adjusted p-value should be treated as a weaker candidate than the p-value alone suggests.
+
+    **Tier thresholds — what the numbers mean**
+    The thresholds `TIER_STRONG_R = 0.45` and `TIER_STRONG_DR2 = 0.10` are heuristic cutoffs chosen for case-study selection, not derived from a statistical distribution. r ≥ 0.45 implies r² ≈ 0.20 — the environmental variable accounts for at least 20% of the population-adjusted production variance. ΔR² ≥ 0.10 means environment must add at least 10 percentage points of explained variance beyond population alone. These numbers were chosen to be "large enough to matter for a case study," not because they represent a critical value at any α level.
+    """)
+    return
+
+
 @app.cell
 def _(MIN_OBS, TIER_MOD_P, TIER_MOD_R, TIER_STRONG_DR2, TIER_STRONG_R, country_screen, mo, pd):
     def _format_screen(df):
@@ -578,10 +603,30 @@ def _(MIN_OBS, TIER_MOD_P, TIER_MOD_R, TIER_STRONG_DR2, TIER_STRONG_R, country_s
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
+    #### How to read the ranking table columns
+
+    | Column | Meaning |
+    |---|---|
+    | `Population R²` | Variance in ln(Production) explained by ln(Population) alone — the "scale effect" |
+    | `Env added R²` | Additional variance explained when temperature and rainfall are added |
+    | `p F-incr` | Incremental F-test p-value — is the improvement in fit statistically significant? |
+    | `r Temp after Pop (partial)` | True FWL partial correlation: temperature residuals vs. production residuals after removing population from both |
+    | `r Rain after Pop (partial)` | Same for rainfall |
+    | `p Temp (BH-adj)` / `p Rain (BH-adj)` | BH-corrected p-values — use these, not raw p-values, to judge significance |
+    | `DW stat` | Durbin-Watson autocorrelation statistic — values < 1.5 warn of inflated p-values |
+    | `Tier` | Heuristic classification: Strong / Moderate / Weak / Population-dominated |
+    | `Best env variable` | Which of temperature or rainfall showed a stronger partial signal |
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
     ---
     ## 2. Population-Dominated Countries
 
-    These are countries where the population-only model already explains a large share of production variation and environmental variables add comparatively little.
+    These are countries where the population-only model already explains a large share of production variation and environmental variables add comparatively little. A high Population R² is not a scientific failure — it tells you which question this country best answers in this dataset: the production-at-scale question, not the environmental-sensitivity question.
     """)
     return
 
@@ -651,6 +696,23 @@ def _(candidate_screen, country_screen, mo):
     {country_select}
     """)
     return (country_select,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    #### How to read the four-panel country explorer
+
+    Each panel answers a different question about the selected country:
+
+    - **Top-left — Production vs. Population over time:** Are log production and log population co-trending? If they move in parallel, population explains most of the variation.
+    - **Top-right — Population-adjusted residual over time:** This is what remains after removing the population trend. A residual above zero means the country produced *more* than population alone predicts that year; below zero means less.
+    - **Bottom-left — Residual vs. Temperature:** Does the partial residual correlate with temperature? An upward slope suggests warmer years are associated with higher-than-expected production for this country.
+    - **Bottom-right — Residual vs. Rainfall:** Same question for rainfall. If rainfall is fixed (climatological mean), this panel will show a vertical cluster — no year-to-year signal.
+
+    > **Correlation ≠ causation.** A pattern in any panel is a candidate signal for investigation, not a proven mechanism. Temperature could correlate with unmeasured variables (investment cycles, varietal shifts, trade policy) that actually drive production. For countries where rainfall is a fixed climatological mean, the bottom-right panel carries no dynamic signal — see rainfall limitation note in the dataset snapshot.
+    """)
+    return
 
 
 @app.cell
@@ -737,6 +799,8 @@ def _(mo):
     Now compare the full panel against the countries flagged as environmental sensitivity candidates.
 
     > **Selection-bias note (Fix 5):** This cohort was identified in §1 based on strong environmental signal. The regression below will tend to show larger coefficients and smaller p-values for these countries than the full panel — this is partly by construction, not independent confirmation. The cohort was selected from the same data being re-analyzed, so finding that environmental variables are more significant in the cohort is a tautological result. The full-panel comparison is included specifically to show the magnitude of this selection effect; it does not validate the §1 screening result.
+
+    Rainfall is decomposed into a between-country structural mean and a within-country annual deviation — matching the main workbook §3 specification (see main workbook Note 16).
     """)
     return
 
@@ -802,6 +866,22 @@ def _(candidate_screen, mo, panel, pd, smf):
     > **Interpreting this table:** The candidate cohort row will typically show lower p-values and higher R² for environmental variables by construction — these countries were selected in §1 precisely because they exhibited strong environmental association. This is a descriptive comparison showing the magnitude of the selection effect, not independent confirmation of the §1 screening result. See the selection-bias note at the top of §4.
     """)
     return (cohort_models,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    #### How to read the cohort coefficient comparison
+
+    The plot compares regression coefficients between the full panel and the candidate cohort:
+
+    - **Dots to the right of zero:** positive association with ln(Production) — the variable is linked to higher production
+    - **Whiskers crossing zero:** the coefficient is not distinguishable from zero at α ≈ 0.05 (95% CI)
+    - **Two colors / groups:** full-panel estimates vs. candidate-cohort estimates — if cohort coefficients are larger, the screening step identified a subgroup where environmental effects are more pronounced
+
+    > **Selection note:** The cohort was chosen in §1 for strong environmental signal. Larger coefficients here are partly by construction — this comparison measures the *size* of the selection effect, not independent confirmation of the environmental signal. See main workbook §3–§4 for the formal inference.
+    """)
+    return
 
 
 @app.cell
@@ -870,7 +950,10 @@ def _(mo):
 
     For the strongest countries, fit a small country-specific model. These models are useful for interpretation, but each country has only about 30 observations, so treat them as case-study evidence.
 
-    > **Rainfall in mini-models:** Within a single country there is no between-country variation, so raw `Rain_mm` is used directly (no decomposition needed). Where rainfall has too few unique values, the mini-model uses population and temperature only.
+    > **Mini-model limitations:**
+    > - **Small n per country (~15–30 rows):** OLS coefficients can be volatile — one unusual year can shift the estimate substantially
+    > - **No year fixed effects:** global time trends (e.g., oil price rises 1995–2008) may appear as production trends within a country
+    > - **Rainfall in mini-models:** Within a single country there is no between-country variation, so raw `Rain_mm` is used directly (no decomposition needed). Where rainfall has too few unique values, the mini-model uses population and temperature only.
     """)
     return
 
@@ -926,6 +1009,24 @@ def _(candidate_screen, mo, panel, pd, smf):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
+    #### How to read the mini-model table
+
+    | Column | Meaning |
+    |---|---|
+    | `n` | Country-year observations in the fit |
+    | `Rain included?` | Whether Rain_mm had sufficient year-to-year variation to include |
+    | `R²` / `Adj R²` | Explained-variance summary — see main workbook Note 17 |
+    | `Temp coef` / `Rain coef` | OLS coefficient: estimated change in ln(Production) per one-unit increase in the predictor, holding others constant |
+    | `Temp p` / `Rain p` | p-value for H₀: β = 0; small p + large coefficient = strongest signal |
+
+    > A small Adj R² with a significant predictor is common at n ≈ 15–30 — it means the predictor is detectable but the model explains only part of the country's production story. Cross-reference with the §1 ranking table for that country's DW stat before concluding.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
     ---
     ## 6. Interpretation
 
@@ -937,6 +1038,8 @@ def _(mo):
     - The strongest countries become candidates for deeper case-study interpretation.
 
     Recommended next step: choose 3-5 strong countries from the ranking table and investigate agricultural history, climate shocks, policy changes, coffee variety, and data-quality notes for those countries.
+
+    > **Hand-off to the main workbook:** Tier assignments and country rankings here are candidate-selection signals, not statistical conclusions. For formal H₀/H₁ conclusions with INEG teacher-phrasing, see `coffee_analysis.py` §2–§5.
     """)
     return
 
