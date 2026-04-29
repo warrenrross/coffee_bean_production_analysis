@@ -41,14 +41,17 @@ Full source documentation, coverage notes, and known limitations: [`docs/data-so
 
 ## Analysis
 
-The Marimo notebook walks through the full analysis in order:
+The primary Marimo notebook (`coffee_analysis.py`) walks through the full analysis:
 
 1. **Exploratory Data Analysis** — descriptive statistics, distributions, time series of global production, scatter plots of each predictor against each response
-2. **Correlation Analysis** — Pearson *r* and hypothesis tests (H₀: ρ = 0) for all predictor–response pairs
+2. **Correlation Analysis** — Pearson *r* and Spearman ρ hypothesis tests (H₀: ρ = 0) for all predictor–response pairs; Spearman cross-check guards against outlier sensitivity
 3. **Multiple Linear Regression** — two models (production, export revenue) with HC3 robust standard errors; ANOVA tables, coefficient estimates, 95% confidence intervals. Rainfall decomposed into structural cross-country mean and within-country interannual deviation.
 4. **Model Adequacy** — residual plots, normality checks (Shapiro-Wilk), and transparent reporting of assumption violations
    - §4.2 **Robustness table** — p-values compared across four specifications: OLS / HC3 / Clustered-by-country / Year-FE+Clustered
    - §4.3 **Influence diagnostics** — Cook's D bar chart and top-10 high-influence observations (leverage, externally studentized residuals, Cook's D > 0.5 flag)
+5. **Conclusions** — formal H₀ rejection language, R² interpretation, and per-predictor significance statements
+
+A second notebook (`environmental_sensitivity_followup.py`) screens which countries still show environmental signal after population is accounted for, ranking candidates for case-study follow-up.
 
 All statistical outputs include the test statistic, p-value, and plain-English conclusion. Charts are interactive.
 

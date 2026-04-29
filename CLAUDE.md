@@ -63,7 +63,7 @@ jupytext --sync notebooks/<name>.ipynb
 - **Jupyter path:** Edit `notebooks/<name>.ipynb` → Jupytext auto-syncs to `scripts/<name>.py` and `docs/<name>.md` → nbstripout removes outputs before commit
 - Never edit `scripts/` or `docs/` directly — they are Jupytext-managed derivatives
 
-## Current Status (last updated 2026-04-22)
+## Current Status (last updated 2026-04-23)
 
 ### What's Done
 - Repo scaffolded, initialized, and pushed to GitHub (`warrenrross/coffee_bean_production_analysis`)
@@ -72,14 +72,15 @@ jupytext --sync notebooks/<name>.ipynb
   - `coffee_analysis_panel.csv` — intermediate panel
   - `baci_country_trade_aggregated.csv` — BACI country-level aggregates
   - `fao_coffee_production_clean.csv` — FAO production cleaned
-- `marimo/coffee_analysis.py` — notebook is complete and launches successfully
+- `marimo/coffee_analysis.py` — primary notebook, complete
+- `marimo/environmental_sensitivity_followup.py` — follow-up notebook, complete
 - `marimo` installed (`python3 -m marimo`, v0.23.2) and tested locally
 - `corr_df` NameError resolved — cell split correctly; `corr_df` returned to DAG
 - `marimo/__marimo__/` session state added to `.gitignore`
 - All Big 5 changes committed and pushed to `main` (commit `8223ed8`); GitHub Pages deployment triggered
 
 ### Statistical improvements implemented 2026-04-22
-All five "Big 5" items from `../statistical_critique.md` are implemented:
+All five "Big 5" items from `../statistical_critique.md` are implemented in `coffee_analysis.py`:
 
 1. **HC3 robust SEs** — `model_a`/`model_b` now use `.fit(cov_type="HC3")`. Raw OLS fits kept as `ols_a`/`ols_b` for influence diagnostics. Column headers updated to `Robust SE`, `Robust t₀`, `Robust 95% CI`.
 2. **Clustered SE robustness** — new §4.2 table compares p-values across four specifications: OLS / HC3 / Clustered-ISO3 / Year-FE+Clustered.
@@ -87,30 +88,48 @@ All five "Big 5" items from `../statistical_critique.md` are implemented:
 4. **Rainfall decomposition** — `Rain_mm` replaced in all model formulas with `Rain_mm_country_mean` (structural cross-country climate) and `Rain_mm_within` (within-country year-to-year deviation). Decomposition computed in the panel loading cell.
 5. **Influence diagnostics** — new §4.3 adds Cook's D bar chart and top-10 influence table (externally studentized residuals, leverage, Cook's D > 0.5 flag). Uses `OLSInfluence` on raw OLS fits. Country names shown via `pycountry` instead of ISO3 codes.
 
+### Statistical review improvements implemented 2026-04-23
+Applied to both notebooks following a full multi-agent stats review:
+
+**`coffee_analysis.py`:**
+- **§1.5 scatter plots** — removed misleading i.i.d. p-value annotations (n≈2,000 pooled rows flagged everything significant); now shows Pearson r only with exploratory note. Fixed `__import__("scipy")` anti-pattern → `stats.linregress`.
+- **§2.1b Spearman** — added rank-based Spearman ρ cross-check table alongside Pearson; both computed in the correlation loop and returned in `corr_df`.
+- **§4.1 Shapiro-Wilk** — fixed biased `residuals[:5000]` slice (was sorted by country, skewed toward early-alphabet) → `stats.shapiro(residuals)` on the full vector.
+- **§5.1** — conclusion table wrapped in `mo.md()` with "Plain-English Conclusions" heading (was orphaned `mo.as_html()`).
+- **§5.2 teacher phrasings** — rewritten to include verbatim INEG assignment language: exact H₀ rejection sentences, "X% of the variation … is explained by the regression model", and per-predictor "p-value = X < α = 0.05. We reject H₀: β = 0." bullets built dynamically.
+
+**`environmental_sensitivity_followup.py`:**
+- **§4 cohort regression (blocker)** — was using raw `Rain_mm` in a pooled multi-country regression, reintroducing the between/within conflation the main workbook fixed. Now uses `Rain_mm_country_mean + Rain_mm_within`. dropna subset, p-value column names, display format, and §4 coefficient plot term mapping all updated to match.
+- **§1 tier thresholds** — magic numbers replaced with named constants (`TIER_STRONG_R=0.45`, `TIER_STRONG_DR2=0.10`, `TIER_MOD_R=0.35`, `TIER_MOD_P=0.10`); constants returned from cell for downstream use.
+- **§1 `_best_env` NaN fix** — when both r_temp and r_rain are NaN the old code silently assigned "Temperature"; now assigns `None` / `np.nan`.
+- **§1.1 display** — tier counts converted from 3-row HTML table to inline bold text; multiple-testing caveat added (n_countries × 2 tests at α=0.05 → several false discoveries expected by chance).
+- **§1 markdown** — FWL / screening-not-testing note added explaining the partial-residual approach and pointing graders to the main workbook for formal H₀/H₁ inference.
+- **§3 country dropdown** — `"ISO3 - Country"` → `"Country (ISO3)"`; ISO3 extractor updated to match; defensive `"GREY" in globals()` check removed; figure title ASCII hyphen → en-dash.
+- **§5 mini-model note** — clarifies why raw `Rain_mm` is used in per-country models (within a single country there is no between-country variation to decompose).
+
 ### Architecture decisions
 - No DuckDB — panel is 1,800 rows; pandas is adequate throughout.
 - Raw OLS fits (`ols_a`, `ols_b`) retained alongside HC3 fits because `OLSInfluence` requires a plain `OLSResults` object and does not work on robust result wrappers.
 - `panel_model` (without underscore prefix) returned from the regression cell so downstream influence and robustness cells can reference it.
 - Country names displayed via `pycountry` wherever data is surfaced to the user; ISO3 retained only as the internal join key.
+- Rainfall decomposition (`Rain_mm_country_mean + Rain_mm_within`) applied in all pooled multi-country regressions in both notebooks. Per-country mini-models intentionally use raw `Rain_mm` — correct because within one country there is no between-country variation.
+- Follow-up notebook (`environmental_sensitivity_followup.py`) is a screening tool only; it does not generate its own H₀/H₁ conclusions. All formal inference lives in the main notebook.
 
 ### Known issues / remaining work
+- Both notebooks have not been run end-to-end locally since 2026-04-23 edits — do this before pushing.
 - Statistical critique items 6–10 are logged but not yet implemented (see `../statistical_critique.md`):
   - Missing-data bias check before complete-case filtering
-  - Confidence intervals on Pearson ρ; de-emphasize pooled p-values in conclusions
+  - Confidence intervals on Pearson ρ (Fisher Z); de-emphasize pooled p-values in conclusions
   - Mean-response CI and prediction intervals for selected country-year scenarios
   - Scale-location plot: replace ad hoc `residuals / residuals.std()` with model-based standardized residuals
   - Model comparison: reduced vs. expanded specifications; interaction terms (e.g. Temp × Rain)
-- GitHub Pages not yet verified live — push `marimo/` to trigger auto-publish and confirm deployment.
+- GitHub Pages not verified since 2026-04-23 edits — push `marimo/` to trigger rebuild.
 
 ### What's Next
-1. **Verify GitHub Pages** — confirm deployment at https://warrenrross.github.io/coffee_bean_production_analysis/ (push was triggered in session 2026-04-22)
-2. **Run notebook end-to-end locally** — `python3 -m marimo edit marimo/coffee_analysis.py` and confirm no runtime errors in new cells before next push
-3. **Address statistical critique items 6–10** (see `../statistical_critique.md`):
-   - Missing-data bias check before complete-case filtering
-   - Confidence intervals on Pearson ρ; de-emphasize pooled p-values in conclusions
-   - Mean-response CI and prediction intervals for selected country-year scenarios
-   - Scale-location plot: replace ad hoc standardization with model-based standardized residuals
-   - Model comparison: reduced vs. expanded specifications; interaction terms (e.g. Temp × Rain)
+1. **Run both notebooks locally** — `python3 -m marimo edit marimo/coffee_analysis.py` and `python3 -m marimo edit marimo/environmental_sensitivity_followup.py`; confirm no runtime errors before pushing.
+2. **Push to trigger GitHub Pages** — any push touching `marimo/` triggers the publish workflow.
+3. **Verify live site** — https://warrenrross.github.io/coffee_bean_production_analysis/
+4. **Address statistical critique items 6–10** (see `../statistical_critique.md`)
 
 ### Running Locally
 ```bash

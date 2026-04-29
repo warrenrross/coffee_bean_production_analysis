@@ -296,12 +296,14 @@ def _(ACCENT, mo, panel, plt):
 def _(mo):
     mo.md("""
     ### 1.5 Predictor vs. Response Scatter Plots
+
+    *Pearson r is shown as an exploratory summary. Pooled p-values are omitted here — with n ≈ 2,000 panel rows, nearly every r is "significant" under i.i.d. assumptions. See §2 for formal hypothesis tests.*
     """)
     return
 
 
 @app.cell
-def _(ACCENT, ACCENT2, mo, np, panel, plt):
+def _(ACCENT, ACCENT2, mo, np, panel, plt, stats):
     _predictors = [
         ("Avg_Temp_C",         "Avg Temperature (°C)",       "X₁"),
         ("Rain_mm",            "Avg Rainfall (mm/yr)",       "X₂"),
@@ -323,13 +325,13 @@ def _(ACCENT, ACCENT2, mo, np, panel, plt):
             ax.scatter(_d[pred_col], _d[resp_col], alpha=0.25, s=14, color=color, linewidths=0)
 
             # OLS trend line
-            _m, _b, _r, _p, _ = __import__("scipy").stats.linregress(_d[pred_col], _d[resp_col])
+            _m, _b, _r, _p, _ = stats.linregress(_d[pred_col], _d[resp_col])
             _x_line = np.linspace(_d[pred_col].min(), _d[pred_col].max(), 200)
             ax.plot(_x_line, _m * _x_line + _b, color="#333", linewidth=1.5, linestyle="--")
 
             ax.set_xlabel(f"{pred_sym}: {pred_label}", fontsize=9)
             ax.set_ylabel(resp_label, fontsize=9)
-            ax.annotate(f"r = {_r:.3f}  p = {_p:.3f}", xy=(0.05, 0.93), xycoords="axes fraction",
+            ax.annotate(f"r = {_r:.3f}", xy=(0.05, 0.93), xycoords="axes fraction",
                         fontsize=9, color="#333")
 
     plt.tight_layout()
@@ -375,15 +377,20 @@ def _(np, panel, pd, stats):
             _r, _p = stats.pearsonr(_d[_pred_col], _d[_resp_col])
             _t0 = _r * np.sqrt((_n - 2) / (1 - _r**2))
             _reject = _p < 0.05
+            _rs, _ps = stats.spearmanr(_d[_pred_col], _d[_resp_col])
+            _reject_s = _ps < 0.05
             _corr_rows.append({
-                "Predictor":   _pred_label,
-                "Response":    _resp_label,
-                "n":           _n,
-                "r":           _r,
-                "T₀":          _t0,
-                "df":          _n - 2,
-                "p-value":     _p,
-                "Reject H₀?":  "Yes ✓" if _reject else "No ✗",
+                "Predictor":             _pred_label,
+                "Response":              _resp_label,
+                "n":                     _n,
+                "r":                     _r,
+                "T₀":                    _t0,
+                "df":                    _n - 2,
+                "p-value":               _p,
+                "Reject H₀?":            "Yes ✓" if _reject else "No ✗",
+                "ρ_s":                   _rs,
+                "p (Spearman)":          _ps,
+                "Reject H₀? (Spearman)": "Yes ✓" if _reject_s else "No ✗",
                 "Conclusion":  (
                     f"Significant {'positive' if _r > 0 else 'negative'} linear relationship (α=0.05)"
                     if _reject else
@@ -398,14 +405,23 @@ def _(np, panel, pd, stats):
 @app.cell
 def _(corr_df, mo):
     _display = corr_df.copy()
-    _display["r"]       = _display["r"].map(lambda x: f"{x:.4f}")
-    _display["T₀"]      = _display["T₀"].map(lambda x: f"{x:.3f}")
-    _display["p-value"] = _display["p-value"].map(lambda x: f"{x:.4f}" if x >= 0.0001 else "< 0.0001")
+    _display["r"]            = _display["r"].map(lambda x: f"{x:.4f}")
+    _display["T₀"]           = _display["T₀"].map(lambda x: f"{x:.3f}")
+    _display["p-value"]      = _display["p-value"].map(lambda x: f"{x:.4f}" if x >= 0.0001 else "< 0.0001")
+    _display["ρ_s"]          = _display["ρ_s"].map(lambda x: f"{x:.4f}")
+    _display["p (Spearman)"] = _display["p (Spearman)"].map(lambda x: f"{x:.4f}" if x >= 0.0001 else "< 0.0001")
     mo.md(
         f"""
         ### 2.1 Pearson Correlation Results (8 tests)
 
         {mo.as_html(_display[["Predictor","Response","n","r","T₀","df","p-value","Reject H₀?","Conclusion"]])}
+
+        ### 2.1b Spearman Correlation — Rank-Based Cross-Check
+
+        Spearman ρ is rank-based and less sensitive to the fat-tailed residuals visible in the §4 Q-Q plots.
+        Consistent results across both tests strengthen each conclusion.
+
+        {mo.as_html(_display[["Predictor","Response","n","ρ_s","p (Spearman)","Reject H₀? (Spearman)"]])}
         """
     )
     return
@@ -660,7 +676,7 @@ def _(ACCENT, ACCENT2, mo, model_a, model_b, np, plt, stats):
             # ── Plot 4: Residual histogram ───────────────────────────────────────
             ax = axes_diag[row_idx, 3]
             ax.hist(residuals, bins=35, color=color, alpha=0.8, edgecolor="white", linewidth=0.4)
-            _sw_stat, _sw_p = stats.shapiro(residuals[:5000])  # Shapiro-Wilk (max 5000)
+            _sw_stat, _sw_p = stats.shapiro(residuals)
             ax.set_title(f"{title}\nResidual Distribution")
             ax.set_xlabel("Residual")
             ax.set_ylabel("Frequency")
@@ -684,7 +700,7 @@ def _(mo, model_a, model_b, stats):
     _results = []
     for _name, _res in [("Model A — ln(Production)", model_a), ("Model B — ln(Export Revenue)", model_b)]:
         _resid = _res.resid.values
-        _w, _p = stats.shapiro(_resid[:5000])
+        _w, _p = stats.shapiro(_resid)
         _results.append({
             "Model": _name,
             "n (residuals)": len(_resid),
@@ -916,7 +932,11 @@ def _(corr_df, mo, pd):
         })
 
     _conc_df = pd.DataFrame(_conclusions)
-    mo.as_html(_conc_df)
+    mo.md(f"""
+    #### Plain-English Conclusions
+
+    {mo.as_html(_conc_df)}
+    """)
     return
 
 
@@ -935,22 +955,50 @@ def _(mo, model_a, model_b):
         "Oil_Price_Brent_USD":  "Oil Price",
     }
 
-    _a_sig_names = ", ".join(_name_map[t] for t in _a_sig) if _a_sig else "none"
-    _b_sig_names = ", ".join(_name_map[t] for t in _b_sig) if _b_sig else "none"
+    def _p_str(p):
+        return "< 0.0001" if p < 0.0001 else f"= {p:.4f}"
+
+    def _predictor_phrasings(sig_terms, model, response_label):
+        if not sig_terms:
+            return "- No individually significant predictors at α = 0.05."
+        lines = []
+        for t in sig_terms:
+            p = model.pvalues[t]
+            lines.append(
+                f"- **{_name_map[t]}:** p-value {_p_str(p)} < α = 0.05. "
+                f"We reject H₀: β = 0. There is sufficient evidence that "
+                f"{_name_map[t]} is a significant predictor of {response_label}."
+            )
+        return "\n".join(lines)
+
+    _a_fp = _p_str(model_a.f_pvalue)
+    _b_fp = _p_str(model_b.f_pvalue)
 
     mo.md(
         f"""
         ### 5.2 Regression Summary
 
-        **Model A — ln(Production):** R² = {model_a.rsquared:.4f}, R²_adj = {model_a.rsquared_adj:.4f}  
-        Overall F-test: F₀ = {model_a.fvalue:.2f}, p {'< 0.0001' if model_a.f_pvalue < 0.0001 else f'= {model_a.f_pvalue:.4f}'}  
-        → {'Reject H₀' if model_a.f_pvalue < 0.05 else 'Fail to reject H₀'}. The model as a whole {'has' if model_a.f_pvalue < 0.05 else 'does not have'} statistically significant explanatory power at α = 0.05.  
-        Individually significant predictors (α = 0.05): **{_a_sig_names}**
+        **Model A — ln(Production):** R² = {model_a.rsquared:.4f}, Adj. R² = {model_a.rsquared_adj:.4f}
 
-        **Model B — ln(Export Revenue):** R² = {model_b.rsquared:.4f}, R²_adj = {model_b.rsquared_adj:.4f}  
-        Overall F-test: F₀ = {model_b.fvalue:.2f}, p {'< 0.0001' if model_b.f_pvalue < 0.0001 else f'= {model_b.f_pvalue:.4f}'}  
-        → {'Reject H₀' if model_b.f_pvalue < 0.05 else 'Fail to reject H₀'}. The model as a whole {'has' if model_b.f_pvalue < 0.05 else 'does not have'} statistically significant explanatory power at α = 0.05.  
-        Individually significant predictors (α = 0.05): **{_b_sig_names}**
+        Overall F-test: F₀ = {model_a.fvalue:.2f}, p-value {_a_fp} < α = 0.05.
+        We reject H₀: β₁ = β₂ = β₃ = β₄ = 0. There is sufficient evidence that the model has statistically significant explanatory power.
+        **{model_a.rsquared_adj * 100:.1f}% of the variation in ln(Production) is explained by the regression model** (adj. R²).
+
+        Individually significant predictors (α = 0.05):
+
+        {_predictor_phrasings(_a_sig, model_a, "ln(Production)")}
+
+        ---
+
+        **Model B — ln(Export Revenue):** R² = {model_b.rsquared:.4f}, Adj. R² = {model_b.rsquared_adj:.4f}
+
+        Overall F-test: F₀ = {model_b.fvalue:.2f}, p-value {_b_fp} < α = 0.05.
+        We reject H₀: β₁ = β₂ = β₃ = β₄ = 0. There is sufficient evidence that the model has statistically significant explanatory power.
+        **{model_b.rsquared_adj * 100:.1f}% of the variation in ln(Export Revenue) is explained by the regression model** (adj. R²).
+
+        Individually significant predictors (α = 0.05):
+
+        {_predictor_phrasings(_b_sig, model_b, "ln(Export Revenue)")}
 
         ---
 
