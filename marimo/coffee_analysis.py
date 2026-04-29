@@ -26,6 +26,10 @@ def _(mo):
     | Coffee production (tonnes) | **Response** | Y₁ |
     | Export revenue (1000 USD) | **Response** | Y₂ |
 
+    **Predictors (X)** are the candidate explanatory variables — the factors we test as potential drivers of coffee output.
+    **Responses (Y)** are the outcomes we are trying to explain.
+    The notebook asks: does a country's temperature, rainfall, population size, or global oil price help explain how much coffee it produces and earns from exports?
+
     **Analysis window:** 1995–2024 · **Countries:** ~74 coffee-producing nations (complete cases)
 
     [View source on GitHub →](https://github.com/warrenrross/coffee_bean_production_analysis)
@@ -37,6 +41,20 @@ def _(mo):
 def _(mo):
     mo.md("""
     ## 0 · Setup and Data Loading
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    > **Panel data:** This analysis uses a *panel dataset* — one row per country per year,
+    > covering 1995–2024. Unlike a single cross-section (one observation per country), panel data
+    > has repeated observations for the same countries over time. This matters for interpretation:
+    > the regression captures patterns both *across countries* (wetter climates vs. drier ones) and
+    > *within countries over time* (years when production rose or fell). It also means observations
+    > are not independent — the same country appears in ~30 consecutive rows — which is why we use
+    > clustered standard errors in the robustness checks (§4.2).
     """)
     return
 
@@ -108,6 +126,25 @@ def _(np, pd):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
+    > **Complete-case filtering:** Rows missing any of the four predictors or either response variable
+    > are dropped before analysis. This complete-case approach simplifies interpretation but means the
+    > panel only includes country-years where all variables were observed. Countries or years with
+    > incomplete data are excluded entirely, which could affect conclusions if missingness is related
+    > to production levels.
+
+    > **Why log-transform? (the mechanism)** A logarithm compresses very large values while
+    > spreading out small ones — ln(1,000,000) = 13.8, but ln(1,000) = 6.9. This is useful when
+    > a variable spans several orders of magnitude, as coffee production does (from hundreds to
+    > millions of tonnes). It also converts *multiplicative* relationships into *additive* ones:
+    > if Brazil produces 10× Vietnam's output, ln(Brazil) − ln(Vietnam) = ln(10) ≈ 2.3, a constant
+    > gap. Linear regression handles additive relationships better than multiplicative ones.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
     ---
     ## 1 · Exploratory Data Analysis
     """)
@@ -118,6 +155,12 @@ def _(mo):
 def _(mo):
     mo.md("""
     ### 1.1 Descriptive Statistics
+
+    **Right-skew in plain English:** A distribution is right-skewed when a few very large values
+    pull the tail to the right — most observations are smaller, but a handful are much larger.
+    Right-skew matters for regression because OLS assumes roughly symmetric residuals; a strongly
+    skewed response can produce biased-looking diagnostics even when the model is correctly specified.
+    The Skewness column below quantifies this: values above 1 indicate notable right-skew.
     """)
     return
 
@@ -183,7 +226,23 @@ def _(mo, panel, pd):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
+    > **Standard deviation vs. standard error:** The table above reports **Std Dev**, which describes
+    > the spread of the raw data — how much individual country-year values vary around the mean.
+    > Later regression tables report **Robust SE** (standard error of a coefficient), which describes
+    > uncertainty in an *estimate* — how precisely the model has pinned down each β̂.
+    > These are different quantities and should not be compared directly.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
     ### 1.2 Distributions — Production and Export Revenue (Raw vs. Log)
+
+    **What a histogram shows:** Each bar counts how many observations fall in a range of values.
+    This is a *shape check*, not an inferential test. Look for: Is the distribution symmetric or
+    skewed? Are there long tails? Does the log-transformed version look more bell-shaped?
     """)
     return
 
@@ -218,6 +277,18 @@ def _(ACCENT, ACCENT2, mo, panel, plt):
 
 
     _()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    > **What this comparison shows:** The raw distributions are right-skewed — a few countries produce
+    > vastly more than most. The log-transformed versions are closer to symmetric. This matters because
+    > OLS regression performs better when the response variable is roughly symmetric — skewed responses
+    > can violate the normality-of-residuals assumption and make linear fits less stable.
+    > Log-transforming before regression is a model-building choice, not just a display convenience.
+    """)
     return
 
 
@@ -265,6 +336,17 @@ def _(ACCENT, mo, panel, plt):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
+    > **Descriptive, not inferential:** The upward trend in global production is visible in the plot
+    > above, but this chart alone does not test whether time causes production to grow. Establishing
+    > a significant time coefficient would require including `Year` as a predictor and testing its
+    > coefficient — which is done in the year-FE robustness check in §4.2.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
     ### 1.4 Top Producers (2020)
     """)
     return
@@ -298,6 +380,8 @@ def _(mo):
     ### 1.5 Predictor vs. Response Scatter Plots
 
     *Pearson r is shown as an exploratory summary. Pooled p-values are omitted here — with n ≈ 2,000 panel rows, nearly every r is "significant" under i.i.d. assumptions. See §2 for formal hypothesis tests.*
+
+    **How to read a scatter plot:** look for four things — (1) **direction**: does the cloud slope upward or downward? (2) **tightness**: is the cloud compact or spread out? (3) **curvature**: does the relationship bend rather than follow a straight line? (4) **outliers**: are there points far from the main trend?
     """)
     return
 
@@ -345,7 +429,13 @@ def _(mo):
     ---
     ## 2 · Correlation Analysis
 
-    For each predictor–response pair, we test:
+    **Pearson r in plain English:** r measures the strength and direction of the *linear* association
+    between two variables. r = +1 is a perfect upward line; r = −1 is a perfect downward line;
+    r = 0 means no linear pattern — but nonlinear relationships can still exist.
+    r does not measure overall relatedness, only linear relatedness.
+
+    For each predictor–response pair, we test the following hypotheses following the
+    7-step hypothesis-testing procedure:
 
     > **H₀:** ρ = 0 (no linear relationship)
     > **H₁:** ρ ≠ 0
@@ -430,6 +520,37 @@ def _(corr_df, mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
+    #### Teacher-phrasing template for correlation conclusions
+
+    When writing conclusions about correlation tests, use this sentence pattern:
+
+    > *"p-value = X < α = 0.05. We reject H₀: ρ = 0. There is sufficient evidence of a significant
+    > [positive/negative] linear relationship between [predictor] and [response] (r = X)."*
+
+    If the test fails to reject:
+
+    > *"p-value = X > α = 0.05. We fail to reject H₀: ρ = 0. There is insufficient evidence to
+    > conclude that a linear relationship exists between [predictor] and [response]."*
+
+    Use "fail to reject" — never "accept H₀" or "prove no relationship exists."
+
+    ---
+
+    #### Correlation matrix as a map
+
+    The heatmap below shows every pairwise Pearson r in the dataset at a glance. It is useful for
+    spotting broad patterns — for example, whether predictors are strongly correlated with each other
+    (multicollinearity) or with the responses.
+
+    **What the heatmap cannot tell you:** how much each predictor contributes while the others are
+    held fixed. That question requires regression (§3). Use the heatmap as orientation, not conclusion.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
     ### 2.2 Correlation Heatmap
     """)
     return
@@ -467,17 +588,66 @@ def _(mo):
     ---
     ## 3 · Multiple Linear Regression
 
-    Two models are fit, both with the same four predictors:
+    Two models are fit with five predictor terms. Rainfall is split into two components:
+    $\overline{\text{Rain}}_{\text{country}}$ = each country's long-run mean (structural climate);
+    $\text{Rain}_{\text{within}}$ = each year's deviation from that mean (interannual variation).
 
     **Model A — Production:**
-    $$\ln(\text{Production}) = \beta_0 + \beta_1\,\text{Temp} + \beta_2\,\text{Rain} + \beta_3\,\ln(\text{Population}) + \beta_4\,\text{Oil} + \varepsilon$$
+    $$\ln(\text{Production}) = \beta_0 + \beta_1\,\text{Temp} + \beta_{2a}\,\overline{\text{Rain}}_{\text{country}} + \beta_{2b}\,\text{Rain}_{\text{within}} + \beta_3\,\ln(\text{Population}) + \beta_4\,\text{Oil} + \varepsilon$$
 
     **Model B — Export Revenue:**
-    $$\ln(\text{Export\_Value}) = \beta_0 + \beta_1\,\text{Temp} + \beta_2\,\text{Rain} + \beta_3\,\ln(\text{Population}) + \beta_4\,\text{Oil} + \varepsilon$$
+    $$\ln(\text{Export\_Value}) = \beta_0 + \beta_1\,\text{Temp} + \beta_{2a}\,\overline{\text{Rain}}_{\text{country}} + \beta_{2b}\,\text{Rain}_{\text{within}} + \beta_3\,\ln(\text{Population}) + \beta_4\,\text{Oil} + \varepsilon$$
 
-    **Overall F-test H₀:** β₁ = β₂ = β₃ = β₄ = 0 (model has no explanatory power)
-    **Individual t-tests H₀:** βⱼ = 0 for j = 1, 2, 3, 4
+    **Overall F-test H₀:** β₁ = β₂ₐ = β₂ᵦ = β₃ = β₄ = 0 (model has no explanatory power)
+    **Individual t-tests H₀:** βⱼ = 0 for each predictor term
     **α = 0.05**
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    #### What MLR adds beyond correlation
+
+    Correlation (§2) measures pairwise association between one predictor and one response.
+    Multiple linear regression fits all four predictors simultaneously, so each coefficient is
+    interpreted as *holding all other predictors constant*. For example: the temperature coefficient
+    β₁ estimates the association between temperature and production **after accounting for differences
+    in population, rainfall, and oil price**. This is what separates regression from a collection
+    of bivariate correlations.
+
+    ---
+
+    #### Why rainfall is split into two terms
+
+    Raw `Rain_mm` confounds two different questions. The decomposition separates them:
+
+    - **Rain_mm_country_mean (β₂ₐ):** Each country's long-run average rainfall. Answers: *Do wetter
+      climates structurally produce more coffee?* This is a cross-country comparison.
+    - **Rain_mm_within (β₂ᵦ):** Each year's deviation from that country's mean. Answers: *Does an
+      unusually wet year boost production?* This is within-country variation over time.
+
+    The two coefficients answer different questions and should not be interpreted interchangeably.
+
+    ---
+
+    #### Reading the regression output
+
+    **R² and adjusted R²** both measure variation explained. Adjusted R² penalizes adding predictors
+    and is reported here because it allows fair comparison across models.
+    Teacher phrasing: *"X% of the variation in [response] is explained by the regression model."*
+
+    **Coefficient table column guide:**
+
+    | Column | Meaning |
+    |---|---|
+    | β̂ (coef) | Estimated change in ln(Y) per one-unit increase in X, holding all other predictors constant |
+    | Robust SE | Standard error of β̂ under HC3 correction — measures estimation uncertainty |
+    | Robust t₀ | t-statistic = β̂ / Robust SE — how many SEs the estimate is from zero |
+    | p-value | Probability of observing this t₀ if H₀: βⱼ = 0 were true — compare to α = 0.05 |
+    | Robust 95% CI | Plausible range for the true coefficient |
+    | Sig? | "Yes ✓" if p-value < 0.05 |
     """)
     return
 
@@ -570,6 +740,23 @@ def _(mo, panel, pd, smf):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
+    #### Confidence interval intuition
+
+    Each bar in the coefficient plot shows the estimated effect of one predictor with a 95%
+    confidence interval. A 95% CI gives a plausible range for the true coefficient: if we repeated
+    this study many times with new samples, about 95% of those intervals would contain the true βⱼ.
+
+    **Key link to significance:** A CI that crosses zero means zero is a plausible value for the
+    coefficient — consistent with failing to reject H₀: βⱼ = 0 at α = 0.05.
+    Bars shown in **gray** cross zero and are not significant; **colored** bars do not cross zero
+    and are significant.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
     ### 3.4 Coefficient Plot — Effect Sizes and 95% CIs
     """)
     return
@@ -621,6 +808,10 @@ def _(mo):
     mo.md(r"""
     ---
     ## 4 · Model Adequacy Checks
+
+    A **residual** is the actual observed value minus the model's predicted value: eᵢ = yᵢ − ŷᵢ. Residual plots reveal whether the model's assumptions hold in practice.
+
+    > A visible pattern in residual plots is more concerning than a high R² — R² can look good even when regression assumptions are violated.
 
     For both models, we verify the four OLS regression assumptions:
 
