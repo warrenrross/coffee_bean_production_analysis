@@ -63,7 +63,7 @@ jupytext --sync notebooks/<name>.ipynb
 - **Jupyter path:** Edit `notebooks/<name>.ipynb` → Jupytext auto-syncs to `scripts/<name>.py` and `docs/<name>.md` → nbstripout removes outputs before commit
 - Never edit `scripts/` or `docs/` directly — they are Jupytext-managed derivatives
 
-## Current Status (last updated 2026-04-23)
+## Current Status (last updated 2026-04-29)
 
 ### What's Done
 - Repo scaffolded, initialized, and pushed to GitHub (`warrenrross/coffee_bean_production_analysis`)
@@ -116,20 +116,26 @@ Applied to both notebooks following a full multi-agent stats review:
 - Follow-up notebook (`environmental_sensitivity_followup.py`) is a screening tool only; it does not generate its own H₀/H₁ conclusions. All formal inference lives in the main notebook.
 
 ### Known issues / remaining work
-- Both notebooks have not been run end-to-end locally since 2026-04-23 edits — do this before pushing.
+- Both notebooks have not been run end-to-end locally since 2026-04-23 edits — do this before the next push.
 - Statistical critique items 6–10 are logged but not yet implemented (see `../statistical_critique.md`):
   - Missing-data bias check before complete-case filtering
   - Confidence intervals on Pearson ρ (Fisher Z); de-emphasize pooled p-values in conclusions
   - Mean-response CI and prediction intervals for selected country-year scenarios
   - Scale-location plot: replace ad hoc `residuals / residuals.std()` with model-based standardized residuals
   - Model comparison: reduced vs. expanded specifications; interaction terms (e.g. Temp × Rain)
-- GitHub Pages not verified since 2026-04-23 edits — push `marimo/` to trigger rebuild.
+- GitHub Pages not verified since 2026-04-29 push — confirm deployment at live site.
+
+### Last push (2026-04-29)
+Commit `50bf0f4` pushed to `main`. Included:
+- `marimo/environmental_sensitivity_followup.py` — follow-up notebook added for the first time
+- `marimo/coffee_analysis.py` — stats review corrections (Spearman cross-check, Shapiro-Wilk fix, scatter plot annotation cleanup, §5.1/5.2 INEG teacher phrasings)
+- `README.md` — updated to describe both notebooks
+- `CLAUDE.md` — status updated; local repo path added
 
 ### What's Next
-1. **Run both notebooks locally** — `python3 -m marimo edit marimo/coffee_analysis.py` and `python3 -m marimo edit marimo/environmental_sensitivity_followup.py`; confirm no runtime errors before pushing.
-2. **Push to trigger GitHub Pages** — any push touching `marimo/` triggers the publish workflow.
-3. **Verify live site** — https://warrenrross.github.io/coffee_bean_production_analysis/
-4. **Address statistical critique items 6–10** (see `../statistical_critique.md`)
+1. **Run both notebooks locally** — `python3 -m marimo edit marimo/coffee_analysis.py` and `python3 -m marimo edit marimo/environmental_sensitivity_followup.py`; confirm no runtime errors.
+2. **Verify live site** — https://warrenrross.github.io/coffee_bean_production_analysis/ (push already triggered GitHub Pages rebuild)
+3. **Address statistical critique items 6–10** (see `../statistical_critique.md`)
 
 ### Running Locally
 ```bash

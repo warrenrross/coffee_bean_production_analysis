@@ -39,6 +39,9 @@ def _():
     import seaborn as sns
     import statsmodels.api as sm
     import statsmodels.formula.api as smf
+    from statsmodels.stats.multitest import multipletests
+    from statsmodels.stats.stattools import durbin_watson
+    from statsmodels.stats.anova import anova_lm
 
     warnings.filterwarnings("ignore")
 
@@ -60,7 +63,10 @@ def _():
         ACCENT2,
         ACCENT3,
         GREY,
+        anova_lm,
+        durbin_watson,
         mo,
+        multipletests,
         np,
         pathlib,
         pd,
@@ -170,33 +176,48 @@ def _(mo):
 
     In context, it means: actual log production minus the log production expected from population alone.
 
-    > **Screening vs. formal testing.** This approach partials the *response* against ln(Population) but does not partial the environmental predictor. The reported r is therefore a screening signal (an FWL-style partial-residual correlation), not a formal partial correlation. For formal H₀/H₁ inference see the main workbook §2–§5. The standardized-β columns in the ranking table below come from a full multivariate fit per country and are the more reliable effect-size measure.
+    > **Partial correlation (FWL-complete).** The reported r values are **true FWL partial correlations**: both the response *and* each environmental predictor are separately regressed on ln(Population), and their residuals are then correlated. This removes any spurious correlation between the environmental predictor and the response that runs through population. For formal H₀/H₁ inference see the main workbook §2–§5. The standardized-β columns in the ranking table below come from a full multivariate fit per country and measure a related but distinct quantity (partial regression coefficient after all other predictors are controlled). The two effect-size columns come from different models and are not directly comparable.
     """)
     return
 
 
 @app.cell
-def _(np, panel, pd, sm, stats):
+def _(anova_lm, durbin_watson, multipletests, np, panel, pd, sm, stats):
     MIN_OBS = 15
     MIN_UNIQUE = 5
 
     # Heuristic screening thresholds — NOT formal hypothesis tests.
     # Used to assign candidate tiers for case-study selection only.
-    TIER_STRONG_R   = 0.45   # |r| between env var and pop-adjusted residual
+    TIER_STRONG_R   = 0.45   # |r| between env var and pop-adjusted residual (partial)
     TIER_STRONG_DR2 = 0.10   # env vars must add ≥10pp R² beyond population
     TIER_MOD_R      = 0.35   # |r| threshold for Moderate tier
-    TIER_MOD_P      = 0.10   # p-value threshold for Moderate tier
+    TIER_MOD_P      = 0.10   # p-value threshold for Moderate tier (BH-adjusted)
 
-    def _fit_r2(y, x_df):
-        _d = pd.concat([y, x_df], axis=1).dropna()
-        if len(_d) < x_df.shape[1] + 5:
-            return np.nan
-        _y = _d.iloc[:, 0]
-        _x = sm.add_constant(_d.iloc[:, 1:], has_constant="add")
+    def _fit_r2_on_common(y, pop_col, env_cols, data):
+        """
+        Compute R² for population-only, env-only, and full models on the same
+        complete-case subsample (avoids comparing R² values from different n).
+        Returns (r2_pop, r2_env, r2_full) or (nan, nan, nan) on failure.
+        """
+        _all_cols = [y] + [pop_col] + env_cols
+        _d = data[_all_cols].dropna()
+        _n_env = len(env_cols)
+        if len(_d) < max(_n_env + 5, MIN_OBS):
+            return np.nan, np.nan, np.nan
+        _y = _d[y]
+        # Population-only
+        _x_pop = sm.add_constant(_d[[pop_col]], has_constant="add")
+        # Env-only
+        _x_env = sm.add_constant(_d[env_cols], has_constant="add")
+        # Full
+        _x_full = sm.add_constant(_d[[pop_col] + env_cols], has_constant="add")
         try:
-            return sm.OLS(_y, _x).fit().rsquared
+            _r2_pop  = sm.OLS(_y, _x_pop).fit().rsquared
+            _r2_env  = sm.OLS(_y, _x_env).fit().rsquared if _n_env > 0 else np.nan
+            _r2_full = sm.OLS(_y, _x_full).fit().rsquared
+            return _r2_pop, _r2_env, _r2_full
         except Exception:
-            return np.nan
+            return np.nan, np.nan, np.nan
 
     def _standardized_fit(group_df, predictors):
         _cols = ["ln_Production"] + predictors
@@ -222,6 +243,7 @@ def _(np, panel, pd, sm, stats):
         if len(_g) < MIN_OBS or _g["ln_Population"].nunique() < MIN_UNIQUE:
             continue
 
+        # --- Step 1: Fit population-only model and extract production residuals ---
         _pop_x = sm.add_constant(_g[["ln_Population"]], has_constant="add")
         try:
             _pop_fit = sm.OLS(_g["ln_Production"], _pop_x).fit()
@@ -242,6 +264,13 @@ def _(np, panel, pd, sm, stats):
             "prod_resid_after_pop",
         ]])
 
+        # Fix 4 — Durbin-Watson statistic on production residuals (diagnostic for serial autocorrelation).
+        # DW near 2.0 = low autocorrelation; DW < 1.5 suggests positive AR(1), inflating p-values.
+        try:
+            _dw_stat = float(durbin_watson(_pop_fit.resid))
+        except Exception:
+            _dw_stat = np.nan
+
         _temp_ok = _g["Avg_Temp_C"].nunique() >= MIN_UNIQUE
         _rain_ok = _g["Rain_mm"].nunique() >= MIN_UNIQUE
         _env_vars = []
@@ -250,18 +279,71 @@ def _(np, panel, pd, sm, stats):
         if _rain_ok:
             _env_vars.append("Rain_mm")
 
+        # --- Fix 1: True FWL partial correlations ---
+        # Residualize BOTH the response AND each environmental predictor on ln(Population),
+        # then correlate the two sets of residuals. This is the correct FWL partial correlation.
         _r_temp, _p_temp = (np.nan, np.nan)
         _r_rain, _p_rain = (np.nan, np.nan)
-        if _temp_ok:
-            _r_temp, _p_temp = stats.pearsonr(_g["Avg_Temp_C"], _g["prod_resid_after_pop"])
-        if _rain_ok:
-            _r_rain, _p_rain = stats.pearsonr(_g["Rain_mm"], _g["prod_resid_after_pop"])
 
-        _r2_pop = _pop_fit.rsquared
-        _r2_env = _fit_r2(_g["ln_Production"], _g[_env_vars]) if _env_vars else np.nan
-        _r2_full = _fit_r2(_g["ln_Production"], _g[["ln_Population"] + _env_vars]) if _env_vars else np.nan
-        _delta_env = _r2_full - _r2_pop if pd.notna(_r2_full) else np.nan
-        _delta_pop = _r2_full - _r2_env if pd.notna(_r2_full) and pd.notna(_r2_env) else np.nan
+        _prod_resid = _g["prod_resid_after_pop"].values  # y residuals (already computed)
+
+        if _temp_ok:
+            # Regress Avg_Temp_C on ln(Population) → extract temp residuals
+            _temp_data = _g[["Avg_Temp_C", "ln_Population"]].dropna()
+            if len(_temp_data) >= MIN_OBS:
+                try:
+                    _temp_pop_x = sm.add_constant(_temp_data[["ln_Population"]], has_constant="add")
+                    _temp_resid = sm.OLS(_temp_data["Avg_Temp_C"], _temp_pop_x).fit().resid
+                    # Align indices: use the intersection of the production residual index and temp residual index
+                    _common_idx = _g.index.intersection(_temp_resid.index)
+                    _r_temp, _p_temp = stats.pearsonr(
+                        _prod_resid[_g.index.get_indexer(_common_idx)],
+                        _temp_resid.loc[_common_idx].values,
+                    )
+                except Exception:
+                    pass
+
+        if _rain_ok:
+            # Regress Rain_mm on ln(Population) → extract rain residuals
+            _rain_data = _g[["Rain_mm", "ln_Population"]].dropna()
+            if len(_rain_data) >= MIN_OBS:
+                try:
+                    _rain_pop_x = sm.add_constant(_rain_data[["ln_Population"]], has_constant="add")
+                    _rain_resid = sm.OLS(_rain_data["Rain_mm"], _rain_pop_x).fit().resid
+                    _common_idx = _g.index.intersection(_rain_resid.index)
+                    _r_rain, _p_rain = stats.pearsonr(
+                        _prod_resid[_g.index.get_indexer(_common_idx)],
+                        _rain_resid.loc[_common_idx].values,
+                    )
+                except Exception:
+                    pass
+
+        # --- R² values computed on a common complete-case sample (Fix 6.2) ---
+        _r2_pop, _r2_env, _r2_full = _fit_r2_on_common(
+            "ln_Production", "ln_Population", _env_vars, _g
+        ) if _env_vars else (np.nan, np.nan, np.nan)
+        # If no env_vars, r2_pop from the individual fit above
+        if not _env_vars:
+            _r2_pop = _pop_fit.rsquared
+        _delta_env = _r2_full - _r2_pop if (pd.notna(_r2_full) and pd.notna(_r2_pop)) else np.nan
+        _delta_pop = _r2_full - _r2_env if (pd.notna(_r2_full) and pd.notna(_r2_env)) else np.nan
+
+        # --- Fix 3: Incremental F-test for environmental variables beyond population ---
+        _p_f_incr = np.nan
+        if _env_vars and pd.notna(_r2_full) and pd.notna(_r2_pop):
+            _all_cols_incr = ["ln_Production", "ln_Population"] + _env_vars
+            _d_incr = _g[_all_cols_incr].dropna()
+            if len(_d_incr) >= len(_env_vars) + MIN_OBS:
+                try:
+                    _y_incr = _d_incr["ln_Production"]
+                    _x_rest = sm.add_constant(_d_incr[["ln_Population"]], has_constant="add")
+                    _x_full = sm.add_constant(_d_incr[["ln_Population"] + _env_vars], has_constant="add")
+                    _fit_rest = sm.OLS(_y_incr, _x_rest).fit()
+                    _fit_full = sm.OLS(_y_incr, _x_full).fit()
+                    _anova_tbl = anova_lm(_fit_rest, _fit_full)
+                    _p_f_incr = float(_anova_tbl["Pr(>F)"].iloc[1])
+                except Exception:
+                    pass
 
         _std_fit = _standardized_fit(_g, ["ln_Population"] + _env_vars)
         _beta_pop = np.nan
@@ -291,23 +373,11 @@ def _(np, panel, pd, sm, stats):
             _best_env = "Rainfall"
             _best_env_p = _p_rain
         _env_dominates_r2 = pd.notna(_delta_env) and pd.notna(_delta_pop) and _delta_env > _delta_pop
-        _max_env_beta = np.nanmax([abs(_beta_temp), abs(_beta_rain)])
+        _max_env_beta = np.nanmax([abs(_beta_temp) if pd.notna(_beta_temp) else np.nan,
+                                   abs(_beta_rain) if pd.notna(_beta_rain) else np.nan])
         _env_dominates_beta = pd.notna(_max_env_beta) and pd.notna(_beta_pop) and _max_env_beta > abs(_beta_pop)
 
-        if (pd.notna(_max_abs_env_r) and _max_abs_env_r >= TIER_STRONG_R
-                and pd.notna(_best_env_p) and _best_env_p < 0.05
-                and pd.notna(_delta_env) and _delta_env >= TIER_STRONG_DR2):
-            _tier = "Strong"
-        elif (
-            (pd.notna(_delta_env) and _delta_env >= TIER_STRONG_DR2)
-            or _env_dominates_r2
-            or (pd.notna(_max_abs_env_r) and _max_abs_env_r >= TIER_MOD_R
-                and pd.notna(_best_env_p) and _best_env_p < TIER_MOD_P)
-        ):
-            _tier = "Moderate"
-        else:
-            _tier = "Weak / inconclusive"
-
+        # Tier will be reassigned after BH correction (Fix 2); store raw values for now.
         country_rows.append({
             "ISO3": _iso3,
             "Country": _g["Country_Name"].iloc[0],
@@ -318,10 +388,12 @@ def _(np, panel, pd, sm, stats):
             "Full R2": _r2_full,
             "Environment added R2": _delta_env,
             "Population added R2": _delta_pop,
-            "r Temp after Pop": _r_temp,
+            "r Temp after Pop (partial)": _r_temp,
             "p Temp": _p_temp,
-            "r Rain after Pop": _r_rain,
+            "r Rain after Pop (partial)": _r_rain,
             "p Rain": _p_rain,
+            "p F-incr": _p_f_incr,
+            "DW stat": _dw_stat,
             "Std beta Pop": _beta_pop,
             "Std beta Temp": _beta_temp,
             "Std beta Rain": _beta_rain,
@@ -329,12 +401,86 @@ def _(np, panel, pd, sm, stats):
             "p beta Rain": _p_beta_rain,
             "Max abs env r": _max_abs_env_r,
             "Best environmental variable": _best_env,
+            "_best_env_p_raw": _best_env_p,
+            "_best_env_label": _best_env,
             "Env added R2 > Pop added R2": _env_dominates_r2,
             "Env beta > Pop beta": _env_dominates_beta,
-            "Candidate tier": _tier,
+            # Temp/rain raw p stored separately so BH can be applied below
+            "_p_temp_raw": _p_temp,
+            "_p_rain_raw": _p_rain,
+            "_delta_env": _delta_env,
+            "_env_dominates_r2": _env_dominates_r2,
+            "_max_abs_env_r": _max_abs_env_r,
+            "_p_f_incr": _p_f_incr,
         })
 
-    country_screen = pd.DataFrame(country_rows).sort_values(
+    # --- Fix 2: Benjamini-Hochberg FDR correction across all country-level p-values ---
+    _screen_df = pd.DataFrame(country_rows)
+
+    # Collect raw p-values; treat NaN as 1.0 for correction purposes (no evidence)
+    _p_temp_arr = _screen_df["_p_temp_raw"].fillna(1.0).values
+    _p_rain_arr = _screen_df["_p_rain_raw"].fillna(1.0).values
+
+    _, _p_temp_adj, _, _ = multipletests(_p_temp_arr, method="fdr_bh")
+    _, _p_rain_adj, _, _ = multipletests(_p_rain_arr, method="fdr_bh")
+
+    # Restore NaN where the original was NaN (country lacked enough variation)
+    _p_temp_adj = np.where(_screen_df["_p_temp_raw"].isna(), np.nan, _p_temp_adj)
+    _p_rain_adj = np.where(_screen_df["_p_rain_raw"].isna(), np.nan, _p_rain_adj)
+
+    _screen_df["p Temp (BH-adj)"] = _p_temp_adj
+    _screen_df["p Rain (BH-adj)"] = _p_rain_adj
+
+    # Derive BH-adjusted best-env p for tier classification
+    def _bh_best_p(row):
+        _t = row["p Temp (BH-adj)"] if pd.notna(row["p Temp (BH-adj)"]) else np.nan
+        _r = row["p Rain (BH-adj)"] if pd.notna(row["p Rain (BH-adj)"]) else np.nan
+        if row["_best_env_label"] == "Temperature":
+            return _t
+        elif row["_best_env_label"] == "Rainfall":
+            return _r
+        return np.nan
+
+    _screen_df["_best_env_p_adj"] = _screen_df.apply(_bh_best_p, axis=1)
+
+    # --- Fix 2 + Fix 3: Tier assignment using BH-adjusted p-values AND incremental F-test ---
+    def _assign_tier(row):
+        _max_r   = row["_max_abs_env_r"]
+        _p_adj   = row["_best_env_p_adj"]
+        _dr2     = row["_delta_env"]
+        _p_f     = row["_p_f_incr"]
+        _dom_r2  = row["_env_dominates_r2"]
+
+        # Strong: high partial r AND corrected p significant AND ΔR² ≥ threshold
+        # AND incremental F-test confirms the R² gain is not just noise (Fix 3)
+        if (
+            pd.notna(_max_r) and _max_r >= TIER_STRONG_R
+            and pd.notna(_p_adj) and _p_adj < 0.05
+            and pd.notna(_dr2) and _dr2 >= TIER_STRONG_DR2
+            and pd.notna(_p_f) and _p_f < 0.05
+        ):
+            return "Strong"
+        elif (
+            (pd.notna(_dr2) and _dr2 >= TIER_STRONG_DR2)
+            or _dom_r2
+            or (pd.notna(_max_r) and _max_r >= TIER_MOD_R
+                and pd.notna(_p_adj) and _p_adj < TIER_MOD_P)
+        ):
+            return "Moderate"
+        else:
+            return "Weak / inconclusive"
+
+    _screen_df["Candidate tier"] = _screen_df.apply(_assign_tier, axis=1)
+
+    # Drop internal helper columns before exposing
+    _internal_cols = [
+        "_p_temp_raw", "_p_rain_raw", "_delta_env", "_env_dominates_r2",
+        "_max_abs_env_r", "_p_f_incr", "_best_env_p_raw", "_best_env_label",
+        "_best_env_p_adj",
+    ]
+    _screen_df = _screen_df.drop(columns=[c for c in _internal_cols if c in _screen_df.columns])
+
+    country_screen = _screen_df.sort_values(
         ["Candidate tier", "Environment added R2", "Max abs env r"],
         ascending=[True, False, False],
     )
@@ -355,10 +501,14 @@ def _(MIN_OBS, TIER_MOD_P, TIER_MOD_R, TIER_STRONG_DR2, TIER_STRONG_R, country_s
             "Full R2",
             "Environment added R2",
             "Population added R2",
-            "r Temp after Pop",
+            "r Temp after Pop (partial)",
             "p Temp",
-            "r Rain after Pop",
+            "p Temp (BH-adj)",
+            "r Rain after Pop (partial)",
             "p Rain",
+            "p Rain (BH-adj)",
+            "p F-incr",
+            "DW stat",
             "Max abs env r",
         ]
         for _c in _float_cols:
@@ -377,10 +527,14 @@ def _(MIN_OBS, TIER_MOD_P, TIER_MOD_R, TIER_STRONG_DR2, TIER_STRONG_R, country_s
         "Full R2",
         "Environment added R2",
         "Population added R2",
-        "r Temp after Pop",
+        "r Temp after Pop (partial)",
         "p Temp",
-        "r Rain after Pop",
+        "p Temp (BH-adj)",
+        "r Rain after Pop (partial)",
         "p Rain",
+        "p Rain (BH-adj)",
+        "p F-incr",
+        "DW stat",
         "Best environmental variable",
     ]
 
@@ -397,14 +551,22 @@ def _(MIN_OBS, TIER_MOD_P, TIER_MOD_R, TIER_STRONG_DR2, TIER_STRONG_R, country_s
     _n_weak   = int(_counts["Weak / inconclusive"])
     _n_total  = _n_strong + _n_mod + _n_weak
 
+    # Flag countries with potential autocorrelation (DW < 1.5)
+    _dw_flagged = country_screen[country_screen["DW stat"].notna() & (country_screen["DW stat"] < 1.5)]["Country"].tolist()
+    _dw_flag_str = ", ".join(_dw_flagged[:10]) + ("…" if len(_dw_flagged) > 10 else "")
+
     mo.md(f"""
     ### 1.1 Environmental Sensitivity Ranking
 
     **Strong: {_n_strong} · Moderate: {_n_mod} · Weak / inconclusive: {_n_weak}** countries (of {_n_total} with ≥ {MIN_OBS} obs)
 
-    > **These tiers are a heuristic screening rule, not a formal hypothesis test.** Threshold guide: **Strong** = |r| ≥ {TIER_STRONG_R}, p < 0.05, and ΔR² ≥ {TIER_STRONG_DR2} from environmental variables; **Moderate** = ΔR² ≥ {TIER_STRONG_DR2}, or env dominates population in R², or |r| ≥ {TIER_MOD_R} with p < {TIER_MOD_P}.
-
-    > **Multiple testing note.** ~{_n_total * 2} per-country correlation tests are performed. At α = 0.05, several "significant" results are expected by chance. Treat tier assignments as candidate-selection signals, not definitive statistical conclusions.
+    > **These tiers are a heuristic screening rule, not a formal hypothesis test.** Threshold guide:
+    > - **Strong** = partial |r| ≥ {TIER_STRONG_R}, corrected p (BH-adj) < 0.05, ΔR² ≥ {TIER_STRONG_DR2}, AND incremental F-test p < 0.05
+    > - **Moderate** = ΔR² ≥ {TIER_STRONG_DR2}, or env R² > pop R², or partial |r| ≥ {TIER_MOD_R} with BH-adjusted p < {TIER_MOD_P}
+    > - `r Temp after Pop (partial)` and `r Rain after Pop (partial)` are **true FWL partial correlations**: both the response and each environmental predictor are residualized on ln(Population) before computing Pearson r.
+    > - `p Temp (BH-adj)` and `p Rain (BH-adj)` are **corrected p-values (Benjamini-Hochberg FDR)** across all ~{_n_total * 2} simultaneous tests. The Strong and Moderate tier significance tests use these corrected values. Raw p-values are also shown for comparison.
+    > - `p F-incr` is the p-value from an incremental F-test (partial F-test) asking whether the environmental variables significantly improve fit beyond the population-only model. The Strong tier requires this p < 0.05.
+    > - **Serial autocorrelation warning (Fix 4):** `DW stat` is the Durbin-Watson statistic on the population-model residuals. DW near 2.0 = low autocorrelation. **Countries with DW < 1.5 have positive AR(1) in their production residuals; their raw p-values are overstated and should be interpreted conservatively even after BH correction.** Countries flagged: {_dw_flag_str if _dw_flag_str else "none at DW < 1.5"}.
 
     The table below ranks countries by how much environmental variables add after population has already been used.
 
@@ -462,6 +624,11 @@ def _(mo):
     ## 3. Interactive Country Explorer
 
     Pick a candidate country to inspect the population-adjusted residuals directly.
+
+    > **Local only:** The dropdown and interactive plot in this section require a live Marimo
+    > kernel. They will not function when viewing this notebook on GitHub Pages — you will see
+    > a static snapshot of the last selected country only. To use the explorer, run the notebook
+    > locally: `python3 -m marimo edit marimo/environmental_sensitivity_followup.py`
     """)
     return
 
@@ -531,7 +698,7 @@ def _(
         _x = np.linspace(_d["Avg_Temp_C"].min(), _d["Avg_Temp_C"].max(), 100)
         ax.plot(_x, np.polyval(_coef, _x), color="#333333", linestyle="--", linewidth=1.2)
     ax.axhline(0, color="#777777", linestyle=":", linewidth=1)
-    ax.set_title(f"Residual vs temperature (r = {_meta['r Temp after Pop']:.3f})")
+    ax.set_title(f"Residual vs temperature (partial r = {_meta['r Temp after Pop (partial)']:.3f})")
     ax.set_xlabel("Average temperature (C)")
     ax.set_ylabel("Residual")
 
@@ -541,7 +708,7 @@ def _(
         _coef = np.polyfit(_d["Rain_mm"], _d["prod_resid_after_pop"], 1)
         _x = np.linspace(_d["Rain_mm"].min(), _d["Rain_mm"].max(), 100)
         ax.plot(_x, np.polyval(_coef, _x), color="#333333", linestyle="--", linewidth=1.2)
-        ax.set_title(f"Residual vs rainfall (r = {_meta['r Rain after Pop']:.3f})")
+        ax.set_title(f"Residual vs rainfall (partial r = {_meta['r Rain after Pop (partial)']:.3f})")
         ax.set_xlabel("Rainfall (mm/yr)")
         ax.set_ylabel("Residual")
     else:
@@ -568,6 +735,8 @@ def _(mo):
     ## 4. Candidate Cohort Regression
 
     Now compare the full panel against the countries flagged as environmental sensitivity candidates.
+
+    > **Selection-bias note (Fix 5):** This cohort was identified in §1 based on strong environmental signal. The regression below will tend to show larger coefficients and smaller p-values for these countries than the full panel — this is partly by construction, not independent confirmation. The cohort was selected from the same data being re-analyzed, so finding that environmental variables are more significant in the cohort is a tautological result. The full-panel comparison is included specifically to show the magnitude of this selection effect; it does not validate the §1 screening result.
     """)
     return
 
@@ -592,10 +761,15 @@ def _(candidate_screen, mo, panel, pd, smf):
     ]).copy()
     _cand_df = _full_df[_full_df["ISO3"].isin(candidate_iso3)].copy()
 
+    _n_full_countries = int(_full_df["ISO3"].nunique())
+    _n_cand_countries = int(_cand_df["ISO3"].nunique())
+    _label_full = f"Full panel (n={_n_full_countries} countries)"
+    _label_cand = f"Candidate cohort (n={_n_cand_countries} countries, selected for environmental signal)"
+
     _rows = []
     cohort_models = []
 
-    for _label, _df in [("Full panel", _full_df), ("Candidate cohort", _cand_df)]:
+    for _label, _df in [(_label_full, _full_df), (_label_cand, _cand_df)]:
         if len(_df) < 20 or _df["ISO3"].nunique() < 2:
             continue
         _res = smf.ols(_formula, data=_df).fit(cov_type="HC3")
@@ -624,7 +798,8 @@ def _(candidate_screen, mo, panel, pd, smf):
 
     {mo.as_html(_display)}
 
-    > Rainfall is decomposed into a between-country structural mean (`Rain_mm_country_mean`) and a within-country annual deviation (`Rain_mm_within`), matching the main workbook's specification. This comparison asks whether the environmental variables look more important after the notebook focuses on countries flagged by the residual screening step.
+    > Rainfall is decomposed into a between-country structural mean (`Rain_mm_country_mean`) and a within-country annual deviation (`Rain_mm_within`), matching the main workbook's specification.
+    > **Interpreting this table:** The candidate cohort row will typically show lower p-values and higher R² for environmental variables by construction — these countries were selected in §1 precisely because they exhibited strong environmental association. This is a descriptive comparison showing the magnitude of the selection effect, not independent confirmation of the §1 screening result. See the selection-bias note at the top of §4.
     """)
     return (cohort_models,)
 
@@ -653,13 +828,14 @@ def _(ACCENT, ACCENT2, cohort_models, mo, pd, plt):
 
     fig_coef_compare, ax_coef_compare = plt.subplots(figsize=(10, 6))
     _terms = ["Temperature", "Rainfall-between", "Rainfall-within", "ln(Population)", "Oil price"]
-    _offsets = {"Full panel": -0.17, "Candidate cohort": 0.17}
-    _colors = {"Full panel": ACCENT, "Candidate cohort": ACCENT2}
+    # Assign offsets and colors by position so dynamic label strings (which include country counts) work
+    _unique_samples = list(_coef_df["Sample"].unique())
+    _offset_list = [-0.17, 0.17]
+    _color_list  = [ACCENT, ACCENT2]
 
-    for _sample in _coef_df["Sample"].unique():
+    for _i, _sample in enumerate(_unique_samples):
         _sub = _coef_df[_coef_df["Sample"] == _sample].set_index("Term").loc[_terms].reset_index()
-        _y = list(range(len(_terms)))
-        _y = [v + _offsets.get(_sample, 0) for v in _y]
+        _y = [v + _offset_list[_i % len(_offset_list)] for v in range(len(_terms))]
         _xerr = [
             _sub["coef"].values - _sub["lo"].values,
             _sub["hi"].values - _sub["coef"].values,
@@ -669,7 +845,7 @@ def _(ACCENT, ACCENT2, cohort_models, mo, pd, plt):
             _y,
             xerr=_xerr,
             fmt="o",
-            color=_colors.get(_sample, "#555555"),
+            color=_color_list[_i % len(_color_list)],
             capsize=4,
             label=_sample,
         )
@@ -678,8 +854,8 @@ def _(ACCENT, ACCENT2, cohort_models, mo, pd, plt):
     ax_coef_compare.set_yticks(range(len(_terms)))
     ax_coef_compare.set_yticklabels(_terms)
     ax_coef_compare.set_xlabel("Coefficient estimate with 95% CI")
-    ax_coef_compare.set_title("Full panel vs candidate cohort coefficients")
-    ax_coef_compare.legend()
+    ax_coef_compare.set_title("Full panel vs candidate cohort (selected for environmental signal)")
+    ax_coef_compare.legend(fontsize=8)
     plt.tight_layout()
 
     mo.mpl.interactive(fig_coef_compare)
