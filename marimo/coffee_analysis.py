@@ -519,6 +519,28 @@ def _(corr_df, mo):
 
 @app.cell(hide_code=True)
 def _(mo):
+    mo.md(r"""
+    > **[Procedure: Correlation t-test]** The T₀ and df columns connect directly to the
+    > t-distribution. Under H₀: ρ = 0, the test statistic $T_0 = r\sqrt{(n-2)/(1-r^2)}$
+    > follows a t-distribution with **df = n − 2** degrees of freedom (see *[[distributions]]*
+    > for the t critical value table). With n ≈ 1,800 here, df ≈ 1,798 and the critical
+    > value is $t_{0.025,\,1798} \approx 1.960$.
+    >
+    > **Step 5 of the 7-step procedure** (*[[hypothesis-testing-overview]]*): Reject H₀ if
+    > |T₀| > 1.96 **or** equivalently if p-value < α = 0.05 — both criteria appear in the
+    > table above. Any row where both conditions agree is the strongest result.
+    >
+    > **Spearman cross-check (§2.1b):** Pearson r assumes a linear relationship and is
+    > sensitive to outliers. Spearman ρₛ is rank-based — it detects any monotone relationship
+    > and is less affected by the heavy tails visible in the Q-Q plots (§4). Consistent
+    > "Yes ✓" across both tests is stronger evidence than either alone.
+    > See *[[correlation-transformations]]* for both test formulas.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
     mo.md("""
     #### Teacher-phrasing template for correlation conclusions
 
@@ -739,6 +761,28 @@ def _(mo, panel, pd, smf):
 
 @app.cell(hide_code=True)
 def _(mo):
+    mo.md(r"""
+    > **[Construct: SS Decomposition & F-test]** The F-test row above is the *overall model significance test*
+    > from *[[regression-ht]]*. Its structure comes from the sum-of-squares identity
+    > (*[[ss-decomposition]]*): $SS_T = SS_R + SS_E$, where $SS_R$ is the variation *explained* by
+    > the model and $SS_E$ is the unexplained residual variation.
+    >
+    > **Reading the df columns:** `df (reg)` = k = number of predictors (here k = 5 including both
+    > rainfall terms). `df (error)` = n − k − 1 ≈ 1,800 − 5 − 1 = 1,794.
+    >
+    > **F₀ formula:** $F_0 = \frac{MS_R}{MS_E} = \frac{SS_R / k}{SS_E / (n-k-1)}$. Reject H₀ (all
+    > βⱼ = 0) if F₀ > F critical ≈ 2.22 at α = 0.05 with df(5, 1794), **or** if p(F) < 0.05.
+    >
+    > **R² and R²_adj:** $R^2 = SS_R / SS_T$ — the fraction of total variance explained by the model.
+    > $R^2_{adj}$ penalizes for the number of predictors k; use it to compare models with different
+    > numbers of terms. Individual coefficient t-tests ($t_0 = \hat{\beta}_j / SE_j$, df = n−k−1)
+    > test whether *each* predictor contributes after controlling for all others — see §3.2/3.3 tables.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
     mo.md("""
     #### Confidence interval intuition
 
@@ -886,6 +930,27 @@ def _(ACCENT, ACCENT2, mo, model_a, model_b, np, plt, stats):
 
 
 @app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    > **[Procedure: Model Adequacy Checks]** Each of the four plots above tests one of the four OLS
+    > regression assumptions from *[[model-adequacy]]*:
+    >
+    > | Plot | Assumption tested | What to look for |
+    > |------|-------------------|-----------------|
+    > | Residuals vs. Fitted | **Linearity** — mean of residuals = 0 at all fitted values | No curve; random scatter around the horizontal dashed line |
+    > | Normal Q-Q | **Normality** — residuals ~ N(0, σ²) | Points follow the diagonal reference line; heavy tails = departure |
+    > | Scale-Location | **Homoscedasticity** — constant residual variance | Horizontal band; a fan shape indicates heteroskedasticity |
+    > | Residual histogram | **Normality** (complementary view) | Approximately bell-shaped; Shapiro-Wilk W quantifies the test |
+    >
+    > **Which matters most here?** With n ≈ 1,800, the Central Limit Theorem makes the normality
+    > assumption least critical — inference is robust to modest departures. Heteroskedasticity
+    > (fan shape in Scale-Location) is more consequential because it inflates OLS standard errors
+    > unevenly — which is why HC3 robust SEs are used for all inference (§3.2/3.3).
+    """)
+    return
+
+
+@app.cell(hide_code=True)
 def _(mo, model_a, model_b, stats):
     # ── Shapiro-Wilk formal results table ─────────────────────────────────────
     _results = []
@@ -994,6 +1059,32 @@ def _(mo, model_a, model_b, ols_a, ols_b, panel_model, pd, smf):
     > Year FE + Clustered specification, year dummies absorb all shared time movements, making
     > the oil term weakly identified. Its coefficient in that column is a macro-time residual,
     > not a country-level logistics effect — interpret cautiously.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    > **[Construct: Variance Estimation & Standard Errors]** The four columns above represent four
+    > different variance estimation strategies from *[[variance-estimation]]* and *[[standard-error]]*:
+    >
+    > | Column | SE strategy | What it assumes / corrects for |
+    > |--------|-------------|-------------------------------|
+    > | **OLS** | Classical $\hat{\sigma}^2 (X^T X)^{-1}$ | Homoscedasticity + independence |
+    > | **HC3** | Heteroskedasticity-consistent (HC3) | Allows $\text{Var}(\varepsilon_i) \neq \sigma^2$ — non-constant variance |
+    > | **Clustered** | Clustered by country (ISO3) | Allows within-country correlation across years |
+    > | **YFE+Clustered** | Year dummies + clustered | Also absorbs shared global time trends |
+    >
+    > **What to look for:** A predictor that is significant (✓) in *all four* columns is the most
+    > convincing result — its significance is not an artifact of the assumed error structure.
+    > A predictor that flips from ✓ to ✗ between OLS and HC3 had inflated significance due to
+    > heteroskedasticity. A predictor that flips under Clustered was riding on within-country
+    > autocorrelation rather than a true cross-country relationship.
+    >
+    > OLS assumes homoscedastic, independent errors; $\hat{\sigma}^2 = MS_E = SS_E / (n-k-1)$
+    > (the same $MS_E$ that anchors all CI and t-test formulas). When that assumption fails,
+    > HC3 or clustered corrections prevent over-confident inferences.
     """)
     return
 
