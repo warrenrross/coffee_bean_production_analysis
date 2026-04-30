@@ -183,7 +183,7 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.md(r"""
     #### Course context: FWL vs. General Factorial Analysis vs. RCBD (Section 4)
 
     The FWL theorem is an extracurricular research technique used here to accomplish something
@@ -245,6 +245,41 @@ def _(mo):
     dry conditions), FWL would miss it entirely. A factorial design with Temperature × Rainfall ×
     Population as factors would catch it; a panel regression with an interaction term
     (`Temp * Rain_mm_within`) would be the observational equivalent.
+
+    ---
+
+    #### Mathematical equivalence: FWL and RCBD
+
+    Both reduce to the same matrix operation. Define the **annihilator matrix** for nuisance variable X₁:
+
+    $$M_1 = I - X_1(X_1^\top X_1)^{-1}X_1^\top$$
+
+    M₁ projects any vector onto the space orthogonal to X₁ — it is the operator that "removes X₁."
+
+    **FWL** gives the β₂ estimate as:
+    $$\hat{\beta}_2 = (X_2^\top M_1 X_2)^{-1} X_2^\top M_1 Y$$
+    i.e., regress $\tilde{Y} = M_1 Y$ on $\tilde{X}_2 = M_1 X_2$ — both variables residualized on X₁ first.
+
+    **RCBD treatment estimate** (set X₁ = block dummy matrix, X₂ = treatment dummy matrix) solves the identical equation:
+    $$\hat{\tau} = (X_T^\top M_B X_T)^{-1} X_T^\top M_B Y$$
+
+    | | FWL (this notebook) | RCBD |
+    |---|---|---|
+    | M = | Population-regression annihilator | Block-demeaning matrix |
+    | $\tilde{Y}$ | Production residuals after removing ln(Pop) | $Y_{ij} - \bar{Y}_{.j}$ (block-demeaned Y) |
+    | $\tilde{X}_2$ | Temp/Rain residuals after removing ln(Pop) | Treatment indicators |
+
+    **The one real difference:** RCBD's experimental design forces $X_B \perp X_T$, so
+    $M_B X_T = X_T$ — block-demeaning doesn't change treatment indicators because each
+    treatment appears exactly once per block. SS_Treatments and SS_Blocks are fully
+    independent contrasts.
+
+    In the coffee data, ln(Population) *correlates* with temperature, so $M_1 X_2 \neq X_2$
+    — the residualization is doing real algebraic work, not a cosmetic adjustment.
+
+    The `anova_lm` incremental F-test used in §1 is structurally identical to RCBD's
+    $F_0 = MS_{\text{Trt}}/MS_E$: both measure reduction in SS_Error from adding the focal
+    terms after the nuisance variable is accounted for.
     """)
     return
 
