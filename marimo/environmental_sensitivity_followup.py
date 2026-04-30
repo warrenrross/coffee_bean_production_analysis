@@ -181,6 +181,74 @@ def _(mo):
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md("""
+    #### Course context: FWL vs. General Factorial Analysis vs. RCBD (Section 4)
+
+    The FWL theorem is an extracurricular research technique used here to accomplish something
+    similar to what we did with **General Factorial Analysis** and **RCBD** in Section 4 of the course.
+    Understanding the parallels and differences grounds this analysis in familiar territory.
+
+    ---
+
+    **What each approach does**
+
+    *FWL (this notebook)* — A theorem about regression: regress both Y and a focal predictor X₂
+    on a control variable X₁, keep both sets of residuals, then correlate them. The result equals
+    the coefficient X₂ would get in a full MLR with both predictors included. Here, ln(Population)
+    is the control; temperature and rainfall are the focal predictors.
+
+    *General Factorial (Section 4)* — An experimental design that tests all combinations of k
+    factors at controlled levels. ANOVA partitions variance into main effects, interaction effects,
+    and error. The key capability factorial has that FWL lacks: **detecting interactions** — whether
+    the effect of Factor A depends on the level of Factor B.
+
+    *RCBD (Section 4)* — A design for one factor of interest plus one **nuisance factor** (the
+    block). Each treatment appears exactly once per block. ANOVA partitions SS_Total into
+    SS_Treatments + SS_Blocks + SS_Error, removing block-to-block variability from the error term
+    to give a more powerful test of treatments.
+
+    ---
+
+    **How they overlap**
+
+    All three are doing the same thing conceptually: **isolating the effect of one variable by
+    accounting for another.** They differ only in how they achieve that control:
+
+    | | FWL | RCBD | Factorial |
+    |---|---|---|---|
+    | How control is achieved | Algebraic residualization of observed data | Block structure absorbs nuisance SS before the F-test | Randomization makes factors orthogonal by design |
+    | Data source | Observational panel | Designed experiment | Designed experiment |
+    | Nuisance variable role | Partialed out of both Y and X | Absorbed into SS_Blocks | Balanced across factor levels by randomization |
+    | Interaction estimated? | No | No (assumed absent — RCBD requires `+` not `*`) | Yes — core purpose |
+
+    **FWL is actually most similar to RCBD**, not to factorial. In RCBD, the "block" (country, in
+    this analogy) is a nuisance factor you want to remove before testing treatments. The RCBD model
+    is additive — `aov(obs ~ trt + blk)` — and explicitly assumes no treatment-by-block interaction,
+    just as FWL assumes population is an additive nuisance separable from the environmental signal.
+    RCBD removes SS_Blocks from SS_Error mathematically; FWL removes the population effect by
+    residualization — two routes to the same destination.
+
+    ---
+
+    **The critical differences**
+
+    *Causal inference:* Factorial and RCBD designs use randomized assignment, so their F-tests
+    support causal claims. FWL operates on observational data — the partial correlation is a cleaner
+    measure than raw r, but unmeasured confounders (altitude, variety, trade policy) cannot be ruled
+    out. Statistical control is not the same as experimental control.
+
+    *Interactions:* FWL is not a design tool — it is used here to evaluate data after the fact,
+    partializing out one nuisance variable (population). It does not detect interactions. If
+    temperature and rainfall interact in their effect on production (e.g., heat is damaging only in
+    dry conditions), FWL would miss it entirely. A factorial design with Temperature × Rainfall ×
+    Population as factors would catch it; a panel regression with an interaction term
+    (`Temp * Rain_mm_within`) would be the observational equivalent.
+    """)
+    return
+
+
 @app.cell
 def _(anova_lm, durbin_watson, multipletests, np, panel, pd, sm, stats):
     MIN_OBS = 15
@@ -488,7 +556,16 @@ def _(anova_lm, durbin_watson, multipletests, np, panel, pd, sm, stats):
     candidate_screen = country_screen[
         country_screen["Candidate tier"].isin(["Strong", "Moderate"])
     ].sort_values(["Candidate tier", "Environment added R2"], ascending=[True, False])
-    return MIN_OBS, TIER_STRONG_DR2, TIER_STRONG_R, TIER_MOD_R, TIER_MOD_P, candidate_screen, country_screen, residual_panel
+    return (
+        MIN_OBS,
+        TIER_MOD_P,
+        TIER_MOD_R,
+        TIER_STRONG_DR2,
+        TIER_STRONG_R,
+        candidate_screen,
+        country_screen,
+        residual_panel,
+    )
 
 
 @app.cell(hide_code=True)
@@ -517,7 +594,16 @@ def _(mo):
 
 
 @app.cell
-def _(MIN_OBS, TIER_MOD_P, TIER_MOD_R, TIER_STRONG_DR2, TIER_STRONG_R, country_screen, mo, pd):
+def _(
+    MIN_OBS,
+    TIER_MOD_P,
+    TIER_MOD_R,
+    TIER_STRONG_DR2,
+    TIER_STRONG_R,
+    country_screen,
+    mo,
+    pd,
+):
     def _format_screen(df):
         _d = df.copy()
         _float_cols = [
